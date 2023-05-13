@@ -1,5 +1,5 @@
 import React from 'react'
-import Hero from '../assets/images/hero.png'
+// import Hero from '../assets/images/hero.png'
 const HeroSection = () => {
   return (
     <div className=' p-8 sm:p-16 '>
@@ -13,7 +13,7 @@ const HeroSection = () => {
                         <p className=' w-[75%]  py-4 text-base sm:w-[45%] sm:py-8 sm:text-xl'>We all are already abundant. We just need a mentor to help us realise it.</p>
         <button className='outline-double outline-1 py-3 px-10 rounded-full font-semibold bg-black text-white hover:bg-gray-950 hover:text-white'>Get Started</button>
       </div>
-      <img className=' mt-80 w-80 h-80 -ml-96  sm:-mt-9 sm:mr-16 sm:h-[500px]  sm:w-[400px] object-cover rounded-lg lg:rounded-r-lg' src={Hero} alt='hero'/>
+      <img className=' mt-80 w-80 h-80 -ml-96  sm:-mt-9 sm:mr-16 sm:h-[500px]  sm:w-[400px] object-cover rounded-lg lg:rounded-r-lg' src='https://imgtr.ee/images/2023/05/13/lin9V.png' alt='hero'/>
     </div>
     
   </div>
