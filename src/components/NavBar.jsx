@@ -7,7 +7,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 const NavBar = () => {
   const [toggle, setToggle] = useState(false);
   return (
-    <nav className='fixed w-full'>
+    <nav className=' w-full '>
       <div className='flex justify-between items-center max-w-7xl px-14 py-8 '>
 
         <div className='flex '>
@@ -19,7 +19,7 @@ const NavBar = () => {
           <ul className='list-none flex flex-row  gap-14'>
             <li className='cursor-pointer hover:text-zinc-400  transition ease-in-out duration-300'>Mentorship Options</li>
             <li className='cursor-pointer hover:text-zinc-400  transition ease-in-out duration-300'>How it works</li>
-            <li className='cursor-pointer hover:text-zinc-400  transition ease-in-out duration-300'>About us</li>
+            <Link to='/about'><li className='cursor-pointer hover:text-zinc-400  transition ease-in-out duration-300'>About us</li></Link>
             <li className='cursor-pointer hover:text-zinc-400  transition ease-in-out duration-300'>Assessment</li>
             <li className='cursor-pointer hover:text-zinc-400  transition ease-in-out duration-300'>Join as a Mentor</li>
           </ul>

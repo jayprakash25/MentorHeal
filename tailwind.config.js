@@ -4,7 +4,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: theme => ({
+        'Image-sm': " url('./assets/images/Heromobile.png')",
+        'Image-lg': "url('./assets/images/Heroweb.png')",
+        
+    })
+    },
   },
   plugins: [],
 }
