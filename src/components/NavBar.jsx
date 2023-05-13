@@ -41,7 +41,7 @@ const NavBar = () => {
 <ul className='list-none flex md:hidden flex-col  gap-1 justify-end items-start'>
             <li className='cursor-pointer hover:text-zinc-400  transition ease-in-out duration-300  '>Mentorship</li>
             <li className='cursor-pointer hover:text-zinc-400  transition ease-in-out duration-300 '>How it works</li>
-            <li className='cursor-pointer hover:text-zinc-400  transition ease-in-out duration-300 '>About us</li>
+            <Link to='/about'><li className='cursor-pointer hover:text-zinc-400  transition ease-in-out duration-300 '>About us</li></Link>
             <li className='cursor-pointer hover:text-zinc-400  transition ease-in-out duration-300 '>Assessment</li>
             <li className='cursor-pointer hover:text-zinc-400  transition ease-in-out duration-300 '>Join as a Mentor</li>
           </ul>
