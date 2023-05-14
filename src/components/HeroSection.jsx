@@ -1,26 +1,37 @@
-import React from 'react'
-// import Hero from '../assets/images/hero.png'
+import React from 'react';
+import Button from './Button';
 const HeroSection = () => {
   return (
-    <div className=' p-8 sm:p-16 '>
-        <div className='   bg-green-50 rounded-lg  flex justify-center items-center '>
-            <div>
-                <div className='flex'>
-                    <div className='   py-5 p-4 sm:ml-12'>
-                        {/* 55% */}
-                        {/* text-7xl w-[95%] font-bold */}
-                        <h1 className=' text-3xl font-bold w-80 sm:text-7xl sm:w-[75%]  '>Mentorship can help you  embrace your potential!</h1>
-                        <p className=' w-[75%]  py-4 text-base sm:w-[45%] sm:py-8 sm:text-xl'>We all are already abundant. We just need a mentor to help us realise it.</p>
-        <button className='outline-double outline-1 py-3 px-10 rounded-full font-semibold bg-black text-white hover:bg-gray-950 hover:text-white'>Get Started</button>
-      </div>
-      <img className=' mt-80 w-80 h-80 -ml-96  sm:-mt-9 sm:mr-16 sm:h-[500px]  sm:w-[400px] object-cover rounded-lg lg:rounded-r-lg' src='https://imgtr.ee/images/2023/05/13/lin9V.png' alt='hero'/>
-    </div>
+<section className='  h-screen w-full relative top-[112px]  z-[-1]  '>
+<div className='flex justify-center '>
+  <div className='lg:flex  bg-[#F3F7F5]  w-[80%] md:w-[700px] lg:w-[1169px]  h-screen  rounded-xl md:rounded-[70px]'>
     
+    <div className='mt-[54px] lg:mt-[73px] lg:ml-[88px] ml-[18px] mr-[43px] '>
+      <h1 className='text-3xl lg:text-6xl  font-bold w-72 md:w-[605px] '>Mentorship can help you  embrace your potential!</h1>
+      <div className='text-[16px] font-normal mt-[17px] lg:mt-[27px] w-[299px] mb-[16px] lg:mb-[27px] '>
+      <p className=''>We all are already abundant. We just </p>
+      <p>need a mentor to help us </p>
+      <p> realise it.</p>
+      </div>
+      <Button/>
+      </div>
+      <div className='flex justify-center mt-[32px]  '>
+      <img src='https://imgtr.ee/images/2023/05/13/lin9V.png' alt='hero.png'/>
+    </div>
+
+    
+
   </div>
-</div>
-</div>
+  </div>
+</section>    
 
   ) 
 }
 
 export default HeroSection
+
+
+
+
+
+
