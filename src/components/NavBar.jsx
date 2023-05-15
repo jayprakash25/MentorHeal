@@ -8,7 +8,7 @@ const NavBar = () => {
   const [toggle, setToggle] = useState(false);
   return (
     <nav className=' fixed w-full  '>
-      <div className='flex justify-between items-center  max-w-7xl px-14 py-8 '>
+      <div className='flex justify-between items-center  max-w-7xl px-9 py-8 gap-4'>
 
         <div className='flex '>
           <Link to='/' className='flex'  onClick={() => {
