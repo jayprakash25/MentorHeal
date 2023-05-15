@@ -17,7 +17,7 @@ const HeroSection = () => {
         <Button/>
       </div>
       </div>
-      <div className=' lg:static  md:left-80 md:bottom-40 md:w-60 lg:w-auto lg:py-24 relative left-28 bottom-6'>
+      <div className=' lg:static  md:left-80 md:bottom-40 w-56 md:w-60 lg:w-auto lg:py-24 relative left-28 bottom-8 '>
       <img className='h-[220px] md:h-[310px] lg:h-[470px]  ' src='https://imgtr.ee/images/2023/05/13/lin9V.png' alt='hero.png'/>
     </div>
 
