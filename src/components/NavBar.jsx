@@ -7,7 +7,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 const NavBar = () => {
   const [toggle, setToggle] = useState(false);
   return (
-    <nav className=' fixed w-full  '>
+    <nav className='  w-full  '>
       <div className='flex justify-between items-center  max-w-7xl px-9 py-8 gap-4'>
 
         <div className='flex '>

@@ -1,37 +1,36 @@
 import React from 'react';
 import Button from './Button';
+import Tagline from './tagline';
+import Hero from '../assets/images/Hero.png'
+
+
 const HeroSection = () => {
   return (
-<section className='  h-screen w-full relative top-[112px]  z-[-1]  '>
-<div className='flex justify-center '>
-  <div className=' lg:flex  bg-[#F3F7F5]  w-[85%] md:w-[700px] lg:w-[1169px]  h-screen  rounded-xl md:rounded-[70px]'>
-    
-    <div className='mt-[54px] lg:mt-[73px] lg:ml-[88px] ml-[18px] mr-[43px] '>
-      <h1 className='text-3xl lg:text-6xl  font-bold w-72 md:w-[605px] '>Mentorship can help you  embrace your potential!</h1>
-      <div className='text-[16px] font-normal mt-[17px] lg:mt-[27px] w-[299px] mb-[16px] lg:mb-[27px] md:py-5 lg:p-0 '>
-      <p className=''>We all are already abundant. We just </p>
-      <p>need a mentor to help us </p>
-      <p> realise it.</p>
-      </div>
-      <div className='py-8'>
-        <Button/>
-      </div>
-      </div>
-      <div className=' lg:static  md:left-80 md:bottom-40 w-56 md:w-60 lg:w-auto lg:py-24 relative left-28 bottom-8 '>
-      <img className='h-[220px] md:h-[310px] lg:h-[470px]  ' src='https://imgtr.ee/images/2023/05/13/lin9V.png' alt='hero.png'/>
-    </div>
+    <section className='m-8'>
+<div className='w-full h-screen bg-[#F3F7F5]   rounded-3xl flex flex-col justify-between'>
+<div className='grid  gap-6 md:gap-24 md:grid-cols-2 max-w-[1240px] m-auto'>
 
-    
+<div className='flex flex-col justify-center  md:items-start md:ml-16 w-full '>
+  <h1 className='mt-11 md:mt-0 md:mb-8 lg:tracking-wider lg:text-5xl md:text-4xl md:tracking-wide md:max-w-md font-bold text-2xl  max-w-[300px]'>Mentorship can help you  embrace your potential! </h1>
+  <p className='py-2 mb-4 max-w-[300px]'>We all are already abundant. We just need a mentor to help us realise it.</p>
+  <Button/>
+</div>
+<div className=''>
+  <img className=' h-80 w-80 object-contain md:h-[550px] md:w-[600px] ml-auto' src={Hero} alt='hero.png' />
+</div>
 
-  </div>
-  </div>
-</section>    
+
+</div>
+</div>
+
+</section>
+
+
 
   ) 
 }
 
 export default HeroSection
-
 
 
 
