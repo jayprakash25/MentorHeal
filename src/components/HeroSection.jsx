@@ -7,8 +7,8 @@ import Hero from '../assets/images/Hero.png'
 const HeroSection = () => {
   return (
     <section className='m-8'>
-<div className='w-full h-screen bg-[#F3F7F5]   rounded-3xl flex flex-col justify-between'>
-<div className='grid  gap-6 md:gap-24 md:grid-cols-2 max-w-[1240px] m-auto'>
+<div className='w-full  bg-[#F3F7F5]   rounded-3xl flex flex-col justify-between'>
+<div className='grid grid-cols-1  gap-6 md:gap-24 md:grid-cols-2 max-w-[1240px] m-auto'>
 
 <div className='flex flex-col justify-center  md:items-start md:ml-16 w-full '>
   <h1 className='mt-11 md:mt-0 md:mb-8 lg:tracking-wider lg:text-5xl md:text-4xl md:tracking-wide md:max-w-md font-bold text-2xl  max-w-[300px]'>Mentorship can help you  embrace your potential! </h1>
@@ -16,7 +16,7 @@ const HeroSection = () => {
   <Button/>
 </div>
 <div className=''>
-  <img className=' h-80 w-80 object-contain md:h-[550px] md:w-[600px] ml-auto' src={Hero} alt='hero.png' />
+  <img className=' h-80 w-55%   object-contain md:h-[550px] ml-auto' src={Hero} alt='hero.png' />
 </div>
 
 
