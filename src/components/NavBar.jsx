@@ -13,7 +13,7 @@ const NavBar = () => {
         <div className='flex '>
           <Link to='/' className='flex'  onClick={() => {
       window.scrollTo(0,0)
-    }}><h1 className='text-black font-bold text-2xl'>Holi</h1><h1 className='text-orange-600 text-2xl font-bold'>Sync</h1></Link>
+    }}><h1 className='text-black font-inter text-2xl '>Holi</h1><h1 className='text-orange-600 text-2xl font-inter'>Sync</h1></Link>
         </div>
 <div className=' hidden lg:flex gap-20  items-center'>
           <ul className='list-none flex flex-row  gap-14'>
