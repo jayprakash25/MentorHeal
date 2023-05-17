@@ -8,7 +8,7 @@ const Card = () => {
             <img src={health} className='bg-white p-4 rounded-full mt-5'/>
             <h1 className='text-2xl font-poppins'>Health</h1>
             <p className='w-[80%] text-[13px] '>We believe in the power of holistic growth and development. From personal and professional growth, to physical and emotional well-being, we believe that these elements are crucial to living a fulfilling life.</p>
-            <p className='font-poppins cursor-pointer text-[13px] text-[#E27066]'>Read More  ></p>
+            <p className='font-poppins cursor-pointer text-[13px] text-[#E27066]'>Read More</p>
         </div>
         </div>
     )
