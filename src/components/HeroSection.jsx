@@ -3,10 +3,12 @@ import Button from './Button';
 import Tagline from './Tagline';
 import Hero from '../assets/images/Hero.png'
 import Card from './Card';
+import Form from './Form';
 
 
 const HeroSection = () => {
   return (
+    <>
     <section className='m-8 '>
 <div className='w-full  bg-[#F3F7F5]   rounded-3xl flex flex-col justify-between'>
 <div className='grid grid-cols-1  gap-6 md:gap-24 md:grid-cols-2 max-w-[1240px] m-auto'>
@@ -33,10 +35,10 @@ const HeroSection = () => {
 <Card/>
 <Card/>
 </section>
-
-
-
 </section>
+<Form/>
+</>
+
 
 
 
