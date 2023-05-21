@@ -4,6 +4,7 @@ import Tagline from './Tagline';
 import Hero from '../assets/images/Hero.png'
 import Card from './Card';
 import Form from './Form';
+import Footer from './Footer';
 
 
 const HeroSection = () => {
@@ -37,6 +38,7 @@ const HeroSection = () => {
 </section>
 </section>
 <Form/>
+<Footer/>
 </>
 
 

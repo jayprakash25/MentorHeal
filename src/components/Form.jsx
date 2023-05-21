@@ -29,12 +29,13 @@ const Form = () => {
         </svg>
       </div>
       <div
-        className="max-w-screen-xl mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-100 text-gray-900 rounded-lg shadow-lg">
+        className="max-w-screen-xl mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-blue-50 text-gray-900 rounded-lg shadow-lg">
         <div className="flex flex-col justify-between">
           <div>
-            <h2 className="text-4xl lg:text-5xl font-bold leading-tight">Lets talk about everything!</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold leading-tight ">Reach out to Us!</h2>
             <div className="text-gray-700 mt-8">
-              Hate forms? Send us an <span className="underline">email</span> instead.
+              If you have any concern please feel free to contact us by filling up the form.
+              <h2 className='font-bold'>Email: support@mentorrnow.com</h2>
             </div>
           </div>
           <div className="mt-8 text-center">
