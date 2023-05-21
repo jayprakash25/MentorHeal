@@ -2,7 +2,7 @@ import React from 'react';
 import Button from './Button';
 import Tagline from './Tagline';
 import Hero from '../assets/images/Hero.png'
-import {Card} from './Card';
+import {Card, FirstCard} from './Card';
 import Form from './Form';
 import Footer from './Footer';
 
@@ -19,6 +19,7 @@ const HeroSection = () => {
   <p className='py-2 mb-4 max-w-[300px]'>We all are already abundant. We just need a mentor to help us realise it.</p>
   <Button/>
 </div>
+
 <div className=''>
   <img className=' h-80 w-55%   object-contain md:h-[550px] ml-auto' src={Hero} alt='hero.png' />
 </div>
@@ -26,6 +27,8 @@ const HeroSection = () => {
 
 </div>
 </div>
+<FirstCard/>
+
 <Tagline/>
 
 <section className='grid md:grid-cols-2  lg:grid-col-3 justify-center  my-10 gap-6'>
