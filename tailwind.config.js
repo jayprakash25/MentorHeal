@@ -16,8 +16,10 @@ export default {
       inter: ["Inter"],
     },
    
+    
   
   },
+  
   plugins: [],
 }
 

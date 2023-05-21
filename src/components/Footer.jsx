@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div>
         
-<footer className="relative bg-blue-950 text-white pt-8 pb-6">
+<footer className="relative  bg-blue-950 text-white pt-8 pb-6">
   <div className="container mx-auto px-4">
     <div className="flex flex-wrap text-left lg:text-left">
       <div className="w-full lg:w-6/12 px-4">
@@ -12,7 +12,7 @@ const Footer = () => {
         <h5 className="text-lg mt-0 mb-2 text-blueGray-600">
           Find us on any of these platforms, we respond 1-2 business days.
         </h5>
-        <div className='flex mt-8'><h1 className='text-white font-inter text-2xl '>Holi</h1><h1 className='text-orange-600 text-2xl font-inter'>Sync</h1></div>
+        <img className='w-[200px] mt-2'src="https://i.ibb.co/pr6nQzZ/final-logo.png" alt="final-logo" border="0"/>
         
       </div>
       <div className="w-full lg:w-6/12 px-4">

@@ -2,7 +2,7 @@ import React from 'react';
 import Button from './Button';
 import Tagline from './Tagline';
 import Hero from '../assets/images/Hero.png'
-import Card from './Card';
+import {Card} from './Card';
 import Form from './Form';
 import Footer from './Footer';
 

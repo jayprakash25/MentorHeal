@@ -1,6 +1,6 @@
 import health from '../assets/images/health.png'
 
-const Card = () => {
+export const Card = () => {
     return (
         <div className='flex justify-center'>
         <div className="w-[344px]  bg-[#F3F7F5] rounded-[30px] flex flex-col items-center gap-5 pb-10">
@@ -15,6 +15,13 @@ const Card = () => {
 }
 
 
+export const Cards=()=>{
+    return(
+        <>
+        </>
+    )
+} 
 
 
-export default Card;
+
+
