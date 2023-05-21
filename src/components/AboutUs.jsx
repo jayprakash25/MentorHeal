@@ -1,6 +1,7 @@
 import React from 'react'
 import heromobile from "../assets/images/Heromobile.png"
 import heroweb from "../assets/images/Heroweb.png"
+import ourmission from "../assets/images/ourmission.png"
 
 const AboutUs = () => {
   return (
@@ -48,8 +49,34 @@ const AboutUs = () => {
         </div>
 
       </div>
+    </div>
 
+{/* Our mission section..... */}
+    <div className='flex flex-col-reverse md:flex-row m-8 md:justify-between '>
+      <div className='mt-4'>
+        <h1 className='font-bold text-[44px] md:text-[54px] lg:text-[64px]'>Our Mission</h1>
+        <p className='text-[#7C7C7C] font-medium leading-6 text-[13px] md:text-[16.5px] lg:text-[20px] md:leading-9 w-80 lg:w-[625px]'>We’re building the economic infrastructure for the 
+internet. Businesses of every size, be it new startups or public companies, use our software to accept payments and manage their businesses online.</p>
+    <div className='flex justify-between mt-2'>
+    <div className='flex flex-col'>
+      <h1 className='font-bold text-[34px] w-[79px] md:text-[43px] lg:text-[52px] '>94%</h1>
+<p className='text-[8px] font-semibold md:text-[10px] lg:text-[13px]'>CLIENT RETENTION</p>
+</div>
 
+<div className='flex flex-col'>
+<h1 className='font-bold text-[34px] w-[79px] md:text-[43px] lg:text-[52px]'>70M+</h1>
+<p className='text-[8px] font-semibold md:text-[10px] lg:text-[13px]'>EMAILS PER MONTH</p>
+</div>
+
+<div className='flex flex-col'>
+<h1 className='font-bold text-[34px] w-[79px] md:text-[43px] lg:text-[52px]'>10K+</h1>
+<p className='text-[8px] font-semibold md:text-[10px] lg:text-[13px]'>MONTHLY CAMPAIGNS</p>
+</div>
+
+    </div>
+
+      </div>
+      <img src={ourmission} className=' md:w-[463px] md:h-auto ' />
     </div>
     </section>
 
