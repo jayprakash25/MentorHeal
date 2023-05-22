@@ -5,6 +5,8 @@ import Hero from '../assets/images/Hero.png'
 import {Card, FirstCard} from './Card';
 import Form from './Form';
 import Footer from './Footer';
+import Section4 from './Section4';
+import Section9 from './Section9';
 
 
 const HeroSection = () => {
@@ -40,7 +42,9 @@ const HeroSection = () => {
 <Card/>
 </section>
 </section>
+
 <Form/>
+<Section9/>
 <Footer/>
 </>
 

@@ -4,7 +4,7 @@ const Form = () => {
   return (
     <div>
       
-<div className=" bg-[#F3F7F5]  text-gray-100 px-8 py-12">
+<div className=" bg-[#ffffff]  text-gray-100 px-8 py-12">
       <div className="text-center w-full">
         <svg className="text-gray-100 h-8 mx-auto"  viewBox="0 0 150 29" version="1.1"
           xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -29,7 +29,7 @@ const Form = () => {
         </svg>
       </div>
       <div
-        className="max-w-screen-xl mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-blue-50 text-gray-900 rounded-lg shadow-lg">
+        className="max-w-screen-xl mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-white text-gray-900 rounded-lg shadow-lg">
         <div className="flex flex-col justify-between">
           <div>
             <h2 className="text-4xl lg:text-5xl font-bold leading-tight ">Reach out to Us!</h2>
