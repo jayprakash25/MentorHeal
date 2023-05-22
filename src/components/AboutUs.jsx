@@ -4,6 +4,7 @@ import OurStory from './OurStory'
 import OurMission from './OurMission'
 import HeroAbout from './HeroAbout'
 import OurVision from './OurVision'
+import Team from './Team'
 
 const AboutUs = () => {
   return (
@@ -23,6 +24,9 @@ const AboutUs = () => {
 
     {/* Our Vision Section...... */}
     <OurVision/>
+
+    {/* Team section...... */}
+    <Team/>
     </section>
 
   )

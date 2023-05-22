@@ -18,17 +18,14 @@ export const Card = () => {
 export const FirstCard=()=>{
     return(
         <>
-   <section className="text-gray-400  bg-[#F3F7F5] body-font">
-  <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-    <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 md:mb-0 mb-10">
+   <section className="text-gray-400 my-8 rounded-3xl  bg-[#F3F7F5] body-font">
+  <div className="container mx-auto flex px-5 py-24 lg:flex-row flex-col items-center">
+    <div className="lg:max-w-lg lg:w-full  w-5/6  mb-10">
       <img className="object-cover object-center rounded-lg sm:ml-20" alt="hero" src="https://i.ibb.co/ssvmKXG/image-1.png"/>
       </div>
-    <div className="lg:flex-grow md:w-1/2 lg:pl-16 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center ">
-      <h1 className="title-font sm:text-4xl text-3xl mb-4 font-bold text-black ">How will mentorship help you?
-        
-      </h1>
-      <p className="mb-8 leading-relaxed">Through the guidance and support of a mentor, individuals can gain valuable insights, develop new skills, and overcome obstacles that they may have otherwise struggled with on their own. Whether in business, personal life, or any other aspect of life, mentorship provides a unique opportunity for individuals to receive personalized feedback, advice, and support from someone who has been through similar experiences. By fostering a positive and collaborative relationship, mentorship can help individuals gain confidence, increase their self-awareness, and achieve their full potential. it.</p>
-      
+    <div className="lg:flex-grow lg:w-1/2 lg:pl-  flex flex-col lg:items-start  items-center text-center ">
+      <h1 className="title-font sm:text-4xl text-3xl mb-4 font-bold text-black ">How will mentorship help you? </h1>
+      <p className="mb-8 leading-relaxed lg:text-left">Through the guidance and support of a mentor, individuals can gain valuable insights, develop new skills, and overcome obstacles that they may have otherwise struggled with on their own. Whether in business, personal life, or any other aspect of life, mentorship provides a unique opportunity for individuals to receive personalized feedback, advice, and support from someone who has been through similar experiences. By fostering a positive and collaborative relationship, mentorship can help individuals gain confidence, increase their self-awareness, and achieve their full potential. it.</p>
     </div>
   </div>
 </section>
