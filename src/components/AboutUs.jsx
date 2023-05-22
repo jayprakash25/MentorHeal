@@ -6,11 +6,16 @@ import HeroAbout from './HeroAbout'
 import OurVision from './OurVision'
 import Team from './Team'
 
+
 const AboutUs = () => {
+ 
   return (
     <section>
+    
+      
 
     {/* Herosection........ */}
+
     
     <HeroAbout/>
     {/* our story...... */}
