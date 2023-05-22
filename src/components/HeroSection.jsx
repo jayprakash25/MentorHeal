@@ -29,6 +29,7 @@ const HeroSection = () => {
 
 </div>
 </div>
+</section>
 <FirstCard/>
 
 <Tagline/>
@@ -41,7 +42,7 @@ const HeroSection = () => {
 <Card/>
 <Card/>
 </section>
-</section>
+
 
 <Form/>
 <Section9/>
