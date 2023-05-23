@@ -3,7 +3,7 @@ import health from '../assets/images/health.png'
 export const Card = () => {
     return (
         <div className='flex justify-center'>
-        <div className="w-[344px]  bg-[#F3F7F5] rounded-[30px] flex flex-col items-center gap-5 pb-10">
+        <div className="w-[325px]  bg-[#F3F7F5] rounded-[30px] flex flex-col items-center gap-5 pb-10">
 
             <img src={health} className='bg-white p-4 rounded-full mt-5'/>
             <h1 className='text-2xl font-poppins'>Health</h1>

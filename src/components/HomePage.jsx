@@ -16,7 +16,7 @@ const HomePage = () => {
 
 <Tagline/>
 
-<section className='grid md:grid-cols-2  lg:grid-col-3 justify-center  my-10 gap-6'>
+<section className='grid md:grid-cols-3  justify-center md:mx-2 lg:mx-0  my-10 gap-6'>
 <Card/>
 <Card/>
 <Card/>
