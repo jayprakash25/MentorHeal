@@ -3,9 +3,9 @@ import Tagline from './Tagline';
 import {Card, FirstCard} from './Card';
 import Form from './Form';
 import Footer from './Footer';
-import Section4 from './Section4';
 import Section9 from './Section9';
 import HeroSection from './HeroSection';
+import Why from './Why';
 
 
 const HomePage = () => {
@@ -24,8 +24,7 @@ const HomePage = () => {
 <Card/>
 <Card/>
 </section>
-
-
+<Why/>
 <Form/>
 <Section9/>
 <Footer/>
