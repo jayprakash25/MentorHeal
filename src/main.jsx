@@ -4,7 +4,7 @@ import App from './App.jsx';
 import './index.css';
 import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 import AboutUs from './components/AboutUs.jsx';
-import HeroSection from './components/HeroSection.jsx';
+import HomePage from './components/HomePage.jsx';
 import Error from './components/Error.jsx';
 
 const appRouter = createBrowserRouter(
@@ -16,7 +16,7 @@ const appRouter = createBrowserRouter(
       children:[
         {
           path:'/',
-          element:<HeroSection/>
+          element:<HomePage/>
         },
         {
           path:'/about',

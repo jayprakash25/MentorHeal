@@ -1,18 +1,11 @@
-import React from 'react';
 import Button from './Button';
-import Tagline from './Tagline';
 import Hero from '../assets/images/Hero.png'
-import {Card, FirstCard} from './Card';
-import Form from './Form';
-import Footer from './Footer';
-import Section4 from './Section4';
-import Section9 from './Section9';
 
 
 const HeroSection = () => {
-  return (
-    <>
-    <section className='m-8 '>
+    return (
+        <div>
+          <section className='m-8 '>
 <div className='w-full  bg-[#F3F7F5]   rounded-3xl flex flex-col justify-between'>
 <div className='grid grid-cols-1  gap-6 md:gap-24 md:grid-cols-2 max-w-[1240px] m-auto'>
 
@@ -30,34 +23,8 @@ const HeroSection = () => {
 </div>
 </div>
 </section>
-<FirstCard/>
-
-<Tagline/>
-
-<section className='grid md:grid-cols-2  lg:grid-col-3 justify-center  my-10 gap-6'>
-<Card/>
-<Card/>
-<Card/>
-<Card/>
-<Card/>
-<Card/>
-</section>
-
-
-<Form/>
-<Section9/>
-<Footer/>
-</>
-
-
-
-
-  ) 
+        </div>
+    )
 }
 
 export default HeroSection
-
-
-
-
-
