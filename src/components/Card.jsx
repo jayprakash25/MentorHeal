@@ -18,7 +18,7 @@ export const Card = () => {
 export const FirstCard=()=>{
     return(
         <>
-   <section className="text-gray-400 my-8 rounded-3xl  bg-[#F3F7F5] body-font">
+   <section className="text-gray-400 m-8 rounded-3xl  bg-[#F3F7F5] body-font">
   <div className="container mx-auto flex px-5 py-24 lg:flex-row flex-col items-center">
     <div className="lg:max-w-lg lg:w-full  w-5/6  mb-10">
       <img className="object-cover object-center rounded-lg sm:ml-20" alt="hero" src="https://i.ibb.co/ssvmKXG/image-1.png"/>
