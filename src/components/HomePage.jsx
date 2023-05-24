@@ -13,7 +13,7 @@ const HomePage = () => {
 <FirstCard/>
 <Tagline/>
 <section className='grid md:grid-cols-3  justify-center md:mx-2 lg:mx-0  my-10 gap-6'>
-{Array(6).fill(null).map((index) => <Card key={index} />)}
+{Array(6).fill().map((keys,index) => <Card key={index} />)}
 </section>
 <Why/>
 <Form/>

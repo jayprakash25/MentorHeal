@@ -3,7 +3,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const TeamCard = (props) => {
-    console.log(props)
+   
     return (
         <div className="border-[0.44px] rounded-xl border-[#000000] w-[200px] justify-center lg:w-[90%] lg:h-[450px] flex flex-col items-center p-2 pt-3 lg:pt-0 shadow-lg">
         <img src={Profile} className="lg:w-[65%]"/>

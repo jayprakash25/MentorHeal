@@ -1,7 +1,7 @@
 import health from '../assets/images/health.png'
 import {data} from '../utils/data'
 
-console.log(data);
+
 export const Card = () => {
     return (
         <div className='flex justify-center'>
