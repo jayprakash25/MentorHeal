@@ -4,6 +4,7 @@ import Form from './Form';
 import Section9 from './Section9';
 import HeroSection from './HeroSection';
 import Why from './Why';
+import Wellness from './Wellness';
 
 
 const HomePage = () => {
@@ -16,6 +17,7 @@ const HomePage = () => {
 {Array(6).fill().map((keys,index) => <Card key={index} />)}
 </section>
 <Why/>
+<Wellness/>
 <Form/>
 <Section9/>
 
