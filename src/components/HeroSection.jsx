@@ -1,31 +1,28 @@
-import Button from './Button';
-import Hero from '../assets/images/Hero.png'
-import {data} from '../utils/data'
-
+import Button from "./Button";
+import Hero from "../assets/images/Hero.png";
 
 const HeroSection = () => {
-    return (
-        <div>
-          <section className='m-8 '>
-<div className='w-full  bg-[#F3F7F5]   rounded-3xl flex flex-col justify-between'>
-<div className='grid grid-cols-1  gap-6 md:gap-24 md:grid-cols-2 max-w-[1240px] m-auto'>
-
-<div className='flex flex-col justify-center  md:items-start md:ml-16 w-full '>
-  <h1 className='mt-11 md:mt-0 md:mb-8  lg:max-w-[605px] lg:text-6xl lg:leading-[69px] md:text-4xl md:tracking-wide md:max-w-md font-bold text-2xl  max-w-[300px]'>{data?.content?.home[1]?.Mainhead}</h1>
-  <p className='py-2 mb-4 max-w-[300px]'>{data?.content?.home[1]?.Maindesc}</p>
-  <Button/>
-</div>
-
-<div className=''>
-  <img className=' h-80 w-55%   object-contain md:h-[550px] ml-auto' src={Hero} alt='hero.png' />
-</div>
-
-
-</div>
-</div>
-</section>
+  return (
+    <div className="">
+      <section className="px-5">
+        <div className=" bg-[#F3F7F5] flex flex-col justify-between md:flex-row md:items-center md:px-5">
+          <div className="mx-auto py-4">
+          <img className="max-w-sm md:w-[35vw]" src={Hero} alt="hero.png" />
+          </div>
+          <div className="flex flex-col   justify-between items-center md:items-start px-5 py-8 space-y-6 md:space-y-9">
+            <h1 className="text-2xl md:text-4xl font-inter md:max-w-[50vw] leading-9 font-semibold">
+              Mentorship can help you embrace your potential!
+            </h1>
+            <p className="text-lg md:text-xl md:max-w-[40vw]">
+              We all are already abundant. We just need a mentor to help us
+              realise it.
+            </p>
+            <Button />
+          </div>
         </div>
-    )
-}
+      </section>
+    </div>
+  );
+};
 
-export default HeroSection
+export default HeroSection;

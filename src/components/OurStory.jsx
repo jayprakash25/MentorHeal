@@ -1,7 +1,7 @@
 const OurStory = () => {
     return (
         <div className='m-8 grid grid-cols-1 md:grid-cols-2 items-center lg:gap-56'>
-        <div className='grid grid-cols-1   gap-8 md:gap-32'>
+        <div className='grid grid-cols-1   gap-8 md:gap-8'>
         <div className='flex flex-col gap-2'>
           <h1 className='text-2xl font-inter text-[#A5D570]'>OUR STORY</h1>
           <p className='font-inter text-[22px] leading-[26px] w-[324px] '>We’re building the economic infrastructure for the internet. Businesses of every size.</p>
