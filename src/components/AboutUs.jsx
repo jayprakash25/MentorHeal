@@ -10,8 +10,6 @@ const AboutUs = () => {
  
   return (
     <section>
-    
-      
 
     {/* Herosection........ */}
 
