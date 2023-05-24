@@ -5,6 +5,7 @@ import Footer from './Footer';
 import Section9 from './Section9';
 import HeroSection from './HeroSection';
 import Why from './Why';
+import Wellness from './Wellness';
 
 
 const HomePage = () => {
@@ -24,6 +25,7 @@ const HomePage = () => {
 <Card/>
 </section>
 <Why/>
+<Wellness/>
 <Form/>
 <Section9/>
 <Footer/>
