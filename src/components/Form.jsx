@@ -536,19 +536,20 @@ const Form = () => {
             </svg>
           </div>
         </div>
+        <form action="https://formspree.io/f/xgebbyyq" method="post">
         <div className="">
           <div>
             <span className="uppercase text-sm text-gray-600 font-bold">Full Name</span>
             <input className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-              type="text" placeholder=""/>
+              name='Name'type="text" placeholder=""/>
           </div>
           <div className="mt-8">
             <span className="uppercase text-sm text-gray-600 font-bold">Email</span>
             <input className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-              type="text"/>
+             name='Email' type="text"/>
           </div>
           <div className="mt-8">
-            <span className="uppercase text-sm text-gray-600 font-bold">Message</span>
+            <span className="uppercase text-sm text-gray-600 font-bold" name='Message'>Message</span>
             <textarea
               className="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
           </div>
@@ -559,6 +560,7 @@ const Form = () => {
             </button>
           </div>
         </div>
+        </form>
       </div>
     </div>
     </div>
