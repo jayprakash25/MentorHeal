@@ -1,4 +1,3 @@
-import React from "react";
 
 const Tagline = () => {
     return (
@@ -9,7 +8,7 @@ const Tagline = () => {
             <h1 className=" text-[#E27066]"> life mystery </h1>
             </div>
             <div className="grid  justify-items-end">
-                <p className="text-[12px] md:text-[13px] font-poppins leading-[16px] max-w-[445px]">We believe in the power of holistic growth and development. From personal and professional growth, to physical and emotional well-being, we believe that these elements are crucial to living a fulfilling and successful life.</p>
+                <p className="text-[12px] md:text-lg  leading-5 px-2 max-w-[445px]">We believe in the power of holistic growth and development. From personal and professional growth, to physical and emotional well-being, we believe that these elements are crucial to living a fulfilling and successful life.</p>
             </div>
 
         </div>

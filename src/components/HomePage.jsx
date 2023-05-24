@@ -1,4 +1,3 @@
-import React from 'react';
 import Tagline from './Tagline';
 import {Card, FirstCard} from './Card';
 import Form from './Form';

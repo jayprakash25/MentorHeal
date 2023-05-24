@@ -1,4 +1,3 @@
-import React from "react";
 import image1 from "../assets/images/image1.png";
 import image2 from "../assets/images/image2.png";
 import image3 from "../assets/images/image3.png";
@@ -15,7 +14,7 @@ const WhyCard = ({ image, content }) => {
     <div className="items-center flex-col flex m-auto">
       <img className="w-[80%] lg:w-[230px]" src={image} alt="" />
 
-      <h1 className="text-[18px] lg:text-[26px] font-bold p-4 text-center">
+      <h1 className="text-[18px] lg:text-lg font- p-4 text-center">
         {content}
       </h1>
     </div>
