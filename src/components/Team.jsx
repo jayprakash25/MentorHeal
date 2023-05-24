@@ -8,12 +8,9 @@ const Team = () => {
         </div>
         <div className="md:grid flex flex-col justify-center   md:grid-cols-3  items-center m-8 gap-4 ">
 
-        <TeamCard name = "James Bond" role="Developer"/>
-        <TeamCard name = "James Bond" role="Developer"/>
-        <TeamCard name = "James Bond" role="Developer"/>
-        <TeamCard name = "James Bond" role="Developer"/>
-        <TeamCard name = "James Bond" role="Developer"/>
-        <TeamCard name = "James Bond" role="Developer"/>
+        
+        {Array(6).fill(null).map((index) => <TeamCard key={index} name = "James Bond" role="Developer" />)}
+
        
 
         </div>

@@ -1,7 +1,10 @@
 import health from '../assets/images/health.png'
+import {data} from '../utils/data'
 
+console.log(data);
 export const Card = () => {
     return (
+      
         <div className='flex justify-center'>
         <div className="w-[325px]  bg-[#F3F7F5] rounded-[30px] flex flex-col items-center gap-5 pb-10">
 
@@ -24,8 +27,8 @@ export const FirstCard=()=>{
       <img className="object-cover object-center rounded-lg sm:ml-20" alt="hero" src="https://i.ibb.co/ssvmKXG/image-1.png"/>
       </div>
     <div className="lg:flex-grow lg:w-1/2 lg:pl-  flex flex-col lg:items-start  items-center text-center ">
-      <h1 className="title-font sm:text-4xl text-3xl mb-4 font-bold text-black ">How will mentorship help you? </h1>
-      <p className="mb-8 leading-relaxed lg:text-left">Through the guidance and support of a mentor, individuals can gain valuable insights, develop new skills, and overcome obstacles that they may have otherwise struggled with on their own. Whether in business, personal life, or any other aspect of life, mentorship provides a unique opportunity for individuals to receive personalized feedback, advice, and support from someone who has been through similar experiences. By fostering a positive and collaborative relationship, mentorship can help individuals gain confidence, increase their self-awareness, and achieve their full potential. it.</p>
+      <h1 className="title-font sm:text-4xl text-3xl mb-4 font-bold text-black ">{data?.content?.home[0]?.cardhead}</h1>
+      <p className="mb-8 leading-relaxed lg:text-left">{data?.content?.home[0]?.card}</p>
     </div>
   </div>
 </section>
