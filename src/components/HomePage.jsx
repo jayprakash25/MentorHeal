@@ -14,7 +14,7 @@ const HomePage = () => {
       <Card />
       <Why />
       <Form />
-      <Section9 />
+      <Section9/>
     </>
   );
 };

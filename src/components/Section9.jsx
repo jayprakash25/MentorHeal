@@ -1,7 +1,7 @@
 const Section9 = () => {
   return (
     <div className="py-24">
-      <section className="flex flex-col md:flex-row md:items-center md:justify-around space-y-7 text-center md:space-y-0 ">
+      <section className="flex flex-col lg:flex-row md:items-center md:justify-around space-y-7 text-center lg:space-y-0 ">
         <div className="text-xl  md:text-2xl">
           <h1>
             Ready to make a leap to the best of you? Be the change you wish to

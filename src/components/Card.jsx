@@ -1,37 +1,57 @@
 import health from "../assets/images/health.png";
+import career from "../assets/images/career.png";
+import descisions from "../assets/images/decisions.png";
+import entrepreneur from "../assets/images/entrepreneur.png";
+import learning from "../assets/images/learning.png";
+import finance from "../assets/images/finance.png";
+import relation from "../assets/images/relation.png";
+import skills from "../assets/images/skills.png";
 
 export const Card = () => {
   const Carddata = [
     {
       image: health,
-      Tittle: "Health",
+      Title: "Health",
       Para: "   We believe in the power of holistic growth and development. From personal and professional growth, to physical and emotional well-being, we believe that these elements are crucial to living a fulfilling life.",
     },
     {
-      image: health,
-      Tittle: "Health",
-      Para: "   We believe in the power of holistic growth and development. From personal and professional growth, to physical and emotional well-being, we believe that these elements are crucial to living a fulfilling life.",
+      image: career,
+      Title: "Career",
+      Para: " A fulfilling and satisfying career provides a sense of purpose and financial stability.",
     },
     {
-      image: health,
-      Tittle: "Health",
-      Para: "   We believe in the power of holistic growth and development. From personal and professional growth, to physical and emotional well-being, we believe that these elements are crucial to living a fulfilling life.",
+      image: learning,
+      Title: "Learning",
+      Para: "Continual learning and growth help individuals stay current and prepared for new opportunities.",    
     },
     {
-      image: health,
-      Tittle: "Health",
-      Para: "   We believe in the power of holistic growth and development. From personal and professional growth, to physical and emotional well-being, we believe that these elements are crucial to living a fulfilling life.",
-    },
+      image: skills,
+      Title: "Skills",
+      Para: " Developing new skills and honing existing ones leads to increased self-confidence and personal growth.",   
+     },
     {
-      image: health,
-      Tittle: "Health",
-      Para: "   We believe in the power of holistic growth and development. From personal and professional growth, to physical and emotional well-being, we believe that these elements are crucial to living a fulfilling life.",
-    },
+      image: descisions,
+      Title: "Decisions",
+      Para: " Making informed and deliberate decisions helps individuals achieve their goals and live the life they desire.",
+        },
     {
-      image: health,
-      Tittle: "Health",
-      Para: "   We believe in the power of holistic growth and development. From personal and professional growth, to physical and emotional well-being, we believe that these elements are crucial to living a fulfilling life.",
-    },
+      image: relation,
+      Title: "Relationships",
+      Para: "   Strong relationships with family and friends provide support, love, and a sense of community.",
+     },
+
+     {
+      image: entrepreneur,
+      Title: "Entrepreneurship",
+      Para: "Entrepreneurship provides individuals with the opportunity to turn their ideas and passions into reality.",
+     },
+     {
+      image: finance,
+      Title: "Financial Literacy",
+      Para: "Understanding how to manage and grow personal finances is essential for financial security and stability.",
+     }
+
+
   ];
 
   return (
@@ -40,9 +60,9 @@ export const Card = () => {
         return (
           <>
             <div key={index} className="flex justify-center">
-              <div className="max-w-[80vw] shadow-md  bg-[#F3F7F5] rounded-2xl flex flex-col items-center space-y-6 p-5">
-                <img src={item.image} className="bg-white py-2 rounded-full" />
-                <h1 className="text-3xl font-semibold">{item.Tittle}</h1>
+              <div className="max-w-[80vw] shadow-md  bg-[#F3F7F5] rounded-2xl flex flex-col items-center space-y-5 p-5">
+                <img src={item.image} className="bg-white py-2 rounded-full w-20 h-20 mt-4" />
+                <h1 className="text-3xl font-semibold">{item.Title}</h1>
                 <p className="text-center text-sm leading-6">{item.Para}</p>
                 <p className="font-poppins cursor-pointer text-lg text-[#E27066]">
                   Read More
@@ -76,7 +96,7 @@ export const FirstCard = () => {
           {/* image */}
           <div className="my-5 md:my-0">
             <img
-              className="md:max-w-[20vw] max-w-sm rounded-lg"
+              className="md:max-w-[20vw]  rounded-lg"
               alt="hero"
               src="https://i.ibb.co/ssvmKXG/image-1.png"
             />
