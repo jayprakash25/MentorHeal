@@ -16,19 +16,19 @@ const Data = [
   },
   {
     image: image3,
-    Tittle: "One on One Mentorship",
-  },
-  {
-    image: image4,
     Tittle: "Experienced On-Site Mentors",
   },
   {
-    image: image5,
+    image: image4,
     Tittle: "Confidential Conversations",
   },
   {
+    image: image5,
+    Tittle: "Commutiy Support",
+  },
+  {
     image: image6,
-    Tittle: "Community Support",
+    Tittle: "Authentic Guidance",
   },
 ];
 
