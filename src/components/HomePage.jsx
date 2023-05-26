@@ -1,9 +1,9 @@
 import Tagline from "./Tagline";
 import { Card, FirstCard } from "./Card";
 import Form from "./Form";
-import Section9 from "./Section9";
 import HeroSection from "./HeroSection";
 import Why from "./Why";
+import Appointment from "./Appointment";
 
 const HomePage = () => {
   return (
@@ -14,7 +14,7 @@ const HomePage = () => {
       <Card />
       <Why />
       <Form />
-      <Section9/>
+      <Appointment/>
     </>
   );
 };
