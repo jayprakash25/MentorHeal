@@ -3,8 +3,8 @@ import Hero from "../assets/images/Hero.png";
 
 const HeroSection = () => {
   return (
-    <div className="">
-      <section className="px-5">
+    <div className="pt-20">
+      <section className="px-5 ">
         <div className=" bg-[#F3F7F5] flex flex-col justify-between md:flex-row md:items-center my-5 md:px-5">
           <div className="mx-auto py-4">
           <img className="max-w-sm md:w-[35vw]" src={Hero} alt="hero.png" />

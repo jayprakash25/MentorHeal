@@ -5,7 +5,7 @@ import heroweb from "../assets/images/Heroweb.png"
 
 const HeroAbout = () => {
     return (
-        <div className='bg-[#F3F7F5] mx-8  flex flex-col-reverse md:flex-row  items-center my-8 '>
+        <div className='bg-[#F3F7F5] mx-8  flex flex-col-reverse md:flex-row  items-center pt-20 '>
         <div className="flex flex-col items-center ">
         <h1 className='font-poppins text-xl md:text-4xl lg:text-5xl leading-9 md:leading-[50px] lg:leading-[65px] lg:w-[573px] text-center py-4 md:pt-16'>We're changing the whole game.</h1>
         <div className='font-poppins flex gap-2 md:gap-4 pb-8 md:pb-0 md:my-5 text-[11px]  items-center'>

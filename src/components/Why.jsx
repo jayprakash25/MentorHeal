@@ -34,7 +34,7 @@ const Data = [
 
 const Why = () => {
   return (
-    <div className="bg-[#F3F7F5] m-8  p-8 flex flex-col items-center justify-center">
+    <div className="bg-[#F3F7F5] mx-8 p-8 flex flex-col items-center justify-center">
       <h1 className="text-3xl md:text-4xl font-semibold">Why Mentorship?</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 justify-center place-items-center my-10 text-center gap-16">
       {Data.map((item, index) => {

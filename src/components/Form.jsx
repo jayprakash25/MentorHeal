@@ -3,7 +3,7 @@ const Form = () => {
   return (
     <div>
       
-<div className=" bg-[#ffffff]  text-gray-100 px-8 py-12">
+<div className=" bg-[#ffffff]  text-gray-100 px-8 ">
       <div className="text-center w-full">
         <svg className="text-gray-100 h-8 mx-auto"  viewBox="0 0 150 29" version="1.1"
           xmlns="http://www.w3.org/2000/svg" >

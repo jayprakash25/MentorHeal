@@ -6,8 +6,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 const NavBar = () => {
   const [toggle, setToggle] = useState(false);
   return (
-    <nav>
-      <div className="flex justify-between items-center px-9 py-3.5 gap-4">
+    <nav className="fixed w-screen bg-white ">
+      <div className="flex  justify-between items-center px-9 py-3.5 gap-4">
         <div>
           <Link
             to="/"
@@ -56,7 +56,7 @@ const NavBar = () => {
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6  bg-[#F3F7F5] absolute top-20 right-0 mx- my-2 min-w-[140px] z-10 rounded-l-lg h-screen`}
+            } p-6  bg-[#F3F7F5] absolute top-5  items-center justify-center mt-10 `}
           >
             <ul className="list-none flex lg:hidden flex-col  gap-6 ">
               <li className="cursor-pointer hover:text-zinc-400  transition ease-in-out duration-300  ">
