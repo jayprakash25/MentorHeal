@@ -31,7 +31,7 @@ const NavBar = ({Scrolltoref}) => {
         <div className=" hidden lg:flex items-center ">
           <ul className="list-none flex flex-row  items-center md:text-sm font-semibold space-x-4 mr-6">
             <li className="cursor-pointer hover:text-[#E27066]  transition ease-in-out duration-300">
-              MentorshipOptions
+              Mentorship-Options
             </li>
             <li className="cursor-pointer hover:text-[#E27066]  transition ease-in-out duration-300">
               How it works

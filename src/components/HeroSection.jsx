@@ -1,4 +1,3 @@
-import Button from "./Button";
 import img1 from "../assets/images/img1.svg";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
@@ -27,7 +26,7 @@ const  HeroSection = () => {
             </h1>
             <p className="text-lg md:text-xl md:max-w-[40vw]">
               We all are already abundant. We just need a mentor to help us
-              realise it. Discover Your purpose.
+              realize it. Discover Your purpose.
             </p>
             <button className='border-[1px] hover:bg-[#E27066] hover:border-[#E27066] hover:text-white ease-in-out duration-500 font-semibold text-sm border-zinc-600 px-5 py-2 rounded-full'>
               Get Started
