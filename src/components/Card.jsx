@@ -1,67 +1,27 @@
-import health from "../assets/images/health.png";
-import career from "../assets/images/career.png";
-import descisions from "../assets/images/decisions.png";
-import entrepreneur from "../assets/images/entrepreneur.png";
-import learning from "../assets/images/learning.png";
-import finance from "../assets/images/finance.png";
-import relation from "../assets/images/relation.png";
-import skills from "../assets/images/skills.png";
-
+import { Link } from "react-router-dom";
+import Carddata from "./Data";
 export const Card = () => {
-  const Carddata = [
-    {
-      image: health,
-      Title: "Health",
-      Para: "   We believe in the power of holistic growth and development. From personal and professional growth, to physical and emotional well-being, we believe that these elements are crucial to living a fulfilling life.",
-    },
-    {
-      image: career,
-      Title: "Career",
-      Para: " A fulfilling and satisfying career provides a sense of purpose and financial stability.",
-    },
-    {
-      image: learning,
-      Title: "Learning",
-      Para: "Continual learning and growth help individuals stay current and prepared for new opportunities.",    
-    },
-    {
-      image: skills,
-      Title: "Skills",
-      Para: " Developing new skills and honing existing ones leads to increased self-confidence and personal growth.",   
-     },
-    {
-      image: descisions,
-      Title: "Decisions",
-      Para: " Making informed and deliberate decisions helps individuals achieve their goals and live the life they desire.",
-        },
-    {
-      image: relation,
-      Title: "Relationships",
-      Para: "   Strong relationships with family and friends provide support, love, and a sense of community.",
-     },
-
-     {
-      image: entrepreneur,
-      Title: "Entrepreneurship",
-      Para: "Entrepreneurship provides individuals with the opportunity to turn their ideas and passions into reality.",
-     },
-     {
-      image: finance,
-      Title: "Financial Literacy",
-      Para: "Understanding how to manage and grow personal finances is essential for financial security and stability.",
-     }
-
-
-  ];
-
   return (
-    <div className="flex flex-col items-center  my-16 justify-center gap-y-5 md:grid grid-cols-3 gap-6 md:px-5">
+    <div className="flex flex-col items-center  my-16 justify-center gap-5 md:grid grid-cols-3  md:px-5">
       {Carddata.map((item, index) => {
         return (
-          <>
-            <div key={index} className="flex justify-center">
-              <div className="max-w-[80vw] shadow-md  bg-[#F3F7F5] rounded-2xl flex flex-col items-center space-y-5 p-5">
-                <img src={item.image} className="bg-white py-2 rounded-full w-20 h-20 mt-4" />
+          <Link
+            to={`/${item.Title}`}
+            state={{
+              Tittle: item.Title,
+              Background: item.Background,
+              Blog: item.Blog,
+            }}
+          >
+            <div
+              key={index}
+              className="flex justify-center hover:scale-105 duration-300 ease-in-out cursor-pointer"
+            >
+              <div className="max-w-[80vw] md:w-[30vw] shadow-sm border-[0.3px] border-gray-200 rounded-lg flex flex-col items-center space-y-5 p-5">
+                <img
+                  src={item.image}
+                  className="bg-white py-2 rounded-full w-20 h-20 mt-4"
+                />
                 <h1 className="text-3xl font-semibold">{item.Title}</h1>
                 <p className="text-center text-sm leading-6">{item.Para}</p>
                 <p className="font-poppins cursor-pointer text-lg text-[#E27066]">
@@ -69,7 +29,7 @@ export const Card = () => {
                 </p>
               </div>
             </div>
-          </>
+          </Link>
         );
       })}
     </div>
@@ -78,13 +38,14 @@ export const Card = () => {
 
 export const FirstCard = () => {
   return (
-    <div className="px-5 ">
-      <section className=" my-10   bg-[#F3F7F5] ">
+    <div className="px-4 ">
+      <section className=" my-16 ">
         <div className=" md:flex md:flex-row-reverse p-7 md:justify-around  items-center md:space-x-5 md:px-5">
           {/* text */}
           <div className="space-y-8 flex py-5 flex-col text-center md:text-left order-2">
             <h1 className="text-2xl md:text-4xl md:max-w-[50vw] leading-8 font-semibold">
-              How will mentorship help you?
+              How will <span className="text-[#E27066]">Mentorship</span> help
+              you?
             </h1>
             <p className="text-sm md:max-w-[50vw] md:text-lg leading-6 md:leading-7">
               Through the guidance and support of a mentor, individuals can gain

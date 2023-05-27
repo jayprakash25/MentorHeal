@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import image1 from "../assets/images/image1.png";
 import image2 from "../assets/images/image2.png";
 import image3 from "../assets/images/image3.png";
@@ -34,17 +35,29 @@ const Data = [
 
 const Why = () => {
   return (
-    <div className="bg-[#F3F7F5] mx-8 p-8 flex flex-col items-center justify-center">
-      <h1 className="text-3xl md:text-4xl font-semibold">Why Mentorship?</h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 justify-center place-items-center my-10 text-center gap-16">
-      {Data.map((item, index) => {
-        return (
-          <div className="space-y-5" key={index}>
-            <img src={item.image}  className="max-w-sm"/>
-            <h1>{item.Tittle}</h1>
-          </div>
-        );
-      })}
+    <div className="bg-[#] mx-8 p-8 flex flex-col items-center justify-center">
+      <h1 className="text-3xl md:text-5xl font-semibold">
+        Why{" "}
+        <span
+          className="text-[#E27066] 
+      "
+        >
+          Mentorship?
+        </span>
+      </h1>
+      <div className="grid grid-cols-1 md:grid-cols-3 justify-center place-items-center my-20 text-center gap-16">
+        {Data.map((item, index) => {
+          return (
+          
+            <div
+              className="space-y-5 hover:scale-105 duration-300 ease-in-out"
+              key={index}
+            >
+              <img src={item.image} className="max-w-sm" />
+              <h1>{item.Tittle}</h1>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

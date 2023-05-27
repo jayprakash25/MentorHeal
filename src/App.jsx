@@ -1,16 +1,18 @@
-import NavBar from './components/NavBar'
-import { Outlet } from 'react-router-dom'
-import Footer from './components/Footer'
+import { Route, Routes } from "react-router-dom";
+import Home from "./components/Home";
+import AboutUs from "./components/AboutUs";
+import ReadFull from "./components/ReadFull";
 
 const App = () => {
   return (
-    <div>
-      <NavBar/>
-      <Outlet/>
-      <Footer/>
-      
-    </div>
-  )
-}
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/:id" element={<ReadFull />} />
+      </Routes>
+    </>
+  );
+};
 
-export default App
+export default App;

@@ -1,21 +1,33 @@
 import Button from "./Button";
-import Hero from "../assets/images/Hero.png";
+import img1 from "../assets/images/img1.svg";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+import { useEffect } from "react";
+// ..
 
-const HeroSection = () => {
+
+const  HeroSection = () => {
+  useEffect(()=>{
+
+    AOS.init();
+  },[])
+
+
   return (
-    <div className="pt-20">
+    <div className="pt-36">
       <section className="px-5 ">
-        <div className=" bg-[#F3F7F5] flex flex-col justify-between md:flex-row md:items-center my-5 md:px-5">
-          <div className="mx-auto py-4">
-          <img className="max-w-sm md:w-[35vw]" src={Hero} alt="hero.png" />
+        <div className="flex flex-col justify-between md:flex-row md:items-center my-5 md:px-5">
+          <div data-aos="fade-left"  className="mx-auto py-4 animate__animated animate__fadeInLeft">
+            <img className="max-w-sm md:w-[44vw]" src={img1} alt="hero.png" />
           </div>
-          <div className="flex flex-col   justify-between items-center md:items-start px-5 py-8 space-y-6 md:space-y-9">
-            <h1 className="text-2xl md:text-4xl font-inter md:max-w-[50vw] leading-9 font-semibold">
-              Mentorship can help you embrace your potential!
+          <div className="flex flex-col animate__animated animate__fadeInRight justify-between items-center md:items-start px-5 py-8 space-y-6 md:space-y-9">
+            <h1 className="text-2xl md:text-4xl md:max-w-[40vw] leading-10 font-semibold">
+              <span className="text-[#E27066]">Mentorship</span> can help you
+              embrace your potential!
             </h1>
             <p className="text-lg md:text-xl md:max-w-[40vw]">
               We all are already abundant. We just need a mentor to help us
-              realise it.
+              realise it. Discover Your purpose.
             </p>
             <Button />
           </div>

@@ -28,7 +28,7 @@ const AboutUs = () => {
     <OurVision/>
 
     {/* Team section...... */}
-    <Team/>
+    {/* <Team/> */}
     </section>
 
   )

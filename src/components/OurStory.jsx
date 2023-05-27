@@ -3,7 +3,7 @@ const OurStory = () => {
         <div className='m-8 grid grid-cols-1 md:grid-cols-2 items-center lg:gap-56'>
         <div className='grid grid-cols-1   gap-8 md:gap-8'>
         <div className='flex flex-col gap-2'>
-          <h1 className='text-2xl font-inter text-[#A5D570]'>OUR STORY</h1>
+          <h1 className='text-2xl font-inter text-[#E27066]'>OUR STORY</h1>
           <p className='font-inter text-[22px] leading-[26px] w-[324px] '>We’re building the economic infrastructure for the internet. Businesses of every size.</p>
           </div>
           <div className='flex gap-6 items-center  '>
@@ -13,7 +13,7 @@ const OurStory = () => {
         </div>
   
         <div className='flex flex-col gap-10 mt-12 md:mt-0'>
-  
+
         <div className='flex flex-col gap-2'> 
           <h1 className='font-semibold text-[20px] leading-6'>1. 6 years of intense research</h1>
           <p className='text-[15px] leading-5 w-[325px] lg:w-[480px] text-[#7c7c7c]'>Our founders had a solution, This is your Email marketing specialist, newsletter service and campaign manager, all rolled into one.</p>
