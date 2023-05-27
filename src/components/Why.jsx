@@ -42,7 +42,7 @@ const Why = () => {
           className="text-[#E27066] 
       "
         >
-          Mentorship?
+          MentorThrive?
         </span>
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-3 justify-center place-items-center my-20 text-center gap-16">

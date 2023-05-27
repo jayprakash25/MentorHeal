@@ -3,7 +3,7 @@ import heroweb from "../assets/images/Heroweb.png";
 import 'animate.css';
 const HeroAbout = () => {
   return (
-    <div className="bg-[#F3F7F5] mx-8  flex flex-col-reverse md:flex-row  items-center pt-20 ">
+    <div className="bg-[#F3F7F5] m-8  flex flex-col-reverse md:flex-row  items-center pt-14 ">
       <div className="flex flex-col items-center ">
         <h1 className="font-poppins text-xl md:text-4xl lg:text-5xl leading-9 md:leading-[50px] lg:leading-[65px] lg:w-[573px] text-center py-4 md:pt-16">
           We're <span className="text-[#E27066]">changing</span> the whole game.

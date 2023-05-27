@@ -10,7 +10,7 @@ const NavBar = ({Scrolltoref}) => {
   const [dropdown, setdropdown] = useState(false);
 
   return (
-    <nav className="fixed w-screen bg-white">
+    <nav className="fixed w-screen bg-white z-50">
       <div className="flex justify-between items-center px-9 py-3.5 gap-4">
         <div>
           <Link
