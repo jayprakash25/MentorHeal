@@ -4,7 +4,7 @@ const Tagline = () => {
       <div className="flex flex-col md:flex-row md:items-center md:justify-around space-y-8 text-center">
         {/* head */}
         <div className="text-3xl md:text-5xl space-y-2 ">
-          <h1>The 8 essential elements of </h1>
+          <h1>The 9 essential elements of </h1>
           <h1 className="text-[#E27066]">life mystery </h1>
         </div>
         {/* para */}

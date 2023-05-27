@@ -36,6 +36,12 @@ const Footer = () => {
                     <li>Health</li>
                     <li>Career</li>
                     <li>Learning</li>
+                    <li>Skills</li>
+                    <li>Decisions</li>
+                    <li>Relationships</li>
+                    <li>Entrepreneurship</li>
+                    <li>Financial Literacy</li>
+                    <li>Spirituality</li>
                   </ul>
                 </div>
                 <div className="w-full lg:w-4/12 px-4">

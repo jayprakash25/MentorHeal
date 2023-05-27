@@ -20,7 +20,7 @@ export const Card = () => {
               <div className="max-w-[80vw] md:w-[30vw] shadow-sm border-[0.3px] border-gray-200 rounded-lg flex flex-col items-center space-y-5 p-5">
                 <img
                   src={item.image}
-                  className="bg-white py-2 rounded-full w-20 h-20 mt-4"
+                  className="bg-white py-2 rounded-full w-24 mt-4"
                 />
                 <h1 className="text-3xl font-semibold">{item.Title}</h1>
                 <p className="text-center text-sm leading-6">{item.Para}</p>
