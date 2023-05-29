@@ -29,7 +29,8 @@ export default function Home() {
       <Card />
       <Why />
       <Transformation/>
-      <Banner/>
+      {/* use when there r events..... */}
+      {/* <Banner/> */}
       <div ref={formref}>
       <Form />
       </div>

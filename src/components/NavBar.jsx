@@ -9,6 +9,10 @@ const NavBar = ({Scrolltoref}) => {
 
   const [dropdown, setdropdown] = useState(false);
 
+  const [more, setMore] = useState(false);
+
+  const options = ["Career", "Learning", "Skills", "Decisions", "Relationships", "Entrepreneurship", "Financial Literacy", "Spirituality"];
+
   return (
     <nav className="fixed w-screen bg-white z-50">
       <div className="flex justify-between items-center px-9 py-3.5 gap-4">
@@ -30,19 +34,50 @@ const NavBar = ({Scrolltoref}) => {
         </div>
         <div className=" hidden lg:flex items-center ">
           <ul className="list-none flex flex-row  items-center md:text-sm font-semibold space-x-4 mr-6">
-            <li className="cursor-pointer hover:text-[#E27066]  transition ease-in-out duration-300">
-              Mentorship-Options
+
+           {/* dropdown web..... */}
+           <div className="flex flex-col">
+            <li onClick={() => {
+              setdropdown(!dropdown)
+            }} className="cursor-pointer hover:text-[#E27066]  transition ease-in-out duration-300">
+              Mentorship-Options ▼
+              {/* <ArrowDropDownIcon/> */}
             </li>
+
+
+            {/* options....... */}
+            <div className={`${dropdown ? 'block' : 'hidden'} absolute bg-[#F3F2F7] p-4 mt-8 rounded-lg`}>
+            <ul className="space-y-3 font-normal">
+              {options.map((option,index) => {
+                return (
+                  <li className="cursor-pointer hover:text-[#E27066]  transition ease-in-out duration-300" key={index}>{option}</li>
+                )
+              })}
+            </ul>
+            </div>
+            </div>
+
             <li className="cursor-pointer hover:text-[#E27066]  transition ease-in-out duration-300">
               How it works
             </li>
 
-            <Link to="/about">
-              <li className="cursor-pointer hover:text-[#E27066] transition ease-in-out duration-300">
-                About us
-              </li>
-            </Link>
+          {/* More...... */}
+             <div>
+             <li onClick={() => {
+              setMore(!more)
+            }} className="cursor-pointer hover:text-[#E27066]  transition ease-in-out duration-300">
+              More ▼
+            </li>
 
+             <div className={`${more ? 'block' : 'hidden'} absolute bg-[#F3F2F7] p-2 mt-3 rounded-lg`}> 
+            <ul>
+              <li className="cursor-pointer hover:text-[#E27066] transition ease-in-out duration-300">
+              <Link to="/about"> About us </Link>
+              </li>
+              </ul>
+            
+            </div>
+            </div>
             <li onClick={Scrolltoref} className="cursor-pointer hover:text-[#E27066] transition ease-in-out duration-300">
               Join as Mentor
             </li>

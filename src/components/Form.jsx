@@ -47,7 +47,7 @@ const Form = () => {
                   If you have any concern please feel free to contact us by
                   filling up the form.
                 </h1>
-                <h2 className="font-semibold">support@mentorrnow.com</h2>
+                <h2 className="font-semibold">rohit.mentorrnow@gmail.com</h2>
               </div>
             </div>
             <div className="mt-8 text-center">

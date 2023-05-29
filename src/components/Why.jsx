@@ -35,7 +35,7 @@ const Data = [
 
 const Why = () => {
   return (
-    <div className="bg-[#] mx-8 p-8 flex flex-col items-center justify-center">
+    <div className="bg-[#] mx-8 p-8 flex flex-col items-center justify-center bg-[#F3F2F7] rounded-lg">
       <h1 className="text-3xl md:text-5xl font-semibold">
         Why{" "}
         <span
@@ -53,7 +53,7 @@ const Why = () => {
               className="space-y-5 hover:scale-105 duration-300 ease-in-out"
               key={index}
             >
-              <img src={item.image} className="max-w-sm" />
+              <img src={item.image} className="max-w-[230px]" />
               <h1>{item.Tittle}</h1>
             </div>
           );

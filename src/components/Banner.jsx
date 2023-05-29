@@ -1,11 +1,10 @@
-import banner from "../assets/images/banner.png"
 
 const Banner = () => {
     return (
         <div className="m-8 mb-0 pt-10 flex flex-col space-y-16">
     <h1 className="font-bold text-3xl md:text-5xl text-center">Our events, workshops, & seminars.</h1>
 
-<img src={banner} className="h-96"/>
+<img src="" className="h-96"/>
         </div>
 
     )

@@ -6,6 +6,7 @@ export const Card = () => {
       {Carddata.map((item, index) => {
         return (
           <Link
+          key={index}
             to={`/${item.Title}`}
             state={{
               Tittle: item.Title,
