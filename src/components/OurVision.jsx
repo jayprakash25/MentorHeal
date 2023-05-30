@@ -5,7 +5,7 @@ const OurVision = () => {
     <div className="grid grid-cols-1 md:grid-cols-2 m-8 items-center md:gap-4 ">
       <img className="w-[369px]" src={ourVision} />
       <div className="mt-8 font-medium  text-[13px] md:text-[16.5px] w-80 lg:text-[20px] lg:w-[562px] text-[#7C7C7C]  ">
-        <h1 className="text-[#E27066] font-bold text-[44px] md:text-[54px] lg:text-[64px] mb-3">
+        <h1 className="text-[#00b8d3] font-bold text-[44px] md:text-[54px] lg:text-[64px] mb-3">
           OUR VISION
         </h1>
         <p>

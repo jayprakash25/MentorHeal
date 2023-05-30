@@ -5,7 +5,7 @@ const Tagline = () => {
         {/* head */}
         <div className="text-3xl md:text-5xl space-y-2 ">
           <h1>The 9 essential elements of </h1>
-          <h1 className="text-[#E27066]">life mystery </h1>
+          <h1 className="text-[#00b8d3]">life mystery </h1>
         </div>
         {/* para */}
         <div className="leading-6 md:max-w-5xl px-5 md:px-3 ">

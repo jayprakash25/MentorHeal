@@ -21,14 +21,14 @@ const  HeroSection = () => {
           </div>
           <div className="flex flex-col animate__animated animate__fadeInRight justify-between items-center md:items-start px-5 py-8 space-y-6 md:space-y-9">
             <h1 className="text-2xl md:text-4xl md:max-w-[40vw] leading-10 font-semibold">
-              <span className="text-[#E27066]">Mentorship</span> can help you
+              <span className="text-[#00b8d3]">Mentorship</span> can help you
               embrace your potential!
             </h1>
             <p className="text-lg md:text-xl md:max-w-[40vw]">
               We all are already abundant. We just need a mentor to help us
               realize it. Discover Your purpose.
             </p>
-            <button className='border-[1px] hover:bg-[#E27066] hover:border-[#E27066] hover:text-white ease-in-out duration-500 font-semibold text-sm border-zinc-600 px-5 py-2 rounded-full'>
+            <button className=' bg-[#00b8d3] text-white  ease-in-out duration-500 font-semibold text-sm border-zinc-600 px-5 py-2 rounded-full'>
               Get Started
             </button>   
           </div>

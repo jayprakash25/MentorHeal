@@ -6,9 +6,9 @@ import HeroSection from "./HeroSection";
 import Why from "./Why";
 import Appointment from "./Appointment";
 import Footer from "./Footer";
+import TeamCard from "./TeamCard";
 import { useRef } from "react";
 import Transformation from "./Transformation";
-import Banner from "./Banner";
 export default function Home() {
 
   const formref = useRef()
@@ -29,6 +29,7 @@ export default function Home() {
       <Card />
       <Why />
       <Transformation/>
+      <TeamCard/>
       {/* use when there r events..... */}
       {/* <Banner/> */}
       <div ref={formref}>

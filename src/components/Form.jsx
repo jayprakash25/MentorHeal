@@ -39,7 +39,7 @@ const Form = () => {
         <div className="max-w-screen-xl mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-white text-gray-900 ">
           <div className="flex flex-col justify-between">
             <div>
-              <h2 className="text-4xl text-[#E27066] lg:text-5xl font-bold leading-tight ">
+              <h2 className="text-4xl text-[#00b8d3] lg:text-5xl font-bold leading-tight ">
                 Reach out to Us!
               </h2>
               <div className="space-y-4 my-8">
@@ -1009,37 +1009,37 @@ const Form = () => {
           <form action="https://formspree.io/f/xgebbyyq" method="post">
             <div className="">
               <div>
-                <span className="uppercase text-sm text-gray-600 font-bold">
+                <span className="uppercase text-sm text-[#8ca1b3] font-bold">
                   Full Name
                 </span>
                 <input
-                  className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                  className="w-full bg-slate-50  mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                   name="Name"
                   type="text"
                   placeholder=""
                 />
               </div>
               <div className="mt-8">
-                <span className="uppercase text-sm text-gray-600 font-bold">
+                <span className="uppercase text-sm text-[#8ca1b3] font-bold">
                   Email
                 </span>
                 <input
-                  className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                  className="w-full bg-gray-50 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                   name="Email"
                   type="text"
                 />
               </div>
               <div className="mt-8">
                 <span
-                  className="uppercase text-sm text-gray-600 font-bold"
+                  className="uppercase text-sm text-[#8ca1b3] font-bold"
                   name="Message"
                 >
                   Message
                 </span>
-                <textarea className="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
+                <textarea className="w-full h-32 bg-gray-50  mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
               </div>
               <div className="mt-8">
-                <button className="uppercase text-sm font-bold tracking-wide bg-[#E27066] text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
+                <button className="uppercase text-sm font-bold tracking-wide bg-[#00b8d3] text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
                   Send Message
                 </button>
               </div>

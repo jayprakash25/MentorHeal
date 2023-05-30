@@ -4,7 +4,7 @@ const OurMission = () => {
   return (
     <div className="flex flex-col-reverse md:flex-row m-8 md:justify-between gap-4">
       <div className="mt-4">
-        <h1 className="font-bold text-[44px] md:text-[54px] text-[#E27066] lg:text-[64px]">
+        <h1 className="font-bold text-[44px] md:text-[54px] text-[#00b8d3] lg:text-[64px]">
           Our Mission
         </h1>
         <p className="text-[#7C7C7C] font-medium leading-6 text-[13px] md:text-[16.5px] lg:text-[20px] md:leading-7 lg:leading-9 w-80 lg:w-[625px]">

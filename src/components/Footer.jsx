@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+
+
 const Footer = () => {
   return (
     <div className="">
@@ -5,16 +8,21 @@ const Footer = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap text-left lg:text-left">
             <div className="w-full lg:w-6/12 px-4  space-y-10 text-black">
-              {/* <h4 className="text-4xl max-w-xl text-gray-800 font-semibold  ">
-                Discover Your Purpose, Embrace
-                <p className="my-3">Your Potential!</p>
-              </h4> */}
-              <img
+            <Link
+            to="/"
+            className="flex"
+            onClick={() => {
+              window.scrollTo(0, 0);
+            }}
+          >
+           <p className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold text-xl">mentorthrive</p>
+          </Link>
+              {/* <img
                 className="w-[200px] mt-2"
                 src="https://i.ibb.co/pr6nQzZ/final-logo.png"
                 alt="final-logo"
                 border="0"
-              />
+              /> */}
             </div>
             <div className="w-full lg:w-6/12 px-4">
               <div className="flex flex-wrap items-top mb-6">

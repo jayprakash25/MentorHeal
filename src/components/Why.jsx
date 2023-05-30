@@ -35,11 +35,11 @@ const Data = [
 
 const Why = () => {
   return (
-    <div className="bg-[#] mx-8 p-8 flex flex-col items-center justify-center bg-[#F3F2F7] rounded-lg">
+    <div className="bg-[#] mx-8 p-8 flex flex-col items-center justify-center  rounded-lg">
       <h1 className="text-3xl md:text-5xl font-semibold">
         Why{" "}
         <span
-          className="text-[#E27066] 
+          className="text-[#00b8d3] 
       "
         >
           MentorThrive?
