@@ -9,31 +9,31 @@ import Footer from "./Footer";
 import TeamCard from "./TeamCard";
 import { useRef } from "react";
 import Transformation from "./Transformation";
+import Events from "./Events";
 export default function Home() {
+  const formref = useRef();
 
-  const formref = useRef()
-
-  const Scrolltoref = ()=>{
+  const Scrolltoref = () => {
     formref.current.scrollIntoView({
-      behaviour: 'smooth '
-    })
-  }
+      behaviour: "smooth ",
+    });
+  };
+
 
 
   return (
     <>
-      <NavBar Scrolltoref={Scrolltoref}/>
-      <HeroSection />
+      <NavBar Scrolltoref={Scrolltoref} />
+      <HeroSection Scrolltoref={Scrolltoref}/>
       <FirstCard />
       <Tagline />
       <Card />
       <Why />
-      <Transformation/>
-      <TeamCard/>
-      {/* use when there r events..... */}
-      {/* <Banner/> */}
+      <Transformation />
+      <TeamCard />
+      <Events />
       <div ref={formref}>
-      <Form />
+        <Form />
       </div>
       <Appointment />
       <Footer />

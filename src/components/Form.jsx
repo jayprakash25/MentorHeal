@@ -39,15 +39,15 @@ const Form = () => {
         <div className="max-w-screen-xl mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-white text-gray-900 ">
           <div className="flex flex-col justify-between">
             <div>
-              <h2 className="text-4xl text-[#00b8d3] lg:text-5xl font-bold leading-tight ">
+              <h2 className="text-4xl bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text  lg:text-5xl font-bold leading-tight ">
                 Reach out to Us!
               </h2>
-              <div className="space-y-4 my-8">
-                <h1>
+              <div className="space-y-4 my-8 text-[#8ca1b3]">
+                <p>
                   If you have any concern please feel free to contact us by
                   filling up the form.
-                </h1>
-                <h2 className="font-semibold">rohit.mentorrnow@gmail.com</h2>
+                </p>
+                <h2 className="font-bold">rohit.mentorrnow@gmail.com</h2>
               </div>
             </div>
             <div className="mt-8 text-center">
@@ -1039,7 +1039,7 @@ const Form = () => {
                 <textarea className="w-full h-32 bg-gray-50  mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
               </div>
               <div className="mt-8">
-                <button className="uppercase text-sm font-bold tracking-wide bg-[#00b8d3] text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
+                <button className="uppercase text-sm font-bold tracking-wide bg-gradient-to-r from-cyan-300 via-cyan-400 to-cyan-400 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
                   Send Message
                 </button>
               </div>

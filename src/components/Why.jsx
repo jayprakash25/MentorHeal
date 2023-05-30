@@ -35,20 +35,16 @@ const Data = [
 
 const Why = () => {
   return (
-    <div className="bg-[#] mx-8 p-8 flex flex-col items-center justify-center  rounded-lg">
+    <div className="bg-gradient-to-r from-[#e8f4ef] to-[#faebe5]  p-8 flex flex-col items-center justify-center  rounded-lg">
       <h1 className="text-3xl md:text-5xl font-semibold">
         Why{" "}
-        <span
-          className="text-[#00b8d3] 
-      "
-        >
+        <span className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold ">
           MentorThrive?
         </span>
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-3 justify-center place-items-center my-20 text-center gap-16">
         {Data.map((item, index) => {
           return (
-          
             <div
               className="space-y-5 hover:scale-105 duration-300 ease-in-out"
               key={index}

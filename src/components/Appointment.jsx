@@ -1,6 +1,6 @@
 const Appointment = () => {
   return (
-    <div className="mt-32 bg-[#00b8d3] py-8 m-10 rounded-lg lg:rounded-full shadow-md">
+    <div  className="mt-32 bg-gradient-to-r from-cyan-500 via-cyan-400 to-cyan-700  py-8 mb-8 shadow-md">
       <section className="flex flex-col lg:flex-row md:items-center md:justify-around space-y-7 text-white text-center lg:space-y-0 ">
        
         {/*-------------------- Text---------------- */}

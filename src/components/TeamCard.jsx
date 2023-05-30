@@ -1,78 +1,76 @@
 import Profile from "../assets/images/profile.png";
 import React from "react";
 
-
-
-
 const TeamCard = () => {
   const teamMembers = [
     {
       id: 1,
       name: "Abhinav Singh",
       position: "CTO",
-      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      imageUrl: Profile,
+      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      imageUrl:
+        "https://images.pexels.com/photos/16756606/pexels-photo-16756606/free-photo-of-man-and-woman-together-in-mountains.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
     {
-        id: 2,
-        name: "Ayush Kulkarni",
-        position: "Founder & CEO",
-        bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      id: 2,
+      name: "Ayush Kulkarni",
+      position: "Founder & CEO",
+      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit..",
+      imageUrl:
+        "https://images.pexels.com/photos/16756606/pexels-photo-16756606/free-photo-of-man-and-woman-together-in-mountains.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
     {
-        id: 3,
-        name: "Ansh Singh",
-        position: "Founder & CEO",
-        bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      id: 3,
+      name: "Ayush Kulkarni",
+      position: "Founder & CEO",
+      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      imageUrl:
+        "https://images.pexels.com/photos/16756606/pexels-photo-16756606/free-photo-of-man-and-woman-together-in-mountains.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
-    {
-        id: 3,
-        name: "Ansh Singh",
-        position: "Founder & CEO",
-        bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    },
-    {
-        id: 3,
-        name: "Ansh Singh",
-        position: "Founder & CEO",
-        bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    },
-    {
-        id: 3,
-        name: "Ansh Singh",
-        position: "Founder & CEO",
-        bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    }
+
     // Add more team members here
   ];
-
   return (
-    <div className="m-8">
-    <h1 className="text-3xl md:text-5xl font-semibold p-8 text-center">Meet your <span className="text-[#00b8b3]">premier advisors</span>, the<span className="text-[#00b8b3]"> leading experts</span>.</h1>
-    <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 p-4 mt-6">
-      {teamMembers.map((member, index) => {
-       
-        return (
+    <div className="mx-8">
+      <h1 className="text-3xl md:text-5xl font-semibold p-8 text-center">
+        Meet your{" "}
+        <span className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent bg-clip-text font-bold">
+          premier advisors
+        </span>
+        , the
+        <span className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold">
+          {" "}
+          leading experts
+        </span>
+      </h1>
+      <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 p-4 mt-6">
+        {teamMembers.map((member, index) => {
+          return (
             <React.Fragment key={index}>
-      <div className="max-w-sm mx-auto rounded overflow-hidden shadow-md hover:shadow-xl transform transition duration-300 hover:scale-105">
-        {/* <img className="" src={member.imageUrl} alt="" /> */}
-        <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2">{member.name}</div>
-          <p className="text-gray-700 text-base">{member.position}</p>
-        </div>
-        <div className="px-6 py-4 pt-1">
-          <p className="text-gray-700 text-base">{member.bio}</p>
-        </div>
+              <div className="max-w-md hover:scale-105 ease-in-out duration-500 cursor-pointer">
+                <img
+                  className="md:w-[30vw] rounded-lg"
+                  src={member.imageUrl}
+                  alt=""
+                />
+                <div className="space-y-2.5 my-3">
+                  <div className="text-xl md:text-2xl bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold">
+                    {member.name}
+                  </div>
+                  <p className="text-cyan-500 font-semibold">
+                    {member.position}
+                  </p>
+                </div>
+                <div className="my-3">
+                  <p className="text-[#8ca1b3]">{member.bio}</p>
+                </div>
+              </div>
+            </React.Fragment>
+          );
+        })}
       </div>
-      </React.Fragment>
-    );
-
-
-      })}
-    </div>
     </div>
   );
 };
-
 
 export default TeamCard;
