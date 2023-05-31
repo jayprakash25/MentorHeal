@@ -1,4 +1,3 @@
-import Profile from "../assets/images/profile.png";
 import React from "react";
 
 const TeamCard = () => {

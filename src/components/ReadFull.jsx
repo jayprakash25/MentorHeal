@@ -6,49 +6,54 @@ import { useLocation, useParams } from "react-router-dom";
 
 export default function ReadFull() {
   const { id } = useParams();
-  console.log(id);
+  // console.log(id);
 
   const data = useLocation();
 
-  console.log(data);
-  const [pdata, setpdata] = useState();
+  const [point, setPoint] = useState(0);
+
+  // console.log(data);
 
   return (
     <>
       <NavBar />
       <div className="pt-20">
         <img src={data.state.Background} className="" alt="" />
-        <h1 className="absolute top-64 text-[#E27066] hidden md:block  md:text-5xl font-semibold left-44 ">
+         <h1 className="absolute top-64 text-[#E27066] hidden md:block  md:text-5xl font-semibold left-44 ">
           {id}
-        </h1>
+         </h1>
       </div>
 
-       <div className=" py-9 md:px-20 px-6 space-y-7">
-      {data.state.Blog.map((item, index) => {
+      <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center px-4 space-x-14 space-y-10 md:space-y-0 py-14">
+      <div className="flex flex-col-reverse md:flex-row lg:flex-col">
+        {data.state.Blog.map((item, index) => {
         return (
           
           <React.Fragment key={index}>
-          <div className="flex justify-between">
            <button key={index}
-
-
             onClick={()=>{
-              if(index == 0){
-                setpdata(item.Points)
-              }
-              
-
+              setPoint(index)
             }}> 
-            
-            
-            <h1 className="text-2xl text-gray-400 font-poppins shadow-md p-4">{item.Tittle.toUpperCase()}</h1></button>
-           <p className={` font-inter max-w-lg`}>{pdata}</p> 
-            </div>
+            <h1 className="text-lg text-gray-400 font-poppins shadow-md p-4">{item.Tittle.toUpperCase()}</h1></button>
+           
           </React.Fragment>
+
         );
       })}
+      </div>
 
-
+      <div className=" max-w-2xl space-y-3"> 
+      <h1 className="font-bold text-xl md:text-2xl lg:text-3xl py-4">{data.state.Blog[point].Tittle}</h1>
+        {data.state.Blog[point].Points.map((item, index) => {
+          return(
+            <React.Fragment key={index}>
+            <div className="flex gap-2">
+          o<p className="font-semibold text-sm md:text-lg">{item.toLowerCase()}</p>
+          </div>
+          </React.Fragment>
+          )
+        })}
+            </div>
        </div>
 
       <Footer />

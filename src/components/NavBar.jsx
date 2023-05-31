@@ -36,6 +36,7 @@ const NavBar = ({ Scrolltoref }) => {
                 onMouseEnter={() => {
                   setdropdown(!dropdown);
                 }}
+               
                 className="cursor-pointer transition ease-in-out duration-300"
               >
                 Mentorship-Options
@@ -98,7 +99,6 @@ const NavBar = ({ Scrolltoref }) => {
                     <Link to="/about"> About us </Link>
                   </li>
                   <li>Contact us</li>
-                  <li>Become a Mentor</li>
                   <li>Testimonials</li>
                 </ul>
               </div>
@@ -107,7 +107,7 @@ const NavBar = ({ Scrolltoref }) => {
               onClick={Scrolltoref}
               className="cursor-pointer transition ease-in-out duration-300"
             >
-              Join as Mentor
+             <Link to="/join"> Join as Mentor</Link>
             </li>
           </ul>
           <Button />
