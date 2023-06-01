@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Carddata from "./Data";
 
 
 const Footer = () => {
@@ -41,7 +42,35 @@ const Footer = () => {
                     Mentorship Options
                   </span>
                   <ul className="text-[#949494] list-unstyled  space-y-4 my-6 cursor-pointer">
-                    <li>Health</li>
+
+
+                  {Carddata.map((item, index) => {
+                    return (
+                      <li
+                        className="cursor-pointer"
+                        key={index}
+                      >
+                        {" "}
+                        <Link
+                          key={index}
+                          to={`/${item.Title}`}
+                          state={{
+                            Tittle: item.Title,
+                            Background: item.Background,
+                            Blog: item.Blog,
+                          }}
+                        >
+                          {item.Title}
+                        </Link>
+                      </li>
+                    );
+                  })}
+
+
+
+
+
+                    {/* <li>Health</li>
                     <li>Career</li>
                     <li>Learning</li>
                     <li>Skills</li>
@@ -49,7 +78,7 @@ const Footer = () => {
                     <li>Relationships</li>
                     <li>Entrepreneurship</li>
                     <li>Financial Literacy</li>
-                    <li>Spirituality</li>
+                    <li>Spirituality</li> */}
                   </ul>
                </div>
                 <div className="w-full lg:w-4/12 px-4">

@@ -36,7 +36,6 @@ const NavBar = ({ Scrolltoref }) => {
                 onMouseEnter={() => {
                   setdropdown(!dropdown);
                 }}
-               
                 className="cursor-pointer transition ease-in-out duration-300"
               >
                 Mentorship-Options
@@ -107,7 +106,7 @@ const NavBar = ({ Scrolltoref }) => {
               onClick={Scrolltoref}
               className="cursor-pointer transition ease-in-out duration-300"
             >
-             <Link to="/join"> Join as Mentor</Link>
+              <Link to="/join"> Join as Mentor</Link>
             </li>
           </ul>
           <Button />
@@ -126,16 +125,49 @@ const NavBar = ({ Scrolltoref }) => {
             } p-6  bg-white shadow-2xl rounded-xl absolute top-5  items-center justify-center mt-10 `}
           >
             <ul className="list-none flex lg:hidden flex-col  gap-4 ">
-              <li className="cursor-pointer transition ease-in-out duration-300  ">
+              <li
+                onClick={() => {
+                  setMore(!more);
+                }}
+                className="cursor-pointer transition ease-in-out duration-300 ">
                 Mentorship
+                <ArrowDropDownIcon />
               </li>
+{/* .........options........ */}
+              <div
+                className={` space-y-4 text-sm ${more ? "block" : "hidden"}`}>
+                <ul className=" font-normal grid gap-3">
+                  {Carddata.map((item, index) => {
+                    return (
+                      <li
+                        className="cursor-pointer   transition ease-in-out duration-300"
+                        key={index}
+                      >
+                        {" "}
+                        <Link
+                          key={index}
+                          to={`/${item.Title}`}
+                          state={{
+                            Tittle: item.Title,
+                            Background: item.Background,
+                            Blog: item.Blog,
+                          }}
+                        >
+                          {item.Title}
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+
               <li className="cursor-pointer transition ease-in-out duration-300 ">
                 How it works
               </li>
 
-              <li className="cursor-pointer transition ease-in-out duration-300 ">
+              {/* <li className="cursor-pointer transition ease-in-out duration-300 ">
                 Assessment
-              </li>
+              </li> */}
 
               <li
                 onClick={() => {
@@ -160,8 +192,9 @@ const NavBar = ({ Scrolltoref }) => {
                   onClick={Scrolltoref}
                   value="cursor-pointer transition ease-in-out duration-300"
                 >
-                  Join As a Mentor
+                  <Link to={"/join"}> Join As a Mentor</Link>
                 </p>
+                <p value="cursor-pointer transition ease-in-out duration-300"></p>
               </div>
             </ul>
           </div>

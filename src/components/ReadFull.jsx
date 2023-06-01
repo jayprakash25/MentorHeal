@@ -19,6 +19,14 @@ export default function ReadFull() {
     Aos.init({duration: 2000});
   },[])
 
+  const location = useLocation(); // import { useLocation } from 'react-router-dom';
+
+useEffect(() => {
+  // Scroll top when location changes
+  window.scrollTo(0, 0);
+}, [location]);
+
+
   return (
     <>
       <NavBar />
