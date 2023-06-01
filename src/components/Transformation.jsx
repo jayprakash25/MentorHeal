@@ -1,7 +1,8 @@
 import { ArrowBackIos } from '@mui/icons-material';
 import { ArrowForwardIos } from '@mui/icons-material';
+import Aos from 'aos';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Transformation = () => {
 
@@ -42,14 +43,19 @@ const nextSlide = () => {
     setSlide(newSlide);
 }
 
-
+  useEffect(()=>{
+    Aos.init({duration: 2000});
+  },[])
     return (
 
         <div className="flex flex-col items-center m-8">
+        <div data-aos = "zoom-in">
         <h1 className='text-3xl md:text-5xl font-semibold py-4'>Our Stories Of <span className='bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold'>Transformation</span></h1>
+        </div>       
         <div className=" mx-auto flex gap-7 md:gap-0  flex-col  md:grid grid-cols-2 p-4">
           {slides.map((testimonial, index) => (
             <div
+              data-aos = "flip-down"
               key={testimonial.id}
               className={`${
                 index === slide ? 'opacity-100 z-10' : 'md:opacity-10  z-0'

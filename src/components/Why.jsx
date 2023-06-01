@@ -5,6 +5,8 @@ import image3 from "../assets/images/image3.png";
 import image4 from "../assets/images/image4.png";
 import image5 from "../assets/images/image5.png";
 import image6 from "../assets/images/image6.png";
+import { useEffect } from "react";
+import Aos from "aos";
 
 const Data = [
   {
@@ -34,18 +36,29 @@ const Data = [
 ];
 
 const Why = () => {
+  useEffect(() => {
+    Aos.init({duration:2000});
+  }, [])
   return (
-    <div className="bg-gradient-to-r from-[#e8f4ef] to-[#faebe5]  p-8 flex flex-col items-center justify-center  rounded-lg">
+    <div 
+    
+    className="bg-gradient-to-r from-[#e8f4ef] to-[#faebe5]  p-8 flex flex-col items-center justify-center  rounded-lg">
+      <div
+      data-aos = "zoom-in-down"
+      >
       <h1 className="text-3xl md:text-5xl font-semibold">
         Why{" "}
         <span className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold ">
           MentorThrive?
         </span>
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 justify-center place-items-center my-20 text-center gap-16">
+      </div>
+      <div 
+      className="grid grid-cols-1 md:grid-cols-3 justify-center place-items-center my-20 text-center gap-16">
         {Data.map((item, index) => {
           return (
             <div
+                  data-aos = 'zoom-in-right'
               className="space-y-5 hover:scale-105 duration-300 ease-in-out"
               key={index}
             >

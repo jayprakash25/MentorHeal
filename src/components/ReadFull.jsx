@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 
 import { useLocation, useParams } from "react-router-dom";
+import Aos from "aos";
 
 export default function ReadFull() {
   const { id } = useParams();
@@ -13,6 +14,10 @@ export default function ReadFull() {
   const [point, setPoint] = useState(0);
 
   // console.log(data);
+
+  useEffect(()=> {
+    Aos.init({duration: 2000});
+  },[])
 
   return (
     <>
@@ -29,20 +34,24 @@ export default function ReadFull() {
         {data.state.Blog.map((item, index) => {
         return (
           
-          <React.Fragment key={index}>
+          <div 
+          data-aos = 'fade-right'
+          key={index}>
            <button key={index}
             onClick={()=>{
               setPoint(index)
             }}> 
             <h1 className="text-lg text-gray-400 font-poppins shadow-md p-4">{item.Tittle.toUpperCase()}</h1></button>
            
-          </React.Fragment>
+          </div>
 
         );
       })}
       </div>
 
-      <div className=" max-w-2xl space-y-3"> 
+      <div 
+      data-aos = 'fade-left'
+      className=" max-w-2xl space-y-3"> 
       <h1 className="font-bold text-xl md:text-2xl lg:text-3xl py-4">{data.state.Blog[point].Tittle}</h1>
         {data.state.Blog[point].Points.map((item, index) => {
           return(
