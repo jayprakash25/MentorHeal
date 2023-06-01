@@ -15,7 +15,7 @@ export const Card = () => {
             <div className="flex justify-center hover:scale-105 duration-300 ease-in-out cursor-pointer">
             
               <div
-              data-aos = "zoom-in-up"
+              data-aos = "zoom-in"
                className="max-w-[80vw] md:w-[30vw] shadow-sm border-[0.3px] border-gray-200 rounded-lg flex flex-col items-center space-y-5 p-5">
                 <img src={item.image} className="bg-white py-2 rounded-full w-24 mt-4"/>
                 <h1 className="text-3xl font-bold ">{item.Title}</h1>

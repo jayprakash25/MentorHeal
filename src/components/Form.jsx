@@ -1,4 +1,27 @@
+import { useState } from "react";
+import { db } from "../Firebase";
+import { collection, addDoc } from "firebase/firestore";
+
 const Form = () => {
+  const [user, setUser] = useState({
+    Name: "",
+    Email: "",
+    Message: "",
+  });
+
+  const submitUser = async (e) => {
+    e.preventDefault();
+    if (user.Name && user.Email && user.Message != "") {
+      try {
+        await addDoc(collection(db, "USER"), user);
+        alert("success");
+      } catch (error) {
+        console.log(error);
+      }
+    } else {
+      alert("Fill the data");
+    }
+  };
   return (
     <div>
       <div className=" bg-[#ffffff]  text-gray-100 px-8 md:-my-24 -my-32 ">
@@ -1006,7 +1029,7 @@ const Form = () => {
               </svg>
             </div>
           </div>
-          <form action="https://formspree.io/f/xgebbyyq" method="post">
+          <form>
             <div className="">
               <div>
                 <span className="uppercase text-sm text-[#8ca1b3] font-bold">
@@ -1017,6 +1040,13 @@ const Form = () => {
                   name="Name"
                   type="text"
                   placeholder=""
+                  value={user.Name}
+                  onChange={(e) => {
+                    setUser({
+                      ...user,
+                      Name: e.target.value,
+                    });
+                  }}
                 />
               </div>
               <div className="mt-8">
@@ -1027,6 +1057,13 @@ const Form = () => {
                   className="w-full bg-gray-50 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                   name="Email"
                   type="text"
+                  value={user.Email}
+                  onChange={(e) => {
+                    setUser({
+                      ...user,
+                      Email: e.target.value,
+                    });
+                  }}
                 />
               </div>
               <div className="mt-8">
@@ -1036,10 +1073,22 @@ const Form = () => {
                 >
                   Message
                 </span>
-                <textarea className="w-full h-32 bg-gray-50  mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
+                <textarea
+                  value={user.Message}
+                  onChange={(e) => {
+                    setUser({
+                      ...user,
+                      Message: e.target.value,
+                    });
+                  }}
+                  className="w-full h-32 bg-gray-50  mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                ></textarea>
               </div>
               <div className="mt-8">
-                <button className="uppercase text-sm font-bold tracking-wide bg-gradient-to-r from-cyan-300 via-cyan-400 to-cyan-400 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
+                <button
+                  onClick={submitUser}
+                  className="uppercase text-sm font-bold tracking-wide bg-gradient-to-r from-cyan-300 via-cyan-400 to-cyan-400 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline"
+                >
                   Send Message
                 </button>
               </div>
