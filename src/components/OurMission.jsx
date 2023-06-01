@@ -3,7 +3,9 @@ import ourmission from "../assets/images/ourmission.png";
 const OurMission = () => {
   return (
     <div className="flex flex-col-reverse md:flex-row m-8 md:justify-between gap-4">
-      <div className="mt-4">
+      <div 
+      data-aos = 'zoom-in'
+      className="mt-4">
         <h1 className="font-bold text-[44px] md:text-[54px] text-[#00b8d3] lg:text-[64px]">
           Our Mission
         </h1>
@@ -41,7 +43,9 @@ const OurMission = () => {
           </div>
         </div>
       </div>
+      <div data-aos = 'zoom-in-up'>
       <img src={ourmission} className=" md:w-[463px] md:h-auto " />
+      </div>
     </div>
   );
 };

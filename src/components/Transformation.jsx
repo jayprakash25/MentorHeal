@@ -56,6 +56,7 @@ const nextSlide = () => {
           {slides.map((testimonial, index) => (
             <div
               data-aos = "flip-down"
+              data-aos-duration = '3000'
               key={testimonial.id}
               className={`${
                 index === slide ? 'opacity-100 z-10' : 'md:opacity-10  z-0'
