@@ -52,15 +52,13 @@ const nextSlide = () => {
         <div data-aos = "zoom-in">
         <h1 className='text-3xl md:text-5xl font-semibold py-4'>Our Stories Of <span className='bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold'>Transformation</span></h1>
         </div>       
-        <div className=" mx-auto flex gap-7 md:gap-0  flex-col  md:grid grid-cols-2 p-4">
+        <div className=" mx-auto flex gap-7 md:gap-0    p-4">
           {slides.map((testimonial, index) => (
             <div
-              data-aos = "flip-down"
-              data-aos-duration = '3000'
               key={testimonial.id}
               className={`${
-                index === slide ? 'opacity-100 z-10' : 'md:opacity-10  z-0'
-              }  transition-opacity duration-500  ease-in-out my-5`}
+                index === slide ? 'flex' : 'hidden'
+              } `}
             >
               <div className="bg-white p-6 rounded shadow-md">
                 <p className="text-[#8ca1b3] leading-7">{testimonial.story}</p>

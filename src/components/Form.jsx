@@ -24,7 +24,7 @@ const Form = () => {
   };
   return (
     <div>
-      <div className=" bg-[#ffffff]  text-gray-100 px-8 md:-my-24 -my-32 ">
+      <div className=" bg-[#ffffff]  text-gray-100 px-8 md:-my-24 -my-36 ">
         <div className="text-center ">
           <svg
             className="text-gray-100 h-8 mx-auto"

@@ -33,8 +33,7 @@ const Footer = () => {
                   </span>
                   <ul className="text-[#949494] list-unstyled space-y-4 my-6 cursor-pointer">
                     <li>About Us</li>
-                    <li>Our Bootcamp</li>
-                    <li>Meet Your Mentor</li>
+                   
                   </ul>
                 </div>
                 <div className="w-full lg:w-4/12 px-4 ml-auto">

@@ -10,7 +10,8 @@ import pro6 from "../assets/images/pro6.png"
 import { useEffect } from "react"
 import Aos from "aos"
 import { useLocation } from "react-router-dom"
-
+import Form from "./Form"
+import Appointment from "./Appointment"
 
 
 const data = [
@@ -115,7 +116,10 @@ useEffect(() => {
         
 
         </div>
-
+        <div className="my-20">
+            <Form/>
+            </div>
+            <Appointment/>
         <Footer/>
         </div>
     )

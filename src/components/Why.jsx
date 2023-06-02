@@ -1,12 +1,9 @@
-import { Link } from "react-router-dom";
 import image1 from "../assets/images/image1.png";
 import image2 from "../assets/images/image2.png";
 import image3 from "../assets/images/image3.png";
 import image4 from "../assets/images/image4.png";
 import image5 from "../assets/images/image5.png";
 import image6 from "../assets/images/image6.png";
-import { useEffect } from "react";
-import Aos from "aos";
 
 const Data = [
   {
@@ -36,15 +33,12 @@ const Data = [
 ];
 
 const Why = () => {
-  useEffect(() => {
-    Aos.init({duration:2000});
-  }, [])
+ 
   return (
     <div 
     
     className="bg-gradient-to-r from-[#e8f4ef] to-[#faebe5]  p-8 flex flex-col items-center justify-center  rounded-lg">
       <div
-      data-aos = "zoom-in-down"
       >
       <h1 className="text-3xl md:text-5xl font-semibold">
         Why{" "}
@@ -54,15 +48,14 @@ const Why = () => {
       </h1>
       </div>
       <div 
-      className="grid grid-cols-1 md:grid-cols-3 justify-center place-items-center my-20 text-center gap-16">
+      className="grid grid-cols-1 md:grid-cols-6 justify-center place-items-center  my-20 text-center gap-16">
         {Data.map((item, index) => {
           return (
             <div
-                  data-aos = 'zoom-in-right'
-              className="space-y-5 hover:scale-105 duration-300 ease-in-out"
+              className="space-y-5 flex flex-col items-center hover:scale-105 duration-300 ease-in-out "
               key={index}
             >
-              <img src={item.image} className="max-w-[230px]" />
+              <img src={item.image} className="max-w-[230px] md:max-w-full" />
               <h1>{item.Tittle}</h1>
             </div>
           );
