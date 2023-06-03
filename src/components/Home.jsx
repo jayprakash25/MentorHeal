@@ -12,24 +12,31 @@ import Transformation from "./Transformation";
 import Events from "./Events";
 export default function Home() {
   const formref = useRef();
+  const testimonialref = useRef();
 
   const Scrolltoref = () => {
     formref.current.scrollIntoView({
       behaviour: "smooth ",
     });
   };
-
-
+  const Scrolltotestimonial = () => {
+    testimonialref.current.scrollIntoView({
+      behaviour: "smooth ",
+    });
+  };
 
   return (
     <>
-      <NavBar Scrolltoref={Scrolltoref} />
-      <HeroSection Scrolltoref={Scrolltoref}/>
+      <NavBar
+        Scrolltoref={Scrolltoref}
+        Scrolltotestimonial={Scrolltotestimonial}
+      />
+      <HeroSection Scrolltoref={Scrolltoref} />
       <FirstCard />
       <Tagline />
       <Card />
       <Why />
-      <Transformation />
+      <Transformation testimonialref={testimonialref} />
       <TeamCard />
       <Events />
       <div ref={formref}>

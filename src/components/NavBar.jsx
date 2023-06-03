@@ -5,7 +5,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import Carddata from "./Data";
 
-const NavBar = ({ Scrolltoref }) => {
+const NavBar = ({ Scrolltoref ,Scrolltotestimonial}) => {
   const [toggle, setToggle] = useState(false);
 
   const [dropdown, setdropdown] = useState(false);
@@ -24,7 +24,7 @@ const NavBar = ({ Scrolltoref }) => {
             }}
           >
             <p className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold text-2xl md:text-3xl">
-              mentorthrive
+              MentorHeal
             </p>
           </Link>
         </div>
@@ -97,8 +97,8 @@ const NavBar = ({ Scrolltoref }) => {
                   <li className="cursor-pointer transition ease-in-out duration-300">
                     <Link to="/about"> About us </Link>
                   </li>
-                  <li>Contact us</li>
-                  <li>Testimonials</li>
+                  <li onClick={Scrolltoref} className="cursor-pointer">Contact us</li>
+                  <li className="cursor-pointer" onClick={Scrolltotestimonial}>Testimonials</li>
                 </ul>
               </div>
             </div>

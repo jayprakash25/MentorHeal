@@ -35,15 +35,13 @@ const Data = [
 const Why = () => {
  
   return (
-    <div 
-    
-    className="bg-gradient-to-r from-[#e8f4ef] to-[#faebe5]  p-8 flex flex-col items-center justify-center  rounded-lg">
+    <div  className="bg-gradient-to-r from-[#e8f4ef] to-[#faebe5]  p-8 flex flex-col items-center justify-center  rounded-lg">
       <div
       >
       <h1 className="text-3xl md:text-5xl font-semibold">
         Why{" "}
         <span className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold ">
-          MentorThrive?
+        MentorHeal?
         </span>
       </h1>
       </div>
