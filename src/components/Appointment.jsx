@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Appointment = () => {
   return (
     <div  className="mt-32 bg-gradient-to-r from-cyan-500 via-cyan-400 to-cyan-700  py-8 mb-8 shadow-md">
@@ -14,11 +16,13 @@ const Appointment = () => {
         {/* --------------------Button------------------*/}
         <div className="md:max-w-lg">
           <button className="  bg-white text-black   px-7 py-2 rounded-full tracking-wide text-sm">
-            <a href="https://zcal.co/i/xervLEsh">Book Your Session</a>
+          <Link to={"/session"}>
+Book Your Session </Link>
           </button>
         </div>
-
       </section>
+      <div>
+      </div>
     </div>
   );
 };
