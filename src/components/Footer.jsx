@@ -1,29 +1,24 @@
 import { Link } from "react-router-dom";
 import Carddata from "./Data";
 
-
 const Footer = () => {
   return (
     <div className="">
-      <footer className="relative  bg-[#212240]  pt-8 ">
+      <footer className="relative  bg-[#212240] text-center pt-8 ">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap text-left lg:text-left">
-            <div className="w-full lg:w-6/12 px-4  space-y-10 text-black">
-            <Link
-            to="/"
-            className="flex"
-            onClick={() => {
-              window.scrollTo(0, 0);
-            }}
-          >
-           <p className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold text-xl">mentorthrive</p>
-          </Link>
-              {/* <img
-                className="w-[200px] mt-2"
-                src="https://i.ibb.co/pr6nQzZ/final-logo.png"
-                alt="final-logo"
-                border="0"
-              /> */}
+            <div className="w-full lg:w-6/12 px-4 text-center  space-y-10 text-black">
+              <Link
+                to="/"
+                className="flex"
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                }}
+              >
+                <p className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold text-3xl mx-auto mb-5 md:text-4xl">
+                  MentorHeal
+                </p>
+              </Link>
             </div>
             <div className="w-full lg:w-6/12 px-4">
               <div className="flex flex-wrap items-top mb-6">
@@ -33,7 +28,6 @@ const Footer = () => {
                   </span>
                   <ul className="text-[#949494] list-unstyled space-y-4 my-6 cursor-pointer">
                     <li>About Us</li>
-                   
                   </ul>
                 </div>
                 <div className="w-full lg:w-4/12 px-4 ml-auto">
@@ -41,33 +35,24 @@ const Footer = () => {
                     Mentorship Options
                   </span>
                   <ul className="text-[#949494] list-unstyled  space-y-4 my-6 cursor-pointer">
-
-
-                  {Carddata.map((item, index) => {
-                    return (
-                      <li
-                        className="cursor-pointer"
-                        key={index}
-                      >
-                        {" "}
-                        <Link
-                          key={index}
-                          to={`/${item.Title}`}
-                          state={{
-                            Tittle: item.Title,
-                            Background: item.Background,
-                            Blog: item.Blog,
-                          }}
-                        >
-                          {item.Title}
-                        </Link>
-                      </li>
-                    );
-                  })}
-
-
-
-
+                    {Carddata.map((item, index) => {
+                      return (
+                        <li className="cursor-pointer" key={index}>
+                          {" "}
+                          <Link
+                            key={index}
+                            to={`/${item.Title}`}
+                            state={{
+                              Tittle: item.Title,
+                              Background: item.Background,
+                              Blog: item.Blog,
+                            }}
+                          >
+                            {item.Title}
+                          </Link>
+                        </li>
+                      );
+                    })}
 
                     {/* <li>Health</li>
                     <li>Career</li>
@@ -79,7 +64,7 @@ const Footer = () => {
                     <li>Financial Literacy</li>
                     <li>Spirituality</li> */}
                   </ul>
-               </div>
+                </div>
                 <div className="w-full lg:w-4/12 px-4">
                   <span className="block uppercase  text-white text-sm font-semibold mb-2">
                     Other Resources
@@ -90,7 +75,7 @@ const Footer = () => {
                     <li>Privacy Policy</li>
                     <li>Contact Us</li>
                   </ul>
-               </div>
+                </div>
               </div>
             </div>
           </div>

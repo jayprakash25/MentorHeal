@@ -6,7 +6,7 @@ const Appointment = () => {
       <section className="flex flex-col lg:flex-row md:items-center md:justify-around space-y-7 text-white text-center lg:space-y-0 ">
        
         {/*-------------------- Text---------------- */}
-        <div className="text-xl max md:max-w-[40vw] md:text-left md:text-3xl space-y-2 lg:space-y-6 ">
+        <div  className="text-xl max md:max-w-[40vw] md:text-left md:text-3xl space-y-2 lg:space-y-6 ">
           <h1 className="leading-10 font-semibold text-white">
             Ready to make a leap to the best of you? 
           </h1>
