@@ -10,8 +10,6 @@ import TeamCard from "./TeamCard";
 import { useRef } from "react";
 import Transformation from "./Transformation";
 import Events from "./Events";
-import Whatsup from "./Whatsup";
-import Quote from "./Quote";
 export default function Home() {
   const formref = useRef();
   const testimonialref = useRef();
@@ -28,7 +26,7 @@ export default function Home() {
   };
 
   return (
-    <main>
+    <>
       <NavBar
         Scrolltoref={Scrolltoref}
         Scrolltotestimonial={Scrolltotestimonial}
@@ -41,13 +39,11 @@ export default function Home() {
       <Transformation testimonialref={testimonialref} />
       <TeamCard />
       <Events />
-      <Quote />
       <div ref={formref}>
         <Form />
       </div>
-      <Whatsup />
       <Appointment />
       <Footer />
-    </main>
+    </>
   );
 }

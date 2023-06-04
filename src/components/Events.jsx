@@ -6,7 +6,7 @@ export default function Events() {
   };
   return (
     <>
-      <div className="my-28">
+      <div className="my-20">
         <img
           src={Event.Banner}
           className="h-[55vh] md:h-[70vh] w-screen object-cover"
