@@ -1,16 +1,15 @@
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
+import "aos/dist/aos.css"; 
 import { useEffect } from "react";
 import HeroPic from "../assets/images/HeroPic.jpeg";
-// ..
 
-const HeroSection = ({Scrolltoref}) => {
+const HeroSection = ({ Scrolltoref }) => {
   useEffect(() => {
     AOS.init();
   }, []);
 
   return (
-    <div className="pt-36">
+    <div className="pt-20">
       <section className="px-5 ">
         <div className="flex flex-col justify-between md:flex-row md:items-center my-5 md:px-5">
           <div
@@ -34,7 +33,10 @@ const HeroSection = ({Scrolltoref}) => {
               We all are already abundant. We just need a mentor to help us
               realize it. Discover Your purpose.
             </p>
-            <button  onClick={Scrolltoref} className="bg-gradient-to-r from-cyan-300 via-cyan-400 to-cyan-400 text-white  ease-in-out duration-500 font-semibold text-sm border-zinc-600 px-5 py-2 rounded-full">
+            <button
+              onClick={Scrolltoref}
+              className="bg-gradient-to-r from-cyan-300 via-cyan-400 to-cyan-400 text-white  ease-in-out duration-500 font-semibold text-sm border-zinc-600 px-5 py-2 rounded-full"
+            >
               Get Started
             </button>
           </div>

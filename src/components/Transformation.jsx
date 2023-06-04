@@ -45,7 +45,7 @@ const Transformation = ({ testimonialref }) => {
 
   useEffect(() => {}, []);
   return (
-    <div className="flex flex-col items-center m-8" ref={testimonialref}>
+    <div className="flex flex-col items-center mx-8 my-20" ref={testimonialref}>
       <div>
         <h1 className="text-3xl md:text-5xl font-semibold py-4">
           Our Stories Of{" "}
@@ -61,7 +61,7 @@ const Transformation = ({ testimonialref }) => {
         transition={{ duration: 0.5 }}
         key={currentSlide}
       >
-        <div className="my-4">
+        <div className="my-10">
           {slides.map((testimonial, index) => (
             <div
               key={testimonial.id}
