@@ -10,6 +10,7 @@ import TeamCard from "./TeamCard";
 import { useRef } from "react";
 import Transformation from "./Transformation";
 import Events from "./Events";
+import Quote from "./Quote";
 export default function Home() {
   const formref = useRef();
   const testimonialref = useRef();
@@ -39,6 +40,7 @@ export default function Home() {
       <Transformation testimonialref={testimonialref} />
       <TeamCard />
       <Events />
+      <Quote/>
       <div ref={formref}>
         <Form />
       </div>
