@@ -1,63 +1,54 @@
-import OurStory from './OurStory'
-import OurMission from './OurMission'
-import HeroAbout from './HeroAbout'
-import OurVision from './OurVision'
-import Prophecy from './Prophecy'
-import NavBar from './NavBar'
-import Footer from './Footer'
-import CardAbout from './CardAbout'
-import Appointment from './Appointment'
-import { useLocation } from 'react-router-dom'
-import { useEffect } from 'react'
-
+import OurStory from "./OurStory";
+import OurMission from "./OurMission";
+import HeroAbout from "./HeroAbout";
+import OurVision from "./OurVision";
+import Prophecy from "./Prophecy";
+import NavBar from "./NavBar";
+import Footer from "./Footer";
+import CardAbout from "./CardAbout";
+import Appointment from "./Appointment";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import Whatsup from "./Whatsup";
 
 const AboutUs = () => {
- 
-const location = useLocation();
+  const location = useLocation();
 
-useEffect(() => {
-  window.scrollTo(0,0);
-}, [location]);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   return (
     <section>
-    <NavBar/>
+      <NavBar />
 
-    {/* Herosection........ */}
+      {/* Herosection........ */}
 
-    <HeroAbout/>
+      <HeroAbout />
 
-    {/* our story...... */}
-    
-    <OurStory/>
-   
-    {/* Our mission section..... */}
+      {/* our story...... */}
 
-    <OurMission/>
+      <OurStory />
 
+      {/* Our mission section..... */}
 
-    {/* Our Vision Section...... */}
-    
-    <OurVision/>
+      <OurMission />
 
-    {/* MentorHeal Prophecy...... */}
+      {/* Our Vision Section...... */}
 
-    <Prophecy/>
+      <OurVision />
 
-    {/* About the team...... */}
-    <CardAbout/>
+      {/* MentorHeal Prophecy...... */}
 
-    <Appointment/>
-    <Footer/>
+      <Prophecy />
 
+      {/* About the team...... */}
+      <CardAbout />
+      <Whatsup />
+      <Appointment />
+      <Footer />
     </section>
+  );
+};
 
-  )
-}
-
-export default AboutUs
-
-
-
-
-
+export default AboutUs;
