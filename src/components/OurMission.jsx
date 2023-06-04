@@ -2,7 +2,7 @@ import ourmission from "../assets/images/ourmission.png";
 
 const OurMission = () => {
   return (
-    <div className="flex flex-col-reverse md:flex-row m-8 md:justify-between gap-4">
+    <div className="flex flex-col-reverse items-center  md:flex-row m-8 md:justify-between gap-4">
       <div 
       data-aos = 'zoom-in'
       className="mt-4">

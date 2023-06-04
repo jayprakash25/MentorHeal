@@ -1,4 +1,3 @@
-import React from "react";
 import Banner from "../assets/images/Banner1.png";
 export default function Events() {
   const Event = {

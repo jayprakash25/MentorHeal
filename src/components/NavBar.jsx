@@ -33,9 +33,7 @@ const NavBar = ({ Scrolltoref ,Scrolltotestimonial}) => {
             {/* dropdown web..... */}
             <div className="flex flex-col">
               <li
-                onMouseEnter={() => {
-                  setdropdown(!dropdown);
-                }}
+                onMouseEnter={() => setdropdown(!dropdown)}
                 className="cursor-pointer transition ease-in-out duration-300"
               >
                 Mentorship-Options

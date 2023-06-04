@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import heromobile from "../assets/images/Heromobile.png";
-import heroweb from "../assets/images/Heroweb.png";
 import "animate.css";
 import Aos from "aos";
 const HeroAbout = () => {
@@ -31,7 +30,6 @@ const HeroAbout = () => {
           </div>
         </div>
         <img className="md:hidden max-w-xs p-4" src={heromobile} />
-        {/* <img className="hidden md:flex " src={heroweb} /> */}
       </div>
     </div>
   );
