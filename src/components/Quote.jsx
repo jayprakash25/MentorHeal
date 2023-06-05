@@ -28,7 +28,7 @@ export default function Quote() {
           <img
             src="https://cdn.britannica.com/05/236505-050-17B6E34A/Elon-Musk-2022.jpg"
             alt="person"
-            className="max-w-md rounded-xl"
+            className="max-w-xs md:max-w-sm lg:max-w-md rounded-xl"
           />
         </div>
       </div>
