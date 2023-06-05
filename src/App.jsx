@@ -4,6 +4,7 @@ import AboutUs from "./components/AboutUs";
 import ReadFull from "./components/ReadFull";
 import Mentor from "./components/Mentor";
 import BookForm from "./components/BookForm";
+import How from "./components/How";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Route path="/:id" element={<ReadFull />} />
         <Route path="/join" element={<Mentor/>}/>
         <Route path="/session" element={<BookForm/>}/>
+        <Route path="/how" element={<How/>} />
       </Routes>
     </>
   );

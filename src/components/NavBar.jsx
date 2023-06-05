@@ -33,8 +33,8 @@ const NavBar = ({ Scrolltoref ,Scrolltotestimonial}) => {
             {/* dropdown web..... */}
             <div className="flex flex-col">
               <li
-                onMouseEnter={() => setdropdown(!dropdown)}
-                className="cursor-pointer transition ease-in-out duration-300"
+                onClick={() => setdropdown(!dropdown)}
+                className="cursor-pointer"
               >
                 Mentorship-Options
               </li>
@@ -71,17 +71,17 @@ const NavBar = ({ Scrolltoref ,Scrolltotestimonial}) => {
               </div>
             </div>
 
-            <li className="cursor-pointer transition ease-in-out duration-300">
-              How it works
+            <li className="cursor-pointer">
+             <Link to={'/how'}> How it works </Link>
             </li>
 
             {/* More...... */}
             <div>
               <li
-                onMouseEnter={() => {
+                onClick={() => {
                   setMore(!more);
                 }}
-                className="cursor-pointer transition ease-in-out duration-300"
+                className="cursor-pointer"
               >
                 More
               </li>
@@ -92,7 +92,7 @@ const NavBar = ({ Scrolltoref ,Scrolltotestimonial}) => {
                 } absolute bg-white shadow-md p-2 mt-3 rounded-lg`}
               >
                 <ul className="font-normal  grid grid-cols-2 gap-3 p-3">
-                  <li className="cursor-pointer transition ease-in-out duration-300">
+                  <li className="cursor-pointer">
                     <Link to="/about"> About us </Link>
                   </li>
                   <li onClick={Scrolltoref} className="cursor-pointer">Contact us</li>
@@ -102,7 +102,7 @@ const NavBar = ({ Scrolltoref ,Scrolltotestimonial}) => {
             </div>
             <li
               onClick={Scrolltoref}
-              className="cursor-pointer transition ease-in-out duration-300"
+              className="cursor-pointer"
             >
               <Link to="/join"> Join as Mentor</Link>
             </li>
@@ -160,7 +160,7 @@ const NavBar = ({ Scrolltoref ,Scrolltotestimonial}) => {
               </div>
 
               <li className="cursor-pointer transition ease-in-out duration-300 ">
-                How it works
+                <Link to={'/how'}>How it works</Link>
               </li>
 
               {/* <li className="cursor-pointer transition ease-in-out duration-300 ">
