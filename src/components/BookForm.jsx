@@ -37,7 +37,7 @@ const BookForm = () => {
   };
 
   return (
-    <form className="max-w-md mx-auto mt-16" onSubmit={handleSubmit}>
+    <form className="max-w-md mx-auto mt-16 p-8" onSubmit={handleSubmit}>
       <div className="mb-4 space-y-5">
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <DemoContainer components={["DateTimePicker"]}>
