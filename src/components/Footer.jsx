@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Carddata from "./Data";
 
-const Footer = () => {
+const Footer = ({Scrolltoref}) => {
   return (
     <div className="">
       <footer className="relative  bg-[#212240] text-center pt-8 ">
@@ -70,10 +70,10 @@ const Footer = () => {
                     Other Resources
                   </span>
                   <ul className="text-[#949494] list-unstyled space-y-4 my-6 cursor-pointer">
-                    <li>Support</li>
+                    {/* <li>Support</li>
                     <li>Terms &amp; Conditions</li>
-                    <li>Privacy Policy</li>
-                    <li>Contact Us</li>
+                    <li>Privacy Policy</li> */}
+                    <li onClick={Scrolltoref}>Contact Us </li>
                   </ul>
                 </div>
               </div>

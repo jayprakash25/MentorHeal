@@ -9,23 +9,23 @@ const TeamCard = () => {
       position: "CTO",
       bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       imageUrl:
-        "https://images.pexels.com/photos/16756606/pexels-photo-16756606/free-photo-of-man-and-woman-together-in-mountains.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "",
     },
     {
       id: 2,
-      name: "Ayush Kulkarni",
+      name: "Rohit Maini",
       position: "Founder & CEO",
       bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit..",
       imageUrl:
-        "https://images.pexels.com/photos/16756606/pexels-photo-16756606/free-photo-of-man-and-woman-together-in-mountains.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "",
     },
     {
       id: 3,
       name: "Ayush Kulkarni",
-      position: "Founder & CEO",
+      position: "Co-Founder",
       bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       imageUrl:
-        "https://images.pexels.com/photos/16756606/pexels-photo-16756606/free-photo-of-man-and-woman-together-in-mountains.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "",
     },
 
     // Add more team members here
@@ -56,12 +56,12 @@ const TeamCard = () => {
             <React.Fragment key={index}>
               <div 
               data-aos = 'zoom-in'
-              className="max-w-md hover:scale-105 ease-in-out duration-500 cursor-pointer">
-                <img
+              className="max-w-md hover:scale-105 ease-in-out duration-500 cursor-pointer shadow-md px-4">
+                {/* <img
                   className="md:w-[30vw] rounded-lg"
                   src={member.imageUrl}
                   alt=""
-                />
+                /> */}
                 <div className="space-y-2.5 my-3">
                   <div className="text-xl md:text-2xl bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold">
                     {member.name}

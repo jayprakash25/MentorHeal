@@ -7,7 +7,7 @@ export default function Quote() {
         <h1 className="text-5xl">
           Even the Most{" "}
           <span className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold">
-            Sucessfull
+            Successfull
           </span>{" "}
           Struggle
         </h1>
