@@ -13,14 +13,7 @@ const CardAbout = () => {
       Name: "Rohit Maini",
       Position: "CEO & Founder",
       Image: ayush,
-      Bio: "I WISH TO HELP AS MANY PEOPLE AS FEASIBLE TO LIVE UP TO THEIR TRUE POTENTIAL. I WANT TO
-      SEE EVERYONE BECOME THE BEST VERSION OF THEMSELVES. I WANT THEM TO LIVE AN ABUNDANT
-      LIFE IN ALL RESPECTS – PHYSICAL HEALTH, MENTAL HEALTH, WEALTH, RELATIONSHIPS, SPIRITUALLY
-      ETC. I WISH FOR A BETTER WORLD WHERE PEOPLE KNOW WHAT THEY LOVE TO DO AND THEN TAKE
-      MASSIVE ACTIONS TO BECOME EXCELLENT IN THEIR CHOSEN FIELD(S) WITH ALL THEIR PASSION. I
-      HOPE FOR AN ENVIRONMENT IN WHICH PEOPLE FIND THE RIGHT MENTORSHIP AT ANY STAGE OF
-      THEIR RESPECTIVE LIVES TO TURN IT AROUND AND MANIFEST THEIR HIDDEN BUT TRUE INFINITE
-      POWER.",
+      Bio: "Rohit is a dreamer. He visualizes mentoring as many people as possible to become the best version of themselves. He has studied both engineering and management and has worked both internationally and in india across various sectors like I.T, FMCG and Finance. He is an experienced investment advisor and a voracious reader across most broad subjects. He has undergone many skill building trainings too and he wishes to help young people realize the right values early in life to maximise compunding in life and also the mid-aged and older people to adapt to the new times along with inculcating the winning habits &amp; concepts. He dreams to incorporate the importance of abundance in all respects and the most successful ways to achieve them in his endeavour to create a community for the same which can help in achieving this elusive well-being for everyone. He believes everyone has the spark of infinite power in them and just wants to live with the ideal of service to mankind and maximum value to humanity by helping people realize their infinite existence and unbound potential.",
     },
     {
       Name: "Abhinav Singh",
