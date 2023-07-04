@@ -11,7 +11,6 @@ import spirit from "../assets/images/spirit.png"
 const Carddata = [
   {
     image: health,
-    Background: "https://mentorrnow.com/assets/img/heal-h.png",
     Title: "Health",
     Para: "We believe in the power of holistic growth and development. From personal and professional growth.",
     Blog: [
@@ -105,7 +104,6 @@ const Carddata = [
   },
   {
     image: career,
-    Background: "https://mentorrnow.com/assets/img/head-ca.png",
     Title: "Career",
     Para: " A fulfilling and satisfying career provides a sense of purpose and financial stability.",
     Blog: [
@@ -164,7 +162,6 @@ const Carddata = [
   },
   {
     image: learning,
-    Background: "https://mentorrnow.com/assets/img/head-lear.png",
     Title: "Learning",
     Para: "Continual learning and growth help individuals stay current and prepared for new opportunities.",
     Blog: [
@@ -224,7 +221,6 @@ const Carddata = [
   },
   {
     image: skills,
-    Background: "https://mentorrnow.com/assets/img/head-skill.png",
     Title: "Skills",
     Para: " Developing new skills and honing existing ones leads to increased self-confidence and personal growth.",
     Blog: [
@@ -333,7 +329,6 @@ const Carddata = [
   },
   {
     image: descisions,
-    Background: "https://mentorrnow.com/assets/img/head-dic.png",
     Title: "Decisions",
     Para: " Making informed and deliberate decisions helps individuals achieve their goals and live the life they desire.",
     Blog: [
@@ -369,7 +364,6 @@ const Carddata = [
   },
   {
     image: relation,
-    Background: "https://mentorrnow.com/assets/img/head-rela.png",
     Title: "Relationships",
     Para: "   Strong relationships with family and friends provide support, love, and a sense of community.",
     Blog: [
@@ -437,7 +431,6 @@ const Carddata = [
 
   {
     image: entrepreneur,
-    Background: "https://mentorrnow.com/assets/img/head-rela.png",
     Title: "Entrepreneurship",
     Para: "Entrepreneurship provides individuals with the opportunity to turn their ideas and passions into reality.",
     Blog: [
@@ -503,7 +496,6 @@ const Carddata = [
   },
   {
     image: finance,
-    Background: "https://mentorrnow.com/assets/img/head-fina.png",
     Title: "Financial Literacy",
     Para: "Understanding how to manage and grow personal finances is essential for financial security and stability.",
     Blog: [
@@ -546,7 +538,6 @@ const Carddata = [
   },
   {
     image: spirit,
-    Background: 'https://mentorrnow.com/assets/img/head-rela.png',
     Title: 'Spirituality',
     Para: "A strong spiritual practice provides a sense of inner peace, clarity, and meaning in life.",
     Blog: [

@@ -43,6 +43,10 @@ const Transformation = ({ testimonialref }) => {
     setCurrentSlide((prevSlide) => (prevSlide - 1 + numSlides) % numSlides);
   };
 
+  setInterval(() => {
+    nextSlide();
+  }, 5000);
+
   useEffect(() => {}, []);
   return (
     <div className="flex flex-col items-center m-8" ref={testimonialref}>
@@ -67,10 +71,10 @@ const Transformation = ({ testimonialref }) => {
               key={testimonial.id}
               className={`${
                 index === currentSlide ? "flex" : "hidden"
-              }   max-w-sm`}
+              }   max-w-3xl`}
             >
               <div className="bg-white p-6 rounded shadow-md text-center">
-                <p className="text-[#8ca1b3]  leading-8">{testimonial.story}</p>
+                <p className="text-[#8ca1b3] leading-8">{testimonial.story}</p>
                 <p className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold">
                   {testimonial.name}
                 </p>
@@ -80,14 +84,14 @@ const Transformation = ({ testimonialref }) => {
         </div>
       </motion.div>
 
-      <div className="mt-4 hidden md:block space-x-2">
+      {/* <div className="mt-4 md:block space-x-2">
         <button onClick={prevSlide}>
           <ArrowBackIos className="stroke-cyan-500" />
         </button>
         <button className="" onClick={nextSlide}>
           <ArrowForwardIos className="stroke-cyan-500" />
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };

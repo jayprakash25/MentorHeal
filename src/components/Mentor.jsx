@@ -12,6 +12,7 @@ import Aos from "aos";
 import { useLocation } from "react-router-dom";
 import Form from "./Form";
 import Appointment from "./Appointment";
+import Whatsup from "./Whatsup";
 
 const data = [
   {
@@ -134,6 +135,7 @@ const Mentor = () => {
         <Form />
       </div>
       <Appointment />
+      <Whatsup/>
       <Footer />
     </div>
   );

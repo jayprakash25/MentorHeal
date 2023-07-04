@@ -1,9 +1,8 @@
-import React from "react";
 import icon from "../assets/whatsapp.png";
 export default function Whatsup() {
   const sendMessage = () => {
     const message = "Hey MenthorThrive";
-    const number = 8317680338;
+    const number = 9130076971;
     const url = `https://web.whatsapp.com/send?phone=${number}&text=${message}&app_absent=0`;
     window.open(url);
   };

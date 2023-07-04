@@ -5,24 +5,24 @@ const TeamCard = () => {
   const teamMembers = [
     {
       id: 1,
-      name: "Abhinav Singh",
-      position: "CTO",
+      name: "Yuvraj Singh",
+      position: "Career",
       bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       imageUrl:
         "",
     },
     {
       id: 2,
-      name: "Rohit Maini",
-      position: "Founder & CEO",
+      name: "Deepika shetty",
+      position: "Spirituality",
       bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit..",
       imageUrl:
         "",
     },
     {
       id: 3,
-      name: "Ayush Kulkarni",
-      position: "Co-Founder",
+      name: "Rahul Menon",
+      position: "Relationships",
       bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       imageUrl:
         "",

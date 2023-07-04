@@ -1,19 +1,19 @@
-import Appointment from "./Appointment"
-import Footer from "./Footer"
-import HowContent from "./HowContent"
-import NavBar from "./NavBar"
+import Appointment from "./Appointment";
+import Footer from "./Footer";
+import HowContent from "./HowContent";
+import NavBar from "./NavBar";
+import Whatsup from "./Whatsup";
 
 const How = () => {
-    return (
-        <div>
-        <NavBar/>
+  return (
+    <div>
+      <NavBar />
+      <HowContent />
+      <Appointment />
+      <Whatsup/>
+      <Footer />
+    </div>
+  );
+};
 
-        <HowContent/>
-
-        <Appointment/>
-        <Footer/>
-        </div>
-    )
-}
-
-export default How
+export default How;

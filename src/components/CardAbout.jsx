@@ -1,38 +1,30 @@
 import ayush from "../assets/images/ayush.jpg";
+import React from "react";
 
 const CardAbout = () => {
   const data = [
     {
       Name: "Ayush Kulkarni",
-      Position: "CEO & Founder",
+      Position: "Co-Founder",
       Image: ayush,
+      Bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
     {
-      Name: "Ayush Kulkarni",
+      Name: "Rohit Maini",
       Position: "CEO & Founder",
       Image: ayush,
+      Bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
     {
-      Name: "Ayush Kulkarni",
-      Position: "CEO & Founder",
+      Name: "Abhinav Singh",
+      Position: "CTO",
       Image: ayush,
+      Bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
-    {
-      Name: "Ayush Kulkarni",
-      Position: "CEO & Founder",
-      Image: ayush,
-    },
-    {
-      Name: "Ayush Kulkarni",
-      Position: "CEO & Founder",
-      Image: ayush,
-    },
-    {
-      Name: "Ayush Kulkarni",
-      Position: "CEO & Founder",
-      Image: ayush,
-    },
+    
   ];
+  
+
 
   return (
     <div className="flex flex-col m-8 items-center justify-center">
@@ -41,7 +33,36 @@ const CardAbout = () => {
           OUR TEAM
         </h1>
       </div>
-      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 p-4 mt-6">
+        {data.map((member, index) => {
+          return (
+            <React.Fragment key={index}>
+              <div 
+              data-aos = 'zoom-in'
+              className="max-w-md hover:scale-105 ease-in-out duration-500 cursor-pointer shadow-md px-4">
+                {/* <img
+                  className="md:w-[30vw] rounded-lg"
+                  src={member.imageUrl}
+                  alt=""
+                /> */}
+                <div className="space-y-2.5 my-3">
+                  <div className="text-xl md:text-2xl bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold">
+                    {member.Name}
+                  </div>
+                  <p className="text-cyan-500 font-semibold">
+                    {member.Position}
+                  </p>
+                </div>
+                <div className="my-3">
+                  <p className="text-[#8ca1b3]">{member.Bio}</p>
+                </div>
+              </div>
+            </React.Fragment>
+          );
+        })}
+      </div>
+      {/* <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+      
         {data.map((_, index) => {
           return (
             <div
@@ -67,7 +88,7 @@ const CardAbout = () => {
             </div>
           );
         })}
-      </div>
+      </div> */}
     </div>
   );
 };

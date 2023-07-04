@@ -33,7 +33,7 @@ const NavBar = ({ Scrolltoref ,Scrolltotestimonial}) => {
             {/* dropdown web..... */}
             <div className="flex flex-col">
               <li
-                onClick={() => setdropdown(!dropdown)}
+                onMouseEnter={() => setdropdown(!dropdown)}
                 className="cursor-pointer"
               >
                 Mentorship-Options
@@ -78,7 +78,7 @@ const NavBar = ({ Scrolltoref ,Scrolltotestimonial}) => {
             {/* More...... */}
             <div>
               <li
-                onClick={() => {
+                onMouseEnter={() => {
                   setMore(!more);
                 }}
                 className="cursor-pointer"
