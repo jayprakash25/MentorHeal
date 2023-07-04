@@ -13,7 +13,14 @@ const CardAbout = () => {
       Name: "Rohit Maini",
       Position: "CEO & Founder",
       Image: ayush,
-      Bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      Bio: "I WISH TO HELP AS MANY PEOPLE AS FEASIBLE TO LIVE UP TO THEIR TRUE POTENTIAL. I WANT TO
+      SEE EVERYONE BECOME THE BEST VERSION OF THEMSELVES. I WANT THEM TO LIVE AN ABUNDANT
+      LIFE IN ALL RESPECTS – PHYSICAL HEALTH, MENTAL HEALTH, WEALTH, RELATIONSHIPS, SPIRITUALLY
+      ETC. I WISH FOR A BETTER WORLD WHERE PEOPLE KNOW WHAT THEY LOVE TO DO AND THEN TAKE
+      MASSIVE ACTIONS TO BECOME EXCELLENT IN THEIR CHOSEN FIELD(S) WITH ALL THEIR PASSION. I
+      HOPE FOR AN ENVIRONMENT IN WHICH PEOPLE FIND THE RIGHT MENTORSHIP AT ANY STAGE OF
+      THEIR RESPECTIVE LIVES TO TURN IT AROUND AND MANIFEST THEIR HIDDEN BUT TRUE INFINITE
+      POWER.",
     },
     {
       Name: "Abhinav Singh",
