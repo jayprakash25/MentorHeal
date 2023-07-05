@@ -10,11 +10,9 @@ import faq from "../assets/images/faq.png";
 
 const FAQs = ({ Q, children }) => {
   const [open, setOpen] = useState(false);
-
   const toggle = () => {
     setOpen(!open);
   };
-
   return (
     <div className="space-y-2">
       <div
@@ -55,19 +53,12 @@ const HowContent = () => {
     },
   ];
 
-  // const [point, setpoint] = useState(false);
-
   return (
     <div className="pt-24 p-8">
       <h1 className="text-4xl lg:text-6xl  text-center pb-14">How it Works?</h1>
 
       <div className="space-y-6">
-        {/* first section...... */}
-
-        <div
-          // data-aos = "zoom-in"
-          className="flex flex-col md:flex-row items-center md:justify-around"
-        >
+        <div className="flex flex-col md:flex-row items-center md:justify-around">
           <img src={path} className="max-w-sm md:max-w-md" />
           <div className="py-2 space-y-2">
             <h1 className="font-semibold text-2xl lg:text-3xl text-[#00b8b3] ">
@@ -80,11 +71,7 @@ const HowContent = () => {
           </div>
         </div>
 
-        {/* second section...... */}
-        <div
-          // data-aos = "zoom-in"
-          className="flex flex-col items-center md:flex-row-reverse md:justify-around"
-        >
+        <div className="flex flex-col items-center md:flex-row-reverse md:justify-around">
           <img src={booking} className="max-w-sm md:max-w-md" />
           <div className="py-2 space-y-2">
             <h1 className="font-semibold text-2xl text-[#00b8b3] lg:text-3xl">
@@ -97,11 +84,7 @@ const HowContent = () => {
           </div>
         </div>
 
-        {/* Third section...... */}
-        <div
-          // data-aos = "zoom-in"
-          className="flex flex-col items-center md:flex-row md:justify-around"
-        >
+        <div className="flex flex-col items-center md:flex-row md:justify-around">
           <img src={meet} className="max-w-sm md:max-w-md" />
           <div className="py-2 space-y-2">
             <h1 className="font-semibold text-2xl text-[#00b8b3] lg:text-3xl">
@@ -122,10 +105,8 @@ const HowContent = () => {
         <Card />
       </div>
 
-      {/* FAQ's...... */}
-
       <div className="py-8 pb-0">
-        <h1 className="text-[#00b8b3] text-xl md:text-2xl lg:text-3xl pb-5">
+        <h1 className="text-[#00b8b3] text-center text-xl md:text-2xl lg:text-3xl pb-5">
           FAQ&apos;s
         </h1>
 
@@ -136,8 +117,7 @@ const HowContent = () => {
                 <div key={index} className="py-4">
                   <FAQs key={index} Q={item.Q}>
                     <p
-                      className="text-[#7c7c7c] max-w-2xl text-sm md:text-md lg:text-lg
-                "
+                      className="text-[#7c7c7c] max-w-2xl text-sm md:text-md lg:text-lg"
                     >
                       {item.Ans}
                     </p>

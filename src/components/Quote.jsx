@@ -3,8 +3,8 @@ import React from "react";
 export default function Quote() {
   return (
     <>
-      <div className="text-center">
-        <h1 className="text-5xl">
+      <div className="text-center my-10">
+        <h1 className="text-3xl md:text-5xl">
           Even the Most{" "}
           <span className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold">
             Successfull
@@ -13,7 +13,7 @@ export default function Quote() {
         </h1>
       </div>
 
-      <div className="flex flex-col gap-8 md:flex-row justify-evenly items-center my-24">
+      <div className="flex flex-col gap-8 md:flex-row justify-evenly items-center my-16">
         <div className="md:max-w-2xl text-center p-3 md:p-0 md:order-1 order-2">
           <q className="leading-8  font-semibold text-[#8ca1b3]">
             Success is not the absence of struggle, but rather the relentless

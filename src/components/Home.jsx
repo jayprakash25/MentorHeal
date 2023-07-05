@@ -47,8 +47,7 @@ export default function Home() {
       </div>
       <Whatsup />
       <Appointment />
-      <Footer         Scrolltoref={Scrolltoref}
-/>
+      <Footer Scrolltoref={Scrolltoref} />
     </>
   );
 }

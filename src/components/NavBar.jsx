@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import Carddata from "./Data";
+import Logo from "../assets/Logo.jpeg";
 
-const NavBar = ({ Scrolltoref ,Scrolltotestimonial}) => {
+const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
   const [toggle, setToggle] = useState(false);
 
   const [dropdown, setdropdown] = useState(false);
@@ -23,9 +24,10 @@ const NavBar = ({ Scrolltoref ,Scrolltotestimonial}) => {
               window.scrollTo(0, 0);
             }}
           >
-            <p className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold text-2xl md:text-3xl">
+            {/* <p className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold text-2xl md:text-3xl">
               MentorHeal
-            </p>
+            </p> */}
+            <img src={Logo} className="w-16 h-16" alt="" />
           </Link>
         </div>
         <div className=" hidden lg:flex items-center ">
@@ -72,7 +74,7 @@ const NavBar = ({ Scrolltoref ,Scrolltotestimonial}) => {
             </div>
 
             <li className="cursor-pointer">
-             <Link to={'/how'}> How it works </Link>
+              <Link to={"/how"}> How it works </Link>
             </li>
 
             {/* More...... */}
@@ -95,15 +97,16 @@ const NavBar = ({ Scrolltoref ,Scrolltotestimonial}) => {
                   <li className="cursor-pointer">
                     <Link to="/about"> About us </Link>
                   </li>
-                  <li onClick={Scrolltoref} className="cursor-pointer">Contact us</li>
-                  <li className="cursor-pointer" onClick={Scrolltotestimonial}>Testimonials</li>
+                  <li onClick={Scrolltoref} className="cursor-pointer">
+                    Contact us
+                  </li>
+                  <li className="cursor-pointer" onClick={Scrolltotestimonial}>
+                    Testimonials
+                  </li>
                 </ul>
               </div>
             </div>
-            <li
-              onClick={Scrolltoref}
-              className="cursor-pointer"
-            >
+            <li onClick={Scrolltoref} className="cursor-pointer">
               <Link to="/join"> Join as Mentor</Link>
             </li>
           </ul>
@@ -127,13 +130,15 @@ const NavBar = ({ Scrolltoref ,Scrolltotestimonial}) => {
                 onClick={() => {
                   setMore(!more);
                 }}
-                className="cursor-pointer transition ease-in-out duration-300 ">
+                className="cursor-pointer transition ease-in-out duration-300 "
+              >
                 Mentorship
                 <ArrowDropDownIcon />
               </li>
-{/* .........options........ */}
+              {/* .........options........ */}
               <div
-                className={` space-y-4 text-sm ${more ? "block" : "hidden"}`}>
+                className={` space-y-4 text-sm ${more ? "block" : "hidden"}`}
+              >
                 <ul className=" font-normal grid gap-3">
                   {Carddata.map((item, index) => {
                     return (
@@ -160,7 +165,7 @@ const NavBar = ({ Scrolltoref ,Scrolltotestimonial}) => {
               </div>
 
               <li className="cursor-pointer transition ease-in-out duration-300 ">
-                <Link to={'/how'}>How it works</Link>
+                <Link to={"/how"}>How it works</Link>
               </li>
 
               {/* <li className="cursor-pointer transition ease-in-out duration-300 ">

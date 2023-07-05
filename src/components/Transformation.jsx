@@ -1,8 +1,5 @@
-import { ArrowBackIos } from "@mui/icons-material";
-import { ArrowForwardIos } from "@mui/icons-material";
-import Aos from "aos";
-import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
+import { motion } from "framer-motion";
 
 const Transformation = ({ testimonialref }) => {
   const slides = [
@@ -28,26 +25,22 @@ const Transformation = ({ testimonialref }) => {
       id: 4,
       story:
         ' "Their team is incredibly skilled, empathetic, and supportive, and they have helped me make significant improvements in my life. With their guidance, I have been able to overcome my limiting beliefs and tap into my full potential. Their approach to wellness is truly transformative, focusing on creating sustainable habits that promote overall well-being. I am grateful for their continued support and highly recommend their services to anyone who is looking to live their best life." ',
-      name: "VISHAL VERMA",
+      name: "RAHUL VERMA",
     },
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
-  const numSlides = 3; // Total number of slides
-
-  const prevSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % numSlides);
-  };
-
+  const numSlides = slides.length - 1; // Total number of slides
   const nextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide - 1 + numSlides) % numSlides);
+    if (currentSlide === numSlides) {
+      setCurrentSlide(0);
+    } else {
+      setCurrentSlide(currentSlide + 1);
+    }
   };
-
-  setInterval(() => {
+  setTimeout(() => {
     nextSlide();
   }, 5000);
-
-  useEffect(() => {}, []);
   return (
     <div className="flex flex-col items-center m-8" ref={testimonialref}>
       <div>
@@ -62,62 +55,26 @@ const Transformation = ({ testimonialref }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.8 }}
         key={currentSlide}
       >
         <div className="my-4">
-          {slides.map((testimonial, index) => (
-            <div
-              key={testimonial.id}
-              className={`${
-                index === currentSlide ? "flex" : "hidden"
-              }   max-w-3xl`}
-            >
+          {
+            <div key={slides[currentSlide]?.id} className="max-w-2xl">
               <div className="bg-white p-6 rounded shadow-md text-center">
-                <p className="text-[#8ca1b3] leading-8">{testimonial.story}</p>
-                <p className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold">
-                  {testimonial.name}
+                <p className="text-[#8ca1b3] leading-8">
+                  {slides[currentSlide]?.story}
+                </p>
+                <p className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold my-3.5">
+                  {slides[currentSlide]?.name}
                 </p>
               </div>
             </div>
-          ))}
+          }
         </div>
       </motion.div>
-
-      {/* <div className="mt-4 md:block space-x-2">
-        <button onClick={prevSlide}>
-          <ArrowBackIos className="stroke-cyan-500" />
-        </button>
-        <button className="" onClick={nextSlide}>
-          <ArrowForwardIos className="stroke-cyan-500" />
-        </button>
-      </div> */}
     </div>
   );
 };
 
 export default Transformation;
-{
-  /* <div className=" mx-auto flex gap-7 md:gap-0   p-4">
-<Swiper
-  spaceBetween={50}
-  slidesPerView={3}
-  onSlideChange={() => console.log("slide change")}
-  onSwiper={(swiper) => console.log(swiper)}
->
-  {slides.map((testimonial, index) => (
-    <div
-      key={testimonial.id}
-      className={`${index === slide ? "flex" : "hidden"} `}
-    >
-      <div className="bg-white p-6 rounded shadow-md text-center">
-        <p className="text-[#8ca1b3] leading-7">{testimonial.story}</p>
-        <p className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent my-4 bg-clip-text font-bold">
-          {testimonial.name}
-        </p>
-      </div>
-    </div>
-  ))}
-</Swiper>
-</div> */
-}
