@@ -39,7 +39,7 @@ export const FirstCard = () => {
     AOS.init();
   }, [])
   return (
-    <div className="px-4 ">
+    <div className="px-4 bg-[#DAFFFB] ">
       <section className=" my-16 ">
         <div className=" md:flex md:flex-row-reverse p-7 md:justify-around  items-center md:space-x-5 md:px-5">
          

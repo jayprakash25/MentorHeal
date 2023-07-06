@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import Carddata from "./Data";
-import Logo from "../assets/Logo.jpeg";
 
 const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
   const [toggle, setToggle] = useState(false);
@@ -24,10 +23,10 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
               window.scrollTo(0, 0);
             }}
           >
-            {/* <p className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold text-2xl md:text-3xl">
+            <p className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold text-2xl md:text-3xl">
               MentorHeal
-            </p> */}
-            <img src={Logo} className="w-16 h-16" alt="" />
+            </p>
+            {/* <img src={Logo} className="w-16 h-16" alt="" /> */}
           </Link>
         </div>
         <div className=" hidden lg:flex items-center ">
