@@ -56,7 +56,7 @@ export const FirstCard = () => {
               Through the guidance and support of a mentor, individuals can gain
               valuable insights, develop new skills, and overcome obstacles that
               they may have otherwise struggled with on their own. Whether in
-              business, personal life, or any other aspect of life.
+              buisness, personal life, or any other aspect of life.
             </p>
           </div>
          

@@ -9,7 +9,7 @@ import Footer from "./Footer";
 import TeamCard from "./TeamCard";
 import { useRef } from "react";
 import Transformation from "./Transformation";
-import Events from "./Events";
+// import Events from "./Events";
 import Quote from "./Quote";
 import Whatsup from "./Whatsup";
 export default function Home() {
@@ -40,7 +40,7 @@ export default function Home() {
       <Why />
       <Transformation testimonialref={testimonialref} />
       <TeamCard />
-      <Events />
+      {/* <Events /> */}
       <Quote />
       <div ref={formref}>
         <Form />

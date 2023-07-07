@@ -42,6 +42,8 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
 
               {/* options....... */}
               <div
+                onMouseEnter={() => setdropdown(true)}
+                onMouseLeave={() => setdropdown(false)}
                 className={`${
                   dropdown ? "block" : "hidden"
                 } absolute bg-white shadow-md p-4 mt-8 rounded-lg`}
@@ -88,6 +90,8 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
               </li>
 
               <div
+                onMouseEnter={() => setMore(true)}
+                onMouseLeave={() => setMore(false)}
                 className={`${
                   more ? "block" : "hidden"
                 } absolute bg-white shadow-md p-2 mt-3 rounded-lg`}
