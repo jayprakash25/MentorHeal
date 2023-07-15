@@ -53,10 +53,11 @@ export default function Quote() {
     <div className="flex flex-col items-center m-8">
       <div>
         <h1 className="text-3xl md:text-5xl font-semibold py-4">
-          Our Stories Of{" "}
+          Even the most {" "}
           <span className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold">
-            Transformation
+            Successful {" "}
           </span>
+          struggle.
         </h1>
       </div>
       <motion.div

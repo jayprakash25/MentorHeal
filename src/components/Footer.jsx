@@ -60,15 +60,6 @@ const Footer = ({ Scrolltoref }) => {
                       );
                     })}
 
-                    {/* <li>Health</li>
-                    <li>Career</li>
-                    <li>Learning</li>
-                    <li>Skills</li>
-                    <li>Decisions</li>
-                    <li>Relationships</li>
-                    <li>Entrepreneurship</li>
-                    <li>Financial Literacy</li>
-                    <li>Spirituality</li> */}
                   </ul>
                 </div>
                 <div className="w-full lg:w-4/12 px-4">
@@ -114,11 +105,7 @@ const Footer = ({ Scrolltoref }) => {
 
           <div className="text-[#dde5f1] bg-[#42909d] py-5 px-5 lg:px-20 mx-10 lg:mx-20 rounded-lg font-semibold text-sm lg:leading-10 text-center ">
             <p>
-              Disclaimer: Please note that we are not a crisis intervention
-              helpline. Should you have severe symptoms or have thought about
-              harming yourself, please seek immediate medical help or call
-              suicide prevention helplines such as Vandrevala Foundation 24x7
-              Helpline: +91-9999666555
+              Disclaimer: We are diligently refining our prototype services, eagerly preparing for the highly anticipated launch announcement. Stay tuned for exciting updates as we shape the future of our industry!
             </p>
           </div>
         </div>
