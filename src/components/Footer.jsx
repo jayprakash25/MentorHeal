@@ -80,13 +80,13 @@ const Footer = ({ Scrolltoref }) => {
           {/* social icons .... */}
           <div className="flex space-x-4 items-center justify-center cursor-pointer">
             <a href="https://www.linkedin.com/company/mentoheal/">
-              <LinkedInIcon style={{color: "white"}} fontSize="large" />
+              <LinkedInIcon style={{color: "#1DA1F2"}} fontSize="large" className="bg-white rounded-full p-1" />
             </a>
             <a href="https://instagram.com/mentorheal.forlife?igshid=MzRlODBiNWFlZA==">
-              <Instagram style={{color: "white"}} fontSize="large" />
+              <Instagram style={{color: "#C13584"}} fontSize="large" className="bg-white rounded-full p-1" />
             </a>
-            <TwitterIcon style={{color: "white"}} fontSize="large" />
-            <FacebookIcon style={{color: "white"}} fontSize="large" />
+            <TwitterIcon style={{color: "#1DA1F2"}} fontSize="large" className="bg-white rounded-full p-1" />
+            <FacebookIcon style={{color: "#4267B2"}} fontSize="large" className="bg-white rounded-full p-1" />
           </div>
 
           <hr className="my-6  dark:bg-gray-400 border-0 h-[1.5px]" />
