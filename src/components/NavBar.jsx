@@ -4,16 +4,26 @@ import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import Carddata from "./Data";
+import { useEffect } from "react";
 
 const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
   const [toggle, setToggle] = useState(false);
-
   const [dropdown, setdropdown] = useState(false);
-
   const [more, setMore] = useState(false);
+  const [scroll, setScroll] = useState(false);
+
+  useEffect(() => {
+    window.onscroll = () => {
+      if(window.scrollY > 50){
+        setScroll(true);
+      } else {
+        setScroll(false);
+      }
+    };
+  }, []);
 
   return (
-    <nav className="fixed w-screen bg-white text-[#8ca1b3] z-50 md:px-8">
+    <nav className={`fixed w-screen bg-white text-[#8ca1b3] z-50 md:px-8 ${scroll ? "shadow-md" : "shadow-none"}`}>
       <div className="flex justify-between items-center px-9 py-3.5 gap-4">
         <div>
           <Link

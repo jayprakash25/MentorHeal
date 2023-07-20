@@ -33,7 +33,7 @@ export default function ReadFull() {
       <NavBar />
       <div className="pt-20">
         {/* <img src={data.state.Background} className="" alt="" /> */}
-        <h1 className=" top-64 text-[#E27066] hidden md:block pl-44  md:text-5xl font-semibold  ">
+        <h1 className=" top-64 text-[#001C30] hidden md:block pl-44  md:text-5xl font-poppins  ">
           {id}
         </h1>
       </div>
@@ -60,7 +60,7 @@ export default function ReadFull() {
         </div>
 
         <div data-aos="fade-left" className=" max-w-2xl space-y-3">
-          <h1 className="font-bold text-xl md:text-2xl lg:text-3xl py-4">
+          <h1 className="font-semibold bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text text-xl md:text-2xl lg:text-3xl py-4">
             {data.state.Blog[point].Tittle}
           </h1>
           {data.state.Blog[point].Points.map((item, index) => {
