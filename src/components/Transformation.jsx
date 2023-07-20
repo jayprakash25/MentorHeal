@@ -1,8 +1,7 @@
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import React from "react";
 const Transformation = ({ testimonialref }) => {
   const slides = [
     {
@@ -31,71 +30,45 @@ const Transformation = ({ testimonialref }) => {
     },
   ];
 
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const numSlides = slides.length - 1; // Total number of slides
-
-  const nextSlide = () => {
-    if (currentSlide === numSlides) {
-      setCurrentSlide(0);
-    } else {
-      setCurrentSlide(currentSlide + 1);
-    }
+  var settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false,
+    autoplay: true,
   };
-
-  const prevSlide = () => {
-    if (currentSlide === 0) {
-      setCurrentSlide(numSlides);
-    } else {
-      setCurrentSlide(currentSlide - 1);
-    }
-  };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [currentSlide]);
 
   return (
-    <div className="flex flex-col items-center m-8" ref={testimonialref}>
-      <div>
-        <h1 className="text-3xl md:text-5xl font-semibold py-4">
-          Our Stories Of{" "}
-          <span className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold">
-            Transformation
-          </span>
-        </h1>
-      </div>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.8 }}
-        key={currentSlide}
-      >
-        <div className="my-4">
-          <div key={slides[currentSlide]?.id} className="max-w-2xl">
-            <div className="bg-white p-6 rounded shadow-md text-center">
-              <p className="text-[#8ca1b3] leading-8">
-                {slides[currentSlide]?.story}
-              </p>
-              <p className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold my-3.5">
-                {slides[currentSlide]?.name}
-              </p>
-            </div>
-          </div>
+    <>
+      <div className="flex flex-col items-center my-20" ref={testimonialref}>
+        <div>
+          <h1 className="text-3xl md:text-5xl font-semibold py-4">
+            Our Stories Of{" "}
+            <span className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold">
+              Transformation
+            </span>
+          </h1>
         </div>
-      </motion.div>
-      <div className="flex justify-around mt-4 ">
-        <button className="" onClick={prevSlide}>
-          <ArrowBackIosIcon />
-        </button>
-        <button onClick={nextSlide}>
-          <ArrowForwardIosIcon />
-        </button>
       </div>
-    </div>
+      <Slider
+        {...settings}
+        className="w-[80vw] sm:w-[60vw] md:w-[50vw] mx-auto my-12"
+      >
+        {slides.map((item, index) => {
+          return (
+            <React.Fragment key={index}>
+              <div className="text-center space-y-7">
+                <p className="text-[#8ca1b3] leading-8">{item.story}</p>
+                <h1 className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold my-3.5 lg:text-xl text-lg">
+                  {item.name}
+                </h1>
+              </div>
+            </React.Fragment>
+          );
+        })}
+      </Slider>
+    </>
   );
 };
 

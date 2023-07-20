@@ -33,27 +33,24 @@ const Data = [
 ];
 
 const Why = () => {
- 
   return (
-    <div  className="bg-gradient-to-r from-[#e8f4ef] to-[#faebe5]  p-8 flex flex-col items-center justify-center  rounded-lg">
-      <div
-      >
-      <h1 className="text-3xl md:text-5xl font-semibold">
-        Why{" "}
-        <span className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold ">
-        MentorHeal?
-        </span>
-      </h1>
+    <div className="bg-gradient-to-r from-[#e8f4ef] to-[#faebe5]  p-8 flex flex-col items-center justify-center  rounded-lg">
+      <div>
+        <h1 className="text-3xl md:text-5xl font-semibold">
+          Why{" "}
+          <span className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold ">
+            MentorHeal?
+          </span>
+        </h1>
       </div>
-      <div 
-      className="grid grid-cols-1 md:grid-cols-6 justify-center place-items-center  my-20 text-center gap-16">
+      <div className="grid grid-cols-1 md:grid-cols-3 justify-center place-items-center my-20 text-center gap-16">
         {Data.map((item, index) => {
           return (
             <div
               className="space-y-5 flex flex-col items-center hover:scale-105 duration-300 ease-in-out "
               key={index}
             >
-              <img src={item.image} className="max-w-[230px] md:max-w-full" />
+              <img src={item.image} className="md:max-w-[10vw] max-w-[30vw]" />
               <h1>{item.Tittle}</h1>
             </div>
           );
