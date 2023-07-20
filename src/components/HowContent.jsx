@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import { Card } from "./Card";
-import faq from "../assets/images/faq.png";
 
 const FAQs = ({ Q, children }) => {
   const [open, setOpen] = useState(false);
@@ -14,15 +13,22 @@ const FAQs = ({ Q, children }) => {
     setOpen(!open);
   };
   return (
-    <div className="space-y-2">
+    <div  className=" bg-[#F5F5F5] w-[20rem] md:w-[30rem] lg:w-[42rem]  px-4 py-5 md:px-8 md:py-8 space-y-4 rounded-2xl">
       <div
-        className="flex cursor-pointer justify-between max-w-md "
+        className="flex items-center justify-between cursor-pointer"
         onClick={toggle}
       >
-        <h1 className="font-semibold md:text-xl">{Q}</h1>
-        <p className="">{open ? <ExpandLessIcon /> : <ExpandMoreIcon />}</p>
+        <h1 className=" md:text-xl lg:text-2xl font-semibold">{Q}</h1>
+        <p>{open ? <ExpandLessIcon/> : <ExpandMoreIcon />}</p>
       </div>
-      {open && <p>{children}</p>}
+      <div style={{
+          maxHeight: open ? "2000px" : "0",
+          overflow: "hidden",
+          transition: "max-height 2s ease-in-out",
+        }}
+>
+      {open && <p className="font-semibold">{children}</p>}
+      </div>
     </div>
   );
 };
@@ -126,7 +132,7 @@ const HowContent = () => {
               );
             })}
           </div>
-          <img className="hidden lg:block max-w-lg" src={faq} alt="img" />
+          {/* <img className="hidden lg:block max-w-lg" src={faq} alt="img" /> */}
         </div>
       </div>
     </div>
