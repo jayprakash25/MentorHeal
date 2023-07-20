@@ -427,7 +427,7 @@ const Carddata = [
   {
     image: entrepreneur,
     Title: "Entrepreneurship",
-    Para: "Entrepreneurship provides individuals with the opportunity to turn their ideas and passions into reality.",
+    Para: "Entrepreneurship provides individuals with the opportunity to turn their ideas into reality.",
     Blog: [
       {
         Tittle: "TEAM",

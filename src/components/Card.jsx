@@ -17,7 +17,7 @@ export const Card = () => {
               <div
               data-aos = "zoom-in"
                className="max-w-[80vw] md:w-[30vw] shadow-sm border-[0.3px] border-gray-200 rounded-lg flex flex-col items-center space-y-5 p-5">
-                <img src={item.image} className="bg-white py-2  w-32 rounded-full mt-4"/>
+                <img src={item.image} className="bg-white py-2  w-44  rounded-full mt-4"/>
                 <h1 className="text-3xl font-bold ">{item.Title}</h1>
                 <p className="text-center text-[#8ca1b3] text-sm leading-6">{item.Para}</p>
                 <p className=" cursor-pointer  text-[#00b8d3]">

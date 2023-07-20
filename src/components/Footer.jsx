@@ -80,7 +80,7 @@ const Footer = ({ Scrolltoref }) => {
           {/* social icons .... */}
           <div className="flex space-x-4 items-center justify-center cursor-pointer">
             <a href="https://www.linkedin.com/company/mentoheal/">
-              <LinkedInIcon color="" fontSize="large" />
+              <LinkedInIcon  fontSize="large" />
             </a>
             <a href="https://instagram.com/mentorheal.forlife?igshid=MzRlODBiNWFlZA==">
               <Instagram fontSize="large" />
@@ -89,10 +89,10 @@ const Footer = ({ Scrolltoref }) => {
             <FacebookIcon fontSize="large" />
           </div>
 
-          <hr className="my-6 bg-black" />
+          <hr className="my-6  dark:bg-gray-400 border-0 h-[1.5px]" />
           <div className="flex flex-wrap items-center md:justify-between justify-center">
             <div className="w-full md:w-4/12 px-4 mx-auto text-center">
-              <div className="text-sm  text-black font-semibold py-1">
+              <div className="text-sm  text-white font-semibold py-1">
                 Copyright © <span id="get-current-year">2023</span>
                 <a href="/" className=" ">
                   {" "}
@@ -101,7 +101,9 @@ const Footer = ({ Scrolltoref }) => {
               </div>
             </div>
           </div>
-          <hr className="my-6 bg-black" />
+          {/* <hr className="my-6 bg-black border-dotted" /> */}
+          <hr className="my-6  dark:bg-gray-400 border-0 h-[1.5px]" />
+
 
           <div className="text-[#dde5f1] bg-[#42909d] py-5 px-5 lg:px-20 mx-10 lg:mx-20 rounded-lg font-semibold text-sm lg:leading-10 text-center ">
             <p>
