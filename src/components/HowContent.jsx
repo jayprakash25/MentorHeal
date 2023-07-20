@@ -55,13 +55,13 @@ const HowContent = () => {
 
   return (
     <div className="pt-24 p-8">
-      <h1 className="text-4xl lg:text-6xl  text-center pb-14">How it Works?</h1>
+      <h1 className="text-3xl lg:text-5xl  text-center pb-14 font-semibold">How it Works?</h1>
 
       <div className="space-y-6">
         <div className="flex flex-col md:flex-row items-center md:justify-around">
           <img src={path} className="max-w-sm md:max-w-md" />
           <div className="py-2 space-y-2">
-            <h1 className="font-semibold text-2xl lg:text-3xl text-[#00b8b3] ">
+            <h1 className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold text-2xl lg:text-3xl ">
               1. Select a Category
             </h1>
             <p className="max-w-sm text-[#7C7C7C] text-[13px] md:text-[16.5px] lg:text-[20px] leading-5 md:leading-7 lg:leading-8 md:max-w-md">
@@ -74,7 +74,7 @@ const HowContent = () => {
         <div className="flex flex-col items-center md:flex-row-reverse md:justify-around">
           <img src={booking} className="max-w-sm md:max-w-md" />
           <div className="py-2 space-y-2">
-            <h1 className="font-semibold text-2xl text-[#00b8b3] lg:text-3xl">
+            <h1 className=" text-2xl bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold  lg:text-3xl">
               2. Book a Slot
             </h1>
             <p className="max-w-sm  text-[#7C7C7C] text-[13px] md:text-[16.5px] lg:text-[20px] leading-5 md:leading-7 lg:leading-8 md:max-w-md">
@@ -87,7 +87,7 @@ const HowContent = () => {
         <div className="flex flex-col items-center md:flex-row md:justify-around">
           <img src={meet} className="max-w-sm md:max-w-md" />
           <div className="py-2 space-y-2">
-            <h1 className="font-semibold text-2xl text-[#00b8b3] lg:text-3xl">
+            <h1 className=" bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold  text-2xl text-[#00b8b3] lg:text-3xl">
               3. Join the Session
             </h1>
             <p className="max-w-sm  text-[#7C7C7C] text-[13px] md:text-[16.5px] lg:text-[20px] leading-5 md:leading-7 lg:leading-8 md:max-w-md">
@@ -100,13 +100,13 @@ const HowContent = () => {
 
       <div className="py-8 pt-12">
         <h1 className="text-3xl lg:text-5xl text-center">
-          Explore by <span className="text-[#00b8b3] ">Categories</span>
+          Explore by <span className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-semibold  ">Categories</span>
         </h1>
         <Card />
       </div>
 
       <div className="py-8 pb-0">
-        <h1 className="text-[#00b8b3] text-center text-xl md:text-2xl lg:text-3xl pb-5">
+        <h1 className=" bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-poppins  text-center text-xl md:text-2xl lg:text-3xl pb-5">
           FAQ&apos;s
         </h1>
 

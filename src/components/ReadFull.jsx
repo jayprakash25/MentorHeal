@@ -44,12 +44,13 @@ export default function ReadFull() {
             return (
               <div data-aos="fade-right" key={index}>
                 <button
+                className="px-4 py-2 my-2 w-52 shadow-md"
                   key={index}
                   onClick={() => {
                     setPoint(index);
                   }}
                 >
-                  <h1 className="text-lg text-gray-400 font-poppins shadow-md p-4">
+                  <h1 className="text-lg text-gray-400 font-poppins">
                     {item.Tittle.toUpperCase()}
                   </h1>
                 </button>
@@ -67,8 +68,8 @@ export default function ReadFull() {
               <React.Fragment key={index}>
                 <div className="flex gap-2">
                   o
-                  <p className="font-semibold text-sm md:text-lg">
-                    {item.toLowerCase()}
+                  <p className="text-[#676767] text-sm font-semibold">
+                    {item.toUpperCase()}
                   </p>
                 </div>
               </React.Fragment>

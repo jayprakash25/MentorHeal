@@ -6,19 +6,19 @@ const quotes = [
     id: 1,
     img: "https://cdn.britannica.com/05/236505-050-17B6E34A/Elon-Musk-2022.jpg",
     quote:
-      '" Success is not the absence of struggle, but rather the relentless pursuit of overcoming it. Even after achieving great heights, the struggle persists, for it is the fuel that drives innovation and propels us towards a better tomorrow. Embrace the challenges, for they are the stepping stones on the path to extraordinary achievements. - Elon Musk"',
+      ' Success is not the absence of struggle, but rather the relentless pursuit of overcoming it. Even after achieving great heights, the struggle persists, for it is the fuel that drives innovation and propels us towards a better tomorrow. Embrace the challenges, for they are the stepping stones on the path to extraordinary achievements. - Elon Musk',
   },
   {
     id: 2,
     img: "https://media.wired.com/photos/5c377ecde1c834084b57a611/4:3/w_2396,h_1797,c_limit/Culture_Monitor_Bezos.jpg",
     quote:
-      '" Choosing to work hard is the key to being successful - Jeff Bezos"',
+      'Choosing to work hard is the key to being successful - Jeff Bezos',
   },
   {
     id: 3,
     img: "https://i.kinja-img.com/gawker-media/image/upload/c_fit,f_auto,g_center,q_60,w_645/stkagurhbfcwasjeiijl.jpg",
     quote:
-      '" We will make it because we are young and we will never, never give up. - Jack Ma"',
+      ' We will make it because we are young and we will never, never give up. - Jack Ma',
   },
 ];
 
