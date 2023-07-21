@@ -14,7 +14,7 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
 
   useEffect(() => {
     window.onscroll = () => {
-      if(window.scrollY > 50){
+      if (window.scrollY > 50) {
         setScroll(true);
       } else {
         setScroll(false);
@@ -23,7 +23,11 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
   }, []);
 
   return (
-    <nav className={`fixed w-screen bg-white text-[#8ca1b3] z-50 md:px-8 ${scroll ? "shadow-md" : "shadow-none"}`}>
+    <nav
+      className={`fixed w-screen bg-white text-[#8ca1b3] z-50 md:px-8 ${
+        scroll ? "shadow-md" : "shadow-none"
+      }`}
+    >
       <div className="flex justify-between items-center px-9 py-3.5 gap-4">
         <div>
           <Link
@@ -33,14 +37,14 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
               window.scrollTo(0, 0);
             }}
           >
-            <p className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold text-2xl md:text-3xl">
+            <p className="text-2xl font-bold text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text md:text-3xl">
               MentorHeal
             </p>
             {/* <img src={Logo} className="w-16 h-16" alt="" /> */}
           </Link>
         </div>
-        <div className=" hidden lg:flex items-center ">
-          <ul className="list-none flex flex-row  items-center md:text-sm font-semibold space-x-6  mr-6">
+        <div className="items-center hidden lg:flex">
+          <ul className="flex flex-row items-center mr-6 space-x-6 font-semibold list-none md:text-sm">
             {/* dropdown web..... */}
             <div className="flex flex-col">
               <li
@@ -58,11 +62,11 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
                   dropdown ? "block" : "hidden"
                 } absolute bg-white shadow-md p-4 mt-8 rounded-lg`}
               >
-                <ul className=" font-normal grid grid-cols-3 gap-3">
+                <ul className="grid grid-cols-3 gap-3 font-normal ">
                   {Carddata.map((item, index) => {
                     return (
                       <li
-                        className="cursor-pointer   transition ease-in-out duration-300"
+                        className="transition duration-300 ease-in-out cursor-pointer"
                         key={index}
                       >
                         {" "}
@@ -106,7 +110,10 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
                   more ? "block" : "hidden"
                 } absolute bg-white shadow-md p-2 mt-3 rounded-lg`}
               >
-                <ul className="font-normal  grid grid-cols-2 gap-3 p-3">
+                <ul className="grid grid-cols-2 gap-3 p-3 font-normal">
+                  <li className="cursor-pointer">
+                    <Link to={"/Blog"}>Blog</Link>
+                  </li>
                   <li className="cursor-pointer">
                     <Link to="/about"> About us </Link>
                   </li>
@@ -127,7 +134,7 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
         </div>
 
         {/* Mobile navbar ...... */}
-        <div className="flex lg:hidden justify-end items-center">
+        <div className="flex items-center justify-end lg:hidden">
           <button onClick={() => setToggle(!toggle)}>
             <MenuIcon color="#00b8b3" />
           </button>
@@ -138,12 +145,12 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
               !toggle ? "hidden" : "flex"
             } p-6  bg-white shadow-2xl rounded-xl absolute top-5  items-center justify-center mt-10 `}
           >
-            <ul className="list-none flex lg:hidden flex-col  gap-4 ">
+            <ul className="flex flex-col gap-4 list-none lg:hidden ">
               <li
                 onClick={() => {
                   setMore(!more);
                 }}
-                className="cursor-pointer transition ease-in-out duration-300 "
+                className="transition duration-300 ease-in-out cursor-pointer "
               >
                 Mentorship
                 <ArrowDropDownIcon />
@@ -152,11 +159,11 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
               <div
                 className={` space-y-4 text-sm ${more ? "block" : "hidden"}`}
               >
-                <ul className=" font-normal grid gap-3">
+                <ul className="grid gap-3 font-normal ">
                   {Carddata.map((item, index) => {
                     return (
                       <li
-                        className="cursor-pointer   transition ease-in-out duration-300"
+                        className="transition duration-300 ease-in-out cursor-pointer"
                         key={index}
                       >
                         {" "}
@@ -177,11 +184,11 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
                 </ul>
               </div>
 
-              <li className="cursor-pointer transition ease-in-out duration-300 ">
+              <li className="transition duration-300 ease-in-out cursor-pointer ">
                 <Link to={"/how"}>How it works</Link>
               </li>
 
-              {/* <li className="cursor-pointer transition ease-in-out duration-300 ">
+              {/* <li className="transition duration-300 ease-in-out cursor-pointer ">
                 Assessment
               </li> */}
 
@@ -189,7 +196,7 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
                 onClick={() => {
                   setdropdown(!dropdown);
                 }}
-                className="flex items-center cursor-pointer space-x-1"
+                className="flex items-center space-x-1 cursor-pointer"
               >
                 <h1>More</h1>
                 <ArrowDropDownIcon />
