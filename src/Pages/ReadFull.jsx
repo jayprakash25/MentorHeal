@@ -1,4 +1,3 @@
-import React from "react";
 import { useLocation } from "react-router-dom";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
@@ -12,7 +11,7 @@ export default function ReadFull() {
     <>
     <NavBar/>
       <main>
-        <div className="pt-24 space-y-9 mx-16 flex flex-col justify-center items-center"><
+        <div className="pt-24 space-y-9 mx-16 flex flex-col justify-center items-center">
           <h1 className="text-2xl font-bold lg:text-3xl max-w-xl lg:tedxt-3xl leading-9">
             {Tittle}
           </h1>

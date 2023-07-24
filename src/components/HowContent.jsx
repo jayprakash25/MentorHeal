@@ -1,4 +1,4 @@
-import path from "../assets/images/path.jpg";
+import path from "../assets/images/path.png";
 import booking from "../assets/images/booking.jpg";
 import meet from "../assets/images/meet.jpg";
 import { useLocation } from "react-router-dom";
