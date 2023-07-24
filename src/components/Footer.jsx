@@ -13,30 +13,33 @@ const Footer = ({ Scrolltoref }) => {
           <div className="flex flex-wrap text-left lg:text-left">
             <div className="w-full lg:w-6/12 px-4 text-center  space-y-10 text-black">
               <div>
-              <Link
-                to="/"
-                className="flex"
-                onClick={() => {
-                  window.scrollTo(0, 0);
-                }}
-              >
-                <p className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold text-3xl mx-auto mb-5 md:text-4xl">
-                  MentorHeal
+                <Link
+                  to="/"
+                  className="flex"
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                  }}
+                >
+                  <p className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold text-3xl mx-auto mb-5 md:text-4xl">
+                    MentorHeal
+                  </p>
+                </Link>
+              </div>
+
+              <div className=" py-16 space-y-8 ">
+                <p className=" text-white font-poppins ">
+                  Subscribe to never miss our articles.
                 </p>
-              </Link>
+                <div className="flex space-x-4 items-center justify-center">
+                  <input
+                    placeholder="Your email"
+                    className="shadow appearance-none border rounded-3xl w-96 py-3 px-6 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  />
+                  <button className="px-6 py-3 bg-[#00b8d3] text-white font-semibold rounded-3xl">
+                    Subscribe Now!!
+                  </button>
                 </div>
-
-                
-                <div className=" py-16 space-y-8 ">
-                  <p className=" text-white font-poppins ">Subscribe to never miss our articles.</p>
-                  <div className="flex space-x-4 items-center justify-center">
-                  <input placeholder="Your email" className="shadow appearance-none border rounded-3xl w-96 py-3 px-6 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
-                  <button className="px-6 py-3 bg-[#00b8d3] text-white font-semibold rounded-3xl">Subscribe Now!!</button>
-                  </div>
-                </div>
-
-                
-
+              </div>
             </div>
             <div className="w-full lg:w-6/12 px-4">
               <div className="flex flex-wrap items-top mb-6">
@@ -92,37 +95,40 @@ const Footer = ({ Scrolltoref }) => {
 
           {/* social icons .... */}
           <div className="flex justify-around pt-10">
-          <div className="">
-                <Link to='/session'>
-                  <button className="px-6 py-3 bg-[#00b8d3] text-white text-[16px] rounded-3xl font-semibold">Book your session</button></Link>
-                </div>
-          
-          <div className="flex space-x-4 items-center justify-center cursor-pointer">
-            <a href="https://www.linkedin.com/company/mentoheal/">
-              <LinkedInIcon
+            <div className="">
+              <Link to="/session">
+                <button className="px-6 py-3 bg-[#00b8d3] text-white text-[16px] rounded-3xl font-semibold">
+                  Book your session
+                </button>
+              </Link>
+            </div>
+
+            <div className="flex space-x-4 items-center justify-center cursor-pointer">
+              <a href="https://www.linkedin.com/company/mentoheal/">
+                <LinkedInIcon
+                  style={{ color: "#1DA1F2" }}
+                  fontSize="large"
+                  className="bg-white rounded-full p-1"
+                />
+              </a>
+              <a href="https://instagram.com/mentorheal.forlife?igshid=MzRlODBiNWFlZA==">
+                <Instagram
+                  style={{ color: "#C13584" }}
+                  fontSize="large"
+                  className="bg-white rounded-full p-1"
+                />
+              </a>
+              <TwitterIcon
                 style={{ color: "#1DA1F2" }}
                 fontSize="large"
                 className="bg-white rounded-full p-1"
               />
-            </a>
-            <a href="https://instagram.com/mentorheal.forlife?igshid=MzRlODBiNWFlZA==">
-              <Instagram
-                style={{ color: "#C13584" }}
+              <FacebookIcon
+                style={{ color: "#4267B2" }}
                 fontSize="large"
                 className="bg-white rounded-full p-1"
               />
-            </a>
-            <TwitterIcon
-              style={{ color: "#1DA1F2" }}
-              fontSize="large"
-              className="bg-white rounded-full p-1"
-            />
-            <FacebookIcon
-              style={{ color: "#4267B2" }}
-              fontSize="large"
-              className="bg-white rounded-full p-1"
-            />
-          </div>
+            </div>
           </div>
 
           <hr className="my-6  dark:bg-gray-400 border-0 h-[1.5px]" />
