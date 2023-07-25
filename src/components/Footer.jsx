@@ -29,15 +29,15 @@ const Footer = ({ Scrolltoref }) => {
               </div>
 
               <div className=" py-16 space-y-8 ">
-                <p className=" text-white font-poppins ">
+                <p className=" text-white lg:text-start lg:pl-24 font-poppins ">
                   Subscribe to never miss our articles.
                 </p>
-                <div className="md:flex space-y-4 md:space-y-0 space-x-4 items-center justify-center">
+                <div className="md:flex space-y-4 md:space-y-0 space-x-2 items-center justify-center">
                   <input
                     placeholder="Your email"
                     value={email}
                     onChange={(e)=>{setEmail(e.target.value)}}
-                    className="shadow appearance-none border rounded-3xl w-64 md:w-96 py-3 px-6 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="shadow appearance-none border rounded-3xl w-54 md:w-64  py-3 px-6 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   />
                   <button onClick={() => {setEmail("")}} className="px-6 py-3 bg-[#00b8d3] text-white font-semibold rounded-3xl">
                     Subscribe Now!!
@@ -98,14 +98,7 @@ const Footer = ({ Scrolltoref }) => {
           </div>
 
           {/* social icons .... */}
-          <div className="md:flex space-y-10 md:space-y-0 justify-around pt-10">
-            <div className="">
-              <Link to="/session">
-                <button className="px-6 py-3 bg-[#00b8d3] text-white text-[16px] rounded-3xl font-semibold">
-                  Book your session
-                </button>
-              </Link>
-            </div>
+          <div className=" pt-10">
 
             <div className="flex space-x-4 items-center justify-center cursor-pointer">
               <a href="https://www.linkedin.com/company/mentoheal/">
