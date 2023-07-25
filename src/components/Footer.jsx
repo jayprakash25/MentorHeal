@@ -5,7 +5,9 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import { Instagram } from "@mui/icons-material";
+import { useState } from "react";
 const Footer = ({ Scrolltoref }) => {
+  const [email, setEmail] = useState("");
   return (
     <div className="">
       <footer className="relative  bg-[#007384] text-center py-8 text-sm">
@@ -30,12 +32,14 @@ const Footer = ({ Scrolltoref }) => {
                 <p className=" text-white font-poppins ">
                   Subscribe to never miss our articles.
                 </p>
-                <div className="flex space-x-4 items-center justify-center">
+                <div className="md:flex space-y-4 md:space-y-0 space-x-4 items-center justify-center">
                   <input
                     placeholder="Your email"
-                    className="shadow appearance-none border rounded-3xl w-96 py-3 px-6 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    value={email}
+                    onChange={(e)=>{setEmail(e.target.value)}}
+                    className="shadow appearance-none border rounded-3xl w-64 md:w-96 py-3 px-6 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   />
-                  <button className="px-6 py-3 bg-[#00b8d3] text-white font-semibold rounded-3xl">
+                  <button onClick={() => {setEmail("")}} className="px-6 py-3 bg-[#00b8d3] text-white font-semibold rounded-3xl">
                     Subscribe Now!!
                   </button>
                 </div>
@@ -94,7 +98,7 @@ const Footer = ({ Scrolltoref }) => {
           </div>
 
           {/* social icons .... */}
-          <div className="flex justify-around pt-10">
+          <div className="md:flex space-y-10 md:space-y-0 justify-around pt-10">
             <div className="">
               <Link to="/session">
                 <button className="px-6 py-3 bg-[#00b8d3] text-white text-[16px] rounded-3xl font-semibold">
