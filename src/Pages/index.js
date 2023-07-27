@@ -1,4 +1,4 @@
 import Blog from './Blog'
-import ReadFull from './ReadFull'
+import ReadFullBlog from './ReadFullBlog'
 
-export { Blog ,ReadFull}
+export { Blog ,ReadFullBlog}
