@@ -13,7 +13,7 @@ const HeroSection = () => {
   return (
     <div className="pt-16">
       <section className="px-5 ">
-        <div className="flex flex-col justify-between md:flex-row md:items-center my-5 md:px-5">
+        <div className="flex flex-col justify-between lg:flex-row md:items-center my-5 md:px-5">
           <div
             data-aos="fade-left"
             className="mx-auto py-4 animate__animated animate__fadeInLeft"
@@ -24,8 +24,8 @@ const HeroSection = () => {
               alt="hero.png"
             />
           </div>
-          <div className="flex flex-col animate__animated animate__fadeInRight justify-between items-center md:items-start px-5 py-8 space-y-6 md:space-y-9">
-            <h1 className="text-2xl md:text-4xl md:max-w-[40vw] leading-10 font-semibold">
+          <div className="flex flex-col animate__animated animate__fadeInRight justify-between items-center md:items-start px-5 py-8 space-y-6 lg:space-y-9">
+            <h1 className="text-2xl md:text-4xl lg:max-w-[40vw] leading-10 font-semibold">
               <span className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold">
                 Mentorship
               </span>{" "}

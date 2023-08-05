@@ -44,13 +44,13 @@ export default function ReadFull() {
             return (
               <div data-aos="fade-right" key={index}>
                 <button
-                className="px-4 py-2 my-2 w-52 shadow-md"
+                  className="px-4 py-2 my-2 w-52 md:w-36 lg:w-52 shadow-md"
                   key={index}
                   onClick={() => {
                     setPoint(index);
                   }}
                 >
-                  <h1 className="text-lg text-gray-400 font-poppins">
+                  <h1 className="text-lg md:text-sm lg:text-lg text-gray-400 font-poppins">
                     {item.Tittle.toUpperCase()}
                   </h1>
                 </button>
@@ -77,8 +77,8 @@ export default function ReadFull() {
           })}
         </div>
       </div>
-      <Appointment/>
-      <Whatsup/>
+      <Appointment />
+      <Whatsup />
       <Footer />
     </>
   );

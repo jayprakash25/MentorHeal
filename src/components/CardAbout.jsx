@@ -10,7 +10,7 @@ const CardAbout = () => {
       Bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
     {
-      Name: "Rohit Maini",
+      Name: "Rohit",
       Position: "CEO & Founder",
       Image: ayush,
       Bio: "Rohit is a dreamer. He visualizes mentoring as many people as possible to become the best version of themselves. He has studied both engineering and management and has worked both internationally and in india across various sectors like I.T, FMCG and Finance. He is an experienced investment advisor and a voracious reader across most broad subjects. He has undergone many skill building trainings too and he wishes to help young people realize the right values early in life to maximise compunding in life and also the mid-aged and older people to adapt to the new times along with inculcating the winning habits &amp; concepts. He dreams to incorporate the importance of abundance in all respects and the most successful ways to achieve them in his endeavour to create a community for the same which can help in achieving this elusive well-being for everyone. He believes everyone has the spark of infinite power in them and just wants to live with the ideal of service to mankind and maximum value to humanity by helping people realize their infinite existence and unbound potential.",
@@ -21,10 +21,7 @@ const CardAbout = () => {
       Image: ayush,
       Bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
-    
   ];
-  
-
 
   return (
     <div className="flex flex-col m-8 items-center justify-center">
@@ -37,9 +34,10 @@ const CardAbout = () => {
         {data.map((member, index) => {
           return (
             <React.Fragment key={index}>
-              <div 
-              data-aos = 'zoom-in'
-              className="max-w-md hover:scale-105 ease-in-out duration-500 cursor-pointer shadow-md px-4">
+              <div
+                data-aos="zoom-in"
+                className="max-w-md hover:scale-105 ease-in-out duration-500 cursor-pointer shadow-md px-4"
+              >
                 {/* <img
                   className="md:w-[30vw] rounded-lg"
                   src={member.imageUrl}

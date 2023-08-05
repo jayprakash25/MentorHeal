@@ -36,7 +36,7 @@ export default function Quote() {
 
   return (
     <>
-      <div className="flex flex-col items-center my-24">
+      <div className="flex flex-col items-center my-24 px-8">
         <div>
           <h1 className="text-3xl md:text-5xl font-semibold py-4">
             Even the most{" "}
@@ -47,18 +47,22 @@ export default function Quote() {
           </h1>
         </div>
       </div>
-      <Slider {...settings} className="md:w-[70vw] w-[80vw] mx-auto my-12">
+      <Slider {...settings} className=" w-[80vw] mx-auto my-12">
         {quotes.map((item, index) => {
           return (
             <React.Fragment key={index}>
-              <div className="flex md:flex-row flex-col gap-12 items-center  justify-evenly  p-6 rounded ">
+              <div className="flex lg:flex-row flex-col gap-12 items-center  justify-evenly  p-6 rounded ">
                 <div className="text-center">
                   <h1 className="text-[#8ca1b3] md:text-xl  font-semibold leading-8">
                     {item.quote}
                   </h1>
                 </div>
                 <div>
-                  <img src={item.img} className="max-w-xs md:max-w-md rounded-lg" alt="" />
+                  <img
+                    src={item.img}
+                    className="max-w-xs md:max-w-md rounded-lg"
+                    alt=""
+                  />
                 </div>
               </div>
             </React.Fragment>
