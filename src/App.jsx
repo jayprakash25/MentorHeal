@@ -4,8 +4,9 @@ import AboutUs from "./components/AboutUs";
 import Mentor from "./components/Mentor";
 import BookForm from "./components/BookForm";
 import How from "./components/How";
-import ReadFull from "./components/ReadFull"
-import { Blog ,ReadFullBlog} from "./Pages/index";
+import ReadFull from "./components/ReadFull";
+import { Blog, ReadFullBlog } from "./Pages/index";
+import Intern from "./Pages/Intern";
 const App = () => {
   return (
     <>
@@ -17,7 +18,8 @@ const App = () => {
         <Route path="/session" element={<BookForm />} />
         <Route path="/how" element={<How />} />
         <Route path="/Blog" element={<Blog />} />
-        <Route path="/ReadFull" element={<ReadFullBlog/>} />
+        <Route path="/internships" element={<Intern />} />
+        <Route path="/ReadFull" element={<ReadFullBlog />} />
       </Routes>
     </>
   );
