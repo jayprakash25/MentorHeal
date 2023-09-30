@@ -1,16 +1,39 @@
-import React from "react";
+import React, { useEffect } from "react";
 import NavBar from "./NavBar";
-import AllBlogs from "./../Data/BlogsData";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { db } from "../Firebase";
+import { collection, getDocs } from "firebase/firestore";
 
 export default function Blogs() {
   const navigate = useNavigate();
+  const [AllBlogs, setAllBlogs] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const collectionRef = collection(db, "BLOGS");
+        const querySnapshot = await getDocs(collectionRef);
+        const blogsData = [];
+        querySnapshot.forEach((doc) => {
+          if (doc.exists()) {
+            blogsData.push(doc.data());
+          }
+        });
+        setAllBlogs(blogsData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <main>
       <NavBar />
       <div className="flex flex-col items-center justify-center gap-10 pt-24 pb-10 md:grid md:grid-cols-2 lg:grid-cols-3 place-items-center md:px-10">
-        {AllBlogs.map((item, index) => {
+        {AllBlogs?.map((item, index) => {
           return (
             <React.Fragment key={index}>
               <div
