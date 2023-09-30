@@ -127,9 +127,9 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
                 </ul>
               </div>
             </div>
-            <li className="cursor-pointer">
+            {/* <li className="cursor-pointer">
               <Link to={"/internships"}>Internships</Link>
-            </li>
+            </li> */}
             <li onClick={Scrolltoref} className="cursor-pointer">
               <Link to="/join"> Join as Mentor</Link>
             </li>

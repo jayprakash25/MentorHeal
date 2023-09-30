@@ -5,7 +5,7 @@ import OurVision from "./OurVision";
 import Prophecy from "./Prophecy";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
-import CardAbout from "./CardAbout";
+// import CardAbout from "./CardAbout";
 import Appointment from "./Appointment";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
@@ -43,7 +43,8 @@ const AboutUs = () => {
       <Prophecy />
 
       {/* About the team...... */}
-      <CardAbout />
+      {/* <CardAbout /> */}
+
       <Whatsup />
       <Appointment />
       <Footer />

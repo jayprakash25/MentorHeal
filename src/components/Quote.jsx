@@ -9,19 +9,19 @@ export default function Quote() {
       id: 1,
       img: "https://cdn.britannica.com/05/236505-050-17B6E34A/Elon-Musk-2022.jpg",
       quote:
-        " Success is not the absence of struggle, but rather the relentless pursuit of overcoming it. - Elon Musk",
+        "The path to the CEO's office should not be through the CFO's office, and it should not be through the marketing department. It needs to be through engineering and design",
     },
     {
       id: 2,
       img: "https://media.wired.com/photos/5c377ecde1c834084b57a611/4:3/w_2396,h_1797,c_limit/Culture_Monitor_Bezos.jpg",
       quote:
-        "Choosing to work hard is the key to being successful - Jeff Bezos",
+        "We see our customers as invited guests to a party, and we are the hosts. It's our job every day to make every important aspect of the customer experience a little bit better",
     },
     {
       id: 3,
-      img: "https://i.kinja-img.com/gawker-media/image/upload/c_fit,f_auto,g_center,q_60,w_645/stkagurhbfcwasjeiijl.jpg",
+      img: "https://media.gettyimages.com/id/1057636522/photo/alibaba-chairman-jack-ma-speaking-duirng-the-hongqiao-international-economic-and-trade-forum.jpg?s=612x612&w=0&k=20&c=_332Hwtwa6uC0nJZwJqAsN5BFZuTBp5H2WuS1AC8Zoc=",
       quote:
-        " We will make it because we are young and we will never, never give up. - Jack Ma",
+        "Help young people. Help small guys. Because small guys will be big. Young people will have the seeds you bury in their minds, and when they grow up, they will change the world",
     },
   ];
 
@@ -36,33 +36,32 @@ export default function Quote() {
 
   return (
     <>
-      <div className="flex flex-col items-center my-24 px-8">
+      <div className="flex flex-col items-center px-8 my-24">
         <div>
-          <h1 className="text-3xl md:text-5xl font-semibold py-4">
-            Even the most{" "}
-            <span className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold">
-              Successful{" "}
+          <h1 className="py-4 text-3xl font-semibold md:text-5xl">
+          Wellness Builds  
+            <span className="font-bold text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text">
+            {" "} Character{" "}
             </span>
-            struggle.
           </h1>
         </div>
       </div>
-      <Slider {...settings} className=" w-[80vw] mx-auto my-12">
+      <Slider {...settings} className=" w-[100vw] lg:w-[60vw] mx-auto my-12">
         {quotes.map((item, index) => {
           return (
             <React.Fragment key={index}>
-              <div className="flex lg:flex-row flex-col gap-12 items-center  justify-evenly  p-6 rounded ">
-                <div className="text-center">
-                  <h1 className="text-[#8ca1b3] md:text-xl  font-semibold leading-8">
-                    {item.quote}
-                  </h1>
-                </div>
+              <div className="flex flex-col items-center justify-center gap-5 lg:flex-row">
                 <div>
                   <img
                     src={item.img}
-                    className="max-w-xs md:max-w-md rounded-lg"
+                    className="max-w-xs rounded-lg md:max-w-md"
                     alt=""
                   />
+                </div>
+                <div className="max-w-xs">
+                  <h1 className="text-[#8ca1b3] md:text-xl font-semibold leading-9">
+                    {item.quote}
+                  </h1>
                 </div>
               </div>
             </React.Fragment>

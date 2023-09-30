@@ -7,7 +7,7 @@ export const Card = () => {
     AOS.init({ duration: 2000 });
   }, []);
   return (
-    <div className="flex flex-col items-center justify-center md:grid-cols-2 lg:grid-cols-3 gap-5 my-16 md:grid md:px-5">
+    <div className="grid grid-cols-1 gap-5 my-16 md:grid-cols-2 lg:grid-cols-3">
       {Carddata.map((item, index) => {
         return (
           <Link
@@ -25,14 +25,11 @@ export const Card = () => {
                 data-aos-easing="ease-in-out"
                 data-aos-mirror="true"
                 data-aos-once="true"
-                className="max-w-[80vw] md:w-[70vw] shadow-sm border-[0.3px] border-gray-200 rounded-lg flex flex-col items-center space-y-5 p-5"
+                className="shadow-sm border-[0.3px] border-gray-200 rounded-lg flex flex-col items-center space-y-5 p-5"
               >
-                {/* <div
-              data-aos = "zoom-in"
-               className="max-w-[80vw] md:w-[30vw] shadow-sm border-[0.3px] border-gray-200 rounded-lg flex flex-col items-center space-y-5 p-5"> */}
                 <img
                   src={item.image}
-                  className="py-2 mt-4 bg-white rounded-full w-44"
+                  className="py-2 mt-4 bg-white rounded-full w-28"
                 />
                 <h1 className="text-3xl font-bold ">{item.Title}</h1>
                 <p className="text-center text-[#8ca1b3] text-sm leading-6">

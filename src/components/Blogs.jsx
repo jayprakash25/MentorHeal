@@ -1,56 +1,50 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
-// import { useLocation } from "react-router-dom";
+import React from "react";
+import NavBar from "./NavBar";
+import AllBlogs from "./../Data/BlogsData";
 import { useNavigate } from "react-router-dom";
-import { db } from "../Firebase";
-import { collection, getDocs } from "firebase/firestore";
-// import DOMPurify from "dompurify";
+
 export default function Blogs() {
   const navigate = useNavigate();
-  // const location = useLocation();
-  const [blogsD, setBlogsD] = useState([]);
 
-  useEffect(() => {
-    fetchData();
-    window.scrollTo(0, 0);
-  }, []);
-
-  const fetchData = async () => {
-    const querySnapshot = await getDocs(collection(db, "Blogs"));
-    const data = querySnapshot.docs.map((doc) => doc.data());
-    //to prevent XSS attacks as fetching html from db
-    // const sanitizedData = DOMPurify.sanitize(data);
-    setBlogsD(data);
-  };
   return (
-    <section className="lg:grid-cols-3 px-8 pt-24 pb-7 gap-7 md:grid md:grid-cols-2 place-items-center lg:grid flex flex-col justify-center items-center">
-      {blogsD.map((item, index) => {
-        return (
-          <React.Fragment key={index}>
-            <div
-              onClick={() => {
-                navigate(`/ReadFull`, {
-                  state: {
-                    image: item.image,
-                    Blog: item.Blog,
-                  },
-                });
-              }}
-              className=" max-w-md max-h-[100vh] cursor-pointer p-6 md:max-w-lg border-[1px] border-slate-200 rounded-xl shadow-md space-y-3"
-            >
-              <div>
-                <img src={item.image} className="rounded-lg" alt={item.image} />
-              </div>
-
-              {/* use dompurify and sanitize fetched data if any xss attacks  */}
+    <main>
+      <NavBar />
+      <div className="flex flex-col items-center justify-center gap-10 pt-24 pb-10 md:grid md:grid-cols-2 lg:grid-cols-3 place-items-center md:px-10">
+        {AllBlogs.map((item, index) => {
+          return (
+            <React.Fragment key={index}>
               <div
-                className="pt-6"
-                dangerouslySetInnerHTML={{ __html: item.Blog.slice(0, 250) + "......" }}
-              />
-            </div>
-          </React.Fragment>
-        );
-      })}
-    </section>
+                className="max-w-sm md:max-w-md lg:max-w-lg space-y-2 border-[1px] border-slate-300 p-5 shadow-md shadow-slate-200 cursor-pointer"
+                onClick={() => {
+                  navigate(`/ReadFull`, {
+                    state: {
+                      Blogimage: item.Blogimage,
+                      BLogTittle: item.BLogTittle,
+                      Sections: item.BlogSections,
+                    },
+                  });
+                }}
+              >
+                <div>
+                  <img
+                    src={item.Blogimage}
+                    className="rounded-md"
+                    alt={item.Blogimage}
+                  />
+                </div>
+                <div>
+                  <h1 className="font-bold underline">{item.BLogTittle}</h1>
+                </div>
+                <div className="flex justify-end">
+                  <button className="px-3 py-1 text-sm font-semibold text-white bg-black">
+                    {item.Category}
+                  </button>
+                </div>
+              </div>
+            </React.Fragment>
+          );
+        })}
+      </div>
+    </main>
   );
 }
