@@ -2,13 +2,13 @@
 export default function Events() {
   return (
     <>
-      <div className="backgound my-5 mb-6">
+      <div className="my-5 mb-6 backgound">
         <div className="text-white md:p-10">
-          <h1 className="text-3xl my-6">Employee Assistance Program (EAP)</h1>
+          <h1 className="my-6 text-3xl">MentorHeal Guidance Program (MGP)</h1>
           <p className="text-lg font-semibold my-7">
-            Business | Institutions | Strategic Partner
+          Schools | Colleges | Institutions | Offices
           </p>
-          <p className="text-lg my-11 font-semibold">
+          <p className="text-lg font-semibold my-11">
             Contact us for a customized wellness plan basis your specific
             industry needs, challenges, corporation size & dynamics
           </p>

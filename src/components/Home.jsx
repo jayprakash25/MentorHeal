@@ -12,6 +12,7 @@ import Transformation from "./Transformation";
 import Events from "./Events";
 import Quote from "./Quote";
 import Whatsup from "./Whatsup";
+import Steps from "./Steps";
 export default function Home() {
   const formref = useRef();
   const testimonialref = useRef();
@@ -37,6 +38,7 @@ export default function Home() {
       <FirstCard />
       <Tagline />
       <Card />
+      <Steps />
       <Why />
       <Transformation testimonialref={testimonialref} />
       <TeamCard />
