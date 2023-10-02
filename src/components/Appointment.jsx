@@ -2,27 +2,26 @@ import { Link } from "react-router-dom";
 
 const Appointment = () => {
   return (
-    <div  className="mt-32 bg-gradient-to-r from-cyan-500 via-cyan-400 to-cyan-700  py-8 mb-8 shadow-md">
-      <section className="flex flex-col lg:flex-row md:items-center md:justify-around space-y-7 text-white text-center lg:space-y-0 ">
-       
+    <div className="py-8 mt-32 mb-8 shadow-md bg-gradient-to-r from-cyan-500 via-cyan-400 to-cyan-700">
+      <section className="flex flex-col text-center text-white lg:flex-row md:items-center md:justify-around space-y-7 lg:space-y-0 ">
         {/*-------------------- Text---------------- */}
-        <div  className="text-xl max md:max-w-[40vw] md:text-left md:text-3xl space-y-2 lg:space-y-6 ">
-          <h1 className="leading-10 font-semibold text-white">
-            Ready to make a leap to the best of you? 
+        <div className="text-xl max md:max-w-[40vw] md:text-left md:text-3xl space-y-2 lg:space-y-6 ">
+          <h1 className="font-semibold leading-10 text-white">
+            Ready to make a leap to the best of you?
           </h1>
-          <p className="font-normal text-sm ">Be the change you wish to see in yourself.</p>
+          <p className="text-sm font-normal ">
+            Be the change you wish to see in yourself.
+          </p>
         </div>
-       
+
         {/* --------------------Button------------------*/}
         <div className="md:max-w-lg">
-          <button className="  bg-white text-black   px-7 py-2 rounded-full tracking-wide text-sm">
-          <Link to={"/session"}>
-Book Your Session </Link>
+          <button className="py-2 text-sm tracking-wide text-black bg-white rounded-full  px-7">
+            <Link to={"/session"}>Book Your Session </Link>
           </button>
         </div>
       </section>
-      <div>
-      </div>
+      <div></div>
     </div>
   );
 };

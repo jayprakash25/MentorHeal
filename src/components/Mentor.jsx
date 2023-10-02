@@ -63,8 +63,7 @@ const Mentor = () => {
       <NavBar />
 
       <div
-        className="pt-32 flex flex-col md:flex-row items-center 
-        text-center p-8 space-y-8 md:justify-around "
+        className="flex flex-col items-center p-8 pt-32 space-y-8 text-center md:flex-row md:justify-around "
       >
         <div data-aos="fade-right">
           <img
@@ -84,7 +83,7 @@ const Mentor = () => {
               for it!).
             </p>
           </div>
-          <div className="my-8 flex">
+          <div className="flex my-8">
             <div className="space-y-2.5">
               <h1 className="text-xl font-semibold">Learn</h1>
               <p className="text-[#8ca1b3]">
@@ -102,9 +101,9 @@ const Mentor = () => {
         </div>
       </div>
 
-      <div className="my-4 space-y-14 text-center p-8">
+      <div className="p-8 my-4 text-center space-y-14">
         <div data-aos="zoom-in-up">
-          <h1 className="text-2xl lg:text-3xl font-semibold">
+          <h1 className="text-2xl font-semibold lg:text-3xl">
             Here’s why mentor around the world love mentoring on MentorrNow…
           </h1>
         </div>
@@ -120,8 +119,7 @@ const Mentor = () => {
                 <div className="mx-auto">
                   <img
                     src={item.image}
-                    className="w-16 h-16
-                "
+                    className="w-16 h-16 "
                   />
                 </div>
                 <h1 className="text-xl font-medium">{item.title}</h1>
@@ -135,7 +133,7 @@ const Mentor = () => {
         <Form />
       </div>
       <Appointment />
-      <Whatsup/>
+      <Whatsup />
       <Footer />
     </div>
   );
