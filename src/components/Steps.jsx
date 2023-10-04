@@ -48,7 +48,7 @@ export default function Steps() {
             </span>{" "}
             can help you
           </h1>
-          <div className="flex flex-col items-center justify-center my-16 lg:px-36 md:flex-row">
+          <div className="flex flex-col items-center justify-center mt-16 lg:px-36 md:flex-row">
             {Step.map((item, i) => {
               return (
                 <div key={i} className="max-w-xl mx-auto space-y-3">
@@ -67,10 +67,9 @@ export default function Steps() {
               );
             })}
           </div>
-          po
         </div>
       </section>
-      <section className="flex flex-col justify-center my-20 divide-y-2 md:divide-y-0 md:divide-x-2 md:flex-row">
+      <section className="flex flex-col justify-center my-10 divide-y-2 md:divide-y-0 md:divide-x-2 md:flex-row">
         {Features.map((item, i) => {
           return (
             <div

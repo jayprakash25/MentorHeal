@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Carddata from "./Data";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import YouTubeIcon from '@mui/icons-material/YouTube';
+import YouTubeIcon from "@mui/icons-material/YouTube";
 import { Instagram } from "@mui/icons-material";
 import { useState } from "react";
 const Footer = ({ Scrolltoref }) => {
@@ -10,9 +10,9 @@ const Footer = ({ Scrolltoref }) => {
   return (
     <div className="">
       <footer className="relative  bg-[#007384] text-center py-8 text-sm">
-        <div className="container mx-auto px-4">
+        <div className="container px-4 mx-auto">
           <div className="flex flex-wrap text-left lg:text-left">
-            <div className="w-full lg:w-6/12 px-4 text-center  space-y-10 text-black">
+            <div className="w-full px-4 text-center text-black lg:w-6/12">
               <div>
                 <Link
                   to="/"
@@ -21,24 +21,28 @@ const Footer = ({ Scrolltoref }) => {
                     window.scrollTo(0, 0);
                   }}
                 >
-                  <p className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold text-3xl mx-auto mb-5 md:text-4xl">
+                  <p className="mx-auto mb-5 text-3xl font-bold text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text md:text-4xl">
                     MentorHeal
                   </p>
                 </Link>
               </div>
-
-              <div className=" py-16 space-y-8 ">
-                <p className=" text-white lg:text-start lg:pl-24 font-poppins ">
-                  Subscribe to never miss our articles.
+              <div className="max-w-xl text-xs text-left text-white lg:pl-20 lg:text-sm lg:text-center ">
+                <p className="leading-5">
+                  MentorHeal is the holistic wellness mentorship platform where
+                  we connect the mentees with experienced, qualified and
+                  certified mentors across the country.
                 </p>
-                <div className="md:flex space-y-4 md:space-y-0 space-x-2 items-center justify-center">
+              </div>
+
+              <div className="py-12 space-y-8 ">
+                <div className="items-center justify-center space-x-2 space-y-4 md:flex md:space-y-0">
                   <input
                     placeholder="Your email"
                     value={email}
                     onChange={(e) => {
                       setEmail(e.target.value);
                     }}
-                    className="shadow appearance-none border rounded-3xl w-54 md:w-64  py-3 px-6 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="px-6 py-3 leading-tight text-gray-700 border shadow appearance-none rounded-3xl w-54 md:w-64 focus:outline-none focus:shadow-outline"
                   />
                   <button
                     onClick={() => {
@@ -51,20 +55,26 @@ const Footer = ({ Scrolltoref }) => {
                 </div>
               </div>
             </div>
-            <div className="w-full lg:w-6/12 px-4">
-              <div className="flex flex-wrap items-top mb-6">
-                <div className="w-full lg:w-4/12 px-4 ml-auto">
-                  <span className="block uppercase  text-white text-sm font-semibold mb-2">
+            <div className="w-full px-4 lg:w-6/12">
+              <div className="flex flex-wrap mb-6 items-top">
+                <div className="w-full px-4 ml-auto lg:w-4/12">
+                  <span className="block mb-2 text-sm font-semibold text-white uppercase">
                     More
                   </span>
                   <ul className="text-[#dde5f1] list-unstyled space-y-4 my-6 cursor-pointer">
                     <li>
                       <Link to={"/about"}>About Us</Link>
                     </li>
+                    <li>
+                      <Link to={"/how"}>How it works</Link>
+                    </li>
+                    <li>
+                      <Link to={"/join"}>Join as Mentor</Link>
+                    </li>
                   </ul>
                 </div>
-                <div className="w-full lg:w-4/12 px-4 ml-auto">
-                  <span className="block uppercase  text-white text-sm font-semibold mb-2">
+                <div className="w-full px-4 ml-auto lg:w-4/12">
+                  <span className="block mb-2 text-sm font-semibold text-white uppercase">
                     Mentorship Options
                   </span>
                   <ul className="text-[#dde5f1]  list-unstyled  space-y-3 my-6 cursor-pointer">
@@ -88,8 +98,8 @@ const Footer = ({ Scrolltoref }) => {
                     })}
                   </ul>
                 </div>
-                <div className="w-full lg:w-4/12 px-4">
-                  <span className="block uppercase  text-white text-sm font-semibold mb-2">
+                <div className="w-full px-4 lg:w-4/12">
+                  <span className="block mb-2 text-sm font-semibold text-white uppercase">
                     Other Resources
                   </span>
                   <ul className="text-[#dde5f1] list-unstyled space-y-4 my-6 cursor-pointer">
@@ -105,40 +115,40 @@ const Footer = ({ Scrolltoref }) => {
 
           {/* social icons .... */}
 
-          <div className="flex space-x-4 items-center justify-center cursor-pointer">
+          <div className="flex items-center justify-center space-x-4 cursor-pointer">
             <a href="https://www.linkedin.com/company/mentoheal/">
               <LinkedInIcon
                 style={{ color: "#1DA1F2" }}
                 fontSize="large"
-                className="bg-white rounded-full p-1"
+                className="p-1 bg-white rounded-full"
               />
             </a>
             <a href="https://instagram.com/mentorheal.forlife?igshid=MzRlODBiNWFlZA==">
               <Instagram
                 style={{ color: "#C13584" }}
                 fontSize="large"
-                className="bg-white rounded-full p-1"
+                className="p-1 bg-white rounded-full"
               />
             </a>
             <TwitterIcon
               style={{ color: "#1DA1F2" }}
               fontSize="large"
-              className="bg-white rounded-full p-1"
+              className="p-1 bg-white rounded-full"
             />
             <YouTubeIcon
-              style={{color: "#CD201F"}}
+              style={{ color: "#CD201F" }}
               fontSize="large"
-              className="bg-white rounded-full p-1"
+              className="p-1 bg-white rounded-full"
             />
           </div>
         </div>
 
         <hr className="my-6  dark:bg-gray-400 border-0 h-[1.5px]" />
-        <div className="flex flex-wrap items-center md:justify-between justify-center">
-          <div className="w-full md:w-4/12 px-4 mx-auto text-center">
-            <div className="text-sm  text-white font-semibold py-1">
+        <div className="flex flex-wrap items-center justify-center md:justify-between">
+          <div className="w-full px-4 mx-auto text-center md:w-4/12">
+            <div className="py-1 text-sm font-semibold text-white">
               Copyright © <span id="get-current-year">2023</span>
-              <a href="/" className=" ">
+              <a href="/" className="">
                 {" "}
                 MentorHeal
               </a>

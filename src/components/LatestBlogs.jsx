@@ -1,11 +1,13 @@
-import React, { useEffect } from "react";
-import NavBar from "./NavBar";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { db } from "../Firebase";
 import { collection, getDocs } from "firebase/firestore";
-export default function Blogs() {
+import { useEffect } from "react";
+
+export default function LatestBlogs() {
   const navigate = useNavigate();
+
   const [AllBlogs, setAllBlogs] = useState(null);
 
   useEffect(() => {
@@ -29,10 +31,18 @@ export default function Blogs() {
   }, []);
 
   return (
-    <main>
-      <NavBar />
-      <div className="flex flex-col items-center justify-center gap-10 pt-24 pb-10 md:grid md:grid-cols-2 lg:grid-cols-3 place-items-center md:px-10 bg-white border-[0.5px]">
-        {AllBlogs?.map((item, index) => {
+    <>
+      <div className="pt-24 text-center">
+        <h1 className="text-3xl font-semibold lg:text-5xl">
+          Latest on Your{" "}
+          <span className="font-bold text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text">
+            MentorHeal
+          </span>{" "}
+          Blog
+        </h1>
+      </div>
+      <section className="flex flex-col items-center justify-center gap-10 pb-10 mt-10 md:grid md:grid-cols-2 lg:grid-cols-3 place-items-center md:px-10">
+        {AllBlogs?.slice(0, 3)?.map((item, index) => {
           return (
             <React.Fragment key={index}>
               <div
@@ -76,7 +86,12 @@ export default function Blogs() {
             </React.Fragment>
           );
         })}
+      </section>
+      <div className="flex justify-center ">
+        <button className="px-9 py-3 bg-[#00b8d3] text-white font-semibold rounded-3xl">
+          Read More Articles
+        </button>
       </div>
-    </main>
+    </>
   );
 }

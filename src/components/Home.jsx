@@ -13,6 +13,7 @@ import Events from "./Events";
 import Quote from "./Quote";
 import Whatsup from "./Whatsup";
 import Steps from "./Steps";
+import LatestBlogs from "./LatestBlogs";
 export default function Home() {
   const formref = useRef();
   const testimonialref = useRef();
@@ -40,6 +41,7 @@ export default function Home() {
       <Card />
       <Steps />
       <Why />
+      <LatestBlogs />
       <Transformation testimonialref={testimonialref} />
       <TeamCard />
       <Events />
