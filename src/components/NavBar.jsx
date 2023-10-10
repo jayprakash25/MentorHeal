@@ -243,7 +243,7 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
         </div>
       </nav>
 
-      {joinmentor ? <JoinMentor /> : null}
+      {joinmentor ? <JoinMentor setjoinmentor={setjoinmentor}/> : null}
     </>
   );
 };

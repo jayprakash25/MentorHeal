@@ -31,22 +31,23 @@ const TeamCard = () => {
   }, []);
 
   return (
-    <div className="my-20 mx-10">
+    <div className="mx-10 my-20">
       <div>
-        <h1 className="text-3xl md:text-5xl font-semibold p-8 text-center">
+        <h1 className="p-8 text-3xl font-semibold text-center md:text-5xl">
           Meet your{" "}
-          <span className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent bg-clip-text font-bold">
+          <span className="font-bold text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text">
             premier advisors
           </span>
           , the
-          <span className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold">
+          <span className="font-bold text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text">
             {" "}
             leading experts
           </span>
         </h1>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 p-4 my-16">
+      <div className="grid grid-cols-1 gap-4 p-4 my-16 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
         {teamMembers.map((member, index) => {
+          const newLocal = "space-y-2.5 my-3 text-center";
           return (
             <React.Fragment key={index}>
               <div
@@ -54,18 +55,13 @@ const TeamCard = () => {
                 data-aos-easing="ease-in-out"
                 data-aos-mirror="true"
                 data-aos-once="true"
-                className="max-w-md hover:scale-105 ease-in-out duration-500 cursor-pointer  px-4 border-[1px] border-slate-200 shadow-sm"
+                className="max-w-md rounded-md hover:scale-105 ease-in-out duration-500 cursor-pointer  px-4 border-[1px] border-gray-200   shadow-md shadow-gray-100"
               >
-                {/* <img
-                  className="md:w-[30vw] rounded-lg"
-                  src={member.imageUrl}
-                  alt=""
-                /> */}
-                <div className="space-y-2.5 my-3 text-center">
-                  <div className="text-xl md:text-2xl bg-gradient-to-l from-cyan-600 via-cyan-400 to-cyan-500 text-transparent  bg-clip-text font-bold">
+                <div className={newLocal}>
+                  <div className="text-xl font-bold text-transparent md:text-2xl bg-gradient-to-l from-cyan-600 via-cyan-400 to-cyan-500 bg-clip-text">
                     {member.name}
                   </div>
-                  <p className="text-cyan-500 font-semibold">
+                  <p className="font-semibold text-cyan-500">
                     {member.position}
                   </p>
                 </div>

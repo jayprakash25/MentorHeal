@@ -5,7 +5,7 @@ import { setDoc, doc } from "firebase/firestore";
 import { ref, getDownloadURL, uploadBytes } from "firebase/storage";
 import { db, storage } from "../../Firebase";
 
-export default function JoinMentor() {
+export default function JoinMentor({ setjoinmentor }) {
   const dpref = useRef(null);
   const [blobimg, setblogimg] = useState({ image: "" });
   const [uploadimage, setuploadimage] = useState();
@@ -16,6 +16,7 @@ export default function JoinMentor() {
     Email: "",
     Categeory: "",
     image: "",
+    bio: "",
   });
 
   const id = useId();
@@ -36,8 +37,6 @@ export default function JoinMentor() {
         console.error("Error saving mentor:", error);
         alert("An error occurred while saving the mentor.");
       }
-    } else {
-      alert("Please enter all details");
     }
   };
 
@@ -46,26 +45,42 @@ export default function JoinMentor() {
       console.log("No image selected.");
       return;
     }
-    const storageRef = ref(storage, `${id}/${uploadimage.name}`);
-    try {
-      await uploadBytes(storageRef, uploadimage);
-      const downloadURL = await getDownloadURL(storageRef);
-      console.log(downloadURL);
-      setmentor({ ...mentor, image: downloadURL });
-      SaveMentor();
-    } catch (error) {
-      console.error("Error uploading image:", error);
-      alert("An error occurred while uploading the image.");
+    if (
+      mentor.Name !== "" &&
+      mentor.Email !== "" &&
+      mentor.Phone !== "" &&
+      mentor.Categeory !== ""
+    ) {
+      const storageRef = ref(storage, `${id}/${uploadimage.name}`);
+      try {
+        await uploadBytes(storageRef, uploadimage);
+        const downloadURL = await getDownloadURL(storageRef);
+        console.log(downloadURL);
+        setmentor({ ...mentor, image: downloadURL });
+        SaveMentor();
+      } catch (error) {
+        console.error("Error uploading image:", error);
+        alert("An error occurred while uploading the image.");
+      }
+    } else {
+      alert("Enter all the details");
     }
   };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center h-full p-3 overflow-y-scroll bg-black bg-opacity-70 backdrop-blur">
-      <div className="w-[80vw] md:w-[60vw] lg:w-[50vw] px-10 bg-white rounded-md py-3">
+      <div className="w-[80vw] md:w-[60vw] lg:w-[45vw] px-10 bg-white rounded-md py-3 overflow-y-scroll ">
         <div className="flex justify-end">
-          <RxCross2 size={25} color="gray" className="cursor-pointer" />
+          <RxCross2
+            onClick={() => {
+              setjoinmentor(false);
+            }}
+            size={25}
+            color="gray"
+            className="cursor-pointer"
+          />
         </div>
-        <form className="flex flex-col gap-3  md:grid md:grid-cols-2 md:gap-7 text-[#8ca1b3] font-semibold">
+        <form className="flex flex-col gap-5  md:grid md:grid-cols-2 md:gap-7 text-[#8ca1b3] font-semibold">
           <div className="flex flex-col space-y-3 md:col-span-2">
             <input
               ref={dpref}
@@ -102,9 +117,9 @@ export default function JoinMentor() {
             )}
           </div>
           <div className="flex flex-col space-y-3">
-            <label>Name</label>
             <input
               type="text"
+              placeholder="Name"
               value={mentor.Name}
               onChange={(e) => {
                 setmentor({ ...mentor, Name: e.target.value });
@@ -113,10 +128,10 @@ export default function JoinMentor() {
             />
           </div>
           <div className="flex flex-col space-y-3">
-            <label>Phone</label>
             <input
               type="text"
               value={mentor.Phone}
+              placeholder="Phone"
               onChange={(e) => {
                 setmentor({ ...mentor, Phone: e.target.value });
               }}
@@ -124,10 +139,10 @@ export default function JoinMentor() {
             />
           </div>
           <div className="flex flex-col space-y-3">
-            <label>Email</label>
             <input
               type="text"
               value={mentor.Email}
+              placeholder="Email"
               onChange={(e) => {
                 setmentor({ ...mentor, Email: e.target.value });
               }}
@@ -135,23 +150,35 @@ export default function JoinMentor() {
             />
           </div>
           <div className="flex flex-col space-y-3">
-            <label>Your Categeory</label>
             <input
               type="text"
               value={mentor.Categeory}
+              placeholder="Categeory"
               onChange={(e) => {
                 setmentor({ ...mentor, Categeory: e.target.value });
               }}
               className="p-3 outline-none border-[0.5px] border-gray-300 rounded-md"
             />
           </div>
+          <div className="flex flex-col space-y-3 md:col-span-2">
+            <textarea
+              type="text"
+              value={mentor.bio}
+              placeholder="Bio"
+              maxLength={150}
+              onChange={(e) => {
+                setmentor({ ...mentor, bio: e.target.value });
+              }}
+              className="p-3 outline-none border-[0.5px] border-gray-300 rounded-md"
+            />
+          </div>
         </form>
-        <div className="flex justify-center mt-5 md:mt-7">
+        <div className="flex justify-center my-5 md:my-7">
           <button
             onClick={uploadImage}
-            className=" px-28 py-3 bg-[#00b8d3] text-white font-semibold rounded-3xl"
+            className=" px-28  py-3 bg-[#00b8d3] text-white font-semibold rounded-3xl"
           >
-            Done
+            Submit
           </button>
         </div>
       </div>
