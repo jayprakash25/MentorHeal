@@ -94,7 +94,9 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
               <li className="cursor-pointer">
                 <Link to={"/how"}> How it works </Link>
               </li>
-
+              <li className="cursor-pointer">
+                <Link to="/signup"> Signup </Link>
+              </li>
               {/* More...... */}
               <div>
                 <li
@@ -127,6 +129,7 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
                     <li onClick={Scrolltoref} className="cursor-pointer">
                       Contact us
                     </li>
+
                     <li
                       className="cursor-pointer"
                       onClick={Scrolltotestimonial}
@@ -136,9 +139,6 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
                   </ul>
                 </div>
               </div>
-              {/* <li className="cursor-pointer">
-              <Link to={"/internships"}>Internships</Link>
-            </li> */}
               <li
                 className="cursor-pointer"
                 onClick={() => {
@@ -205,6 +205,9 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
                 <li className="transition duration-300 ease-in-out cursor-pointer ">
                   <Link to={"/how"}>How it works</Link>
                 </li>
+                <li className="cursor-pointer">
+                  <Link to="/signup"> Signup </Link>
+                </li>
                 <li
                   onClick={() => {
                     setdropdown(!dropdown);
@@ -224,6 +227,9 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
                       About Us
                     </p>
                   </Link>
+                  <li className="cursor-pointer">
+                    <Link to="/signup"> Signup </Link>
+                  </li>
                   <p
                     onClick={() => {
                       setjoinmentor(true);
@@ -243,7 +249,7 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
         </div>
       </nav>
 
-      {joinmentor ? <JoinMentor setjoinmentor={setjoinmentor}/> : null}
+      {joinmentor ? <JoinMentor setjoinmentor={setjoinmentor} /> : null}
     </>
   );
 };

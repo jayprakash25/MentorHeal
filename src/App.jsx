@@ -7,7 +7,7 @@ import How from "./components/How";
 import ReadFull from "./components/ReadFull";
 import { Blog, ReadFullBlog } from "./Pages/index";
 import Intern from "./Pages/Intern";
-import { FindMentors } from "./features/index";
+import { FindMentors, Signup } from "./features/index";
 const App = () => {
   return (
     <>
@@ -22,6 +22,7 @@ const App = () => {
         <Route path="/internships" element={<Intern />} />
         <Route path="/ReadFull" element={<ReadFullBlog />} />
         <Route path="/mentors" element={<FindMentors />} />
+        <Route path="/signup" element={<Signup />} />
       </Routes>
     </>
   );

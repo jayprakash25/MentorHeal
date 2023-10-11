@@ -36,7 +36,9 @@ export default function Mentors({ filterCategeory, mentors }) {
                       <p className="mt-2 text-sm font-semibold text-gray-500">
                         {_.Categeory}
                       </p>
-                      <p className="mt-3 text-xs text-gray-500">({_.Rating}) ⭐⭐⭐⭐⭐</p>
+                      <p className="mt-3 text-xs text-gray-500">
+                        ({_.Rating}) ⭐⭐⭐⭐⭐
+                      </p>
                       <p className="mt-1 text-sm font-semibold text-gray-500">
                         Conversations : {_.Conversation}
                       </p>
