@@ -94,9 +94,7 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
               <li className="cursor-pointer">
                 <Link to={"/how"}> How it works </Link>
               </li>
-              <li className="cursor-pointer">
-                <Link to="/signup"> Signup </Link>
-              </li>
+
               {/* More...... */}
               <div>
                 <li
@@ -139,8 +137,11 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
                   </ul>
                 </div>
               </div>
+              <li className="px-5  text-white cursor-pointer bg-gradient-to-l from-cyan-400 via-cyan-400 to-cyan-300 py-1.5 rounded-full">
+                <Link to="/signup"> Signup </Link>
+              </li>
               <li
-                className="cursor-pointer"
+                className="px-5  text-white cursor-pointer bg-gradient-to-l from-cyan-400 via-cyan-400 to-cyan-300 py-1.5 rounded-full"
                 onClick={() => {
                   setjoinmentor(true);
                 }}
