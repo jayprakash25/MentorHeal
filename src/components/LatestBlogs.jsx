@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { db } from "../Firebase";
 import { collection, getDocs } from "firebase/firestore";
@@ -88,9 +88,11 @@ export default function LatestBlogs() {
         })}
       </section>
       <div className="flex justify-center ">
-        <button className="px-9 py-3 bg-[#00b8d3] text-white font-semibold rounded-3xl">
-          Read More Articles
-        </button>
+        <Link to="/Blog">
+          <button className="px-9 py-3 bg-[#00b8d3] text-white font-semibold rounded-3xl">
+            Read More Articles
+          </button>
+        </Link>
       </div>
     </>
   );
