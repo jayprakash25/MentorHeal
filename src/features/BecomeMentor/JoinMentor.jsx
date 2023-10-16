@@ -21,25 +21,6 @@ export default function JoinMentor({ setjoinmentor }) {
 
   const id = useId();
 
-  const SaveMentor = async () => {
-    if (
-      mentor.Name !== "" &&
-      mentor.Email !== "" &&
-      mentor.Phone !== "" &&
-      mentor.Categeory !== "" &&
-      mentor.image !== undefined
-    ) {
-      try {
-        const mentorRef = doc(db, "MENTORS", mentor.Name);
-        await setDoc(mentorRef, mentor);
-        alert("Success");
-      } catch (error) {
-        console.error("Error saving mentor:", error);
-        alert("An error occurred while saving the mentor.");
-      }
-    }
-  };
-
   const uploadImage = async () => {
     if (!blobimg) {
       console.log("No image selected.");
@@ -56,8 +37,16 @@ export default function JoinMentor({ setjoinmentor }) {
         await uploadBytes(storageRef, uploadimage);
         const downloadURL = await getDownloadURL(storageRef);
         console.log(downloadURL);
-        setmentor({ ...mentor, image: downloadURL });
-        SaveMentor();
+        // Update the mentor state with the image URL
+        const updatedMentor = {
+          ...mentor,
+          image: downloadURL,
+        };
+        setmentor(updatedMentor);
+        // Save the updated mentor to the database
+        const mentorRef = doc(db, "MENTORS", mentor.Name);
+        await setDoc(mentorRef, updatedMentor);
+        alert("Success");
       } catch (error) {
         console.error("Error uploading image:", error);
         alert("An error occurred while uploading the image.");
