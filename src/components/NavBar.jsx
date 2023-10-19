@@ -7,11 +7,12 @@ import Carddata from "./Data";
 import { useEffect } from "react";
 import { JoinMentor } from "../features/index";
 const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
+  // state handlers
+  const mentorjwt = localStorage.getItem("mentorjwt");
   const [toggle, setToggle] = useState(false);
   const [dropdown, setdropdown] = useState(false);
   const [more, setMore] = useState(false);
   const [scroll, setScroll] = useState(false);
-
   const [joinmentor, setjoinmentor] = useState(false);
 
   useEffect(() => {
@@ -140,14 +141,16 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
               <li className="px-5  text-white cursor-pointer bg-gradient-to-l from-cyan-400 via-cyan-400 to-cyan-300 py-1.5 rounded-full">
                 <Link to="/signup"> Signup </Link>
               </li>
-              <li
-                className="px-5  text-white cursor-pointer bg-gradient-to-l from-cyan-400 via-cyan-400 to-cyan-300 py-1.5 rounded-full"
-                onClick={() => {
-                  setjoinmentor(true);
-                }}
-              >
-                Join as Mentor
-              </li>
+              {mentorjwt ? null : (
+                <li
+                  className="px-5  text-white cursor-pointer bg-gradient-to-l from-cyan-400 via-cyan-400 to-cyan-300 py-1.5 rounded-full"
+                  onClick={() => {
+                    setjoinmentor(true);
+                  }}
+                >
+                  Join as Mentor
+                </li>
+              )}
             </ul>
             <Button />
           </div>
@@ -231,15 +234,16 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
                   <li className="cursor-pointer">
                     <Link to="/signup"> Signup </Link>
                   </li>
-                  <p
-                    onClick={() => {
-                      setjoinmentor(true);
-                    }}
-                    value="cursor-pointer transition ease-in-out duration-300"
-                  >
-                    Join As a Mentor
-                  </p>
-
+                  {mentorjwt ? null : (
+                    <p
+                      onClick={() => {
+                        setjoinmentor(true);
+                      }}
+                      value="cursor-pointer transition ease-in-out duration-300"
+                    >
+                      Join As a Mentor
+                    </p>
+                  )}
                   <p value="cursor-pointer transition ease-in-out duration-300">
                     <Link to={"/blog"}>Blog</Link>
                   </p>
@@ -249,7 +253,6 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
           </div>
         </div>
       </nav>
-
       {joinmentor ? <JoinMentor setjoinmentor={setjoinmentor} /> : null}
     </>
   );

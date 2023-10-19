@@ -15,6 +15,7 @@ import Whatsup from "./Whatsup";
 import Steps from "./Steps";
 import LatestBlogs from "./LatestBlogs";
 export default function Home() {
+  // refs
   const formref = useRef();
   const testimonialref = useRef();
 

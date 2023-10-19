@@ -4,9 +4,12 @@ import { RxCross2 } from "react-icons/rx";
 import { setDoc, doc } from "firebase/firestore";
 import { ref, getDownloadURL, uploadBytes } from "firebase/storage";
 import { db, storage } from "../../Firebase";
+import { useNavigate } from "react-router-dom";
 
 export default function JoinMentor({ setjoinmentor }) {
   const dpref = useRef(null);
+  const id = useId();
+  const navigate = useNavigate();
   const [blobimg, setblogimg] = useState({ image: "" });
   const [uploadimage, setuploadimage] = useState();
 
@@ -19,8 +22,11 @@ export default function JoinMentor({ setjoinmentor }) {
     bio: "",
   });
 
-  const id = useId();
+  const sendMail = (mail) => {
+    alert("Mail sent to", mail);
+  };
 
+  // Creating a mentor profile
   const uploadImage = async () => {
     if (!blobimg) {
       console.log("No image selected.");
@@ -37,16 +43,16 @@ export default function JoinMentor({ setjoinmentor }) {
         await uploadBytes(storageRef, uploadimage);
         const downloadURL = await getDownloadURL(storageRef);
         console.log(downloadURL);
-        // Update the mentor state with the image URL
         const updatedMentor = {
           ...mentor,
           image: downloadURL,
         };
         setmentor(updatedMentor);
-        // Save the updated mentor to the database
         const mentorRef = doc(db, "MENTORS", mentor.Name);
         await setDoc(mentorRef, updatedMentor);
-        alert("Success");
+        localStorage.setItem("mentorjwt", id);
+        navigate("/mentors");
+        sendMail(mentor.Email);
       } catch (error) {
         console.error("Error uploading image:", error);
         alert("An error occurred while uploading the image.");
