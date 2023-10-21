@@ -6,7 +6,7 @@ import { ref, getDownloadURL, uploadBytes } from "firebase/storage";
 import { db, storage } from "../../Firebase";
 import { useNavigate } from "react-router-dom";
 import { BiLoaderAlt } from "react-icons/bi";
-
+import Data from "../../Data/MentorShipCategories";
 export default function JoinMentor({ setjoinmentor }) {
   const dpref = useRef(null);
   const id = useId();
@@ -151,15 +151,20 @@ export default function JoinMentor({ setjoinmentor }) {
               />
             </div>
             <div className="flex flex-col space-y-3">
-              <input
-                type="text"
-                value={mentor.Categeory}
-                placeholder="Categeory"
+              <select
+                className="p-3 outline-none border-[0.5px] border-gray-300 rounded-md"
                 onChange={(e) => {
                   setmentor({ ...mentor, Categeory: e.target.value });
                 }}
-                className="p-3 outline-none border-[0.5px] border-gray-300 rounded-md"
-              />
+              >
+                {Data.map((item, i) => {
+                  return (
+                    <React.Fragment key={i}>
+                      <option value={item}>{item}</option>
+                    </React.Fragment>
+                  );
+                })}
+              </select>
             </div>
             <div className="flex flex-col space-y-3 md:col-span-2">
               <textarea
@@ -186,7 +191,7 @@ export default function JoinMentor({ setjoinmentor }) {
                   className="duration-300 ease-in-out animate-spin"
                 />
               ) : (
-                Submit
+                "Submit"
               )}
             </button>
           </div>
