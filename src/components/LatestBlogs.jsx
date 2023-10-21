@@ -71,14 +71,14 @@ export default function LatestBlogs() {
                 <div className="flex justify-end gap-5 pt-5">
                   {item.Category?.map((item, index) => {
                     return (
-                      <>
+                      <React.Fragment key={index}>
                         <button
                           key={index}
                           className="px-5 py-1 text-sm font-semibold text-[#5e626e] bg-[#dee6ef]"
                         >
                           #{item}
                         </button>
-                      </>
+                      </React.Fragment>
                     );
                   })}
                 </div>
