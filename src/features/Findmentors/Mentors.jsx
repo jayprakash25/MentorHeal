@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 export default function Mentors({ filterCategeory, mentors }) {
   console.log(filterCategeory);
 
@@ -59,9 +60,11 @@ export default function Mentors({ filterCategeory, mentors }) {
                     </p>
                   </div>
                   <div className="flex justify-center mt-6">
-                    <button className="hover:bg-[#62d6e8] border-[1px] border-green-300 hover:text-white  w-full py-2  font-semibold ease-in-out duration-500">
-                      Book
-                    </button>
+                    <Link to="/session">
+                      <button className="hover:bg-[#62d6e8] border-[1px] border-green-300 hover:text-white  w-full py-2  font-semibold ease-in-out duration-500">
+                        Book
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </React.Fragment>
