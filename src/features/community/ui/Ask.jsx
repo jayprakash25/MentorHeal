@@ -1,6 +1,23 @@
-import React from "react";
 import { BsPeople } from "react-icons/bs";
+import { db } from "../../../Firebase";
+import { addDoc, collection } from "firebase/firestore";
+import { useState } from "react";
 export default function Ask() {
+  const [data, setData] = useState({
+    ask: "",
+  });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      await addDoc(collection(db, "POSTS"), data);
+      alert("Done");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div className="pl-2 mt-6 space-y-2">
       <div className="flex items-center gap-3">
@@ -18,11 +35,21 @@ export default function Ask() {
         cols={20}
         rows={6}
         type="text"
+        value={data.ask}
+        onChange={(e) => {
+          setData({
+            ...data,
+            ask: e.target.value,
+          });
+        }}
         className=" mx-auto text-lg w-[70vw] sm:w-[60vw] md:w-[50vw] lg:w-[45vw]  border-b-2 border-gray-300 outline-none"
         placeholder="Start your questions with What,why etc"
       />
       <div className="flex justify-end ">
-        <button className="px-5 font-semibold text-white cursor-pointer bg-gradient-to-l from-cyan-400 via-cyan-400 to-cyan-300 py-1.5 rounded-full">
+        <button
+          onClick={handleSubmit}
+          className="px-5 font-semibold text-white cursor-pointer bg-gradient-to-l from-cyan-400 via-cyan-400 to-cyan-300 py-1.5 rounded-full"
+        >
           Submit
         </button>
       </div>
