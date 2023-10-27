@@ -7,7 +7,7 @@ import How from "./components/How";
 import ReadFull from "./components/ReadFull";
 import { Blog, Community, ReadFullBlog } from "./Pages/index";
 import Intern from "./Pages/Intern";
-import { FindMentors, Signup } from "./features/index";
+import { FindMentors, ReadFullQuestion, Signup } from "./features/index";
 const App = () => {
   return (
     <>
@@ -24,6 +24,7 @@ const App = () => {
         <Route path="/mentors" element={<FindMentors />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/community" element={<Community />} />
+        <Route path="/queries/:tittle" element={<ReadFullQuestion />} />
       </Routes>
     </>
   );

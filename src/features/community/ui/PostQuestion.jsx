@@ -6,8 +6,8 @@ export default function PostQuestion() {
   const [category, setcategory] = useState();
 
   return (
-    <main className="my-10">
-      <div className="p-5 border-[1px] border-gray-300  rounded-md mx-auto space-y-5  w-[80vw] sm:w-[60vw] md:w-[60vw] lg:w-[50vw]">
+    <main className="mt-10">
+      <div className="p-5 border-[1px] border-gray-300  rounded-md mx-auto space-y-5  w-[80vw] sm:w-[70vw] md:w-[60vw] lg:w-[40vw]">
         <div className="flex items-center gap-2.5 justify-center">
           <img
             src="https://qph.cf2.quoracdn.net/main-thumb-1741383872-50-jkrzkqlzjsjvexpvlkgixgehnnjndhwk.jpeg"

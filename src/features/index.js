@@ -4,13 +4,15 @@ import Mentors from "./Findmentors/Mentors";
 import JoinMentor from "./BecomeMentor/JoinMentor";
 import Signup from "./UserSignup/Signup";
 import PostQuestion from "./community/ui/PostQuestion";
-import Queries from "./community/ui/Queries";
+import Posts from "./community/ui/Posts";
 import AskModel from "./community/ui/AskModel";
 import Guildline from "./community/ui/Guildline";
 import Ask from "./community/ui/Ask";
 import Post from "./community/ui/Post";
+import ReadFullQuestion from "./community/ui/ReadFullQuestion";
 
 export {
+  ReadFullQuestion,
   Post,
   Ask,
   Guildline,
@@ -21,5 +23,5 @@ export {
   JoinMentor,
   Signup,
   PostQuestion,
-  Queries,
+  Posts,
 };

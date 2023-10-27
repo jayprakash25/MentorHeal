@@ -1,10 +1,10 @@
 import React from "react";
-import { PostQuestion, Queries } from "../features/index";
+import { PostQuestion, Posts } from "../features/index";
 export default function Community() {
   return (
     <>
       <PostQuestion />
-      <Queries />
+      <Posts />
     </>
   );
 }
