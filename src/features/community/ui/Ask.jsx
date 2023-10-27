@@ -9,7 +9,6 @@ export default function Ask() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       await addDoc(collection(db, "POSTS"), data);
       alert("Done");
