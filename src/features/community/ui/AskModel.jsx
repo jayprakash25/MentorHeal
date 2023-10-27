@@ -28,7 +28,7 @@ export default function AskModel({ category, setcategory }) {
           </div>
         </div>
         {category === "Ask" && <Guildline />}
-        {category === "Ask" ?  <Ask /> : <Post/>  }
+        {category === "Ask" ? <Ask /> : <Post />}
       </div>
     </div>
   );

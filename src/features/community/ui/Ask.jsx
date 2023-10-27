@@ -21,7 +21,7 @@ export default function Ask() {
         className=" mx-auto text-lg w-[70vw] sm:w-[60vw] md:w-[50vw] lg:w-[45vw]  border-b-2 border-gray-300 outline-none"
         placeholder="Start your questions with What,why etc"
       />
-      <div class="flex justify-end ">
+      <div className="flex justify-end ">
         <button className="px-5 font-semibold text-white cursor-pointer bg-gradient-to-l from-cyan-400 via-cyan-400 to-cyan-300 py-1.5 rounded-full">
           Submit
         </button>

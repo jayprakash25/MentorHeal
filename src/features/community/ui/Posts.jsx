@@ -19,7 +19,6 @@ export default function Posts() {
         console.error("Error fetching data:", error);
       }
     };
-
     fetchData();
     window.scrollTo(0, 0);
   }, []);
@@ -31,7 +30,7 @@ export default function Posts() {
         {
           image:
             "https://qph.cf2.quoracdn.net/main-thumb-1741383872-50-jkrzkqlzjsjvexpvlkgixgehnnjndhwk.jpeg",
-          a: "what do you think ?",
+          a: "what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?what do you think ?",
         },
 
         {
@@ -81,20 +80,28 @@ export default function Posts() {
                 <div
                   className="border-[1px] border-gray-300 p-5 cursor-pointer"
                   onClick={() => {
-                    navigate(`/queries/${item.Q}`);
+                    navigate(`/queries/${item.Q}`, {
+                      state: {
+                        q: item.Q,
+                        comment: item.comment,
+                      },
+                    });
                   }}
                 >
                   <h1 className="text-lg font-bold">{item.Q}</h1>
                   <ul className="flex flex-col gap-2.5 mt-3">
                     {item.comment.slice(0, 1).map((item, i) => {
                       return (
-                        <div key={i} className="flex items-center gap-5">
+                        <div
+                          key={i}
+                          className="flex items-center gap-5 text-sm"
+                        >
                           <img
                             src={item.image}
                             alt={item.image}
                             className="w-7 h-7 rounded-full"
                           />
-                          <p>{item.a}</p>
+                          <p>{item.a.slice(0, 150)}</p>
                         </div>
                       );
                     })}
