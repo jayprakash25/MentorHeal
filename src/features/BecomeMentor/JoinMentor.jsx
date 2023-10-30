@@ -6,6 +6,7 @@ import { ref, getDownloadURL, uploadBytes } from "firebase/storage";
 import { db, storage } from "../../Firebase";
 import { useNavigate } from "react-router-dom";
 import { BiLoaderAlt } from "react-icons/bi";
+import emailjs from "@emailjs/browser";
 import Data from "../../Data/MentorShipCategories";
 export default function JoinMentor({ setjoinmentor }) {
   const dpref = useRef(null);
@@ -24,9 +25,30 @@ export default function JoinMentor({ setjoinmentor }) {
     bio: "",
   });
 
-  // const sendMail = (mail) => {
-  //   alert("Mail sent to", mail);
-  // };
+  const sendEmail = () => {
+    emailjs
+      .send(
+        "service_m5ql7ex",
+        "template_s697m1j",
+        {
+          from_name: "MentorHeal",
+          to_name: mentor.Name,
+          from_email: "chrahulofficial@gmail.com",
+          to_email: mentor.Email,
+          message:
+            "A warm welcome to our mentor team at MentorHeal! We're excited to have you on board. Your expertise will be invaluable in guiding our team. Let's embark on this journey together!",
+        },
+        "pskEHJBdJUVoAlloz"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
 
   // Creating a mentor profile
   const uploadImage = async () => {
