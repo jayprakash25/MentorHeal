@@ -2,8 +2,9 @@ import { doc, getDoc, updateDoc } from "firebase/firestore";
 import React from "react";
 import { useState } from "react";
 import { BsPeople } from "react-icons/bs";
-import {  useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { db } from "../../Firebase";
+import { useNavigate } from "react-router-dom";
 
 export default function ReplyModel({ setReply }) {
   const [data, setData] = useState({
@@ -12,6 +13,7 @@ export default function ReplyModel({ setReply }) {
 
   const { postid } = useParams();
 
+  const navigate = useNavigate();
 
   const PostComment = async () => {
     try {
@@ -25,7 +27,7 @@ export default function ReplyModel({ setReply }) {
           comments: comments,
         });
         setReply(false);
-        console.log("Comment added successfully");
+        navigate("/community");
       } else {
         console.log("Document does not exist");
       }
@@ -36,7 +38,7 @@ export default function ReplyModel({ setReply }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center h-full p-3 overflow-y-scroll bg-black bg-opacity-70 backdrop-blur">
-      <div className="space-y-2 bg-white p-6">
+      <div className="p-6 space-y-2 bg-white">
         <div className="flex items-center gap-3">
           <img
             src="https://qph.cf2.quoracdn.net/main-thumb-1741383872-50-jkrzkqlzjsjvexpvlkgixgehnnjndhwk.jpeg"

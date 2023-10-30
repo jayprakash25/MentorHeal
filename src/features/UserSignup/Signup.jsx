@@ -1,14 +1,25 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import { auth } from "../../Firebase";
+import { auth, db } from "../../Firebase";
+import { doc, setDoc } from "firebase/firestore";
 export default function Signup() {
   const GoogleProvider = new GoogleAuthProvider();
+
+  const navigate = useNavigate();
 
   const GoogleSignin = async () => {
     try {
       const res = await signInWithPopup(auth, GoogleProvider);
-      console.log(res.user);
+      const User = {
+        Name: res.user.displayName,
+        email: res.user.email,
+        pic: res.user.photoURL,
+        Phone: res.user.phoneNumber,
+      };
+      await setDoc(doc(db, "USERS", res.providerId), User);
+      localStorage.setItem("user", JSON.stringify(User));
+      navigate("/mentors");
     } catch (error) {
       console.log(error);
     }

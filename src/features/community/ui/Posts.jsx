@@ -19,6 +19,7 @@ export default function Posts() {
         }));
 
         setData(posts);
+        console.log(data);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -53,12 +54,12 @@ export default function Posts() {
                       alt={
                         "https://qph.cf2.quoracdn.net/main-thumb-1741383872-50-jkrzkqlzjsjvexpvlkgixgehnnjndhwk.jpeg"
                       }
-                      className="w-7 h-7 rounded-full"
+                      className="rounded-full w-7 h-7"
                     />
                     <h1 className="text-lg font-bold">{item.ask}</h1>
                   </div>
                   <ul className="flex flex-col gap-2.5 mt-3">
-                    {item?.comment?.slice(0, 1).map((item, i) => {
+                    {item?.comments?.map((item, i) => {
                       return (
                         <div
                           key={i}
@@ -71,9 +72,9 @@ export default function Posts() {
                             alt={
                               "https://qph.cf2.quoracdn.net/main-thumb-1741383872-50-jkrzkqlzjsjvexpvlkgixgehnnjndhwk.jpeg"
                             }
-                            className="w-7 h-7 rounded-full"
+                            className="rounded-full w-7 h-7"
                           />
-                          <p>{item?.a?.slice(0, 150)}</p>
+                          <p>{item?.Postcomment}</p>
                         </div>
                       );
                     })}
