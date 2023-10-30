@@ -7,13 +7,13 @@ import { db } from "../../Firebase";
 import { useNavigate } from "react-router-dom";
 
 export default function ReplyModel({ setReply }) {
+  const { postid } = useParams();
+  const navigate = useNavigate();
+  const mentorjwt = localStorage.getItem("mentorjwt");
   const [data, setData] = useState({
     Postcomment: "",
+    mentorjwt: mentorjwt,
   });
-
-  const { postid } = useParams();
-
-  const navigate = useNavigate();
 
   const PostComment = async () => {
     try {
@@ -46,7 +46,7 @@ export default function ReplyModel({ setReply }) {
             className="rounded-full w-7 h-7"
           />
           <button className="text-sm font-semibold text-gray-500 flex items-center gap-2 border-[1px] rounded-full px-8 py-2">
-            <h1>Public {postid}</h1>
+            <h1>Public</h1>
             <BsPeople size={20} color="gray" />
           </button>
         </div>

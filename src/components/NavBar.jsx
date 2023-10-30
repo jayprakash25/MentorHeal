@@ -209,9 +209,13 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
                 <li className="transition duration-300 ease-in-out cursor-pointer ">
                   <Link to={"/how"}>How it works</Link>
                 </li>
-                <li className="cursor-pointer">
-                  <Link to="/signup"> Signup </Link>
-                </li>
+                {mentorjwt ? (
+                  ""
+                ) : (
+                  <li className="cursor-pointer">
+                    <Link to="/signup"> Signup </Link>
+                  </li>
+                )}
                 <li
                   onClick={() => {
                     setdropdown(!dropdown);

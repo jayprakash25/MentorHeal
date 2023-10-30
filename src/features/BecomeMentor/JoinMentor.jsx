@@ -45,7 +45,6 @@ export default function JoinMentor({ setjoinmentor }) {
       try {
         await uploadBytes(storageRef, uploadimage);
         const downloadURL = await getDownloadURL(storageRef);
-        console.log(downloadURL);
         const updatedMentor = {
           ...mentor,
           image: downloadURL,
@@ -171,7 +170,7 @@ export default function JoinMentor({ setjoinmentor }) {
                 type="text"
                 value={mentor.bio}
                 placeholder="Bio"
-                maxLength={150}
+                maxLength={250}
                 onChange={(e) => {
                   setmentor({ ...mentor, bio: e.target.value });
                 }}

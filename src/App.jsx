@@ -24,7 +24,7 @@ const App = () => {
         <Route path="/mentors" element={<FindMentors />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/community" element={<Community />} />
-        <Route path="/queries/:postid/:tittle" element={<ReadFullQuestion />} />
+        <Route path="/queries/:postid/" element={<ReadFullQuestion />} />
       </Routes>
     </>
   );

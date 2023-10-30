@@ -4,11 +4,15 @@ import { useEffect } from "react";
 import { db } from "../../../Firebase";
 import { useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
+import { Loader } from "../../../components";
 
 export default function Posts() {
   const navigate = useNavigate();
 
   const [data, setData] = useState([]);
+
+  const [loading, setloading] = useState(true);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -17,9 +21,8 @@ export default function Posts() {
           id: doc.id,
           ...doc.data(),
         }));
-
         setData(posts);
-        console.log(data);
+        setloading(false);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -32,33 +35,48 @@ export default function Posts() {
     <>
       <div className="p-2  mx-auto space-y-5  w-[80vw] sm:w-[70vw] md:w-[60vw] lg:w-[40vw] mt-7">
         <div className="flex flex-col gap-5">
-          {data?.map((item, i) => {
-            return (
-              <React.Fragment key={i}>
-                <div
-                  className="border-[1px] border-gray-300 p-5 cursor-pointer"
-                  onClick={() => {
-                    navigate(`/queries/${item.id}/${item.ask}`, {
-                      state: {
-                        q: item?.ask,
-                        comment: item?.comment,
-                      },
-                    });
-                  }}
-                >
-                  <div className="flex items-start justify-start gap-5 ">
-                    <img
-                      src={
-                        "https://qph.cf2.quoracdn.net/main-thumb-1741383872-50-jkrzkqlzjsjvexpvlkgixgehnnjndhwk.jpeg"
-                      }
-                      alt={
-                        "https://qph.cf2.quoracdn.net/main-thumb-1741383872-50-jkrzkqlzjsjvexpvlkgixgehnnjndhwk.jpeg"
-                      }
-                      className="rounded-full w-7 h-7"
-                    />
-                    <h1 className="text-lg font-bold">{item.ask}</h1>
+          {loading ? (
+            <Loader text={"Please wait...."} />
+          ) : (
+            data?.map((item, i) => {
+              return (
+                <React.Fragment key={i}>
+                  <div
+                    className="border-[1px] border-gray-300 p-5 cursor-pointer"
+                    onClick={() => {
+                      navigate(`/queries/${item.id}`, {
+                        state: {
+                          q: item?.ask,
+                          comment: item?.comment,
+                        },
+                      });
+                    }}
+                  >
+                    <div className="flex items-start justify-start gap-5 ">
+                      <img
+                        src={
+                          "https://qph.cf2.quoracdn.net/main-thumb-1741383872-50-jkrzkqlzjsjvexpvlkgixgehnnjndhwk.jpeg"
+                        }
+                        alt={
+                          "https://qph.cf2.quoracdn.net/main-thumb-1741383872-50-jkrzkqlzjsjvexpvlkgixgehnnjndhwk.jpeg"
+                        }
+                        className="rounded-full w-7 h-7"
+                      />
+                      <h1 className="text-lg font-bold">{item.ask}</h1>
+                    </div>
+                    {/*  */}
                   </div>
-                  {/* <ul className="flex flex-col gap-2.5 mt-3">
+                </React.Fragment>
+              );
+            })
+          )}
+        </div>
+      </div>
+    </>
+  );
+}
+{
+  /* <ul className="flex flex-col gap-2.5 mt-3">
                     {item?.comments?.map((item, i) => {
                       return (
                         <div
@@ -78,13 +96,5 @@ export default function Posts() {
                         </div>
                       );
                     })}
-                  </ul> */}
-                </div>
-              </React.Fragment>
-            );
-          })}
-        </div>
-      </div>
-    </>
-  );
+                  </ul> */
 }
