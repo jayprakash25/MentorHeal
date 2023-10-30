@@ -58,7 +58,7 @@ export default function Posts() {
                     />
                     <h1 className="text-lg font-bold">{item.ask}</h1>
                   </div>
-                  <ul className="flex flex-col gap-2.5 mt-3">
+                  {/* <ul className="flex flex-col gap-2.5 mt-3">
                     {item?.comments?.map((item, i) => {
                       return (
                         <div
@@ -78,7 +78,7 @@ export default function Posts() {
                         </div>
                       );
                     })}
-                  </ul>
+                  </ul> */}
                 </div>
               </React.Fragment>
             );
