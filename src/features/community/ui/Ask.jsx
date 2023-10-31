@@ -2,7 +2,7 @@ import { BsPeople } from "react-icons/bs";
 import { db } from "../../../Firebase";
 import { addDoc, collection } from "firebase/firestore";
 import { useState } from "react";
-export default function Ask() {
+export default function Ask({ setpopup }) {
   const [data, setData] = useState({
     ask: "",
   });
@@ -11,7 +11,7 @@ export default function Ask() {
     e.preventDefault();
     try {
       await addDoc(collection(db, "POSTS"), data);
-      alert("Done");
+      setpopup(false);
     } catch (error) {
       console.log(error);
     }

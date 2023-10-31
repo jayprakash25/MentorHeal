@@ -3,9 +3,9 @@ import { BsPeople } from "react-icons/bs";
 import { db } from "../../../Firebase";
 import { useState } from "react";
 
-export default function Post() {
+export default function Post({ setpopup }) {
   const [data, setData] = useState({
-    post: "",
+    ask: "",
   });
 
   const handleSubmit = async (e) => {
@@ -13,7 +13,7 @@ export default function Post() {
 
     try {
       await addDoc(collection(db, "POSTS"), data);
-      alert("Done");
+      setpopup(false);
     } catch (error) {
       console.log(error);
     }
@@ -36,11 +36,11 @@ export default function Post() {
           cols={20}
           rows={12}
           type="text"
-          value={data.post}
+          value={data.ask}
           onChange={(e) => {
             setData({
               ...data,
-              post: e.target.value,
+              ask: e.target.value,
             });
           }}
           className=" mx-auto text-lg w-[70vw] sm:w-[60vw] md:w-[50vw] lg:w-[45vw]  border-b-2 border-gray-300 outline-none"

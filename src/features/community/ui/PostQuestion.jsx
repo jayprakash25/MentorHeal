@@ -10,7 +10,7 @@ export default function PostQuestion() {
       <div className="p-5 border-[1px] border-gray-300  rounded-md mx-auto space-y-5  w-[80vw] sm:w-[70vw] md:w-[60vw] lg:w-[40vw]">
         <div className="flex items-center gap-2.5 justify-center">
           <img
-            src="https://qph.cf2.quoracdn.net/main-thumb-1741383872-50-jkrzkqlzjsjvexpvlkgixgehnnjndhwk.jpeg"
+            src="https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=626&ext=jpg"
             alt=""
             className="w-10 h-10 rounded-full"
           />
@@ -45,7 +45,7 @@ export default function PostQuestion() {
         </div>
       </div>
       {popup ? (
-        <AskModel category={category} setcategory={setcategory} />
+        <AskModel category={category} setcategory={setcategory} setpopup={setpopup}/>
       ) : null}
     </main>
   );
