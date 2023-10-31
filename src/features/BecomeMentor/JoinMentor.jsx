@@ -25,7 +25,7 @@ export default function JoinMentor({ setjoinmentor }) {
     bio: "",
   });
 
-  const sendEmail = () => {
+  const sendEmail = (email) => {
     emailjs
       .send(
         "service_m5ql7ex",
@@ -34,7 +34,7 @@ export default function JoinMentor({ setjoinmentor }) {
           from_name: "MentorHeal",
           to_name: mentor.Name,
           from_email: "chrahulofficial@gmail.com",
-          to_email: mentor.Email,
+          to_email: email,
           message:
             "A warm welcome to our mentor team at MentorHeal! We're excited to have you on board. Your expertise will be invaluable in guiding our team. Let's embark on this journey together!",
         },
@@ -77,7 +77,7 @@ export default function JoinMentor({ setjoinmentor }) {
         setloader(false);
         localStorage.setItem("mentorjwt", id);
         navigate("/mentors");
-        // sendMail(mentor.Email);
+        sendEmail(mentor.Email);
       } catch (error) {
         console.error("Error uploading image:", error);
         alert("An error occurred while uploading the image.");
