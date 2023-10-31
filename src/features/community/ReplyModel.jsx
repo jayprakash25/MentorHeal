@@ -2,20 +2,23 @@ import { doc, getDoc, updateDoc } from "firebase/firestore";
 import React from "react";
 import { useState } from "react";
 import { BsPeople } from "react-icons/bs";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { db } from "../../Firebase";
-import { useNavigate } from "react-router-dom";
+import { Loader } from "../../components";
 
 export default function ReplyModel({ setReply }) {
   const { postid } = useParams();
   const navigate = useNavigate();
   const mentorjwt = localStorage.getItem("mentorjwt");
+  const [loading, setloading] = useState(false);
+
   const [data, setData] = useState({
     Postcomment: "",
     mentorjwt: mentorjwt,
   });
 
   const PostComment = async () => {
+    setloading(true);
     try {
       const postRef = doc(db, "POSTS", postid);
       const postSnapshot = await getDoc(postRef);
@@ -27,6 +30,7 @@ export default function ReplyModel({ setReply }) {
           comments: comments,
         });
         setReply(false);
+        setloading(false);
         navigate("/community");
       } else {
         console.log("Document does not exist");
@@ -81,6 +85,7 @@ export default function ReplyModel({ setReply }) {
           </button>
         </div>
       </div>
+      {loading ? <Loader text={"Please wait...."} /> : null}
     </div>
   );
 }
