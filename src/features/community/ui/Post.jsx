@@ -36,7 +36,7 @@ export default function Post({ setpopup }) {
             src={
               user
                 ? user.pic
-                : "https://qph.cf2.quoracdn.net/main-thumb-1741383872-50-jkrzkqlzjsjvexpvlkgixgehnnjndhwk.jpeg"
+                : "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=626&ext=jpg"
             }
             alt=""
             className="rounded-full w-7 h-7"
