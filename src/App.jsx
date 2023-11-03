@@ -8,6 +8,8 @@ import ReadFull from "./components/ReadFull";
 import { Blog, Community, ReadFullBlog } from "./Pages/index";
 import Intern from "./Pages/Intern";
 import { FindMentors, ReadFullQuestion, Signup } from "./features/index";
+import "animate.css";
+
 const App = () => {
   return (
     <>

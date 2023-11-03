@@ -2,12 +2,14 @@ import { BsPeople } from "react-icons/bs";
 import { db } from "../../../Firebase";
 import { addDoc, collection } from "firebase/firestore";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 export default function Ask({ setpopup }) {
   const [data, setData] = useState({
     ask: "",
   });
 
   const user = JSON.parse(localStorage.getItem("user"));
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();

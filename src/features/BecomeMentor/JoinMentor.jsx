@@ -89,7 +89,7 @@ export default function JoinMentor({ setjoinmentor }) {
 
   return (
     <>
-      <div className="fixed inset-0 z-50 flex items-center justify-center h-full p-3 overflow-y-scroll bg-black bg-opacity-70 backdrop-blur">
+      <div className="fixed inset-0 z-50 flex items-center justify-center h-full p-3 overflow-y-scroll bg-black bg-opacity-70 backdrop-blur animate__animated animate__fadeIn">
         <div className="w-[80vw] md:w-[60vw] lg:w-[45vw] px-10 bg-white rounded-md py-3 overflow-y-scroll ">
           <div className="flex justify-end">
             <RxCross2

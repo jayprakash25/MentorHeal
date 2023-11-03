@@ -3,7 +3,7 @@ import { Ask, Guildline, Post } from "../.././index";
 
 export default function AskModel({ category, setcategory, setpopup }) {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center h-full p-3 overflow-y-scroll bg-black bg-opacity-70 backdrop-blur">
+    <div className="fixed inset-0 z-50 flex items-center justify-center h-full p-3 overflow-y-scroll bg-black bg-opacity-70 backdrop-blur animate__animated animate__fadeIn ">
       <div className="p-5 bg-white w-[90vw] md:w-[60vw] lg:w-[50vw] rounded-md">
         <div className="flex items-center justify-around">
           <div
