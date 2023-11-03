@@ -15,6 +15,8 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
   const [scroll, setScroll] = useState(false);
   const [joinmentor, setjoinmentor] = useState(false);
 
+  const user = JSON.parse(localStorage.getItem("user"));
+
   useEffect(() => {
     window.onscroll = () => {
       if (window.scrollY > 50) {
@@ -138,9 +140,11 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
                   </ul>
                 </div>
               </div>
-              <li className="px-5  text-white cursor-pointer bg-gradient-to-l from-cyan-400 via-cyan-400 to-cyan-300 py-1.5 rounded-full">
-                <Link to="/signup"> Signup </Link>
-              </li>
+              {user ? null : (
+                <li className="px-5  text-white cursor-pointer bg-gradient-to-l from-cyan-400 via-cyan-400 to-cyan-300 py-1.5 rounded-full">
+                  <Link to="/signup"> Signup </Link>
+                </li>
+              )}
               {mentorjwt ? null : (
                 <li
                   className="px-5  text-white cursor-pointer bg-gradient-to-l from-cyan-400 via-cyan-400 to-cyan-300 py-1.5 rounded-full"
@@ -235,9 +239,11 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
                       About Us
                     </p>
                   </Link>
-                  <li className="cursor-pointer">
-                    <Link to="/signup"> Signup </Link>
-                  </li>
+                  {user ? null : (
+                    <li className="cursor-pointer">
+                      <Link to="/signup"> Signup </Link>
+                    </li>
+                  )}
                   {mentorjwt ? null : (
                     <p
                       onClick={() => {
