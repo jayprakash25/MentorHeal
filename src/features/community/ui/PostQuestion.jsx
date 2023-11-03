@@ -45,7 +45,11 @@ export default function PostQuestion() {
         </div>
       </div>
       {popup ? (
-        <AskModel category={category} setcategory={setcategory} setpopup={setpopup}/>
+        <AskModel
+          category={category}
+          setcategory={setcategory}
+          setpopup={setpopup}
+        />
       ) : null}
     </main>
   );

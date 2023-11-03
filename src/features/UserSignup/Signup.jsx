@@ -60,7 +60,7 @@ export default function Signup() {
                   className="w-7 h-7"
                 />
                 <h1>Sign up with Google</h1>
-              </button>{" "}
+              </button>
             </div>
           </div>
         </div>
