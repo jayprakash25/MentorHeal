@@ -1,9 +1,9 @@
-import { addDoc, collection } from "firebase/firestore";
+import { setDoc } from "firebase/firestore";
 import { BsPeople } from "react-icons/bs";
 import { db } from "../../../Firebase";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { doc, getDoc } from "firebase/firestore";
+import { doc, getDoc , collection } from "firebase/firestore";
 
 export default function Post({ setpopup }) {
   const [userimg, setuserimg] = useState();
@@ -43,7 +43,6 @@ export default function Post({ setpopup }) {
       return;
     }
     if (!token) {
-      console.log("User not authenticated"); 
       alert("Please Signup");
       navigate("/signup");
     } else {

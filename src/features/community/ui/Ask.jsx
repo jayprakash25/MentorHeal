@@ -1,9 +1,9 @@
 import { BsPeople } from "react-icons/bs";
 import { db } from "../../../Firebase";
-import { collection, setDoc } from "firebase/firestore";
+import { setDoc } from "firebase/firestore";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { doc, getDoc } from "firebase/firestore";
+import { doc, getDoc, collection } from "firebase/firestore";
 export default function Ask({ setpopup }) {
   const [userimg, setuserimg] = useState();
   const [data, setData] = useState({
@@ -13,6 +13,7 @@ export default function Ask({ setpopup }) {
   });
 
   const token = localStorage.getItem("userToken");
+
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -20,17 +21,16 @@ export default function Ask({ setpopup }) {
     if (data.ask === "") {
       return;
     }
-    if (!token) {
-      console.log("User not authenticated"); 
-      alert("Please Signup");
-      navigate("/signup");
-    } else {
+    if (token) {
       try {
         await setDoc(collection(db, "POSTS"), data);
         setpopup(false);
       } catch (error) {
         console.log(error);
       }
+    } else {
+      alert("Please signup");
+      navigate("/signup");
     }
   };
   //get user image and Name
