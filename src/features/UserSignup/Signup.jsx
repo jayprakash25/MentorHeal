@@ -3,10 +3,36 @@ import { Link, useNavigate } from "react-router-dom";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth, db } from "../../Firebase";
 import { doc, setDoc } from "firebase/firestore";
+import emailjs from "@emailjs/browser";
 export default function Signup() {
   const GoogleProvider = new GoogleAuthProvider();
 
   const navigate = useNavigate();
+
+  const sendEmail = (email, name) => {
+    emailjs
+      .send(
+        "service_m5ql7ex",
+        "template_s697m1j",
+        {
+          from_name: "MentorHeal",
+          to_name: name,
+          from_email: "chrahulofficial@gmail.com",
+          to_email: email,
+          message:
+            "A warm welcome to our mentor team at MentorHeal! We're excited to have you on board. Your expertise will be invaluable in guiding our team. Let's embark on this journey together!",
+        },
+        "pskEHJBdJUVoAlloz"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
 
   const GoogleSignin = async () => {
     try {
@@ -19,6 +45,7 @@ export default function Signup() {
       };
       await setDoc(doc(db, "USERS", res.providerId), User);
       localStorage.setItem("user", JSON.stringify(User));
+      sendEmail(User.email, User.Name);
       navigate("/mentors");
     } catch (error) {
       console.log(error);
