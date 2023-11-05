@@ -13,26 +13,24 @@ export default function Ask({ setpopup }) {
   });
 
   const token = localStorage.getItem("userToken");
-
-  const user = JSON.parse(localStorage.getItem("user"));
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (user) {
-      if (data.ask === "") {
-        alert("Please write something ..");
-      } else {
-        try {
-          await setDoc(collection(db, "POSTS"), data);
-          setpopup(false);
-        } catch (error) {
-          console.log(error);
-        }
-      }
-    } else {
+    if (data.ask === "") {
+      return;
+    }
+    if (!token) {
+      console.log("User not authenticated"); 
       alert("Please Signup");
       navigate("/signup");
+    } else {
+      try {
+        await setDoc(collection(db, "POSTS"), data);
+        setpopup(false);
+      } catch (error) {
+        console.log(error);
+      }
     }
   };
   //get user image and Name

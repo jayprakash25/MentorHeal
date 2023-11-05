@@ -13,7 +13,7 @@ export default function Post({ setpopup }) {
     Name: "",
   });
 
-  const user = JSON.parse(localStorage.getItem("user"));
+  const token = localStorage.getItem("userToken");
 
   const navigate = useNavigate();
 
@@ -39,20 +39,20 @@ export default function Post({ setpopup }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (user) {
-      if (data.ask === "") {
-        alert("Please write something ..");
-      } else {
-        try {
-          await addDoc(collection(db, "POSTS"), data);
-          setpopup(false);
-        } catch (error) {
-          console.log(error);
-        }
-      }
-    } else {
+    if (data.ask === "") {
+      return;
+    }
+    if (!token) {
+      console.log("User not authenticated"); 
       alert("Please Signup");
       navigate("/signup");
+    } else {
+      try {
+        await setDoc(collection(db, "POSTS"), data);
+        setpopup(false);
+      } catch (error) {
+        console.log(error);
+      }
     }
   };
 
