@@ -5,6 +5,7 @@ import { BsPeople } from "react-icons/bs";
 import { useNavigate, useParams } from "react-router-dom";
 import { db } from "../../Firebase";
 import { Loader } from "../../components";
+import { doc, getDoc } from "firebase/firestore";
 
 export default function ReplyModel({ setReply }) {
   const { postid } = useParams();
@@ -18,26 +19,47 @@ export default function ReplyModel({ setReply }) {
     mentorjwt: mentorjwt,
   });
 
+  //get user image
+  useEffect(() => {
+    const fetchComments = async () => {
+      try {
+        const postRef = doc(db, "USERS", localStorage.getitem("userToken"));
+        const User = await getDoc(postRef);
+        setuserimg(User.data().pic);
+        console.log(userimg);
+      } catch (error) {
+        console.error("Error fetching comments:", error);
+      }
+    };
+    fetchComments();
+    window.scrollTo(0, 0);
+  }, []);
+
   const PostComment = async () => {
     setloading(true);
-    try {
-      const postRef = doc(db, "POSTS", postid);
-      const postSnapshot = await getDoc(postRef);
-      if (postSnapshot.exists()) {
-        const post = postSnapshot.data();
-        const comments = post.comments || [];
-        comments.push(data);
-        await updateDoc(postRef, {
-          comments: comments,
-        });
-        setReply(false);
-        setloading(false);
-        navigate("/community");
-      } else {
-        console.log("Document does not exist");
+    if (user) {
+      try {
+        const postRef = doc(db, "POSTS", postid);
+        const postSnapshot = await getDoc(postRef);
+        if (postSnapshot.exists()) {
+          const post = postSnapshot.data();
+          const comments = post.comments || [];
+          comments.push(data);
+          await updateDoc(postRef, {
+            comments: comments,
+          });
+          setReply(false);
+          setloading(false);
+          navigate("/community");
+        } else {
+          console.log("Document does not exist");
+        }
+      } catch (error) {
+        console.log(error);
       }
-    } catch (error) {
-      console.log(error);
+    } else {
+      alert("Please Signup");
+      navigate("/signup");
     }
   };
 
@@ -47,8 +69,8 @@ export default function ReplyModel({ setReply }) {
         <div className="flex items-center gap-3">
           <img
             src={
-              user
-                ? user.pic
+              userimg !== undefined
+                ? userimg
                 : "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=626&ext=jpg"
             }
             alt=""

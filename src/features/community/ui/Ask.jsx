@@ -3,12 +3,14 @@ import { db } from "../../../Firebase";
 import { addDoc, collection } from "firebase/firestore";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { doc, getDoc } from "firebase/firestore";
 export default function Ask({ setpopup }) {
+  const [userimg, setuserimg] = useState();
   const [data, setData] = useState({
     ask: "",
+    pic : userimg
   });
 
-  const [userimg, setuserimg] = useState();
 
   const user = JSON.parse(localStorage.getItem("user"));
   const navigate = useNavigate();
@@ -27,14 +29,14 @@ export default function Ask({ setpopup }) {
       navigate("/signup");
     }
   };
-
   //get user image
   useEffect(() => {
     const fetchComments = async () => {
       try {
         const postRef = doc(db, "USERS", localStorage.getitem("userToken"));
         const User = await getDoc(postRef);
-        setuserimg(User.pic);
+        setuserimg(User.data().pic);
+        console.log(userimg);
       } catch (error) {
         console.error("Error fetching comments:", error);
       }
@@ -48,7 +50,7 @@ export default function Ask({ setpopup }) {
       <div className="flex items-center gap-3">
         <img
           src={
-            userimg !== null
+            userimg !== undefined
               ? userimg
               : "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=626&ext=jpg"
           }

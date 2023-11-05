@@ -56,11 +56,7 @@ export default function Posts() {
                   >
                     <div className="flex items-start justify-start gap-5 ">
                       <img
-                        src={
-                          user
-                            ? user.pic
-                            : "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=626&ext=jpg"
-                        }
+                        src={item.pic}
                         alt=""
                         className="rounded-full w-7 h-7"
                       />

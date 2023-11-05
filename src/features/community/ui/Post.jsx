@@ -3,15 +3,34 @@ import { BsPeople } from "react-icons/bs";
 import { db } from "../../../Firebase";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { doc, getDoc } from "firebase/firestore";
 
 export default function Post({ setpopup }) {
+  const [userimg, setuserimg] = useState();
   const [data, setData] = useState({
     ask: "",
+    pic: userimg,
   });
 
   const user = JSON.parse(localStorage.getItem("user"));
 
   const navigate = useNavigate();
+
+  //get user image
+  useEffect(() => {
+    const fetchComments = async () => {
+      try {
+        const postRef = doc(db, "USERS", localStorage.getitem("userToken"));
+        const User = await getDoc(postRef);
+        setuserimg(User.data().pic);
+        console.log(userimg);
+      } catch (error) {
+        console.error("Error fetching comments:", error);
+      }
+    };
+    fetchComments();
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

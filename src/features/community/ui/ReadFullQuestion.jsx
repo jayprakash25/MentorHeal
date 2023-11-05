@@ -8,6 +8,8 @@ import ReplyModel from "../ReplyModel";
 import { useEffect } from "react";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../../Firebase";
+import { doc, getDoc } from "firebase/firestore";
+
 export default function ReadFullQuestion() {
   const data = useLocation();
   const user = JSON.parse(localStorage.getItem("user"));
@@ -17,6 +19,22 @@ export default function ReadFullQuestion() {
   const [loading, setloading] = useState(true);
 
   const { postid } = useParams();
+
+  //get user image
+  useEffect(() => {
+    const fetchComments = async () => {
+      try {
+        const postRef = doc(db, "USERS", localStorage.getitem("userToken"));
+        const User = await getDoc(postRef);
+        setuserimg(User.data().pic);
+        console.log(userimg);
+      } catch (error) {
+        console.error("Error fetching comments:", error);
+      }
+    };
+    fetchComments();
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     const fetchComments = async () => {
@@ -41,8 +59,8 @@ export default function ReadFullQuestion() {
             <div className="flex items-start justify-start gap-5">
               <img
                 src={
-                  user
-                    ? user.pic
+                  userimg !== undefined
+                    ? userimg
                     : "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=626&ext=jpg"
                 }
                 alt=""
