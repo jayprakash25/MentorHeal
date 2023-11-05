@@ -1,7 +1,7 @@
 import { addDoc, collection } from "firebase/firestore";
 import { BsPeople } from "react-icons/bs";
 import { db } from "../../../Firebase";
-import { useState } from "react";
+import { useState , useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import { doc, getDoc } from "firebase/firestore";
 
