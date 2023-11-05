@@ -39,7 +39,9 @@ export default function Signup() {
         <div>
           <div className="my-11">
             <div className=" space-y-1.5 text-center">
-              <h1 className="text-3xl font-bold md:text-4xl">Get MentorShip</h1>
+              <h1 className="text-2xl font-bold lg:text-3xl md:text-4xl">
+                Get MentorShip
+              </h1>
               <p className="text-[#676b5f] font-semibold md:text-lg">
                 Sign Up for free!
               </p>
@@ -50,7 +52,7 @@ export default function Signup() {
                 and confirm you have read our Privacy Notice.
               </h2>
               <button
-                className="flex items-center justify-center rounded-full space-x-3 border-[1px] hover:bg-[#eeefea] ease-in-out duration-500 border-slate-300 px-10 py-3.5"
+                className="flex items-center justify-center rounded-full space-x-3 border-[1px] hover:bg-[#eeefea] ease-in-out duration-500 border-slate-300 px-8 text-sm py-3.5"
                 onClick={GoogleSignin}
               >
                 <img
