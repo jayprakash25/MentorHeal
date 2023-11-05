@@ -10,6 +10,7 @@ import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../../Firebase";
 export default function ReadFullQuestion() {
   const data = useLocation();
+  const user = JSON.parse(localStorage.getItem("user"));
 
   const [Reply, setReply] = useState(false);
   const [Comments, setComments] = useState();
@@ -40,11 +41,11 @@ export default function ReadFullQuestion() {
             <div className="flex items-start justify-start gap-5">
               <img
                 src={
-                  "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=626&ext=jpg"
+                  user
+                    ? user.pic
+                    : "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=626&ext=jpg"
                 }
-                alt={
-                  "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=626&ext=jpg"
-                }
+                alt=""
                 className="rounded-full w-7 h-7"
               />
               <h1 className="text-lg font-bold">{data?.state?.q}</h1>
@@ -74,11 +75,11 @@ export default function ReadFullQuestion() {
                     <div className="flex items-center gap-3">
                       <img
                         src={
-                          "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=626&ext=jpg"
+                          user
+                            ? user.pic
+                            : "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=626&ext=jpg"
                         }
-                        alt={
-                          "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=626&ext=jpg"
-                        }
+                        alt=""
                         className="rounded-full w-7 h-7"
                       />
                       <h1 className="text-sm font-semibold text-gray-700">

@@ -11,6 +11,8 @@ export default function Posts() {
 
   const [data, setData] = useState([]);
 
+  const user = JSON.parse(localStorage.getItem("user"));
+
   const [loading, setloading] = useState(true);
 
   useEffect(() => {
@@ -55,11 +57,11 @@ export default function Posts() {
                     <div className="flex items-start justify-start gap-5 ">
                       <img
                         src={
-                          "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=626&ext=jpg"
+                          user
+                            ? user.pic
+                            : "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=626&ext=jpg"
                         }
-                        alt={
-                          "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=626&ext=jpg"
-                        }
+                        alt=""
                         className="rounded-full w-7 h-7"
                       />
                       <h1 className="text-lg font-bold">{item.ask}</h1>
