@@ -20,6 +20,7 @@ export default function Ask({ setpopup }) {
     if (user) {
       try {
         await addDoc(collection(db, "POSTS"), data);
+        console.log(data)
         setpopup(false);
       } catch (error) {
         console.log(error);
