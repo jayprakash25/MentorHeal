@@ -45,7 +45,7 @@ const TeamCard = () => {
           </span>
         </h1>
       </div>
-      <div className="grid grid-cols-1 gap-4 p-4 my-16 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+      <div className="grid grid-cols-1 gap-4 p-3 my-16 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
         {teamMembers.map((member, index) => {
           const newLocal = "space-y-2.5 my-3 text-center";
           return (
@@ -55,7 +55,7 @@ const TeamCard = () => {
                 data-aos-easing="ease-in-out"
                 data-aos-mirror="true"
                 data-aos-once="true"
-                className="max-w-md rounded-md hover:scale-105 ease-in-out duration-500 cursor-pointer  px-4 border-[1px] border-gray-200   shadow-md shadow-gray-100"
+                className="max-w-md rounded-md hover:scale-105 ease-in-out duration-500 cursor-pointer px-4 border-[1px] border-gray-200   shadow-md shadow-gray-100"
               >
                 <div className={newLocal}>
                   <div className="text-xl font-bold text-transparent md:text-2xl bg-gradient-to-l from-cyan-600 via-cyan-400 to-cyan-500 bg-clip-text">
