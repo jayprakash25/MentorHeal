@@ -48,7 +48,7 @@ export default function Ask({ setpopup }) {
       <div className="flex items-center gap-3">
         <img
           src={
-            userimg
+            userimg !== null
               ? userimg
               : "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=626&ext=jpg"
           }
