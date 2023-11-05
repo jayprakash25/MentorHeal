@@ -126,7 +126,7 @@ export default function JoinMentor({ setjoinmentor }) {
                 />
               ) : null}
               {blobimg.image ? null : (
-                <div className="flex flex-col items-center gap-1 mx-auto text-sm" >
+                <div className="flex flex-col items-center gap-1 mx-auto text-sm">
                   <FiUploadCloud
                     size={65}
                     className="cursor-pointer"

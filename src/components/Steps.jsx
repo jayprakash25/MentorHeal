@@ -48,7 +48,7 @@ export default function Steps() {
             </span>{" "}
             can help you
           </h1>
-          <div className="flex flex-col  justify-center mt-16 gap-6 md:gap-0 lg:px-36 md:flex-row">
+          <div className="flex flex-col items-center justify-center gap-6 mt-16 md:gap-0 lg:px-36 md:flex-row">
             {Step.map((item, i) => {
               return (
                 <div key={i} className="max-w-xl mx-auto space-y-3">
