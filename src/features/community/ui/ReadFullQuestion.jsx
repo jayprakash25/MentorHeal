@@ -8,7 +8,6 @@ import ReplyModel from "../ReplyModel";
 import { useEffect } from "react";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../../Firebase";
-import { doc, getDoc } from "firebase/firestore";
 
 export default function ReadFullQuestion() {
   const data = useLocation();

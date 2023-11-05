@@ -5,7 +5,6 @@ import { BsPeople } from "react-icons/bs";
 import { useNavigate, useParams } from "react-router-dom";
 import { db } from "../../Firebase";
 import { Loader } from "../../components";
-import { doc, getDoc } from "firebase/firestore";
 
 export default function ReplyModel({ setReply }) {
   const { postid } = useParams();
