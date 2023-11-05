@@ -15,7 +15,7 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
   const [scroll, setScroll] = useState(false);
   const [joinmentor, setjoinmentor] = useState(false);
 
-  const user = JSON.parse(localStorage.getItem("user"));
+  const user = localStorage.getItem("userToken");
 
   useEffect(() => {
     window.onscroll = () => {
