@@ -16,7 +16,7 @@ export default function ReadFullQuestion() {
   const [Comments, setComments] = useState();
   const [loading, setloading] = useState(true);
   const { postid } = useParams();
-  const [userimg, setuserimg] = useState();
+
 
   //get user image
   useEffect(() => {
@@ -24,8 +24,10 @@ export default function ReadFullQuestion() {
       try {
         const postRef = doc(db, "USERS", localStorage.getItem("userToken"));
         const User = await getDoc(postRef);
-        setuserimg(User.data().pic);
-        console.log(userimg);
+        setData({
+          ...data,
+          pic: User.data().pic,
+        });
       } catch (error) {
         console.error("Error fetching comments:", error);
       }
@@ -55,11 +57,7 @@ export default function ReadFullQuestion() {
         <div className="flex flex-col gap-5">
           <div className="border-[1px] border-gray-200 p-5  cursor-pointer">
             <div className="flex items-start justify-start gap-5">
-              <img
-                src={userimg}
-                alt=""
-                className="rounded-full w-7 h-7"
-              />
+              <img src={data?.state?.pic} alt="" className="rounded-full w-7 h-7" />
               <h1 className="text-lg font-bold">{data?.state?.q}</h1>
             </div>
             <div className="flex items-end justify-end text-[#8c8d8e] font-semibold mt-4">

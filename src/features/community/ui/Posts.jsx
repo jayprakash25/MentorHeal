@@ -50,6 +50,7 @@ export default function Posts() {
                         state: {
                           q: item?.ask,
                           comment: item?.comment,
+                          pic: item?.pic,
                         },
                       });
                     }}
@@ -72,27 +73,4 @@ export default function Posts() {
       </div>
     </>
   );
-}
-{
-  /* <ul className="flex flex-col gap-2.5 mt-3">
-                    {item?.comments?.map((item, i) => {
-                      return (
-                        <div
-                          key={i}
-                          className="flex items-center gap-5 text-sm"
-                        >
-                          <img
-                            src={
-                              "https://qph.cf2.quoracdn.net/main-thumb-1741383872-50-jkrzkqlzjsjvexpvlkgixgehnnjndhwk.jpeg"
-                            }
-                            alt={
-                              "https://qph.cf2.quoracdn.net/main-thumb-1741383872-50-jkrzkqlzjsjvexpvlkgixgehnnjndhwk.jpeg"
-                            }
-                            className="rounded-full w-7 h-7"
-                          />
-                          <p>{item?.Postcomment}</p>
-                        </div>
-                      );
-                    })}
-                  </ul> */
 }
