@@ -11,9 +11,9 @@ export default function ReplyModel({ setReply }) {
   const navigate = useNavigate();
   const mentorjwt = localStorage.getItem("mentorjwt");
   const [loading, setloading] = useState(false);
-  const user = JSON.parse(localStorage.getItem("user"));
   const [userimg, setuserimg] = useState();
-
+  const [userimg, setuserimg] = useState();
+  const token = localStorage.getItem("userToken");
   const [data, setData] = useState({
     Postcomment: "",
     mentorjwt: mentorjwt,
@@ -43,7 +43,7 @@ export default function ReplyModel({ setReply }) {
 
   const PostComment = async () => {
     setloading(true);
-    if (user) {
+    if (token) {
       try {
         const postRef = doc(db, "POSTS", postid);
         const postSnapshot = await getDoc(postRef);
