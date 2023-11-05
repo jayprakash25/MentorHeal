@@ -31,9 +31,9 @@ const TeamCard = () => {
   }, []);
 
   return (
-    <div className="mx-10 my-20">
+    <div className="mx-5 my-20">
       <div>
-        <h1 className="p-8 text-3xl font-semibold text-center md:text-5xl">
+        <h1 className="px-5 text-xl font-semibold text-center md:text-5xl">
           Meet your{" "}
           <span className="font-bold text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text">
             premier advisors
