@@ -91,7 +91,7 @@ export default function JoinMentor({ setjoinmentor }) {
   return (
     <>
       <div className="fixed inset-0 z-50 flex items-center justify-center h-full p-3 overflow-y-scroll bg-black bg-opacity-70 backdrop-blur animate__animated animate__fadeIn">
-        <div className="w-[92vw] md:w-[60vw] lg:w-[45vw] px-8 bg-white rounded-md py-3 overflow-y-scroll ">
+        <div className="w-[90vw] md:w-[60vw] lg:w-[45vw] px-8 bg-white rounded-md py-3 overflow-y-scroll ">
           <div className="flex justify-end">
             <RxCross2
               onClick={() => {
@@ -103,7 +103,7 @@ export default function JoinMentor({ setjoinmentor }) {
             />
           </div>
 
-          <form className="flex flex-col gap-5  md:grid md:grid-cols-2 md:gap-7 text-[#8ca1b3] font-semibold">
+          <form className="flex flex-col gap-5 text-sm md:grid md:grid-cols-2 md:gap-7 text-[#8ca1b3] font-semibold">
             <div className="flex flex-col space-y-3 md:col-span-2">
               <input
                 ref={dpref}
