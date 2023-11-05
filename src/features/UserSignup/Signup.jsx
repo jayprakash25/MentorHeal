@@ -44,8 +44,8 @@ export default function Signup() {
         email: res.user.email,
         pic: res.user.photoURL,
       };
-      await setDoc(doc(db, "USERS", UserToken), User);
-      localStorage.setItem("user", JSON.stringify(User));
+      const docRef = doc(db, "USERS", UserToken);
+      await setDoc(docRef, User);
       localStorage.setItem("userToken", UserToken);
       sendEmail(User.email, User.Name);
       navigate("/mentors");
