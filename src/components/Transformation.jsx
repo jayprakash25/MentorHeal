@@ -41,8 +41,8 @@ const Transformation = ({ testimonialref }) => {
 
   return (
     <>
-      <div className="flex flex-col items-center my-20" ref={testimonialref}>
-        <div>
+      <div className="flex flex-col items-center justify-center my-20" ref={testimonialref}>
+        <div className="text-center">
           <h1 className="py-4 text-xl font-semibold md:text-5xl">
             Our Stories Of{" "}
             <span className="font-bold text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text">
