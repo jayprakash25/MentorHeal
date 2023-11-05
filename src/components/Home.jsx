@@ -31,7 +31,7 @@ export default function Home() {
   };
 
   return (
-    <>
+    <body className="overflow-x-clip">
       <NavBar
         Scrolltoref={Scrolltoref}
         Scrolltotestimonial={Scrolltotestimonial}
@@ -53,6 +53,6 @@ export default function Home() {
       <Whatsup />
       <Appointment />
       <Footer Scrolltoref={Scrolltoref} />
-    </>
+    </body>
   );
 }
