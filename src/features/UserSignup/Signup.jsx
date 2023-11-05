@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useId } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth, db } from "../../Firebase";
@@ -8,6 +8,8 @@ export default function Signup() {
   const GoogleProvider = new GoogleAuthProvider();
 
   const navigate = useNavigate();
+
+  const UserToken = useId();
 
   const sendEmail = (email, name) => {
     emailjs
@@ -41,10 +43,10 @@ export default function Signup() {
         Name: res.user.displayName,
         email: res.user.email,
         pic: res.user.photoURL,
-        Phone: res.user.phoneNumber,
       };
-      await setDoc(doc(db, "USERS", res.providerId), User);
+      await setDoc(doc(db, "USERS", UserToken), User);
       localStorage.setItem("user", JSON.stringify(User));
+      localStorage.setItem("userToken", UserToken);
       sendEmail(User.email, User.Name);
       navigate("/mentors");
     } catch (error) {

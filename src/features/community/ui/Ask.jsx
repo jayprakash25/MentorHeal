@@ -8,6 +8,8 @@ export default function Ask({ setpopup }) {
     ask: "",
   });
 
+  const [userimg, setuserimg] = useState();
+
   const user = JSON.parse(localStorage.getItem("user"));
   const navigate = useNavigate();
 
@@ -26,13 +28,28 @@ export default function Ask({ setpopup }) {
     }
   };
 
+  //get user image
+  useEffect(() => {
+    const fetchComments = async () => {
+      try {
+        const postRef = doc(db, "USERS", localStorage.getitem("userToken"));
+        const User = await getDoc(postRef);
+        setuserimg(User.pic);
+      } catch (error) {
+        console.error("Error fetching comments:", error);
+      }
+    };
+    fetchComments();
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="pl-2 mt-6 space-y-2">
       <div className="flex items-center gap-3">
         <img
           src={
-            user
-              ? user.pic
+            userimg
+              ? userimg
               : "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=626&ext=jpg"
           }
           alt=""
