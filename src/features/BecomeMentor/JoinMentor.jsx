@@ -103,7 +103,7 @@ export default function JoinMentor({ setjoinmentor }) {
             />
           </div>
 
-          <form className="flex flex-col gap-5 text-sm md:grid md:grid-cols-2 md:gap-7 text-[#8ca1b3] font-semibold">
+          <form className="flex flex-col gap-5  md:grid md:grid-cols-2 md:gap-7 text-[#8ca1b3] font-semibold">
             <div className="flex flex-col space-y-3 md:col-span-2">
               <input
                 ref={dpref}
@@ -126,7 +126,7 @@ export default function JoinMentor({ setjoinmentor }) {
                 />
               ) : null}
               {blobimg.image ? null : (
-                <div className="flex flex-col items-center gap-1 mx-auto">
+                <div className="flex flex-col items-center gap-1 mx-auto text-sm" >
                   <FiUploadCloud
                     size={65}
                     className="cursor-pointer"
@@ -147,7 +147,7 @@ export default function JoinMentor({ setjoinmentor }) {
                 onChange={(e) => {
                   setmentor({ ...mentor, Name: e.target.value });
                 }}
-                className="p-3 outline-none border-[0.5px] border-gray-300 rounded-md"
+                className="p-3 outline-none border-[0.5px] border-gray-300 rounded-md text-sm"
               />
             </div>
             <div className="flex flex-col space-y-3">
@@ -158,7 +158,7 @@ export default function JoinMentor({ setjoinmentor }) {
                 onChange={(e) => {
                   setmentor({ ...mentor, Phone: e.target.value });
                 }}
-                className="p-3 outline-none border-[0.5px] border-gray-300 rounded-md"
+                className="p-3 outline-none border-[0.5px] border-gray-300 rounded-md text-sm"
               />
             </div>
             <div className="flex flex-col space-y-3">
@@ -169,12 +169,12 @@ export default function JoinMentor({ setjoinmentor }) {
                 onChange={(e) => {
                   setmentor({ ...mentor, Email: e.target.value });
                 }}
-                className="p-3 outline-none border-[0.5px] border-gray-300 rounded-md"
+                className="p-3 outline-none border-[0.5px] border-gray-300 rounded-md text-sm"
               />
             </div>
             <div className="flex flex-col space-y-3">
               <select
-                className="p-3 outline-none border-[0.5px] border-gray-300 rounded-md"
+                className="p-3 outline-none border-[0.5px] border-gray-300 rounded-md text-sm"
                 onChange={(e) => {
                   setmentor({ ...mentor, Categeory: e.target.value });
                 }}
@@ -197,14 +197,14 @@ export default function JoinMentor({ setjoinmentor }) {
                 onChange={(e) => {
                   setmentor({ ...mentor, achievement: e.target.value });
                 }}
-                className="p-3 outline-none border-[0.5px] border-gray-300 rounded-md"
+                className="p-3 outline-none border-[0.5px] border-gray-300 rounded-md text-sm"
               />
             </div>
           </form>
           <div className="flex justify-center my-5 md:my-7">
             <button
               onClick={uploadImage}
-              className=" px-28  py-3 bg-[#00b8d3] text-white font-semibold rounded-3xl"
+              className=" px-28  py-3 bg-[#00b8d3] text-white font-semibold rounded-3xl text-sm"
             >
               {loader ? (
                 <BiLoaderAlt
