@@ -20,11 +20,15 @@ export default function Ask({ setpopup }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (user) {
-      try {
-        await addDoc(collection(db, "POSTS"), data);
-        setpopup(false);
-      } catch (error) {
-        console.log(error);
+      if (data.ask === "") {
+        alert("Please write something ..");
+      } else {
+        try {
+          await addDoc(collection(db, "POSTS"), data);
+          setpopup(false);
+        } catch (error) {
+          console.log(error);
+        }
       }
     } else {
       alert("Please Signup");
