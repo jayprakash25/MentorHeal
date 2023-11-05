@@ -1,6 +1,6 @@
 import { BsPeople } from "react-icons/bs";
 import { db } from "../../../Firebase";
-import { addDoc, collection } from "firebase/firestore";
+import { collection, setDoc } from "firebase/firestore";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { doc, getDoc } from "firebase/firestore";
@@ -24,7 +24,7 @@ export default function Ask({ setpopup }) {
         alert("Please write something ..");
       } else {
         try {
-          await addDoc(collection(db, "POSTS"), data);
+          await setDoc(collection(db, "POSTS"), data);
           setpopup(false);
         } catch (error) {
           console.log(error);
