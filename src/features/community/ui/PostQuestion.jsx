@@ -5,7 +5,27 @@ import { db } from "../../../Firebase";
 export default function PostQuestion() {
   const [popup, setpopup] = useState(false);
   const [category, setcategory] = useState();
-  const [userimg, setuserimg] = useState();
+  const [userimg, setuserimg] = useState({
+    pic: "",
+  });
+
+  useEffect(() => {
+    const fetchUserDetails = async () => {
+      try {
+        const postRef = doc(db, "USERS", localStorage.getItem("userToken"));
+        const User = await getDoc(postRef);
+        setuserimg(User.data().pic);
+        setuserimg({
+          ...userimg,
+          pic: User.data().pic,
+        });
+      } catch (error) {
+        console.error("Error fetching comments:", error);
+      }
+    };
+    fetchUserDetails();
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     const fetchComments = async () => {
@@ -28,8 +48,8 @@ export default function PostQuestion() {
         <div className="flex items-center gap-2.5 justify-center">
           <img
             src={
-              userimg !== undefined
-                ? userimg
+              userimg.pic
+                ? userimg.pic
                 : "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=626&ext=jpg"
             }
             alt=""
