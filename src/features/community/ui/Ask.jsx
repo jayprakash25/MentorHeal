@@ -1,7 +1,7 @@
 import { BsPeople } from "react-icons/bs";
 import { db } from "../../../Firebase";
 import { addDoc, collection } from "firebase/firestore";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 export default function Ask({ setpopup }) {
   const [data, setData] = useState({
