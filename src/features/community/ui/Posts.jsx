@@ -44,7 +44,7 @@ export default function Posts() {
               return (
                 <React.Fragment key={i}>
                   <div
-                    className="border-[1px] border-gray-300 p-5 cursor-pointer"
+                    className="border-[1px] border-gray-300 p-5 cursor-pointer rounded-md"
                     onClick={() => {
                       navigate(`/queries/${item.id}`, {
                         state: {
@@ -61,7 +61,9 @@ export default function Posts() {
                         alt=""
                         className="rounded-full w-7 h-7"
                       />
-                      <h1 className="text-lg font-bold">{item.ask}</h1>
+                      <h1 className="text-[1rem] md:text-lg font-bold">
+                        {item.ask}
+                      </h1>
                     </div>
                     {/*  */}
                   </div>

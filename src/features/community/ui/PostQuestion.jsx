@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { AskModel } from "../../index";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../../Firebase";
@@ -44,7 +44,7 @@ export default function PostQuestion() {
 
   return (
     <main className="pt-24">
-      <div className="p-5 border-[1px] border-gray-300  rounded-md mx-auto space-y-5  w-[80vw] sm:w-[70vw] md:w-[60vw] lg:w-[40vw]">
+      <div className="p-5 border-[1px] border-gray-300  rounded-md mx-auto space-y-5  w-[90vw]  md:w-[60vw] lg:w-[40vw]">
         <div className="flex items-center gap-2.5 justify-center">
           <img
             src={
@@ -58,7 +58,7 @@ export default function PostQuestion() {
           <input
             type="text"
             placeholder="What do you want to ask "
-            className="py-2 outline-none border-[1px] border-slate-300 px-10 w-[70vw] sm:w-[60vw] md:w-[60vw] lg:w-[50vw] cursor-pointer rounded-full"
+            className="py-2 outline-none border-[1px] border-slate-300 px-10 w-[70vw]  md:w-[60vw] lg:w-[50vw] cursor-pointer rounded-full"
             onClick={() => {
               setpopup(true);
               setcategory("Ask");

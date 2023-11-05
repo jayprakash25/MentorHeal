@@ -59,7 +59,7 @@ export default function Mentors({ filterCategeory, mentors }) {
                   </div>
                   <div className="flex justify-center mt-6 ">
                     <Link to="/session">
-                      <button className="hover:bg-[#62d6e8] border-[1px] border-green-300 hover:text-white  w-[50vw] sm:w-[40vw] md:w-[30vw] lg:w-[24vw] font-semibold ease-in-out duration-500 py-2.5">
+                      <button className="hover:bg-[#62d6e8] rounded-xl border-[1px] border-green-300 hover:text-white  w-[50vw] sm:w-[40vw] md:w-[30vw] lg:w-[24vw] font-semibold ease-in-out duration-500 py-2.5">
                         Book
                       </button>
                     </Link>

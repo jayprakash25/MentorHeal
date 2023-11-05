@@ -1,4 +1,3 @@
-import React from "react";
 import { useLocation, useParams } from "react-router-dom";
 import { FiEdit } from "react-icons/fi";
 import { BsPeople } from "react-icons/bs";
@@ -36,14 +35,16 @@ export default function ReadFullQuestion() {
     <>
       <div className="p-2 pb-14 mx-auto space-y-5  w-[80vw] sm:w-[70vw] md:w-[60vw] lg:w-[40vw] mt-7">
         <div className="flex flex-col gap-5">
-          <div className="border-[1px] border-gray-200 p-5  cursor-pointer">
+          <div className="border-[1px] rounded-md border-gray-200 p-5  cursor-pointer">
             <div className="flex items-start justify-start gap-5">
               <img
                 src={data?.state?.pic}
                 alt=""
                 className="rounded-full w-7 h-7"
               />
-              <h1 className="text-lg font-bold">{data?.state?.q}</h1>
+              <h1 className="text-[1rem] md:text-lg font-bold">
+                {data?.state?.q}
+              </h1>
             </div>
             <div className="flex items-end justify-end text-[#8c8d8e] font-semibold mt-4">
               <div

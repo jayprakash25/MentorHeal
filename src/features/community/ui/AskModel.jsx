@@ -1,4 +1,3 @@
-import React from "react";
 import { Ask, Guildline, Post } from "../.././index";
 
 export default function AskModel({ category, setcategory, setpopup }) {

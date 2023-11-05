@@ -1,4 +1,3 @@
-import React from "react";
 import { PostQuestion, Posts } from "../features/index";
 import { NavBar } from "../components";
 

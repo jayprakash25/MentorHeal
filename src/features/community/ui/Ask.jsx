@@ -79,7 +79,7 @@ export default function Ask({ setpopup }) {
             ask: e.target.value,
           });
         }}
-        className=" mx-auto text-lg w-[70vw] sm:w-[60vw] md:w-[50vw] lg:w-[45vw]  border-b-2 border-gray-300 outline-none"
+        className=" mx-auto md:text-lg w-[70vw] sm:w-[60vw] md:w-[50vw] lg:w-[45vw] text-sm  border-b-2 border-gray-300 outline-none"
         placeholder="Start your questions with What,why etc"
       />
       <div className="flex justify-end gap-5">
