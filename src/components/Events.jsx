@@ -4,11 +4,11 @@ export default function Events() {
     <>
       <div className="my-5 mb-6 backgound">
         <div className="text-white md:p-10">
-          <h1 className="my-6 text-3xl">MentorHeal Guidance Program (MGP)</h1>
-          <p className="text-lg font-semibold my-7">
+          <h1 className="my-6 text-sm lg:text-3xl">MentorHeal Guidance Program (MGP)</h1>
+          <p className="text-sm font-semibold lg:text-lg my-7">
           Schools | Colleges | Institutions | Offices
           </p>
-          <p className="text-lg font-semibold my-11">
+          <p className="text-sm font-semibold lg:text-lg my-11">
             Contact us for a customized wellness plan basis your specific
             industry needs, challenges, corporation size & dynamics
           </p>
