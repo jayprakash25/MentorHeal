@@ -18,21 +18,21 @@ export default function ReadFullQuestion() {
   const { postid } = useParams();
   const [userimg, setuserimg] = useState();
 
-    //get user image
-    useEffect(() => {
-      const fetchComments = async () => {
-        try {
-          const postRef = doc(db, "USERS", localStorage.getItem("userToken"));
-          const User = await getDoc(postRef);
-          setuserimg(User.data().pic);
-          console.log(userimg);
-        } catch (error) {
-          console.error("Error fetching comments:", error);
-        }
-      };
-      fetchComments();
-      window.scrollTo(0, 0);
-    }, []);
+  //get user image
+  useEffect(() => {
+    const fetchComments = async () => {
+      try {
+        const postRef = doc(db, "USERS", localStorage.getItem("userToken"));
+        const User = await getDoc(postRef);
+        setuserimg(User.data().pic);
+        console.log(userimg);
+      } catch (error) {
+        console.error("Error fetching comments:", error);
+      }
+    };
+    fetchComments();
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     const fetchComments = async () => {
@@ -55,15 +55,11 @@ export default function ReadFullQuestion() {
         <div className="flex flex-col gap-5">
           <div className="border-[1px] border-gray-200 p-5  cursor-pointer">
             <div className="flex items-start justify-start gap-5">
-            <img
-            src={
-              userimg !== undefined
-                ? userimg
-                : "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=626&ext=jpg"
-            }
-            alt=""
-            className="rounded-full w-7 h-7"
-          />
+              <img
+                src={userimg}
+                alt=""
+                className="rounded-full w-7 h-7"
+              />
               <h1 className="text-lg font-bold">{data?.state?.q}</h1>
             </div>
             <div className="flex items-end justify-end text-[#8c8d8e] font-semibold mt-4">
@@ -95,7 +91,7 @@ export default function ReadFullQuestion() {
                         className="rounded-full w-7 h-7"
                       />
                       <h1 className="text-sm font-semibold text-gray-700">
-                        Rahul
+                        {item.Name}
                       </h1>
                       <BsPeople size={20} color="gray" />
                     </div>
