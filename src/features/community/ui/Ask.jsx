@@ -1,6 +1,6 @@
 import { BsPeople } from "react-icons/bs";
 import { db } from "../../../Firebase";
-import { setDoc } from "firebase/firestore";
+import { addDoc } from "firebase/firestore";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { doc, getDoc, collection } from "firebase/firestore";
@@ -23,7 +23,8 @@ export default function Ask({ setpopup }) {
     }
     if (token) {
       try {
-        await setDoc(collection(db, "POSTS"), data);
+        const postsCollection = collection(db, "POSTS");
+        await addDoc(postsCollection, data);
         setpopup(false);
       } catch (error) {
         console.log(error);

@@ -42,16 +42,17 @@ export default function Post({ setpopup }) {
     if (data.ask === "") {
       return;
     }
-    if (!token) {
-      alert("Please Signup");
-      navigate("/signup");
-    } else {
+    if (token) {
       try {
-        await setDoc(collection(db, "POSTS"), data);
+        const postsCollection = collection(db, "POSTS");
+        await addDoc(postsCollection, data);
         setpopup(false);
       } catch (error) {
         console.log(error);
       }
+    } else {
+      alert("Please signup");
+      navigate("/signup");
     }
   };
 
