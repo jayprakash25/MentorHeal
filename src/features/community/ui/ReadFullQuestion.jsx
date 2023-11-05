@@ -12,35 +12,34 @@ import { db } from "../../../Firebase";
 export default function ReadFullQuestion() {
   const data = useLocation();
   const user = JSON.parse(localStorage.getItem("user"));
-
   const [Reply, setReply] = useState(false);
   const [Comments, setComments] = useState();
   const [loading, setloading] = useState(true);
-
   const { postid } = useParams();
+  const [userimg, setuserimg] = useState();
 
-  //get user image
-  useEffect(() => {
-    const fetchComments = async () => {
-      try {
-        const postRef = doc(db, "USERS", localStorage.getitem("userToken"));
-        const User = await getDoc(postRef);
-        setuserimg(User.data().pic);
-        console.log(userimg);
-      } catch (error) {
-        console.error("Error fetching comments:", error);
-      }
-    };
-    fetchComments();
-    window.scrollTo(0, 0);
-  }, []);
+    //get user image
+    useEffect(() => {
+      const fetchComments = async () => {
+        try {
+          const postRef = doc(db, "USERS", localStorage.getItem("userToken"));
+          const User = await getDoc(postRef);
+          setuserimg(User.data().pic);
+          console.log(userimg);
+        } catch (error) {
+          console.error("Error fetching comments:", error);
+        }
+      };
+      fetchComments();
+      window.scrollTo(0, 0);
+    }, []);
 
   useEffect(() => {
     const fetchComments = async () => {
       try {
         const postRef = doc(db, "POSTS", postid);
         const postSnapshot = await getDoc(postRef);
-        setComments(postSnapshot.data().comments);
+        setComments(postSnapshot.data()?.comments);
         setloading(false);
       } catch (error) {
         console.error("Error fetching comments:", error);
@@ -56,15 +55,15 @@ export default function ReadFullQuestion() {
         <div className="flex flex-col gap-5">
           <div className="border-[1px] border-gray-200 p-5  cursor-pointer">
             <div className="flex items-start justify-start gap-5">
-              <img
-                src={
-                  userimg !== undefined
-                    ? userimg
-                    : "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=626&ext=jpg"
-                }
-                alt=""
-                className="rounded-full w-7 h-7"
-              />
+            <img
+            src={
+              userimg !== undefined
+                ? userimg
+                : "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=626&ext=jpg"
+            }
+            alt=""
+            className="rounded-full w-7 h-7"
+          />
               <h1 className="text-lg font-bold">{data?.state?.q}</h1>
             </div>
             <div className="flex items-end justify-end text-[#8c8d8e] font-semibold mt-4">
@@ -91,11 +90,7 @@ export default function ReadFullQuestion() {
                   >
                     <div className="flex items-center gap-3">
                       <img
-                        src={
-                          user
-                            ? user.pic
-                            : "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=626&ext=jpg"
-                        }
+                        src={item.pic}
                         alt=""
                         className="rounded-full w-7 h-7"
                       />

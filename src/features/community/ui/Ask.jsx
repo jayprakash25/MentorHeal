@@ -8,9 +8,11 @@ export default function Ask({ setpopup }) {
   const [userimg, setuserimg] = useState();
   const [data, setData] = useState({
     ask: "",
-    pic : userimg
+    pic: "",
+    Name: "",
   });
 
+  const token = localStorage.getItem("userToken");
 
   const user = JSON.parse(localStorage.getItem("user"));
   const navigate = useNavigate();
@@ -20,7 +22,6 @@ export default function Ask({ setpopup }) {
     if (user) {
       try {
         await addDoc(collection(db, "POSTS"), data);
-        console.log(data)
         setpopup(false);
       } catch (error) {
         console.log(error);
@@ -30,14 +31,18 @@ export default function Ask({ setpopup }) {
       navigate("/signup");
     }
   };
-  //get user image
+  //get user image and Name
   useEffect(() => {
     const fetchComments = async () => {
       try {
-        const postRef = doc(db, "USERS", localStorage.getitem("userToken"));
+        const postRef = doc(db, "USERS", token);
         const User = await getDoc(postRef);
         setuserimg(User.data().pic);
-        console.log(userimg);
+        setData({
+          ...data,
+          pic: User.data().pic,
+          Name: User.data().Name,
+        });
       } catch (error) {
         console.error("Error fetching comments:", error);
       }
@@ -59,7 +64,7 @@ export default function Ask({ setpopup }) {
           className="rounded-full w-7 h-7"
         />
         <button className="text-sm font-semibold text-gray-500 flex items-center gap-2 border-[1px] rounded-full px-8 py-2">
-          <h1>Public</h1>
+          <h1>{data.Name}</h1>
           <BsPeople size={20} color="gray" />
         </button>
       </div>

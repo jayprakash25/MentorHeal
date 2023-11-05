@@ -1,18 +1,39 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AskModel } from "../../index";
-
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../../../Firebase";
 export default function PostQuestion() {
   const [popup, setpopup] = useState(false);
   const [category, setcategory] = useState();
+  const [userimg, setuserimg] = useState();
+
+  useEffect(() => {
+    const fetchComments = async () => {
+      try {
+        const postRef = doc(db, "USERS", localStorage.getItem("userToken"));
+        const User = await getDoc(postRef);
+        setuserimg(User.data().pic);
+        console.log(userimg);
+      } catch (error) {
+        console.error("Error fetching comments:", error);
+      }
+    };
+    fetchComments();
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <main className="pt-24">
       <div className="p-5 border-[1px] border-gray-300  rounded-md mx-auto space-y-5  w-[80vw] sm:w-[70vw] md:w-[60vw] lg:w-[40vw]">
         <div className="flex items-center gap-2.5 justify-center">
           <img
-            src="https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=626&ext=jpg"
+            src={
+              userimg !== undefined
+                ? userimg
+                : "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=626&ext=jpg"
+            }
             alt=""
-            className="w-10 h-10 rounded-full"
+            className="rounded-full w-7 h-7"
           />
           <input
             type="text"

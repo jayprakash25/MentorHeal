@@ -257,6 +257,9 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
                   <p value="cursor-pointer transition ease-in-out duration-300">
                     <Link to={"/blog"}>Blog</Link>
                   </p>
+                  <p value="cursor-pointer transition ease-in-out duration-300">
+                    <Link to={"/community"}>community</Link>
+                  </p>
                 </div>
               </ul>
             </div>

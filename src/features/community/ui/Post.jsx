@@ -1,7 +1,7 @@
 import { addDoc, collection } from "firebase/firestore";
 import { BsPeople } from "react-icons/bs";
 import { db } from "../../../Firebase";
-import { useState , useEffect} from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { doc, getDoc } from "firebase/firestore";
 
@@ -9,7 +9,8 @@ export default function Post({ setpopup }) {
   const [userimg, setuserimg] = useState();
   const [data, setData] = useState({
     ask: "",
-    pic: userimg,
+    pic: "",
+    Name: "",
   });
 
   const user = JSON.parse(localStorage.getItem("user"));
@@ -20,10 +21,14 @@ export default function Post({ setpopup }) {
   useEffect(() => {
     const fetchComments = async () => {
       try {
-        const postRef = doc(db, "USERS", localStorage.getitem("userToken"));
+        const postRef = doc(db, "USERS", localStorage.getItem("userToken"));
         const User = await getDoc(postRef);
         setuserimg(User.data().pic);
-        console.log(userimg);
+        setData({
+          ...data,
+          pic: User.data().pic,
+          Name: User.data().Name,
+        });
       } catch (error) {
         console.error("Error fetching comments:", error);
       }
@@ -53,15 +58,15 @@ export default function Post({ setpopup }) {
         <div className="flex items-center gap-3">
           <img
             src={
-              user
-                ? user.pic
+              userimg !== undefined
+                ? userimg
                 : "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=626&ext=jpg"
             }
             alt=""
             className="rounded-full w-7 h-7"
           />
           <button className="text-sm font-semibold text-gray-500 flex items-center gap-2 border-[1px] rounded-full px-8 py-1">
-            <h1>Public</h1>
+            <h1>{data.Name}</h1>
             <BsPeople size={20} color="gray" />
           </button>
         </div>

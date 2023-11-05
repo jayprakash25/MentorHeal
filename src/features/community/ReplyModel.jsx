@@ -1,6 +1,6 @@
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BsPeople } from "react-icons/bs";
 import { useNavigate, useParams } from "react-router-dom";
 import { db } from "../../Firebase";
@@ -12,20 +12,27 @@ export default function ReplyModel({ setReply }) {
   const mentorjwt = localStorage.getItem("mentorjwt");
   const [loading, setloading] = useState(false);
   const user = JSON.parse(localStorage.getItem("user"));
+  const [userimg, setuserimg] = useState();
 
   const [data, setData] = useState({
     Postcomment: "",
     mentorjwt: mentorjwt,
+    pic: "",
+    Name: "",
   });
 
   //get user image
   useEffect(() => {
     const fetchComments = async () => {
       try {
-        const postRef = doc(db, "USERS", localStorage.getitem("userToken"));
+        const postRef = doc(db, "USERS", localStorage.getItem("userToken"));
         const User = await getDoc(postRef);
         setuserimg(User.data().pic);
-        console.log(userimg);
+        setData({
+          ...data,
+          pic: User.data().pic,
+          Name: User.data().Name,
+        });
       } catch (error) {
         console.error("Error fetching comments:", error);
       }
@@ -76,7 +83,7 @@ export default function ReplyModel({ setReply }) {
             className="rounded-full w-7 h-7"
           />
           <button className="text-sm font-semibold text-gray-500 flex items-center gap-2 border-[1px] rounded-full px-8 py-2">
-            <h1>Public</h1>
+            <h1>{data.Name}</h1>
             <BsPeople size={20} color="gray" />
           </button>
         </div>
