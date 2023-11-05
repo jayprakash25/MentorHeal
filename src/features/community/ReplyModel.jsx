@@ -12,7 +12,6 @@ export default function ReplyModel({ setReply }) {
   const mentorjwt = localStorage.getItem("mentorjwt");
   const [loading, setloading] = useState(false);
   const [userimg, setuserimg] = useState();
-  const [userimg, setuserimg] = useState();
   const token = localStorage.getItem("userToken");
   const [data, setData] = useState({
     Postcomment: "",

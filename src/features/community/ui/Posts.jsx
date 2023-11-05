@@ -11,8 +11,6 @@ export default function Posts() {
 
   const [data, setData] = useState([]);
 
-  const user = JSON.parse(localStorage.getItem("user"));
-
   const [loading, setloading] = useState(true);
 
   useEffect(() => {

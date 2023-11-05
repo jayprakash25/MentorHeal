@@ -47,6 +47,7 @@ export default function Post({ setpopup }) {
         const postsCollection = collection(db, "POSTS");
         await addDoc(postsCollection, data);
         setpopup(false);
+        navigate("/")
       } catch (error) {
         console.log(error);
       }
