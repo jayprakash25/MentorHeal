@@ -22,7 +22,7 @@ export default function JoinMentor({ setjoinmentor }) {
     Email: "",
     Categeory: "",
     image: "",
-    bio: "",
+    achievement: "",
   });
 
   const sendEmail = (email) => {
@@ -60,6 +60,7 @@ export default function JoinMentor({ setjoinmentor }) {
       mentor.Name !== "" &&
       mentor.Email !== "" &&
       mentor.Phone !== "" &&
+      mentor.achievement !== "" &&
       mentor.Categeory !== ""
     ) {
       setloader(true);
@@ -190,11 +191,11 @@ export default function JoinMentor({ setjoinmentor }) {
             <div className="flex flex-col space-y-3 md:col-span-2">
               <textarea
                 type="text"
-                value={mentor.bio}
-                placeholder="Bio"
+                value={mentor.achievement}
+                placeholder="Achievements"
                 maxLength={250}
                 onChange={(e) => {
-                  setmentor({ ...mentor, bio: e.target.value });
+                  setmentor({ ...mentor, achievement: e.target.value });
                 }}
                 className="p-3 outline-none border-[0.5px] border-gray-300 rounded-md"
               />
