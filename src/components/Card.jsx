@@ -19,17 +19,19 @@ export const Card = () => {
               Blog: item.Blog,
             }}
           >
-            <div className="flex justify-center duration-300 ease-in-out cursor-pointer hover:shadow-md shadow-slate-50">
+            <div className="flex justify-center  duration-300 ease-in-out cursor-pointer hover:shadow-md shadow-slate-50">
               <div className="shadow-sm border-[0.3px] border-gray-200 rounded-lg flex flex-col items-center space-y-5 p-4">
                 <img
                   src={item.image}
-                  className="py-2 mt-4 bg-[#d1cfcf] rounded-full w-28 h-28"
+                  className=" mt-4 bg-[#d1cfcf] rounded-full w-28 h-28"
                 />
                 <h1 className="text-3xl font-bold ">{item.Title}</h1>
-                <p className="text-center text-[#8ca1b3] font-semibold  leading-6">
+                <p className="text-center lg:h-20 text-[#8ca1b3] font-semibold  leading-6">
                   {item.Para}
                 </p>
-                <p className=" cursor-pointer  text-[#00b8d3] font-bold border-cyan-500">Read More</p>
+                <p className=" cursor-pointer  text-[#00b8d3] font-bold border-cyan-500">
+                  Read More
+                </p>
                 {/* </div> */}
               </div>
             </div>
@@ -45,7 +47,7 @@ export const FirstCard = () => {
     AOS.init({ duration: 2000 });
   }, []);
   return (
-  <div className="px-4 bg-[#4f82a2] ">
+    <div className="px-4 bg-[#4f82a2] ">
       <section className=" my-28">
         <div className="items-center md:flex md:flex-row-reverse p-7 md:justify-around md:space-x-5 md:px-5">
           <div className="flex flex-col order-2 py-5 space-y-8 text-center md:text-left">

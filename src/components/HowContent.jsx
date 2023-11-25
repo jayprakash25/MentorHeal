@@ -13,21 +13,22 @@ const FAQs = ({ Q, children }) => {
     setOpen(!open);
   };
   return (
-    <div  className=" bg-[#F5F5F5] w-[20rem] md:w-[30rem] lg:w-[42rem]  px-4 py-5 md:px-8 md:py-8 space-y-4 rounded-2xl">
+    <div className=" bg-[#F5F5F5] w-[20rem] md:w-[30rem] lg:w-[42rem]  px-4 py-5 md:px-8 md:py-8 space-y-4 rounded-2xl">
       <div
         className="flex items-center justify-between cursor-pointer"
         onClick={toggle}
       >
         <h1 className=" md:text-xl lg:text-2xl font-semibold">{Q}</h1>
-        <p>{open ? <ExpandLessIcon/> : <ExpandMoreIcon />}</p>
+        <p>{open ? <ExpandLessIcon /> : <ExpandMoreIcon />}</p>
       </div>
-      <div style={{
+      <div
+        style={{
           maxHeight: open ? "2000px" : "0",
           overflow: "hidden",
           transition: "max-height 2s ease-in-out",
         }}
->
-      {open && <p className="font-semibold">{children}</p>}
+      >
+        {open && <p className="font-semibold">{children}</p>}
       </div>
     </div>
   );
@@ -61,8 +62,16 @@ const HowContent = () => {
 
   return (
     <div className="pt-24 p-8">
-      <h1 className="text-3xl lg:text-5xl  text-center pb-14 font-semibold">How it Works?</h1>
-
+      <h1 className="text-3xl lg:text-5xl  text-center pb-14 font-semibold">
+        How it Works?
+      </h1>
+      <p className="text-justify font-medium">
+        Unlock your full potential with our easy 4-step process. We&apos;ve
+        streamlined every aspect of your journey, ensuring a seamless experience
+        from start to finish. Our platform is your gateway to personal growth
+        and achievement, where you&apos;ll connect with experienced mentors who
+        are passionate about helping you reach your goals.
+      </p>
       <div className="space-y-6">
         <div className="flex flex-col md:flex-row items-center md:justify-around">
           <img src={path} className="max-w-sm md:max-w-md" />
@@ -106,7 +115,10 @@ const HowContent = () => {
 
       <div className="py-8 pt-12">
         <h1 className="text-3xl lg:text-5xl text-center">
-          Explore by <span className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-semibold  ">Categories</span>
+          Explore by{" "}
+          <span className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-semibold  ">
+            Categories
+          </span>
         </h1>
         <Card />
       </div>
@@ -122,9 +134,7 @@ const HowContent = () => {
               return (
                 <div key={index} className="py-4">
                   <FAQs key={index} Q={item.Q}>
-                    <p
-                      className="text-[#7c7c7c] max-w-2xl text-sm md:text-md lg:text-lg"
-                    >
+                    <p className="text-[#7c7c7c] max-w-2xl text-sm md:text-md lg:text-lg">
                       {item.Ans}
                     </p>
                   </FAQs>

@@ -1,16 +1,18 @@
-import health from "../assets/images/health.png";
-import career from "../assets/images/career.png";
-import descisions from "../assets/images/decisions.png";
-import entrepreneur from "../assets/images/entrepreneur.png";
-import learning from "../assets/images/learning.png";
-import finance from "../assets/images/finance.png";
-import relation from "../assets/images/relation.png";
-import skills from "../assets/images/skills.png";
-import spirit from "../assets/images/spirit.png";
+import {
+  Health,
+  Career,
+  Decision,
+  Entrepreneur,
+  Financial,
+  Learning,
+  Relationships,
+  Skills,
+  Spirituality,
+} from "../assets/Cards";
 
 const Carddata = [
   {
-    image: health,
+    image: Health,
     Title: "Health",
     Para: "We believe in the power of holistic growth and development. From personal and professional growth.",
     Blog: [
@@ -99,7 +101,7 @@ const Carddata = [
     ],
   },
   {
-    image: career,
+    image: Career,
     Title: "Career",
     Para: " A fulfilling and satisfying career provides a sense of purpose and financial stability.",
     Blog: [
@@ -157,7 +159,7 @@ const Carddata = [
     ],
   },
   {
-    image: learning,
+    image: Learning,
     Title: "Learning",
     Para: "Continual learning and growth help individuals stay current and prepared for new opportunities.",
     Blog: [
@@ -216,7 +218,7 @@ const Carddata = [
     ],
   },
   {
-    image: skills,
+    image: Skills,
     Title: "Skills",
     Para: " Developing new skills and honing existing ones leads to increased self-confidence and personal growth.",
     Blog: [
@@ -324,7 +326,7 @@ const Carddata = [
     ],
   },
   {
-    image: descisions,
+    image: Decision,
     Title: "Decisions",
     Para: " Making informed and deliberate decisions helps individuals achieve their goals and live the life they desire.",
     Blog: [
@@ -359,7 +361,7 @@ const Carddata = [
     ],
   },
   {
-    image: relation,
+    image: Relationships,
     Title: "Relationships",
     Para: "   Strong relationships with family and friends provide support, love, and a sense of community.",
     Blog: [
@@ -425,7 +427,7 @@ const Carddata = [
   },
 
   {
-    image: entrepreneur,
+    image: Entrepreneur,
     Title: "Entrepreneurship",
     Para: "Entrepreneurship provides individuals with the opportunity to turn their ideas into reality.",
     Blog: [
@@ -490,7 +492,7 @@ const Carddata = [
     ],
   },
   {
-    image: finance,
+    image: Financial,
     Title: "Financial Literacy",
     Para: "Understanding how to manage and grow personal finances is essential for financial security and stability.",
     Blog: [
@@ -531,7 +533,7 @@ const Carddata = [
     ],
   },
   {
-    image: spirit,
+    image: Spirituality,
     Title: "Spirituality",
     Para: "A strong spiritual practice provides a sense of inner peace, clarity, and meaning in life.",
     Blog: [
