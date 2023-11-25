@@ -4,6 +4,7 @@ import { Data } from "../Data/index";
 import { LiaGreaterThanSolid } from "react-icons/lia";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import { Link } from "react-router-dom";
 
 const FAQs = ({ Q, children }) => {
   const [open, setOpen] = useState(false);
@@ -139,9 +140,14 @@ export default function MentorShipPage() {
             <h1 className="text-xl font-bold lg:text-4xl">
               Join our growing Peer network!
             </h1>
-            <button className="border-[1px] border-black flex items-center  rounded-full justify-center space-x-5 px-6 py-2">
-              <h1 className="text-sm font-semibold">Get Started</h1>
-              <LiaGreaterThanSolid size={18} color="black" />
+            <button className="border-[1px] border-black   rounded-full px-6 py-2">
+              <Link
+                to="/Mentor-Ship-Page/form"
+                className="flex items-center justify-center space-x-5 "
+              >
+                <h1 className="text-sm font-semibold">Get Started</h1>
+                <LiaGreaterThanSolid size={18} color="black" />
+              </Link>
             </button>
           </div>
         </div>
