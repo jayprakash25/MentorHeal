@@ -1,19 +1,22 @@
-import NavBar from "./NavBar";
-import Tagline from "./Tagline";
-import { Card, FirstCard } from "./Card";
-import Form from "./Form";
-import HeroSection from "./HeroSection";
-import Why from "./Why";
-import Appointment from "./Appointment";
-import Footer from "./Footer";
-import TeamCard from "./TeamCard";
 import { useRef } from "react";
-import Transformation from "./Transformation";
-import Events from "./Events";
-import Quote from "./Quote";
-import Whatsup from "./Whatsup";
-import Steps from "./Steps";
-import LatestBlogs from "./LatestBlogs";
+import {
+  NavBar,
+  Footer,
+  HeroSection,
+  Tagline,
+  Why,
+  Quote,
+  Whatsup,
+  LatestBlogs,
+  Steps,
+  TeamCard,
+  Events,
+  Appointment,
+  Form,
+  Transformation,
+  Card,
+  FirstCard,
+} from "./index";
 export default function Home() {
   // refs
   const formref = useRef();

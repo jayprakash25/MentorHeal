@@ -16,7 +16,7 @@ const Appointment = () => {
 
         {/* --------------------Button------------------*/}
         <div className="md:max-w-lg">
-          <button className="py-2 text-sm tracking-wide text-black bg-white rounded-full  px-7">
+          <button className="py-2 text-sm tracking-wide text-black bg-white rounded-full px-7">
             <Link to={"/session"}>Book Your Session </Link>
           </button>
         </div>
