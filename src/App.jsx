@@ -9,6 +9,7 @@ import { Blog, Community, ReadFullBlog } from "./Pages/index";
 import Intern from "./Pages/Intern";
 import { FindMentors, ReadFullQuestion, Signup } from "./features/index";
 import "animate.css";
+import MentorShipPage from "./Pages/MentorShipPage";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="/mentors" element={<FindMentors />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/community" element={<Community />} />
+        <Route path="/Mentor-Ship-Page" element={<MentorShipPage />} />
         <Route path="/queries/:postid/" element={<ReadFullQuestion />} />
       </Routes>
     </>

@@ -5,7 +5,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import Carddata from "./Data";
 import { useEffect } from "react";
-import { JoinMentor } from "../features/index";
 const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
   // state handlers
   const mentorjwt = localStorage.getItem("mentorjwt");
@@ -13,7 +12,6 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
   const [dropdown, setdropdown] = useState(false);
   const [more, setMore] = useState(false);
   const [scroll, setScroll] = useState(false);
-  const [joinmentor, setjoinmentor] = useState(false);
 
   const user = localStorage.getItem("userToken");
 
@@ -146,13 +144,8 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
                 </li>
               )}
               {mentorjwt ? null : (
-                <li
-                  className="px-5  text-white cursor-pointer bg-gradient-to-l from-cyan-400 via-cyan-400 to-cyan-300 py-1.5 rounded-full"
-                  onClick={() => {
-                    setjoinmentor(true);
-                  }}
-                >
-                  Join as Mentor
+                <li className="px-5  text-white cursor-pointer bg-gradient-to-l from-cyan-400 via-cyan-400 to-cyan-300 py-1.5 rounded-full">
+                  <Link to="/Mentor-Ship-Page">Join as Mentor</Link>
                 </li>
               )}
             </ul>
@@ -248,14 +241,9 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
                     </li>
                   )}
                   {mentorjwt ? null : (
-                    <p
-                      onClick={() => {
-                        setjoinmentor(true);
-                      }}
-                      value="cursor-pointer transition ease-in-out duration-300"
-                    >
-                      Join As a Mentor
-                    </p>
+                    <li value="cursor-pointer transition ease-in-out duration-300">
+                      <Link to="/Mentor-Ship-Page">Join as Mentor</Link>
+                    </li>
                   )}
                   <p value="cursor-pointer transition ease-in-out duration-300">
                     <Link to={"/blog"}>Blog</Link>
@@ -269,7 +257,6 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
           </div>
         </div>
       </nav>
-      {joinmentor ? <JoinMentor setjoinmentor={setjoinmentor} /> : null}
     </>
   );
 };
