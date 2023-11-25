@@ -9,8 +9,7 @@ export default function Events() {
           Schools | Colleges | Institutions | Offices
           </p>
           <p className="text-sm font-semibold lg:text-lg my-11">
-            Contact us for a customized wellness plan basis your specific
-            industry needs, challenges, corporation size & dynamics
+          Contact us to invite the professionals in various industries and spaces or conduct a seminar, event or a workshop
           </p>
           <button className="bg-cyan-500 rounded-full text-white font-semibold px-10 py-1.5">
             Enquire Now

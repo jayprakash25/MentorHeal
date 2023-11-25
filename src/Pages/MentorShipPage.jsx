@@ -58,7 +58,7 @@ export default function MentorShipPage() {
     <>
       <NavBar />
       {/* Herosection-1 */}
-      <div className="bg-[#fef2ef] hover:bg-[#f9f9f9] lg:flex lg:justify-evenly lg:items-center pt-28 px-5 pb-8 lg:shadow-sm">
+      <div className="bg-[#fef2ef] lg:bg-[#f9f9f9] lg:flex lg:justify-evenly lg:items-center pt-28 px-5 pb-8 lg:shadow-sm">
         <div>
           <img
             src="https://www.soulup.in/cdn/shop/files/Website-3_copy_2.jpg?v=1672729690"

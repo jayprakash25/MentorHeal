@@ -51,10 +51,6 @@ const TeamCard = () => {
           return (
             <React.Fragment key={index}>
               <div
-                data-aos="fade"
-                data-aos-easing="ease-in-out"
-                data-aos-mirror="true"
-                data-aos-once="true"
                 className="max-w-md rounded-md hover:scale-105 ease-in-out duration-500 cursor-pointer px-4 border-[1px] border-gray-200   shadow-md shadow-gray-100"
               >
                 <div className={newLocal}>

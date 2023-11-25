@@ -13,10 +13,9 @@ const HeroSection = () => {
   return (
     <div className="pt-16">
       <section className="px-5 ">
-        <div className="flex flex-col justify-between lg:flex-row md:items-center my-5 md:px-5">
+        <div className="flex flex-col justify-between my-5 lg:flex-row md:items-center md:px-5">
           <div
-            data-aos="fade-left"
-            className="mx-auto py-4 animate__animated animate__fadeInLeft"
+            className="py-4 mx-auto"
           >
             <img
               className="max-w-xs md:max-w-lg"
@@ -24,19 +23,19 @@ const HeroSection = () => {
               alt="hero.png"
             />
           </div>
-          <div className="flex flex-col animate__animated animate__fadeInRight justify-between items-center md:items-start px-5 py-8 space-y-6 lg:space-y-9">
+          <div className="flex flex-col items-center justify-between px-5 py-8 space-y-6 animate__animated animate__fadeInRight md:items-start lg:space-y-9">
             <h1 className="text-2xl md:text-4xl lg:max-w-[40vw] leading-10 font-semibold">
-              <span className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold">
+              <span className="font-bold text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text">
                 Mentorship
               </span>{" "}
               can help you embrace your potential!
             </h1>
             <p className="text-lg text-[#8ca1b3] md:text-xl md:max-w-[40vw]">
-              We all are already abundant. We just need a mentor to help us
-              realize it. Discover Your purpose.
+              We are all already abundant. We just need a mentor to help us
+              realise it and discover our purpose
             </p>
             <Link to="/how">
-              <button className="bg-gradient-to-r from-cyan-300 via-cyan-400 to-cyan-400 text-white  ease-in-out duration-500 font-semibold text-sm border-zinc-600 px-5 py-2 rounded-full">
+              <button className="px-5 py-2 text-sm font-semibold text-white duration-500 ease-in-out rounded-full bg-gradient-to-r from-cyan-300 via-cyan-400 to-cyan-400 border-zinc-600">
                 Get Started
               </button>
             </Link>

@@ -3,7 +3,7 @@ import beacon from "../assets/images/beacon.jpg";
 
 const Prophecy = () => {
   return (
-    <div className="m-8 py-8">
+    <div className="py-8 m-8">
       <div>
         <h1 className="font-bold  text-[44px] leading-[50px] md:text-[54px]  text-center py-8">
           MentorHeal&apos;s Prophecy
@@ -11,12 +11,8 @@ const Prophecy = () => {
       </div>
 
       <div className="space-y-2">
-        <div
-          data-aos="zoom-in"
-          className="flex flex-col-reverse
-        md:flex-row items-center md:justify-around "
-        >
-          <div className=" py-5 space-y-2">
+        <div className="flex flex-col-reverse items-center md:flex-row md:justify-around ">
+          <div className="py-5 space-y-2 ">
             <h1 className="text-2xl lg:text-3xl text-[#00b8d3] font-semibold">
               Enable youth empowerment
             </h1>
@@ -31,10 +27,7 @@ const Prophecy = () => {
           </div>
         </div>
 
-        <div
-          data-aos="zoom-in"
-          className="flex flex-col-reverse md:flex-row-reverse items-center md:justify-around"
-        >
+        <div className="flex flex-col-reverse items-center md:flex-row-reverse md:justify-around">
           <div className="py-5 space-y-2">
             <h1 className="text-2xl lg:text-3xl text-[#00b8d3] font-semibold">
               Become the beacon of learning

@@ -7,7 +7,7 @@ export const Card = () => {
     AOS.init({ duration: 2000 });
   }, []);
   return (
-    <div className="grid grid-cols-1 gap-5 my-16 md:grid-cols-2 lg:grid-cols-3 p-8">
+    <div className="grid grid-cols-1 gap-5 p-8 my-16 md:grid-cols-2 lg:grid-cols-3">
       {Carddata.map((item, index) => {
         return (
           <Link
@@ -21,10 +21,6 @@ export const Card = () => {
           >
             <div className="flex justify-center duration-300 ease-in-out cursor-pointer hover:scale-105 md:h-[51vw] lg:h-[28vw]">
               <div
-                data-aos="fade-up"
-                data-aos-easing="ease-in-out"
-                data-aos-mirror="true"
-                data-aos-once="true"
                 className="shadow-sm border-[0.3px] border-gray-200 rounded-lg flex flex-col items-center space-y-5 p-4"
               >
                 <img
@@ -54,12 +50,7 @@ export const FirstCard = () => {
     <div className="px-4 bg-[#DAFFFB] ">
       <section className=" my-28">
         <div className="items-center md:flex md:flex-row-reverse p-7 md:justify-around md:space-x-5 md:px-5">
-          <div
-            data-aos="fade-right"
-            data-aos-easing="ease-in-out"
-            data-aos-once="true"
-            className="flex flex-col order-2 py-5 space-y-8 text-center md:text-left"
-          >
+          <div className="flex flex-col order-2 py-5 space-y-8 text-center md:text-left">
             <h1 className="text-2xl md:text-4xl md:max-w-[50vw] leading-8 font-semibold">
               How will{" "}
               <span className="font-bold text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text">
@@ -74,12 +65,7 @@ export const FirstCard = () => {
               buisness, personal life, or any other aspect of life.
             </p>
           </div>
-          <div
-            data-aos="fade-left"
-            data-aos-easing="ease-in-out"
-            data-aos-once="true"
-            className="my-5 md:my-0"
-          >
+          <div className="my-5 md:my-0">
             <img
               className="md:max-w-[20vw]  rounded-lg"
               alt="hero"

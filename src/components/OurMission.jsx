@@ -2,9 +2,8 @@ import ourmission from "../assets/images/ourmission.png";
 
 const OurMission = () => {
   return (
-    <div className="flex flex-col-reverse items-center  md:flex-row m-8 md:justify-between gap-4">
+    <div className="flex flex-col-reverse items-center gap-4 m-8 md:flex-row md:justify-between">
       <div 
-      data-aos = 'zoom-in'
       className="mt-4">
         <h1 className="font-bold text-[44px] md:text-[54px] text-[#00b8d3] lg:text-[64px]">
           Our Mission
@@ -14,7 +13,7 @@ const OurMission = () => {
           Businesses of every size, be it new startups or public companies, use
           our software to accept payments and manage their businesses online.
         </p>
-        <div className="flex justify-between mt-2 p-2">
+        <div className="flex justify-between p-2 mt-2">
           <div className="flex flex-col ">
             <h1 className="font-bold text-[34px] w-[79px]  lg:text-[52px] ">
               94%
@@ -43,7 +42,7 @@ const OurMission = () => {
           </div>
         </div>
       </div>
-      <div data-aos = 'zoom-in-up'>
+      <div >
       <img src={ourmission} className=" md:w-[463px] md:h-auto " />
       </div>
     </div>

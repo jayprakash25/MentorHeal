@@ -13,7 +13,6 @@ const Appointment = () => {
             Be the change you wish to see in yourself.
           </p>
         </div>
-
         {/* --------------------Button------------------*/}
         <div className="md:max-w-lg">
           <button className="py-2 text-sm tracking-wide text-black bg-white rounded-full px-7">
