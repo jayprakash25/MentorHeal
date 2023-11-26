@@ -36,12 +36,13 @@ export default function Quote() {
 
   return (
     <>
-      <div className="flex flex-col items-center px-8 my-24">
+      <div className="flex flex-col items-center px-5 md:px-8 my-24">
         <div>
           <h1 className="py-4 text-3xl font-semibold md:text-5xl">
-          Wellness Builds  
+            Wellness Builds
             <span className="font-bold text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text">
-            {" "} Character{" "}
+              {" "}
+              Character{" "}
             </span>
           </h1>
         </div>
@@ -58,7 +59,7 @@ export default function Quote() {
                     alt=""
                   />
                 </div>
-                <div className="max-w-xs">
+                <div className="max-w-xs px-5 md:px-0">
                   <h1 className="text-[#8ca1b3] md:text-xl font-semibold leading-9">
                     {item.quote}
                   </h1>

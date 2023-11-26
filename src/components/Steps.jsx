@@ -38,7 +38,7 @@ export default function Steps() {
   ];
 
   return (
-    <>
+    <div className="px-5 md:px-0">
       <section>
         <div>
           <h1 className="text-2xl text-center lg:text-4xl">
@@ -51,15 +51,18 @@ export default function Steps() {
           <div className="flex flex-col items-center justify-center gap-6 mt-16 md:gap-0 lg:px-36 md:flex-row">
             {Step.map((item, i) => {
               return (
-                <div key={i} className="max-w-sm mx-auto space-y-3 md:max-w-xl">
-                  <div>
-                    <img src={item.image} alt={item.image} />
+                <div
+                  key={i}
+                  className=" mx-auto space-y-3 md:max-w-xl flex flex-col  items-center"
+                >
+                  <div className="w-full">
+                    <img src={item.image} alt={item.image} className="w-full" />
                   </div>
                   <div className="space-y-2">
-                    <h1 className="text-sm text-[#000000] font-semibold ">
+                    <h1 className="text-lg text-[#000000] font-semibold ">
                       {item.Tittle}
                     </h1>
-                    <p className="text-xs w-72 text-[#8ca1b3] leading-7">
+                    <p className="text-sm font-medium  w-72 text-[#8ca1b3] leading-6">
                       {item.Para}
                     </p>
                   </div>
@@ -89,6 +92,6 @@ export default function Steps() {
           );
         })}
       </section>
-    </>
+    </div>
   );
 }

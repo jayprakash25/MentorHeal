@@ -7,7 +7,7 @@ export const Card = () => {
     AOS.init({ duration: 2000 });
   }, []);
   return (
-    <div className="grid grid-cols-1 gap-5 p-8 my-16 md:grid-cols-2 lg:grid-cols-3">
+    <div className="grid grid-cols-1 gap-5 p-8 px-5 my-16 md:grid-cols-2 lg:grid-cols-3">
       {Carddata.map((item, index) => {
         return (
           <Link
@@ -25,7 +25,7 @@ export const Card = () => {
                   src={item.image}
                   className=" mt-4 bg-[#d1cfcf] rounded-full w-28 h-28"
                 />
-                <h1 className="text-3xl font-bold ">{item.Title}</h1>
+                <h1 className="text-3xl font-bold text-center">{item.Title}</h1>
                 <p className="text-center lg:h-20 text-[#8ca1b3] font-semibold  leading-6">
                   {item.Para}
                 </p>
@@ -47,9 +47,9 @@ export const FirstCard = () => {
     AOS.init({ duration: 2000 });
   }, []);
   return (
-    <div className="px-4 bg-[#4f82a2] ">
+    <div className="px-5 bg-[#4f82a2] ">
       <section className=" my-28">
-        <div className="items-center md:flex md:flex-row-reverse p-7 md:justify-around md:space-x-5 md:px-5">
+        <div className="items-center md:flex md:flex-row-reverse p-7 px-0 md:justify-around md:space-x-5 md:px-5">
           <div className="flex flex-col order-2 py-5 space-y-8 text-center md:text-left">
             <h1 className="text-2xl text-white md:text-4xl md:max-w-[50vw] leading-8 font-semibold">
               How will{" "}

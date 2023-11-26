@@ -64,7 +64,7 @@ export default function MentorShipPage() {
           <img
             src="https://www.soulup.in/cdn/shop/files/Website-3_copy_2.jpg?v=1672729690"
             alt="img1"
-            className="max-w-md lg:max-w-xl"
+            className="md:max-w-md lg:max-w-xl"
           />
         </div>
 
@@ -88,7 +88,7 @@ export default function MentorShipPage() {
         </div>
       </div>
       {/* Why join the Peer network? */}
-      <section className="flex flex-col items-center justify-center my-8 gap-5  lg:flex-none lg:w-[70vw] mx-auto lg:space-y-20">
+      <section className="flex flex-col items-center justify-center my-8 gap-5 px-5 lg:flex-none lg:w-[70vw] mx-auto lg:space-y-20">
         {Data.map((_, i) => {
           return (
             <React.Fragment key={i}>

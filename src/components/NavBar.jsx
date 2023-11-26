@@ -32,7 +32,7 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
           scroll ? "shadow-md" : "shadow-none"
         }`}
       >
-        <div className="flex justify-between items-center px-9 py-3.5 gap-4">
+        <div className="flex justify-between items-center px-5 md:px-9 py-3.5 gap-4">
           <div>
             <Link
               to="/"

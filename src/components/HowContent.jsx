@@ -62,7 +62,7 @@ const HowContent = () => {
   ];
 
   return (
-    <div className="pt-24 p-8 ">
+    <div className="pt-24 px-5 md:p-8 ">
       <h1 className="text-3xl lg:text-5xl  text-center pb-14 font-semibold">
         How it Works?
       </h1>
@@ -131,8 +131,8 @@ const HowContent = () => {
             Categories
           </span>
         </h1>
-        <Card />
       </div>
+      <Card />
 
       <div className="py-8 pb-0">
         <h1 className=" bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-poppins  text-center text-xl md:text-2xl lg:text-3xl pb-5">

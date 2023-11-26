@@ -14,16 +14,14 @@ const HeroSection = () => {
     <div className="pt-16">
       <section className="px-5 ">
         <div className="flex flex-col justify-between my-5 lg:flex-row md:items-center md:px-5">
-          <div
-            className="py-4 mx-auto"
-          >
+          <div className="py-4 mx-auto">
             <img
               className="max-w-xs md:max-w-lg"
               src={HeroPic}
               alt="hero.png"
             />
           </div>
-          <div className="flex flex-col items-center justify-between px-5 py-8 space-y-6 animate__animated animate__fadeInRight md:items-start lg:space-y-9">
+          <div className="flex flex-col items-center justify-between lg:px-5 py-8 space-y-6 animate__animated animate__fadeInRight md:items-start lg:space-y-9">
             <h1 className="text-2xl md:text-4xl lg:max-w-[40vw] leading-10 font-semibold">
               <span className="font-bold text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text">
                 Mentorship
