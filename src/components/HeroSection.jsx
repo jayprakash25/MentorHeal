@@ -13,7 +13,7 @@ const HeroSection = () => {
               alt="hero.png"
             />
           </div>
-          <div className="flex flex-col items-center justify-between lg:px-5 py-8 space-y-6 animate__animated animate__fadeInRight md:items-start lg:space-y-9">
+          <div className="flex flex-col items-center justify-between py-8 space-y-6 lg:px-5 md:items-start lg:space-y-9">
             <div className="flex flex-col items-center justify-between px-5 py-8 space-y-6 md:items-start lg:space-y-9">
               <h1 className="text-2xl md:text-4xl lg:max-w-[40vw] leading-10 font-semibold">
                 <span className="font-bold text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text">

@@ -5,9 +5,11 @@ import { LiaGreaterThanSolid } from "react-icons/lia";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import { Link } from "react-router-dom";
-
+import JoinMentor from "../features/BecomeMentor/JoinMentor";
+import { useRef } from "react";
 const FAQs = ({ Q, children }) => {
   const [open, setOpen] = useState(false);
+
   const toggle = () => {
     setOpen(!open);
   };
@@ -36,6 +38,14 @@ const FAQs = ({ Q, children }) => {
 };
 
 export default function MentorShipPage() {
+  const formref = useRef(null);
+
+  const handlescroll = () => {
+    formref.current.scrollIntoView({
+      behaviour: "smooth",
+    });
+  };
+
   const data = [
     {
       Q: "How do I choose the right mentor for me?",
@@ -72,20 +82,21 @@ export default function MentorShipPage() {
             The Mentors Network
           </h1>
           <p className="text-[#6d6667] my-4 text-lg ">
-            At MentorHeal we are building a unique network which allows everyone
-            to benefit from each other’s lived experiences.{" "}
+            MentorHeal is an innovative platform dedicated to fostering academic
+            and personal growth by connecting students with experienced mentors.
           </p>
           <p className="my-4 text-[#6d6667] text-lg ">
-            If you have learned something from your journey and are ready to
-            share it as well as build on your emotional progress - join
-            MentorHeal as a Peer.{" "}
+            One of MentorHeal's standout features is its seamless integration of
+            video calling, providing a face-to-face interaction that transcends
+            traditional mentorship boundaries.
           </p>
-          <Link to="/Mentor-Ship-Page/form">
-            <button className="flex items-center justify-center px-6 py-2 mt-6 space-x-2 font-semibold text-white duration-500 ease-in-out rounded-full bg-cyan-400 ">
-              <h1>Join the Mentor Network</h1>
-              <LiaGreaterThanSolid size={18} color="white" />
-            </button>
-          </Link>
+          <button
+            onClick={handlescroll}
+            className="flex items-center justify-center px-6 py-2 mt-6 space-x-2 font-semibold text-white duration-500 ease-in-out rounded-full bg-cyan-400 "
+          >
+            <h1>Join the Mentor Network</h1>
+            <LiaGreaterThanSolid size={18} color="white" />
+          </button>
         </div>
       </div>
       {/* Why join the Peer network? */}
@@ -152,6 +163,9 @@ export default function MentorShipPage() {
           </div>
         </div>
       </section>
+      <div ref={formref}>
+        <JoinMentor />
+      </div>
       <Footer />
     </>
   );
