@@ -53,13 +53,13 @@ const Transformation = ({ testimonialref }) => {
         <>
           <Slider
             {...settings}
-            className="w-[80vw] sm:w-[60vw] md:w-[50vw] mx-auto my-7"
+            className="w-[100vw] sm:w-[60vw] md:w-[50vw] mx-auto my-7"
           >
             {slides.map((item, index) => {
               return (
                 <React.Fragment key={index}>
                   <div className=" space-y-7">
-                    <p className="text-[#8ca1b3] leading-8">{item.story}</p>
+                    <p className="text-[#8ca1b3] leading-7">{item.story}</p>
                     <h1 className="bg-gradient-to-l text-center from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold my-3.5 lg:text-xl text-lg">
                       {item.name}
                     </h1>
