@@ -49,11 +49,11 @@ const Transformation = ({ testimonialref }) => {
           </h1>
         </div>
       </div>
-      <div className="flex items-center justify-center px-3.5">
+      <div className="flex items-center justify-center px-5">
         <>
           <Slider
             {...settings}
-            className="w-[100vw] sm:w-[60vw] md:w-[50vw] mx-auto my-7"
+            className="w-[90vw] sm:w-[60vw] md:w-[50vw] mx-auto my-4"
           >
             {slides.map((item, index) => {
               return (
