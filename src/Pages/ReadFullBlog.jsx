@@ -8,11 +8,6 @@ export default function ReadFullBlog() {
 
   const { Tags, Blogimage, BLogTittle, Sections } = data.state;
 
-  console.log(Tags);
-  console.log(Blogimage);
-  console.log(BLogTittle);
-  console.log(Sections);
-
   return (
     <main>
       <NavBar />
@@ -39,7 +34,7 @@ export default function ReadFullBlog() {
           <div className="flex justify-start pt-5">
             <img
               src={Blogimage}
-              className="max-w-md duration-300 ease-in-out rounded-md cursor-pointer lg:max-w-2xl hover:brightness-90"
+              className="max-w-xs duration-300 ease-in-out rounded-md cursor-pointer lg:max-w-2xl hover:brightness-90"
               alt={Blogimage}
             />
           </div>
