@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth, db } from "../../Firebase";
 import { doc, setDoc } from "firebase/firestore";
+import GoogleIcon from "@mui/icons-material/Google";
 import emailjs from "@emailjs/browser";
 export default function Signup() {
   const GoogleProvider = new GoogleAuthProvider();
@@ -77,20 +78,16 @@ export default function Signup() {
             </div>
             <div className="flex flex-col justify-center max-w-md mx-auto my-10 space-y-8">
               <h2 className="text-[#676b5f]  text-center mx-auto max-w-md md:max-w-xl text-sm md:text-base ">
-                By continuing, you agree to MentorHeal's Terms and Conditions
-                and confirm you have read our Privacy Notice.
+                By continuing, you agree to MentorHeal&apos;s Terms and
+                Conditions and confirm you have read our Privacy Notice.
               </h2>
               <button
                 className="flex items-center justify-center rounded-full space-x-3 border-[1px] hover:bg-[#eeefea] ease-in-out duration-500 border-slate-300 px-8 text-sm py-3.5"
                 onClick={GoogleSignin}
               >
-                <img
-                  src={
-                    "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/150px-Google_%22G%22_Logo.svg.png"
-                  }
-                  className="w-7 h-7"
-                />
-                <h1>Sign up with Google</h1>
+                {/* <img src={GoogleIcon} className="w-7 h-7" /> */}
+                <GoogleIcon fontSize="medium" />
+                <h1 className=" font-poppins">Sign up with Google</h1>
               </button>
             </div>
           </div>

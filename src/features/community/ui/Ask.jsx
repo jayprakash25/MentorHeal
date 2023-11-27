@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { doc, getDoc, collection } from "firebase/firestore";
 export default function Ask({ setpopup }) {
-  const [userimg, setuserimg] = useState();
   const [data, setData] = useState({
     ask: "",
     pic: "",
@@ -41,7 +40,6 @@ export default function Ask({ setpopup }) {
       try {
         const postRef = doc(db, "USERS", token);
         const User = await getDoc(postRef);
-        setuserimg(User.data().pic);
         setData({
           ...data,
           pic: User.data().pic,
@@ -53,15 +51,15 @@ export default function Ask({ setpopup }) {
     };
     fetchComments();
     window.scrollTo(0, 0);
-  }, []);
+  }, [token]);
 
   return (
     <div className="pl-2 mt-6 space-y-2">
       <div className="flex items-center gap-3">
         <img
           src={
-            userimg !== undefined
-              ? userimg
+            data.pic
+              ? data.pic
               : "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=626&ext=jpg"
           }
           alt=""
