@@ -49,8 +49,7 @@ const Transformation = ({ testimonialref }) => {
           </h1>
         </div>
       </div>
-      <div className="flex items-center justify-center px-5">
-        <>
+      <div className="flex items-center justify-center px-8 lg:px-3">
           <Slider
             {...settings}
             className="w-[90vw] sm:w-[60vw] md:w-[50vw] mx-auto my-4"
@@ -68,7 +67,6 @@ const Transformation = ({ testimonialref }) => {
               );
             })}
           </Slider>
-        </>
       </div>
     </>
   );
