@@ -91,13 +91,13 @@ export default function Ask({ setpopup }) {
           onClick={() => {
             setpopup(false);
           }}
-          className="px-5 font-semibold text-white cursor-pointer bg-gradient-to-l from-cyan-400 via-cyan-400 to-cyan-300 py-1.5 rounded-full"
+          className="px-5 font-semibold text-white cursor-pointer  bg-cyan-400 py-1.5 rounded-full"
         >
           Cancel
         </button>
         <button
           onClick={handleSubmit}
-          className="px-5 font-semibold text-white cursor-pointer bg-gradient-to-l from-cyan-400 via-cyan-400 to-cyan-300 py-1.5 rounded-full"
+          className="px-5 font-semibold text-white cursor-pointer bg-cyan-400  py-1.5 rounded-full"
         >
           Submit
         </button>

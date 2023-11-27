@@ -2,6 +2,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import React from "react";
+import NavBar from "./NavBar";
 const Transformation = ({ testimonialref }) => {
   const slides = [
     {
@@ -19,14 +20,8 @@ const Transformation = ({ testimonialref }) => {
     {
       id: 3,
       story:
-        ' "Their team is incredibly skilled, empathetic, and supportive, and they have helped me make significant improvements in my life. With their guidance, I have been able to overcome my limiting beliefs and tap into my full potential. Their approach to wellness is truly transformative, focusing on creating sustainable habits that promote overall well-being. I am grateful for their continued support and highly recommend their services to anyone who is looking to live their best life." ',
+        '"Their team is incredibly skilled, empathetic, and supportive, and they have helped me make significant improvements in my life. With their guidance, I have been able to overcome my limiting beliefs and tap into my full potential. Their approach to wellness is truly transformative, focusing on creating sustainable habits that promote overall well-being. I am extremely  grateful for their continued support, I highly recommend their services to anyone who is looking to live their best life." ',
       name: "VISHAL VERMA",
-    },
-    {
-      id: 4,
-      story:
-        ' "Their team is incredibly skilled, empathetic, and supportive, and they have helped me make significant improvements in my life. With their guidance, I have been able to overcome my limiting beliefs and tap into my full potential. Their approach to wellness is truly transformative, focusing on creating sustainable habits that promote overall well-being. I am grateful for their continued support and highly recommend their services to anyone who is looking to live their best life." ',
-      name: "RAHUL VERMA",
     },
   ];
 
@@ -41,24 +36,51 @@ const Transformation = ({ testimonialref }) => {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center my-20" ref={testimonialref}>
+      <div
+        className="flex flex-col items-center justify-center my-8"
+        ref={testimonialref}
+      >
         <div className="text-center">
           <h1 className="py-4 text-2xl font-semibold md:text-5xl">
-            Our Stories Of{" "}
-            <span className="font-bold text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text">
-              Transformation
-            </span>
+            Proud Stories Of Transformation
           </h1>
         </div>
       </div>
-      <Slider
+      <div className="grid grid-cols-1 gap-8 px-10 my-10 md:grid-cols-2 lg:grid-cols-3">
+        {slides.map((item, index) => {
+          return (
+            <React.Fragment key={index}>
+              <div className="text-sm space-y-7 border-[1px] border-slate-300 p-5 rounded-lg">
+                <div className="flex justify-center">
+                  <img
+                    src="https://www.soulup.in/cdn/shop/files/bxs_quote-left.png?v=1668937322"
+                    alt=""
+                  />
+                </div>
+                <p className="text-[#8ca1b3] leading-7 font-semibold">{item.story}</p>
+                <h1 className="text-center  font-bold my-3.5 text-lg ">
+                  {item.name}
+                </h1>
+              </div>
+            </React.Fragment>
+          );
+        })}
+      </div>
+    </>
+  );
+};
+
+export default Transformation;
+
+{
+  /* <Slider
         {...settings}
-        className="w-[80vw] sm:w-[60vw] md:w-[50vw] mx-auto my-12"
+        className="w-[80vw] sm:w-[60vw] md:w-[30vw] mx-auto my-12"
       >
         {slides.map((item, index) => {
           return (
             <React.Fragment key={index}>
-              <div className="text-center space-y-7">
+              <div className="text- space-y-7">
                 <p className="text-[#8ca1b3] leading-8">{item.story}</p>
                 <h1 className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold my-3.5 lg:text-xl text-lg">
                   {item.name}
@@ -67,9 +89,5 @@ const Transformation = ({ testimonialref }) => {
             </React.Fragment>
           );
         })}
-      </Slider>
-    </>
-  );
-};
-
-export default Transformation;
+      </Slider> */
+}

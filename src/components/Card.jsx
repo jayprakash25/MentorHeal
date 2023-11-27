@@ -7,7 +7,7 @@ export const Card = () => {
     AOS.init({ duration: 2000 });
   }, []);
   return (
-    <div className="grid grid-cols-1 gap-5 p-8 my-16 md:grid-cols-2 lg:grid-cols-3">
+    <div className="grid grid-cols-1 gap-5 p-8 mt-10 md:grid-cols-2 lg:grid-cols-3 place-items-center">
       {Carddata.map((item, index) => {
         return (
           <Link
@@ -19,7 +19,7 @@ export const Card = () => {
               Blog: item.Blog,
             }}
           >
-            <div className="flex justify-center  duration-300 ease-in-out cursor-pointer hover:shadow-md shadow-slate-50">
+            <div className="flex justify-center max-w-lg duration-300 ease-in-out rounded-lg cursor-pointer hover:shadow-md shadow-slate-50">
               <div className="shadow-sm border-[0.3px] border-gray-200 rounded-lg flex flex-col items-center space-y-5 p-4">
                 <img
                   src={item.image}
@@ -47,27 +47,30 @@ export const FirstCard = () => {
     AOS.init({ duration: 2000 });
   }, []);
   return (
-    <div className="px-4 bg-[#4f82a2] ">
+    <div className="px-4 bg-cyan-500 w-[90vw] lg:w-[80vw] mx-auto rounded-lg">
       <section className=" my-28">
-        <div className="items-center md:flex md:flex-row-reverse p-7 md:justify-around md:space-x-5 md:px-5">
-          <div className="flex flex-col order-2 py-5 space-y-8 text-center md:text-left">
+        <div className="items-start md:flex md:flex-row-reverse p-7 md:justify-around md:space-x-5 md:px-5">
+          <div className="flex flex-col order-2 py-5 space-y-8 md:text-left">
             <h1 className="text-2xl text-white md:text-4xl md:max-w-[50vw] leading-8 font-semibold">
               How will{" "}
-              <span className="font-bold text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text">
-                Mentorship
-              </span>{" "}
-              help you?
+              {/* <span className="font-bold text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text"> */}
+              {/* </span>{" "} */}
+              Mentorship help you?
             </h1>
             <p className="text-sm text-white md:max-w-[50vw] md:text-lg leading-6 md:leading-7">
               Through the guidance and support of a mentor, individuals can gain
               valuable insights, develop new skills, and overcome obstacles that
               they may have otherwise struggled with on their own. Whether in
-              buisness, personal life, or any other aspect of life.
+              buisness, personal life, or any other aspect of life.Through the
+              guidance and support of a mentor, individuals can gain valuable
+              insights, develop new skills, and overcome obstacles that they may
+              have otherwise struggled with on their own. Whether in buisness,
+              personal life, or any other aspect of life.
             </p>
           </div>
           <div className="my-5 md:my-0">
             <img
-              className="md:max-w-[20vw]  rounded-lg"
+              className="md:max-w-[20vw] mx-auto rounded-lg"
               alt="hero"
               src="https://i.ibb.co/ssvmKXG/image-1.png"
             />

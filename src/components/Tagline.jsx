@@ -2,13 +2,13 @@
 const Tagline = () => {
   
   return (
-    <section className="my-12">
+    <section className="mt-28">
       <div className="flex flex-col space-y-8 text-center md:items-center md:justify-around">
         {/* head */}
         <div 
-        className="space-y-2 text-3xl md:text-4xl ">
+        className="space-y-2 text-3xl font-semibold md:text-4xl">
           <h1>The 9 essential elements of </h1>
-          <h1 className="font-bold text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text">life mystery </h1>
+          <h1 className="">life mystery </h1>
         </div>
         {/* para */}
         <div 

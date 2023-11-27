@@ -1,24 +1,12 @@
 import React, { useEffect, useState } from "react";
-import NavBar from "./NavBar";
-import Footer from "./Footer";
-
+import { Footer, NavBar, Whatsup, Appointment } from "./index";
 import { useLocation, useParams } from "react-router-dom";
-import Aos from "aos";
-import Whatsup from "./Whatsup";
-import Appointment from "./Appointment";
 
 export default function ReadFull() {
   const { id } = useParams();
-
-  const data = useLocation();
-
-  const [point, setPoint] = useState(0);
-
-  useEffect(() => {
-    Aos.init({ duration: 2000 });
-  }, []);
-
   const location = useLocation();
+  const data = useLocation();
+  const [point, setPoint] = useState(0);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -38,7 +26,7 @@ export default function ReadFull() {
         <div className="flex flex-col-reverse md:flex-row lg:flex-col">
           {data.state.Blog.map((item, index) => {
             return (
-              <div data-aos="fade-right" key={index}>
+              <div key={index}>
                 <button
                   className="px-4 py-2 my-2 shadow-md w-52"
                   key={index}
@@ -55,7 +43,7 @@ export default function ReadFull() {
           })}
         </div>
 
-        <div data-aos="fade-left" className="max-w-2xl space-y-3 ">
+        <div className="max-w-2xl space-y-3 ">
           <h1 className="py-4 text-xl font-semibold text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text md:text-2xl lg:text-3xl">
             {data.state.Blog[point].Tittle}
           </h1>

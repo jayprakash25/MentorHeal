@@ -1,6 +1,5 @@
 import React, { useId, useRef, useState } from "react";
 import { FiUploadCloud } from "react-icons/fi";
-import { RxCross2 } from "react-icons/rx";
 import { setDoc, doc } from "firebase/firestore";
 import { ref, getDownloadURL, uploadBytes } from "firebase/storage";
 import { db, storage } from "../../Firebase";
@@ -8,7 +7,8 @@ import { useNavigate } from "react-router-dom";
 import { BiLoaderAlt } from "react-icons/bi";
 import emailjs from "@emailjs/browser";
 import Data from "../../Data/MentorShipCategories";
-export default function JoinMentor({ setjoinmentor }) {
+import { Footer, NavBar } from "../../components";
+export default function JoinMentor() {
   const dpref = useRef(null);
   const id = useId();
   const navigate = useNavigate();
@@ -90,13 +90,14 @@ export default function JoinMentor({ setjoinmentor }) {
 
   return (
     <>
-      <div className="z-50 flex items-center justify-center h-full p-3 overflow-y-scroll ">
+      <NavBar />
+      <div className="z-50 flex items-center justify-center h-full p-3 pt-20 overflow-y-scroll">
         <div className="w-[90vw] md:w-[60vw] lg:w-[45vw] px-8 bg-white rounded-md py-3 overflow-y-scroll ">
           <div className="space-y-3 text-lg">
             <h1 className="font-semibold ">
               Please register for Workshop This question is required.*
             </h1>
-            <p className="text-semibold">
+            <p className="font-light text-semibold">
               Contact information will only be used to coordinate sessions with
               you.
             </p>
@@ -199,15 +200,15 @@ export default function JoinMentor({ setjoinmentor }) {
                       dpref.current.click();
                     }}
                   />
-                  <p>Your Picture</p>
+                  <p className="font-light">Your Picture</p>
                 </div>
               )}
             </div>
           </form>
-          <div className="flex justify-start my-5 md:my-7">
+          <div className="flex justify-center mb-5 mt-11">
             <button
               onClick={uploadImage}
-              className=" px-8 py-3 bg-[#00b8d3] text-white font-semibold rounded-md text-sm"
+              className="py-3 text-sm font-semibold text-white rounded-full px-28 bg-cyan-400"
             >
               {loader ? (
                 <BiLoaderAlt
@@ -216,12 +217,13 @@ export default function JoinMentor({ setjoinmentor }) {
                   className="duration-300 ease-in-out animate-spin"
                 />
               ) : (
-                "Ok"
+                "Submit"
               )}
             </button>
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

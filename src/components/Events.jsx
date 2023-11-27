@@ -2,7 +2,7 @@
 export default function Events() {
   return (
     <>
-      <div className="my-5 mb-6 backgound">
+      <div className="mt-24 mb-6 backgound">
         <div className="text-white md:p-10">
           <h1 className="my-6 text-sm lg:text-3xl">MentorHeal Guidance Program (MGP)</h1>
           <p className="text-sm font-semibold lg:text-lg my-7">
