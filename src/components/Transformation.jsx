@@ -53,7 +53,7 @@ const Transformation = ({ testimonialref }) => {
         <>
           <Slider
             {...settings}
-            className="w-[80vw] sm:w-[60vw] md:w-[50vw] mx-auto my-12"
+            className="w-[80vw] sm:w-[60vw] md:w-[50vw] mx-auto my-7"
           >
             {slides.map((item, index) => {
               return (
