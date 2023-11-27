@@ -60,7 +60,7 @@ const Transformation = ({ testimonialref }) => {
                 <React.Fragment key={index}>
                   <div className=" space-y-7">
                     <p className="text-[#8ca1b3] leading-7">{item.story}</p>
-                    <h1 className="bg-gradient-to-l text-center from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold my-3.5 lg:text-xl text-lg">
+                    <h1 className="bg-gradient-to-l text-center from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold my-3.5 lg:text-xl ">
                       {item.name}
                     </h1>
                   </div>
