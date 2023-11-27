@@ -69,7 +69,7 @@ export default function MentorShipPage() {
         </div>
         <div className="max-w-md pl-3 mt-5 lg:max-w-">
           <h1 className="text-3xl font-bold lg:text-5xl">
-            The MentorHeal Peer Network
+            The Mentors Network
           </h1>
           <p className="text-[#6d6667] my-4 text-lg ">
             At MentorHeal we are building a unique network which allows everyone
@@ -82,7 +82,7 @@ export default function MentorShipPage() {
           </p>
           <Link to="/Mentor-Ship-Page/form">
             <button className="flex items-center justify-center px-6 py-2 mt-6 space-x-2 font-semibold text-white duration-500 ease-in-out rounded-full bg-cyan-400 ">
-              <h1>Join the Peer Network</h1>
+              <h1>Join the Mentor Network</h1>
               <LiaGreaterThanSolid size={18} color="white" />
             </button>
           </Link>
