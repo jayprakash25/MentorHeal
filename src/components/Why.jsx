@@ -49,7 +49,7 @@ const Why = () => {
                   <img
                     src={_.image}
                     alt=""
-                    className="w-28 h-28 lg:w-32 lg:h-32"
+                    className="w-24 h-24 lg:w-32 lg:h-32"
                   />
                 </div>
                 <div>
