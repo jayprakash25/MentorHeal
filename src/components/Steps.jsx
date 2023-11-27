@@ -40,7 +40,7 @@ export default function Steps() {
               return (
                 <div
                   key={i}
-                  className="flex flex-col hover:shadow-md cursor-pointer ease-in-out duration-300 items-center lg:items-start mx-auto space-y-3 max-w-xs lg:max-w-xs border-[1px] rounded-lg border-slate-300 p-5"
+                  className="flex flex-col hover:shadow-md cursor-pointer ease-in-out duration-300 items- lg:items-start mx-auto space-y-3 max-w-xs lg:max-w-xs border-[1px] rounded-lg border-slate-300 p-5"
                 >
                   <div>
                     <img
