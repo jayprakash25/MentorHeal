@@ -66,7 +66,7 @@ export default function Quote() {
                     alt={item.img}
                   />
                 </div>
-                <div className="max-w-xs px-5 md:px-0">
+                <div className="max-w-xs md:px-0">
                   <h1 className="text-[#8ca1b3]  font-semibold leading-7">
                     {item.quote}
                   </h1>
