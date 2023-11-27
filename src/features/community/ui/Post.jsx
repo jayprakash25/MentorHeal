@@ -1,9 +1,9 @@
-import { setDoc } from "firebase/firestore";
+import { addDoc, setDoc } from "firebase/firestore";
 import { BsPeople } from "react-icons/bs";
 import { db } from "../../../Firebase";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { doc, getDoc , collection } from "firebase/firestore";
+import { doc, getDoc, collection } from "firebase/firestore";
 
 export default function Post({ setpopup }) {
   const [userimg, setuserimg] = useState();
@@ -47,7 +47,7 @@ export default function Post({ setpopup }) {
         const postsCollection = collection(db, "POSTS");
         await addDoc(postsCollection, data);
         setpopup(false);
-        navigate("/")
+        navigate("/");
       } catch (error) {
         console.log(error);
       }
