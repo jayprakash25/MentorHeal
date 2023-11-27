@@ -35,7 +35,7 @@ export default function Steps() {
             </span>{" "}
             a better you
           </h1>
-          <div className="flex flex-col items-start justify-center gap-5 px-3 mt-16 lg:px-0 md:px-0 lg:gap-0 lg:flex-row">
+          <div className="flex flex-col items-start justify-start gap-5 px-3 mt-16 lg:px-0 md:px-0 lg:gap-0 lg:flex-row">
             {Step.map((item, i) => {
               return (
                 <div
