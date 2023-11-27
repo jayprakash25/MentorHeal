@@ -3,7 +3,7 @@ export default function Steps() {
     {
       image: "https://d2a61ob4m0n1zq.cloudfront.net/newHome/1.svg",
       Tittle: "Connect with your Expert",
-      Para: "Chat anonymously with a YourDOST expert who's here to help you and not judge you.",
+      Para: "Chat anonymously with a MentorHeal expert who's here to help you and not judge you.",
     },
     {
       image: "https://d2a61ob4m0n1zq.cloudfront.net/newHome/2.svg",
@@ -21,17 +21,17 @@ export default function Steps() {
     {
       image: "https://dgb1oxf9aexic.cloudfront.net/newHome/17.svg",
       Tittle: "Online Chat Sessions",
-      Para: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam officiis, error inventore ipsa vero minima deserunt incidunt corrupti, atque dignissimos debitis iusto amet sit quasi veritatis laboriosam labore at hic!",
+      Para: " In a world where connectivity is key, we bring you a seamless and engaging way to connect with others in real-time. Our platform provides a secure and user-friendly environment for individuals to participate in conversations that matter to them. Whether you're seeking professional advice, making new friends.",
     },
     {
       image: "https://dgb1oxf9aexic.cloudfront.net/newHome/18.svg",
       Tittle: "Voice Calls",
-      Para: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam officiis, error inventore ipsa vero minima deserunt incidunt corrupti, atque dignissimos debitis iusto amet sit quasi veritatis laboriosam labore at hic!",
+      Para: "Introducing our cutting-edge Voice Calls feature, where the power of real-time communication meets convenience. Seamlessly connect with friends, family, or colleagues through crystal-clear audio on our platform. Our Voice Calls offer a reliable and efficient way to bridge distances, fostering a sense of closeness that transcends screens.",
     },
     {
       image: "https://dgb1oxf9aexic.cloudfront.net/newHome/19.svg",
       Tittle: "Face to Face Sessions",
-      Para: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam officiis, error inventore ipsa vero minima deserunt incidunt corrupti, atque dignissimos debitis iusto amet sit quasi veritatis laboriosam labore at hic!",
+      Para: "Embark on a transformative journey of connection with our Face to Face Sessions, an immersive and personalized way to engage with others. Experience the power of visual communication as our platform facilitates real-time video interactions, allowing you to connect with friends, family, or colleagues face to face, regardless of physical distances.",
     },
   ];
 
@@ -47,7 +47,7 @@ export default function Steps() {
               return (
                 <div
                   key={i}
-                  className=" mx-auto space-y-3 md:max-w-xl flex flex-col  items-center"
+                  className="flex flex-col items-center mx-auto space-y-3 md:max-w-xl"
                 >
                   <div className="w-full">
                     <img src={item.image} alt={item.image} className="w-full" />

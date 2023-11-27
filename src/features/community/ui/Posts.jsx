@@ -63,7 +63,6 @@ export default function Posts() {
                         {item.ask}
                       </h1>
                     </div>
-                    {/*  */}
                   </div>
                 </React.Fragment>
               );

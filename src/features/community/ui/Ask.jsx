@@ -26,7 +26,7 @@ export default function Ask({ setpopup }) {
         const postsCollection = collection(db, "POSTS");
         await addDoc(postsCollection, data);
         setpopup(false);
-        navigate("/")
+        navigate("/");
       } catch (error) {
         console.log(error);
       }

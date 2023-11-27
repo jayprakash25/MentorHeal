@@ -69,7 +69,7 @@ export default function MentorShipPage() {
         </div>
         <div className="max-w-md pl-3 mt-5 lg:max-w-">
           <h1 className="text-3xl font-bold lg:text-5xl">
-            The SoulUp Peer Network
+            The MentorHeal Peer Network
           </h1>
           <p className="text-[#6d6667] my-4 text-lg ">
             At MentorHeal we are building a unique network which allows everyone
