@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Steps() {
   const Step = [
     {
@@ -39,14 +37,10 @@ export default function Steps() {
 
   return (
     <div className="px-5 md:px-0">
-      <section>
+      <section className="mt-20">
         <div>
-          <h1 className="text-2xl text-center lg:text-4xl">
-            Three steps{" "}
-            <span className="font-bold text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text">
-              Mentorship
-            </span>{" "}
-            can help you
+          <h1 className="text-3xl font-semibold text-center md:text-4xl ">
+            Four Steps to unleash a better you
           </h1>
           <div className="flex flex-col items-center justify-center gap-6 mt-16 md:gap-0 lg:px-36 md:flex-row">
             {Step.map((item, i) => {

@@ -103,22 +103,23 @@ export default function Home() {
         Scrolltotestimonial={Scrolltotestimonial}
       />
       <HeroSection Scrolltoref={Scrolltoref} />
-      <FirstCard />
+      <Steps />
+      {/* <FirstCard /> */}
       {/* <Why Data={Data2} /> */}
+      <Why Data={Data} />
       <Tagline />
       <Card />
-      <Steps />
-      <Why Data={Data} />
-      <LatestBlogs />
-      <Transformation testimonialref={testimonialref} />
-      <TeamCard />
-      <Events />
+      {/* <Transformation testimonialref={testimonialref} /> */}
+      {/* <TeamCard /> */}
+      {/* <Events /> */}
+      <FirstCard />
       <Quote />
+      <Whatsup />
+      <Appointment />
+      <LatestBlogs />
       <div ref={formref}>
         <Form />
       </div>
-      <Whatsup />
-      <Appointment />
       <Footer Scrolltoref={Scrolltoref} />
     </body>
   );

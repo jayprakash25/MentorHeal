@@ -5,9 +5,13 @@ import Mentor from "./components/Mentor";
 import BookForm from "./components/BookForm";
 import How from "./components/How";
 import ReadFull from "./components/ReadFull";
-import { Blog, Community, ReadFullBlog , MentorShipPage } from "./Pages/index";
-import Intern from "./Pages/Intern";
-import { FindMentors, JoinMentor, ReadFullQuestion, Signup } from "./features/index";
+import { Blog, Community, ReadFullBlog, MentorShipPage, MGP } from "./Pages/index";
+import {
+  FindMentors,
+  JoinMentor,
+  ReadFullQuestion,
+  Signup,
+} from "./features/index";
 import "animate.css";
 
 const App = () => {
@@ -21,14 +25,14 @@ const App = () => {
         <Route path="/session" element={<BookForm />} />
         <Route path="/how" element={<How />} />
         <Route path="/Blog" element={<Blog />} />
-        <Route path="/internships" element={<Intern />} />
         <Route path="/ReadFull" element={<ReadFullBlog />} />
         <Route path="/mentors" element={<FindMentors />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/community" element={<Community />} />
         <Route path="/Mentor-Ship-Page" element={<MentorShipPage />} />
         <Route path="/queries/:postid/" element={<ReadFullQuestion />} />
-        <Route path="/Mentor-Ship-Page/form" element={<JoinMentor/>} />
+        <Route path="/Mentor-Ship-Page/form" element={<JoinMentor />} />
+        <Route path="/MGP" element={<MGP />} />
       </Routes>
     </>
   );

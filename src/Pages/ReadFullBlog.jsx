@@ -31,7 +31,7 @@ export default function ReadFullBlog() {
           </div>
 
           <div className="flex justify-start pt-5 ">
-            <h1 className="max-w-2xl font-bold underline text-xl lg:text-2xl ">
+            <h1 className="max-w-2xl text-xl font-bold underline lg:text-2xl ">
               {BLogTittle}
             </h1>
           </div>
@@ -39,7 +39,7 @@ export default function ReadFullBlog() {
           <div className="flex justify-start pt-5">
             <img
               src={Blogimage}
-              className="duration-300 ease-in-out rounded-md cursor-pointer hover:brightness-90"
+              className="max-w-md duration-300 ease-in-out rounded-md cursor-pointer lg:max-w-2xl hover:brightness-90"
               alt={Blogimage}
             />
           </div>
@@ -60,14 +60,14 @@ export default function ReadFullBlog() {
           </div>
         </section>
 
-        <div className="pt-36 hidden md:block">
-        <Link to="/session">
-          <img
-            src="https://d1hny4jmju3rds.cloudfront.net/blogSidebar/talktoexpert.png"
-            alt=""
-            className="max-w-xs  cursor-pointer fixed right-24"
-          />
-        </Link>
+        <div className="hidden pt-36 md:block">
+          <Link to="/session">
+            <img
+              src="https://d1hny4jmju3rds.cloudfront.net/blogSidebar/talktoexpert.png"
+              alt=""
+              className="fixed max-w-xs cursor-pointer right-24"
+            />
+          </Link>
         </div>
       </div>
       <Footer />

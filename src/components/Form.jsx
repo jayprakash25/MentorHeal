@@ -24,10 +24,10 @@ const Form = () => {
   };
   return (
     <div>
-      <div className=" bg-[#ffffff]  text-gray-100 px-8 md:-my-32 -my-36 ">
+      <div className=" bg-[#ffffff]  text-gray-100 px-3 ">
         <div className="text-center">
           <svg
-            className="text-gray-100 h-8 mx-auto"
+            className="h-8 mx-auto text-gray-100"
             viewBox="0 0 150 29"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
@@ -59,10 +59,10 @@ const Form = () => {
             </g>
           </svg>
         </div>
-        <div className="max-w-screen-xl mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-white text-gray-900 ">
+        <div className="grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-16 mx-auto text-gray-900 bg-white mt-14 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 ">
           <div className="flex flex-col justify-between">
             <div>
-              <h2 className="text-4xl bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text  lg:text-5xl font-bold leading-tight ">
+              <h2 className="text-4xl font-bold leading-tight text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text lg:text-5xl ">
                 Reach out to Us!
               </h2>
               <div className="space-y-4 my-8 text-[#8ca1b3]">
@@ -1036,7 +1036,7 @@ const Form = () => {
                   Full Name
                 </span>
                 <input
-                  className="w-full bg-slate-50  mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                  className="w-full p-3 mt-2 rounded-lg bg-slate-50 focus:outline-none focus:shadow-outline"
                   name="Name"
                   type="text"
                   placeholder=""
@@ -1054,7 +1054,7 @@ const Form = () => {
                   Email
                 </span>
                 <input
-                  className="w-full bg-gray-50 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                  className="w-full p-3 mt-2 rounded-lg bg-gray-50 focus:outline-none focus:shadow-outline"
                   name="Email"
                   type="text"
                   value={user.Email}
@@ -1081,13 +1081,13 @@ const Form = () => {
                       Message: e.target.value,
                     });
                   }}
-                  className="w-full h-32 bg-gray-50  mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                  className="w-full h-32 p-3 mt-2 rounded-lg bg-gray-50 focus:outline-none focus:shadow-outline"
                 ></textarea>
               </div>
               <div className="mt-8">
                 <button
                   onClick={submitUser}
-                  className="uppercase text-sm font-bold tracking-wide bg-gradient-to-r from-cyan-300 via-cyan-400 to-cyan-400 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline"
+                  className="w-full p-3 text-sm font-bold tracking-wide text-gray-100 uppercase rounded-lg bg-cyan-400 "
                 >
                   Send Message
                 </button>

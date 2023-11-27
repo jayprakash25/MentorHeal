@@ -5,6 +5,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import Carddata from "./Data";
 import { useEffect } from "react";
+import logo from "../assets/logo.png";
 const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
   // state handlers
   const mentorjwt = localStorage.getItem("mentorjwt");
@@ -41,10 +42,10 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
                 window.scrollTo(0, 0);
               }}
             >
-              <p className="text-2xl font-bold text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text md:text-3xl">
+              <p className="text-2xl font-semibold text-cyan-400 md:text-3xl ">
                 MentorHeal
               </p>
-              {/* <img src={Logo} className="w-16 h-16" alt="" /> */}
+              {/* <img src={logo} className="w-8 h-8" alt="" /> */}
             </Link>
           </div>
           <div className="items-center hidden lg:flex">
@@ -124,27 +125,30 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
                     <li className="cursor-pointer">
                       <Link to="/mentors"> Mentors </Link>
                     </li>
-
-                    <li onClick={Scrolltoref} className="cursor-pointer">
-                      Contact us
+                    <li className="cursor-pointer">
+                      <Link to="/MGP"> MGP </Link>
                     </li>
+                    {/* <li onClick={Scrolltoref} className="cursor-pointer">
+                      Contact us
+                    </li> */}
 
-                    <li
+                    {/* <li
                       className="cursor-pointer"
                       onClick={Scrolltotestimonial}
                     >
                       Testimonials
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
               </div>
+              {/* className="px-5  text-white cursor-pointer bg-gradient-to-l from-cyan-400 via-cyan-400 to-cyan-300 py-1.5 rounded-full" */}
               {user ? null : (
-                <li className="px-5  text-white cursor-pointer bg-gradient-to-l from-cyan-400 via-cyan-400 to-cyan-300 py-1.5 rounded-full">
+                <li className="cursor-pointer - rounded-">
                   <Link to="/signup"> User Signup </Link>
                 </li>
               )}
               {mentorjwt ? null : (
-                <li className="px-5  text-white cursor-pointer bg-gradient-to-l from-cyan-400 via-cyan-400 to-cyan-300 py-1.5 rounded-full">
+                <li className="cursor-pointer ">
                   <Link to="/Mentor-Ship-Page">Join as Mentor</Link>
                 </li>
               )}
@@ -202,7 +206,6 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
                     })}
                   </ul>
                 </div>
-
                 <li className="transition duration-300 ease-in-out cursor-pointer ">
                   <Link to={"/how"}>How it works</Link>
                 </li>
@@ -250,6 +253,9 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
                   </p>
                   <p value="cursor-pointer transition ease-in-out duration-300">
                     <Link to={"/community"}>community</Link>
+                  </p>
+                  <p value="cursor-pointer transition ease-in-out duration-300">
+                    <Link to={"/MGP"}>MGP</Link>
                   </p>
                 </div>
               </ul>

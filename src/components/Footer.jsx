@@ -8,8 +8,9 @@ import { useState } from "react";
 const Footer = ({ Scrolltoref }) => {
   const [email, setEmail] = useState("");
   return (
+    // 007384
     <div className="">
-      <footer className="relative  bg-[#007384] text-center py-8 text-sm">
+      <footer className="relative py-8 text-sm text-center bg-cyan-600">
         <div className="container px-4 mx-auto">
           <div className="flex flex-wrap text-left lg:text-left">
             <div className="w-full px-4 text-center text-black lg:w-6/12">
@@ -156,8 +157,8 @@ const Footer = ({ Scrolltoref }) => {
           </div>
         </div>
         <hr className="my-6  dark:bg-gray-400 border-0 h-[1.5px]" />
-
-        <div className="text-[#dde5f1] bg-[#42909d] py-5 px-5 lg:px-20 mx-10 lg:mx-20 rounded-lg font-semibold text-sm lg:leading-10 text-center ">
+        {/* 42909d */}
+        <div className="text-[#dde5f1] bg-cyan-700 py-5 px-5 lg:px-20 mx-10 lg:mx-20 rounded-lg font-semibold text-sm lg:leading-10  ">
           <p>
             Disclaimer: We are diligently refining our prototype services,
             eagerly preparing for the highly anticipated launch announcement.

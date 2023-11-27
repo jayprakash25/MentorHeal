@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavBar } from "../components/index";
+import { Footer, NavBar } from "../components/index";
 import { Data } from "../Data/index";
 import { LiaGreaterThanSolid } from "react-icons/lia";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -59,7 +59,7 @@ export default function MentorShipPage() {
     <>
       <NavBar />
       {/* Herosection-1 */}
-      <div className="bg-[#fef2ef] lg:bg-[#f9f9f9] lg:flex lg:justify-evenly lg:items-center pt-28 px-5 pb-8 lg:shadow-sm">
+      <div className="bg-[#fef2ef] lg:bg-[#f9f9f9] flex flex-col lg:flex-row lg:justify-evenly justify-center items-center   pt-28 px-5 pb-8 lg:shadow-sm">
         <div>
           <img
             src="https://www.soulup.in/cdn/shop/files/Website-3_copy_2.jpg?v=1672729690"
@@ -67,7 +67,6 @@ export default function MentorShipPage() {
             className="md:max-w-md lg:max-w-xl"
           />
         </div>
-
         <div className="max-w-md pl-3 mt-5 lg:max-w-">
           <h1 className="text-3xl font-bold lg:text-5xl">
             The SoulUp Peer Network
@@ -81,10 +80,12 @@ export default function MentorShipPage() {
             share it as well as build on your emotional progress - join SoulUp
             as a Peer.{" "}
           </p>
-          <button className="flex items-center mt-6 justify-center px-6 py-2 space-x-2 font-semibold text-black duration-500 ease-in-out rounded-full bg-gradient-to-r from-[#ffeba0] to-[#f6d65e] hover:border-[1px] hover:border-zinc-800">
-            <h1>Join the Peer Network</h1>
-            <LiaGreaterThanSolid size={18} color="black" />
-          </button>
+          <Link to="/Mentor-Ship-Page/form">
+            <button className="flex items-center justify-center px-6 py-2 mt-6 space-x-2 font-semibold text-white duration-500 ease-in-out rounded-full bg-cyan-400 ">
+              <h1>Join the Peer Network</h1>
+              <LiaGreaterThanSolid size={18} color="white" />
+            </button>
+          </Link>
         </div>
       </div>
       {/* Why join the Peer network? */}
@@ -129,29 +130,29 @@ export default function MentorShipPage() {
           );
         })}
       </section>
-
+      {/* fef2ef */}
       {/* Join our network! */}
       <section className="my-8">
-        <div className="bgclip bg-[#fef2ef] ml-6 py-14 px-2 pl-3 lg:pl-28 lg:w-[80vw] lg:mx-auto">
-          <div className="max-w-xs space-y-6 lg:max-w-xl">
-            <p className="w-48 text-sm font-semibold lg:w-auto lg:text-2xl">
+        <div className="bgclip bg-cyan-500 ml-6 py-14 px-2 pl-3 lg:pl-28 w-[90vw] lg:w-[80vw] lg:mx-auto">
+          <div className="max-w-xs space-y-6 text-white lg:max-w-xl">
+            <p className="w-48 text-lg lg:text-2xl font- lg:w-auto ">
               Believe in the power of lived-experience sharing?
             </p>
-            <h1 className="text-xl font-bold lg:text-4xl">
+            <h1 className="text-xl font-semibold lg:text-4xl">
               Join our growing Peer network!
             </h1>
-            <button className="border-[1px] border-black   rounded-full px-6 py-2">
+            <button className="py-2 text-sm tracking-wide text-black bg-white rounded-full px-7">
               <Link
                 to="/Mentor-Ship-Page/form"
                 className="flex items-center justify-center space-x-5 "
               >
                 <h1 className="text-sm font-semibold">Get Started</h1>
-                <LiaGreaterThanSolid size={18} color="black" />
               </Link>
             </button>
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 }
