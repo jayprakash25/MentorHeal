@@ -59,12 +59,12 @@ export default function MentorShipPage() {
     <>
       <NavBar />
       {/* Herosection-1 */}
-      <div className="bg-[#fef2ef] lg:bg-[#f9f9f9] flex flex-col lg:flex-row lg:justify-evenly justify-center items-center   pt-28 px-5 pb-8 lg:shadow-sm">
+      <div className="bg-[#f9f9f9] flex flex-col lg:flex-row lg:justify-evenly justify-center items-center   pt-28 px-5 pb-8 lg:shadow-sm">
         <div>
           <img
-            src="https://www.soulup.in/cdn/shop/files/Website-3_copy_2.jpg?v=1672729690"
+            src="https://images.pexels.com/photos/6325984/pexels-photo-6325984.jpeg?auto=compress&cs=tinysrgb&w=600"
             alt="img1"
-            className="md:max-w-md lg:max-w-xl"
+            className=" md:max-w-md lg:max-w-xl grayscale"
           />
         </div>
         <div className="max-w-md pl-3 mt-5 lg:max-w-">
@@ -99,7 +99,7 @@ export default function MentorShipPage() {
                     (i + 1) % 2 == 0 ? "lg:order-2" : "null"
                   } `}
                 >
-                  <img src={_.image} alt="" className="lg:w-[85vw]" />
+                  <img src={_.image} alt="" className="lg:w-[85vw] grayscale" />
                 </div>
                 <div className="max-w-md space-y-3">
                   <h1 className="flex items-center mt-5 space-x-2 lg:text-xl">
