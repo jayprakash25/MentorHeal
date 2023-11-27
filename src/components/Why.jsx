@@ -1,32 +1,67 @@
-import lg8 from "../assets/Team/lg8.png";
+import React from "react";
+import {
+  Authentic,
+  Top,
+  oneonone,
+  confidential,
+  Community,
+} from "../assets/Why/index";
 const Why = () => {
+  const Data = [
+    {
+      image: Authentic,
+      Tittle: "Authentic Guidance",
+    },
+    {
+      image: oneonone,
+      Tittle: "One on One Mentorship",
+    },
+    {
+      image: Top,
+      Tittle: "Experienced Mentors",
+    },
+    {
+      image: Community,
+      Tittle: "Community Support",
+    },
+    {
+      image: confidential,
+      Tittle: "Confidential Conversation",
+    },
+  ];
+
   return (
-    <div className="px-1.5 flex flex-col items-center justify-center w-[80vw] mx-auto  my-28 space-y-8">
+    <div className="px-1.5 flex flex-col items-center justify-center w-[100vw] mx-auto  my-28 space-y-8 bg-gradient-to-l from-[#e9f3ee] to-[#f8ebe5] p-16">
       <div>
-        <h1 className="text-3xl font-semibold md:text-4xl ">Why MentorHeal?</h1>
+        <h1 className="text-3xl font-semibold md:text-4xl ">
+          Why{" "}
+          <span className="font-bold text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text">
+            MentorHeal?
+          </span>
+        </h1>
       </div>
-      <div>
-        <img src={lg8} className="cursor-pointer h-[50vh] lg:[75vh]" />
+      <div className="flex flex-col items-center justify-center gap-5 lg:gap-10 lg:flex-row ">
+        {Data.map((_, i) => {
+          return (
+            <React.Fragment key={i}>
+              <div className="flex flex-col items-center space-y-3">
+                <div>
+                  <img
+                    src={_.image}
+                    alt=""
+                    className="w-28 h-28 lg:w-32 lg:h-32"
+                  />
+                </div>
+                <div>
+                  <h1>{_.Tittle}</h1>
+                </div>
+              </div>
+            </React.Fragment>
+          );
+        })}
       </div>
     </div>
   );
 };
 
 export default Why;
-// md:max-w-[12vw] max-w-[30vw]
-{
-  /* {Data.map((item, index) => {
-          return (
-            <div
-              className="flex flex-col items-center space-y-5 duration-300 ease-in-out hover:scale-105 "
-              key={index}
-            >
-              <img
-                src={item.image}
-                className="w-48 h-48 rounded-full cursor-pointer lg:w-36 lg:h-36"
-              />
-              <h1 className="md:text-sm">{item.Tittle}</h1>
-            </div>
-          );
-        })} */
-}

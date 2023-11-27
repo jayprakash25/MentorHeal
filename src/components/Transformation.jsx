@@ -41,30 +41,34 @@ const Transformation = ({ testimonialref }) => {
         ref={testimonialref}
       >
         <div className="text-center">
-          <h1 className="py-4 text-2xl font-semibold md:text-5xl">
-            Proud Stories Of Transformation
+          <h1 className="py-4 text-3xl font-semibold md:text-4xl">
+            Proud Stories Of{" "}
+            <span className="font-bold text-center text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text ">
+              Transformation
+            </span>
           </h1>
         </div>
       </div>
-      <div className="grid grid-cols-1 gap-8 px-10 my-10 md:grid-cols-2 lg:grid-cols-3">
-        {slides.map((item, index) => {
-          return (
-            <React.Fragment key={index}>
-              <div className="text-sm space-y-7 border-[1px] border-slate-300 p-5 rounded-lg">
-                <div className="flex justify-center">
-                  <img
-                    src="https://www.soulup.in/cdn/shop/files/bxs_quote-left.png?v=1668937322"
-                    alt=""
-                  />
-                </div>
-                <p className="text-[#8ca1b3] leading-7 font-semibold">{item.story}</p>
-                <h1 className="text-center  font-bold my-3.5 text-lg ">
-                  {item.name}
-                </h1>
-              </div>
-            </React.Fragment>
-          );
-        })}
+      <div className="flex items-center justify-center">
+        <>
+          <Slider
+            {...settings}
+            className="w-[80vw] sm:w-[60vw] md:w-[50vw] mx-auto my-12"
+          >
+            {slides.map((item, index) => {
+              return (
+                <React.Fragment key={index}>
+                  <div className=" space-y-7">
+                    <p className="text-[#8ca1b3] leading-8">{item.story}</p>
+                    <h1 className="bg-gradient-to-l text-center from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold my-3.5 lg:text-xl text-lg">
+                      {item.name}
+                    </h1>
+                  </div>
+                </React.Fragment>
+              );
+            })}
+          </Slider>
+        </>
       </div>
     </>
   );
@@ -73,21 +77,5 @@ const Transformation = ({ testimonialref }) => {
 export default Transformation;
 
 {
-  /* <Slider
-        {...settings}
-        className="w-[80vw] sm:w-[60vw] md:w-[30vw] mx-auto my-12"
-      >
-        {slides.map((item, index) => {
-          return (
-            <React.Fragment key={index}>
-              <div className="text- space-y-7">
-                <p className="text-[#8ca1b3] leading-8">{item.story}</p>
-                <h1 className="bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold my-3.5 lg:text-xl text-lg">
-                  {item.name}
-                </h1>
-              </div>
-            </React.Fragment>
-          );
-        })}
-      </Slider> */
+  /**/
 }

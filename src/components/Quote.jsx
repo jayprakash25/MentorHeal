@@ -43,9 +43,9 @@ export default function Quote() {
 
   return (
     <>
-      <div className="flex flex-col items-center px-5 my-24 md:px-8">
+      <div className="flex flex-col items-center px-5 my-10 md:px-8">
         <div>
-          <h1 className="py-4 text-3xl font-semibold md:text-5xl">
+          <h1 className="py-4 text-3xl font-semibold md:text-4xl">
             Wellness Builds
             <span className="font-bold text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text">
               {" "}
@@ -54,54 +54,32 @@ export default function Quote() {
           </h1>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center gap-10 mx-auto mt-12 lg:flex-row">
+      <Slider {...settings} className=" w-[100vw] lg:w-[60vw] mx-auto mt-8">
         {quotes.map((item, index) => {
           return (
             <React.Fragment key={index}>
-              <div className="flex flex-col items-center justify-center gap-5 ">
+              <div className="flex flex-col items-center justify-center gap-5 lg:flex-row">
                 <div>
                   <img
                     src={item.img}
-                    className="max-w-xs rounded-lg cursor-pointer filter grayscale"
-                    alt={item.img}
+                    className="max-w-xs rounded-lg md:max-w-md grayscale"
+                    alt=""
                   />
                 </div>
-                <div className="max-w-xs md:px-0">
-                  <h1 className="text-[#8ca1b3]  font-semibold leading-7">
-                    {item.quote}
+                <div className="max-w-xs">
+                  <h1 className="text-[#8ca1b3] md:text-xl  leading-7 lg:leading-10">
+                    "{item.quote}"
                   </h1>
                 </div>
               </div>
-              {/* </div> */}
             </React.Fragment>
           );
         })}
-      </div>
+      </Slider>
     </>
   );
 }
 
 {
-  /* <Slider {...settings} className=" w-[100vw] lg:w-[60vw] mx-auto my-12">
-{quotes.map((item, index) => {
-  return (
-    <React.Fragment key={index}>
-      <div className="flex flex-col items-center justify-center gap-5 lg:flex-row">
-        <div>
-          <img
-            src={item.img}
-            className="max-w-xs rounded-lg md:max-w-md"
-            alt=""
-          />
-        </div>
-        <div className="max-w-xs">
-          <h1 className="text-[#8ca1b3] md:text-xl font-semibold leading-9">
-            {item.quote}
-          </h1>
-        </div>
-      </div>
-    </React.Fragment>
-  );
-})}
-</Slider> */
+  /* */
 }

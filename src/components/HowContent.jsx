@@ -81,9 +81,7 @@ const HowContent = () => {
   ];
 
   return (
-    <div className="pt-24  md:px-8 ">
-      {/* <h1 className="text-3xl lg:text-5xl  text-center pb-14 font-semibold"> */}
-      {/* <div className="px-8 pt-20">*/}
+    <div className="pt-24 md:px-8 ">
       <div className="px-5 md:px-0">
         <h1 className="py-5 text-3xl font-semibold text-center lg:pl-20 lg:text-5xl lg:text-start">
           How it Works?
@@ -96,8 +94,7 @@ const HowContent = () => {
           experienced mentors who are passionate about helping you reach your
           goals.
         </p>
-
-        <section className="grid items-center justify-center grid-cols-1 gap-8  mx-auto mt-14 md:grid-cols-2 ">
+        <section className="grid items-center justify-center grid-cols-1 gap-8 mx-auto mt-14 md:grid-cols-2 ">
           {howItWorks?.map((item, i) => {
             return (
               <div key={i}>
@@ -112,7 +109,6 @@ const HowContent = () => {
             );
           })}
         </section>
-
         <div className="py-8 mt-16">
           <h1 className="text-3xl text-center lg:text-5xl">
             Explore by Categories
@@ -120,8 +116,7 @@ const HowContent = () => {
         </div>
       </div>
       <Card />
-
-      <div className="pb-0 py-7 px-5 md:px-0">
+      <div className="px-5 pb-0 py-7 md:px-0">
         <div className="flex flex-row-reverse items-center justify-around">
           <div>
             {data.map((item, index) => {

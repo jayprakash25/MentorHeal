@@ -35,7 +35,11 @@ export default function LatestBlogs() {
     <>
       <div className="mt-24 text-center">
         <h1 className="text-3xl font-semibold md:text-4xl">
-          Latest on Your MentorHeal Blog
+          Latest on Your{" "}
+          <span className="font-bold text-center text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text">
+            MentorHeal
+          </span>{" "}
+          Blog
         </h1>
       </div>
       <section className="flex flex-col items-center justify-center pb-10 mt-10 gap-7 md:grid md:grid-cols-2 lg:grid-cols-3 place-items-center md:px-10">

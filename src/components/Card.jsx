@@ -7,7 +7,7 @@ export const Card = () => {
     AOS.init({ duration: 2000 });
   }, []);
   return (
-    <div className="grid grid-cols-1 gap-5 px-5 md:p-8 mt-10 md:grid-cols-2 lg:grid-cols-3 place-items-center">
+    <div className="grid grid-cols-1 gap-5 px-5 mt-10 md:p-8 md:grid-cols-2 lg:grid-cols-3 place-items-center">
       {Carddata.map((item, index) => {
         return (
           <Link

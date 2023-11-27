@@ -153,7 +153,7 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
                 </li>
               )}
             </ul>
-            <Button />
+            {/* <Button /> */}
           </div>
 
           {/* Mobile navbar ...... */}
@@ -251,9 +251,9 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
                   <p value="cursor-pointer transition ease-in-out duration-300">
                     <Link to={"/blog"}>Blog</Link>
                   </p>
-                  <p value="cursor-pointer transition ease-in-out duration-300">
+                  {/* <p value="cursor-pointer transition ease-in-out duration-300">
                     <Link to={"/community"}>community</Link>
-                  </p>
+                  </p> */}
                   <p value="cursor-pointer transition ease-in-out duration-300">
                     <Link to={"/MGP"}>MGP</Link>
                   </p>

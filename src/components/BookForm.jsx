@@ -8,7 +8,7 @@ import Carddata from "./Data";
 import { db } from "../Firebase";
 import { collection, addDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
-import { Footer, NavBar, Transformation } from "./index";
+import { Footer, NavBar} from "./index";
 
 const BookForm = () => {
   const [date, setdate] = useState(null);
@@ -141,7 +141,6 @@ const BookForm = () => {
         </button>
       </form>
 
-      <Transformation />
 
       <Footer />
     </>

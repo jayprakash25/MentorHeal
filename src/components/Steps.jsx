@@ -1,37 +1,26 @@
+import { chose, Find, Schedule, Set } from "../assets/How";
+
 export default function Steps() {
   const Step = [
     {
-      image: "https://d2a61ob4m0n1zq.cloudfront.net/newHome/1.svg",
-      Tittle: "Connect with your Expert",
-      Para: "Chat anonymously with a MentorHeal expert who's here to help you and not judge you.",
+      image: Set,
+      Tittle: "Get Started: Set Up Your Account in just  few clicks",
+      Para: "Unlock the door to your journey with just a few clicks",
     },
     {
-      image: "https://d2a61ob4m0n1zq.cloudfront.net/newHome/2.svg",
-      Tittle: "Discuss your Concerns",
-      Para: "Open up to your Expert in a space where you get the guidance you need, and your concerns get the attention they deserve.",
+      image: chose,
+      Tittle: "Explore and Discover: Chose a category",
+      Para: "Dive into a world of possibilities by selecting your area of mentorship.",
     },
     {
-      image: "https://d2a61ob4m0n1zq.cloudfront.net/newHome/3.svg",
-      Tittle: "Unleash a Better You",
-      Para: "With 24X7 support from our experts, bid goodbye to your old self and be on your way to becoming a better you.",
-    },
-  ];
-
-  const Features = [
-    {
-      image: "https://dgb1oxf9aexic.cloudfront.net/newHome/17.svg",
-      Tittle: "Online Chat Sessions",
-      Para: " In a world where connectivity is key, we bring you a seamless and engaging way to connect with others in real-time. Our platform provides a secure and user-friendly environment for individuals to participate in conversations that matter to them. Whether you're seeking professional advice, making new friends.",
+      image: Find,
+      Tittle: "Meet Your Guide: Find The Right Mentor",
+      Para: "Connect with experienced mentors which you feel right for you",
     },
     {
-      image: "https://dgb1oxf9aexic.cloudfront.net/newHome/18.svg",
-      Tittle: "Voice Calls",
-      Para: "Introducing our cutting-edge Voice Calls feature, where the power of real-time communication meets convenience. Seamlessly connect with friends, family, or colleagues through crystal-clear audio on our platform. Our Voice Calls offer a reliable and efficient way to bridge distances, fostering a sense of closeness that transcends screens.",
-    },
-    {
-      image: "https://dgb1oxf9aexic.cloudfront.net/newHome/19.svg",
-      Tittle: "Face to Face Sessions",
-      Para: "Embark on a transformative journey of connection with our Face to Face Sessions, an immersive and personalized way to engage with others. Experience the power of visual communication as our platform facilitates real-time video interactions, allowing you to connect with friends, family, or colleagues face to face, regardless of physical distances.",
+      image: Schedule,
+      Tittle: "Book Your Path: Schedule A Call and get started",
+      Para: "Take the next step towards success by scheduling your first conversation.",
     },
   ];
 
@@ -40,17 +29,25 @@ export default function Steps() {
       <section className="mt-20">
         <div>
           <h1 className="text-3xl font-semibold text-center md:text-4xl ">
-            Four Steps to unleash a better you
+            Four Steps to{" "}
+            <span className="font-bold text-center text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text ">
+              unleash
+            </span>{" "}
+            a better you
           </h1>
-          <div className="flex flex-col items-center justify-center gap-6 mt-16 md:gap-0 lg:px-36 md:flex-row">
+          <div className="flex flex-col items-start justify-center gap-5 px-3 mt-16 lg:px-0 md:px-0 lg:gap-0 lg:flex-row">
             {Step.map((item, i) => {
               return (
                 <div
                   key={i}
-                  className="flex flex-col items-center mx-auto space-y-3 md:max-w-xl"
+                  className="flex flex-col hover:shadow-md cursor-pointer ease-in-out duration-300 items-center lg:items-start mx-auto space-y-3 max-w-sm lg:max-w-xs border-[1px] rounded-lg border-slate-300 p-5"
                 >
-                  <div className="w-full">
-                    <img src={item.image} alt={item.image} className="w-full" />
+                  <div>
+                    <img
+                      src={item.image}
+                      alt={item.image}
+                      className="w-24 lg:w-32"
+                    />
                   </div>
                   <div className="space-y-2">
                     <h1 className="text-lg text-[#000000] font-semibold ">
@@ -65,26 +62,6 @@ export default function Steps() {
             })}
           </div>
         </div>
-      </section>
-      <section className="flex flex-col justify-center my-10 divide-y-2 md:divide-y-0 md:divide-x-2 md:flex-row">
-        {Features.map((item, i) => {
-          return (
-            <div
-              className="flex gap-5 p-4 duration-300 ease-in-out shadow-xl cursor-pointer shadow-slate-200 hover:bg-gray-50"
-              key={i}
-            >
-              <div>
-                <img src={item.image} className="w-20 h-20" alt={item.image} />
-              </div>
-              <div className="max-w-xs space-y-2">
-                <h1 className="text-sm md:text-lg lg:text-xl text-[#000000] font-semibold">
-                  {item.Tittle}
-                </h1>
-                <p className="text-xs leading-5">{item.Para}</p>
-              </div>
-            </div>
-          );
-        })}
       </section>
     </div>
   );

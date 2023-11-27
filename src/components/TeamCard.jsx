@@ -31,9 +31,9 @@ const TeamCard = () => {
   }, []);
 
   return (
-    <div className="mx-5 my-20">
+    <div className="mx-5 my-10">
       <div>
-        <h1 className="px-5 text-2xl font-semibold text-center md:text-5xl">
+        <h1 className="px-5 text-3xl font-semibold leading-10 text-center md:text-4xl">
           Meet your{" "}
           <span className="font-bold text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text">
             premier advisors
@@ -45,12 +45,12 @@ const TeamCard = () => {
           </span>
         </h1>
       </div>
-      <div className="grid grid-cols-1 gap-4 p-3 px-0 md:p-3 my-16 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+      <div className="grid grid-cols-1 gap-4 p-3 px-0 my-16 md:p-3 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
         {teamMembers.map((member, index) => {
           const newLocal = "space-y-2.5 my-3 text-center";
           return (
             <React.Fragment key={index}>
-              <div className="max-w-md rounded-md hover:scale-105 ease-in-out duration-500 cursor-pointer px-4 border-[1px] border-gray-200   shadow-md shadow-gray-100">
+              <div className="max-w-md rounded-md mx-auto cursor-pointer px-4 border-[1px] border-gray-200   hover:shadow-md ease-in-out duration-300 ">
                 <div className={newLocal}>
                   <div className="text-xl font-bold text-transparent md:text-2xl bg-gradient-to-l from-cyan-600 via-cyan-400 to-cyan-500 bg-clip-text">
                     {member.name}
