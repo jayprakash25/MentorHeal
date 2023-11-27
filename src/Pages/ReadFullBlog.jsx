@@ -31,7 +31,7 @@ export default function ReadFullBlog() {
             </h1>
           </div>
 
-          <div className="flex justify-start pt-5">
+          <div className="flex justify-start pt-5 pr-3 md:pr-0">
             <img
               src={Blogimage}
               className="max-w-xs duration-300 ease-in-out rounded-md cursor-pointer lg:max-w-2xl hover:brightness-90"
