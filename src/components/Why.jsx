@@ -1,7 +1,7 @@
 import lg8 from "../assets/Team/lg8.png";
 const Why = () => {
   return (
-    <div className="px-3 flex flex-col items-center justify-center w-[80vw] mx-auto  my-28 space-y-8">
+    <div className="px-1.5 flex flex-col items-center justify-center w-[80vw] mx-auto  my-28 space-y-8">
       <div>
         <h1 className="text-3xl font-semibold md:text-4xl ">Why MentorHeal?</h1>
       </div>
