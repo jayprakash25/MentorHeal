@@ -50,23 +50,25 @@ const Transformation = ({ testimonialref }) => {
         </div>
       </div>
       <div className="flex items-center justify-center px-8 lg:px-3">
-          <Slider
-            {...settings}
-            className="w-[90vw] sm:w-[60vw] md:w-[50vw] mx-auto my-4"
-          >
-            {slides.map((item, index) => {
-              return (
-                <React.Fragment key={index}>
-                  <div className="max-w-md  space-y-7">
-                    <p className="text-[#8ca1b3] leading-7">{item.story}</p>
-                    <h1 className="bg-gradient-to-l text-center from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold my-3.5 lg:text-xl ">
-                      {item.name}
-                    </h1>
-                  </div>
-                </React.Fragment>
-              );
-            })}
-          </Slider>
+        <Slider
+          {...settings}
+          className="w-[90vw] sm:w-[60vw] md:w-[50vw] mx-auto my-4"
+        >
+          {slides.map((item, index) => {
+            return (
+              <React.Fragment key={index}>
+                <div className="max-w-md lg:max-w-none space-y-7">
+                  <p className="text-[#8ca1b3] leading-7 text-center lg:text-left">
+                    {item.story}
+                  </p>
+                  <h1 className="bg-gradient-to-l text-center from-cyan-500 via-cyan-300 to-cyan-500 text-transparent  bg-clip-text font-bold my-3.5 lg:text-xl ">
+                    {item.name}
+                  </h1>
+                </div>
+              </React.Fragment>
+            );
+          })}
+        </Slider>
       </div>
     </>
   );
