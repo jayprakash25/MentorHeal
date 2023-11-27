@@ -25,9 +25,9 @@ export default function Steps() {
   ];
 
   return (
-    <div className="px-5 md:px-0">
+    <div className="">
       <section className="mt-20">
-        <div>
+        <div className="px-5 md:px-0">
           <h1 className="text-3xl font-semibold text-center md:text-4xl ">
             Four Steps to{" "}
             <span className="font-bold text-center text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text ">
