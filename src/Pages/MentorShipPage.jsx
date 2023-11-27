@@ -13,7 +13,7 @@ const FAQs = ({ Q, children }) => {
   };
   return (
     <>
-      <div className=" border-b-[1px] hover:bg-[#F5F5F5] w-[80vw]  px-4 py-5 md:px-8 md:py-8 space-y-4 rounded-2xl">
+      <div className=" border-b-[1px]  w-[80vw]  px-4 py-5 md:px-8 md:py-8 space-y-4 ">
         <div
           className="flex items-center justify-between cursor-pointer"
           onClick={toggle}
@@ -77,8 +77,8 @@ export default function MentorShipPage() {
           </p>
           <p className="my-4 text-[#6d6667] text-lg ">
             If you have learned something from your journey and are ready to
-            share it as well as build on your emotional progress - join SoulUp
-            as a Peer.{" "}
+            share it as well as build on your emotional progress - join
+            MentorHeal as a Peer.{" "}
           </p>
           <Link to="/Mentor-Ship-Page/form">
             <button className="flex items-center justify-center px-6 py-2 mt-6 space-x-2 font-semibold text-white duration-500 ease-in-out rounded-full bg-cyan-400 ">

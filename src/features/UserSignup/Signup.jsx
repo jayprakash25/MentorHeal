@@ -49,7 +49,7 @@ export default function Signup() {
       await setDoc(docRef, User);
       localStorage.setItem("userToken", UserToken);
       sendEmail(User.email, User.Name);
-      navigate("/mentors");
+      navigate("/community");
     } catch (error) {
       console.log(error);
     }

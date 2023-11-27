@@ -43,7 +43,7 @@ export default function Quote() {
 
   return (
     <>
-      <div className="flex flex-col items-center px-5 md:px-8 my-24">
+      <div className="flex flex-col items-center px-5 my-24 md:px-8">
         <div>
           <h1 className="py-4 text-3xl font-semibold md:text-5xl">
             Wellness Builds
@@ -67,7 +67,7 @@ export default function Quote() {
                   />
                 </div>
                 <div className="max-w-xs px-5 md:px-0">
-                  <h1 className="text-[#8ca1b3] md:text-xl font-semibold leading-9">
+                  <h1 className="text-[#8ca1b3]  font-semibold leading-7">
                     {item.quote}
                   </h1>
                 </div>
