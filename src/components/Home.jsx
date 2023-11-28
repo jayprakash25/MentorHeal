@@ -10,7 +10,6 @@ import {
   LatestBlogs,
   Steps,
   TeamCard,
-  Events,
   Appointment,
   Form,
   Transformation,
@@ -24,7 +23,7 @@ import {
   oneonone,
   Top,
 } from "../assets/Why";
-
+import { MGP } from "../Pages/index";
 export default function Home() {
   // refs
   const formref = useRef();
@@ -110,6 +109,7 @@ export default function Home() {
       <Steps />
       <Transformation testimonialref={testimonialref} />
       <TeamCard />
+      <MGP page={"home"}/>
       <Quote />
       <Whatsup />
       <LatestBlogs />

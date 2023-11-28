@@ -39,7 +39,7 @@ export default function Quote() {
   };
 
   return (
-    <>
+    <section className="mt-32">
       <div className="flex flex-col items-center px-5 my-10 md:px-8">
         <div>
           <h1 className="py-4 text-3xl font-semibold md:text-4xl">
@@ -74,7 +74,7 @@ export default function Quote() {
           );
         })}
       </Slider>
-    </>
+    </section>
   );
 }
 

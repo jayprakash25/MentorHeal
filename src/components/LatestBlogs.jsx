@@ -33,7 +33,7 @@ export default function LatestBlogs() {
 
   return (
     <>
-      <div className="mt-24 text-center">
+      <div className="mt-32 text-center">
         <h1 className="text-3xl font-semibold md:text-4xl">
           Latest on Your{" "}
           <span className="font-bold text-center text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text">

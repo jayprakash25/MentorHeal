@@ -16,7 +16,7 @@ const OurMission = () => {
           (soul) - we are on a mission to empower people to lead truly
           fulfilling lives by harmonizing these aspects.
         </p>
-        <div className="flex justify-between p-2 mt-2">
+        {/* <div className="flex justify-between p-2 mt-2">
           <div className="flex flex-col ">
             <h1 className="font-bold text-[34px] w-[79px]  lg:text-[52px] ">
               94%
@@ -43,7 +43,7 @@ const OurMission = () => {
               MONTHLY CAMPAIGNS
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
       <div>
         <img src={ourmission} className=" md:w-[463px] md:h-auto " />

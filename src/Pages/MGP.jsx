@@ -1,7 +1,7 @@
 import React from "react";
 import { Footer, NavBar } from "../components";
 
-export default function MGP() {
+export default function MGP({ page }) {
   const Events = [
     {
       image:
@@ -26,14 +26,37 @@ export default function MGP() {
   ];
 
   return (
-    <>
-      <NavBar />
-      <div className="flex justify-center">
-        <div className="px-4 pt-16 mx-auto mb-14">
+    <section className={` ${page === "home" ? "mb-20 mt-14" : null} `}>
+      {page === "home" ? null : <NavBar />}
+      {page === "home" ? (
+        <div className="text-3xl font-semibold text-center font-cardo md:text-4xl ">
+          <h1>
+            MentorHeal{" "}
+            <span className="font-bold text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text">
+              Guidance
+            </span>{" "}
+            Program
+          </h1>
+        </div>
+      ) : null}
+      <div className={`flex justify-center `}>
+        <div
+          className={` 
+          ${
+            page === "home"
+              ? "flex lg:flex-row flex-col justify-around gap-20 "
+              : "px-4 pt-16 mx-auto mb-14"
+          }
+        `}
+        >
           {Events.map((_, i) => {
             return (
               <React.Fragment key={i}>
-                <div className="flex flex-col items-start justify-center gap-5 mt-11 lg:gap-8 lg:flex-row">
+                <div
+                  className={`flex flex-col items-start justify-center gap-5 mt-11 lg:gap-8  ${
+                    page === "home" ? "flex-col" : "lg:flex-row"
+                  }`}
+                >
                   <img
                     className="max-w-xs duration-500 ease-in-out cursor-pointer md:max-w-sm lg:max-w-lg hover:brightness-75"
                     src={_.image}
@@ -59,7 +82,7 @@ export default function MGP() {
           })}
         </div>
       </div>
-      <Footer />
-    </>
+      {page === "home" ? null : <Footer />}
+    </section>
   );
 }
