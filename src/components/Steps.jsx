@@ -50,9 +50,9 @@ export default function Steps() {
                     />
                   </div>
                   <div className="space-y-2">
-                    <h1 className="text-lg text-[#000000] font-semibold ">
+                    <p className="text-lg text-[#000000] font-semibold ">
                       {item.Tittle}
-                    </h1>
+                    </p>
                     <p className="text-sm font-medium  w-72 text-[#8ca1b3] leading-6">
                       {item.Para}
                     </p>

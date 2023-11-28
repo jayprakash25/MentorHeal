@@ -67,7 +67,7 @@ export default function LatestBlogs() {
                   />
                 </div>
                 <div>
-                  <h1 className="font-bold underline">{item.BLogTittle}</h1>
+                  <p className="font-bold underline">{item.BLogTittle}</p>
                 </div>
               </div>
             </React.Fragment>

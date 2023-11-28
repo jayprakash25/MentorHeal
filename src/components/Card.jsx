@@ -51,7 +51,7 @@ export const FirstCard = () => {
       <section className=" my-28">
         <div className="items-start md:flex md:flex-row-reverse p-7 md:justify-around md:space-x-5 md:px-5">
           <div className="flex flex-col order-2 py-5 space-y-8 md:text-left">
-            <h1 className="text-2xl text-white md:text-4xl md:max-w-[50vw] leading-8 font-semibold">
+            <h1 className="text-2xl font-cardo text-white md:text-4xl md:max-w-[50vw] leading-8 font-semibold">
               How will{" "}
               {/* <span className="font-bold text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text"> */}
               {/* </span>{" "} */}
