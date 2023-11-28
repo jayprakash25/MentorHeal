@@ -7,7 +7,7 @@ export default function Quote() {
   const quotes = [
     {
       id: 1,
-      img: "https://blackhattalent.com/wp-content/uploads/2023/08/robinsharma.jpg",
+      img: "https://vskbharat.com/wp-content/uploads/2019/03/robin-sharma.jpg",
       quote:
         "The path to the CEO's office should not be through the CFO's office, and it should not be through the marketing department. It needs to be through engineering and design",
     },
