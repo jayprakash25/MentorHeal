@@ -44,7 +44,7 @@ export default function MGP({ page }) {
           className={` 
           ${
             page === "home"
-              ? "flex lg:flex-row flex-col justify-center gap-20 "
+              ? "flex lg:flex-row flex-col justify-center lg:justify-around gap-20 "
               : "px-4 pt-16 mx-auto mb-14"
           }
         `}
