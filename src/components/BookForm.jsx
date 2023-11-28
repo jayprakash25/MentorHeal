@@ -134,7 +134,7 @@ const BookForm = () => {
         </div>
 
         <button
-          className="w-full px-4 py-2 mt-5 text-white rounded-md bg-gradient-to-r from-cyan-300 to-cyan-500"
+          className="w-full px-4 py-2 mt-5 text-white rounded-md bg-[#4a7999]"
           type="submit"
         >
           Submit
