@@ -104,13 +104,12 @@ export default function Home() {
       />
       <HeroSection Scrolltoref={Scrolltoref} />
       <FirstCard />
-      <Why Data={Data} />
-      <Steps />
       <Tagline />
       <Card />
+      <Why Data={Data} />
+      <Steps />
       <Transformation testimonialref={testimonialref} />
       <TeamCard />
-      {/* <Events /> */}
       <Quote />
       <Whatsup />
       <LatestBlogs />

@@ -69,20 +69,6 @@ export default function LatestBlogs() {
                 <div>
                   <h1 className="font-bold underline">{item.BLogTittle}</h1>
                 </div>
-                <div className="flex justify-end gap-5 pt-5">
-                  {item.Category?.map((item, index) => {
-                    return (
-                      <React.Fragment key={index}>
-                        <button
-                          key={index}
-                          className="px-5 py-1 text-sm font-semibold text-[#5e626e] bg-[#F5F5F5]"
-                        >
-                          #{item}
-                        </button>
-                      </React.Fragment>
-                    );
-                  })}
-                </div>
               </div>
             </React.Fragment>
           );

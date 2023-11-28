@@ -70,7 +70,7 @@ const Form = () => {
                   If you have any concern please feel free to contact us by
                   filling up the form.
                 </p>
-                <h2 className="font-bold">rohit.mentorrnow@gmail.com</h2>
+                <h2 className="font-bold">contact@mentorheal.com</h2>
               </div>
             </div>
             <div className="mt-8 text-center">

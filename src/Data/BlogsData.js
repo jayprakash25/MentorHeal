@@ -1,6 +1,5 @@
 const AllBlogs = [
   {
-    Category: ["Tech", "Life", "Health"],
     Blogimage:
       "https://media.wired.com/photos/655e01daf1c66c0a818775fe/16:9/w_1600,c_limit/samaltman-biz-GettyImages-1769720820.jpg",
     BLogTittle:
@@ -27,7 +26,6 @@ const AllBlogs = [
     ],
   },
   {
-    Category: ["Tech", "Life", "Health"],
     Blogimage:
       "https://media.wired.com/photos/655d4af6d9b25379f60e93fd/16:9/w_1600,c_limit/Congress-Asks-SEC-To-Investigate-Musk-Neuralink-Business-1231044822.jpg",
     BLogTittle:
@@ -54,7 +52,6 @@ const AllBlogs = [
     ],
   },
   {
-    Category: ["Tech", "Life", "Health"],
     Blogimage:
       "https://media.wired.com/photos/6557d1718c4eb8ee698a0f09/16:9/w_1600,c_limit/_20231023_hp_csm_delharvey_055.jpg",
     BLogTittle:
