@@ -10,12 +10,14 @@ export default function Quote() {
       img: "https://vskbharat.com/wp-content/uploads/2019/03/robin-sharma.jpg",
       quote:
         "The path to the CEO's office should not be through the CFO's office, and it should not be through the marketing department. It needs to be through engineering and design",
+        name : "Robin Sharma",
     },
     {
       id: 2,
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8CE0tFpz5ha5WekWiYr8B9f2cs-F5ZVNd9NKk-FQbUVS0GZnc-G9MDWI2LaccXCS-dhI&usqp=CAU",
       quote:
         "We see our customers as invited guests to a party, and we are the hosts. It's our job every day to make every important aspect of the customer experience a little bit better",
+        name : "Novak Tjokovic",
     },
 
     {
@@ -23,6 +25,7 @@ export default function Quote() {
       img: "https://akm-img-a-in.tosshub.com/lingo/hrb/images/story/202302/untitled-design-2023-02-16t165401077160223050538.png?size=945:532",
       quote:
         "The path to the CEO's office should not be through the CFO's office, and it should not be through the marketing department. It needs to be through engineering and design",
+        name : "Jay Shetty",
     },
   ];
 
@@ -61,6 +64,7 @@ export default function Quote() {
                   />
                 </div>
                 <div className="max-w-xs">
+                <h1 className="text-lg font-semibold">{item.name}</h1>
                   <h1 className="text-[#8ca1b3] md:text-xl  leading-7 lg:leading-10">
                     "{item.quote}"
                   </h1>

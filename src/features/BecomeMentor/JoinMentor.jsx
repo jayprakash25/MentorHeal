@@ -140,7 +140,7 @@ export default function JoinMentor() {
               />
             </div>
             <div className="flex flex-col space-y-3">
-              <label className="pl-1.5">Categeory*</label>
+              <label className="pl-1.5">Category *</label>
               <select
                 className="p-3 outline-none border-b-[0.5px] border-gray-300  focus:border-gray-800 ease-in-out duration-300"
                 onChange={(e) => {

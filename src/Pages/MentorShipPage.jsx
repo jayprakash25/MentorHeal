@@ -114,11 +114,7 @@ export default function MentorShipPage() {
                 </div>
                 <div className="max-w-md space-y-3">
                   <h1 className="flex items-center mt-5 space-x-2 lg:text-xl">
-                    <span className="text-[#f9d6cc] font-bold">{i + 1}</span>
-                    <span>
-                      {" "}
-                      <LiaGreaterThanSolid size={15} color="#d3d2d3" />
-                    </span>
+                    <span className="font-bold text-slate-800">{i + 1}.</span>
                   </h1>
                   <h1 className="text-xl font-bold lg:text-3xl">{_.Tittle}</h1>
                   <p className=" text-[#6d6667] ">{_.Para}</p>
@@ -143,7 +139,7 @@ export default function MentorShipPage() {
       </section>
       {/* fef2ef */}
       {/* Join our network! */}
-      <section className="my-8">
+      {/* <section className="my-8">
         <div className="bgclip bg-cyan-500 ml-6 py-14 px-2 pl-3 lg:pl-28 w-[90vw] lg:w-[80vw] lg:mx-auto">
           <div className="max-w-xs space-y-6 text-white lg:max-w-xl">
             <p className="w-48 text-lg lg:text-2xl font- lg:w-auto ">
@@ -162,11 +158,10 @@ export default function MentorShipPage() {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
       <div ref={formref}>
         <JoinMentor />
       </div>
-      <Footer />
     </>
   );
 }

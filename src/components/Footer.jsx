@@ -34,7 +34,6 @@ const Footer = ({ Scrolltoref }) => {
                   certified mentors across the country.
                 </p>
               </div>
-
               <div className="py-12 space-y-8 ">
                 <div className="items-center justify-center space-x-2 space-y-4 md:flex md:space-y-0">
                   <input
