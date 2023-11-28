@@ -15,13 +15,13 @@ const HeroSection = () => {
           </div>
           <div className="flex flex-col items-center justify-between py-8 space-y-6 lg:px-5 md:items-start lg:space-y-9">
             <div className="flex flex-col items-center justify-between px-5 py-8 space-y-6 md:items-start lg:space-y-9">
-              <h1 className="text-2xl md:text-4xl lg:max-w-[40vw] leading-10 font-semibold">
-                <span className="font-bold text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text">
+              <h1 className="text-2xl md:text-4xl lg:max-w-[40vw] leading-10 font-Kanit">
+                <span className="font-Kanit text-transparent bg-gradient-to-l from-[#4a7999] via-[#5087ac] to-[#4a7ea1] bg-clip-text">
                   Mentorship
                 </span>{" "}
                 can help you embrace your potential!
               </h1>
-              <p className="text-lg text-[#8ca1b3] md:text-xl md:max-w-[40vw]">
+              <p className="text-lg text-[#8ca1b3] md:text-xl md:max-w-[40vw] font-Kanit">
                 We are all already abundant. We just need a mentor to help us
                 realise it and discover our purpose.
               </p>

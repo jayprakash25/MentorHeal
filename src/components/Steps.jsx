@@ -4,22 +4,22 @@ export default function Steps() {
   const Step = [
     {
       image: Set,
-      Tittle: "Get Started: Set Up Your Account in just  few clicks.",
+      Tittle: "Get Started: Set Up Your Account in just  few clicks",
       Para: "Unlock the door to your journey with just a few clicks.",
     },
     {
       image: chose,
-      Tittle: "Explore and Discover: Chose a category.",
+      Tittle: "Explore and Discover: Chose a category",
       Para: "Dive into a world of possibilities by selecting your area of mentorship.",
     },
     {
       image: Find,
-      Tittle: "Meet Your Guide: Find The Right Mentor.",
+      Tittle: "Meet Your Guide: Find The Right Mentor",
       Para: "Connect with experienced mentors which you feel right for you.",
     },
     {
       image: Schedule,
-      Tittle: "Book Your Path: Schedule A Call and get started.",
+      Tittle: "Book Your Path: Schedule A Call and get started",
       Para: "Take the next step towards success by scheduling your first conversation.",
     },
   ];

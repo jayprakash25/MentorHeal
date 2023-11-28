@@ -9,7 +9,7 @@ export default function Quote() {
       id: 1,
       img: "https://bestania.com/wp-content/uploads/2018/09/ROBIN-SHARMA-COVER-759x500.jpg",
       quote:
-        "investing in yourself is the best investment you will ever make. it will not only improve your life, it will improve the lives of all those around you.",
+        "Investing in yourself is the best investment you will ever make.It will not only improve your life, it will improve the lives of all those around you.",
       name: "Robin Sharma",
     },
     {

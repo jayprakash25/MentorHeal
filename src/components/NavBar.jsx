@@ -5,7 +5,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import Carddata from "./Data";
 import { useEffect } from "react";
-import logo from "../assets/logo.png";
+import MainLogo from "../assets/MainLogo.png";
 const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
   // state handlers
   const mentorjwt = localStorage.getItem("mentorjwt");
@@ -42,10 +42,10 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
                 window.scrollTo(0, 0);
               }}
             >
-              <p className="text-2xl font-semibold text-cyan-400 md:text-3xl ">
+              {/* <p className="text-2xl font-semibold text-cyan-400 md:text-3xl ">
                 MentorHeal
-              </p>
-              {/* <img src={logo} className="w-8 h-8" alt="" /> */}
+              </p> */}
+              <img src={MainLogo} className="w-52" alt="" />
             </Link>
           </div>
           <div className="items-center hidden lg:flex">

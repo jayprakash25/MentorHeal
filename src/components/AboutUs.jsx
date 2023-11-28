@@ -24,7 +24,7 @@ const AboutUs = () => {
 
       {/* Herosection........ */}
 
-      {/* <HeroAbout /> */}
+      <HeroAbout />
 
       {/* our story...... */}
 

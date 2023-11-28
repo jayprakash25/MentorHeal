@@ -12,6 +12,7 @@ export default {
       poppins: ["Poppins"],
       inter: ["Inter"],
       cardo: ["Cardo"],
+      Kanit : ["Kanit"]
     },
   },
 

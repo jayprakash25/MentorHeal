@@ -46,7 +46,7 @@ const OurMission = () => {
         </div> */}
       </div>
       <div>
-        <img src={ourmission} className=" md:w-[463px] md:h-auto " />
+        <img src={ourmission} className=" md:w-[463px] md:h-auto greyscale" />
       </div>
     </div>
   );

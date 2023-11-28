@@ -58,7 +58,7 @@ export const FirstCard = () => {
               Mentorship help you?
             </h1>
             <p className="text-sm text-white md:max-w-[50vw] md:text-lg leading-6 md:leading-7">
-            A mentor serves as a compass, providing insights born from experience, steering individuals through challenges, and imparting crucial life skills. The mentor-mentee relationship fosters personal and professional growth, nurturing not just skills but character. Through shared experiences, a mentor instills resilience, strategic thinking, and a profound understanding of one's strengths. This dynamic connection bridges the gap between theory and application, accelerating the journey toward success by offering a roadmap enriched with lessons learned firsthand.
+            Through the guidance and support of a mentor, individuals can gain valuable insights, develop new skills, and overcome obstacles that they may have otherwise struggled with on their own. Whether in business, personal life, or any other aspect of life.A mentor serves as a compass, providing insights born from experience, steering individuals through challenges, and imparting crucial life skills. The mentor-mentee relationship fosters personal and professional growth, nurturing not just skills but character. Through shared experiences, a mentor instills resilience, strategic thinking, and a profound understanding of one's strengths. This dynamic connection bridges the gap between theory and application, accelerating the journey toward success by offering a roadmap enriched with lessons learned firsthand.
             </p>
           </div>
           <div className="my-5 md:my-0">
