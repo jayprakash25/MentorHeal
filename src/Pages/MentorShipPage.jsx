@@ -4,7 +4,6 @@ import { Data } from "../Data/index";
 import { LiaGreaterThanSolid } from "react-icons/lia";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
-import { Link } from "react-router-dom";
 import JoinMentor from "../features/BecomeMentor/JoinMentor";
 import { useRef } from "react";
 const FAQs = ({ Q, children }) => {

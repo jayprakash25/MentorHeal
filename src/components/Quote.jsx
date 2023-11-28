@@ -9,14 +9,14 @@ export default function Quote() {
       id: 1,
       img: "https://vskbharat.com/wp-content/uploads/2019/03/robin-sharma.jpg",
       quote:
-        "The path to the CEO's office should not be through the CFO's office, and it should not be through the marketing department. It needs to be through engineering and design",
+        "investing in yourself is the best investment you will ever make. it will not only improve your life, it will improve the lives of all those around you.",
         name : "Robin Sharma",
     },
     {
       id: 2,
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8CE0tFpz5ha5WekWiYr8B9f2cs-F5ZVNd9NKk-FQbUVS0GZnc-G9MDWI2LaccXCS-dhI&usqp=CAU",
       quote:
-        "We see our customers as invited guests to a party, and we are the hosts. It's our job every day to make every important aspect of the customer experience a little bit better",
+        "Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful.",
         name : "Novak Tjokovic",
     },
 
@@ -24,7 +24,7 @@ export default function Quote() {
       id: 12,
       img: "https://akm-img-a-in.tosshub.com/lingo/hrb/images/story/202302/untitled-design-2023-02-16t165401077160223050538.png?size=945:532",
       quote:
-        "The path to the CEO's office should not be through the CFO's office, and it should not be through the marketing department. It needs to be through engineering and design",
+        "If you do something in the same space every day, it becomes easier and natural",
         name : "Jay Shetty",
     },
   ];
