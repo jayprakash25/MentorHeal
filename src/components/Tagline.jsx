@@ -8,7 +8,7 @@ const Tagline = () => {
           <h1 className="font-bold text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text">
             life mystery{" "}
           </h1> */}
-        <div className="space-y-2 text-3xl font-semibold md:text-4xl">
+        <div className="space-y-2 font-cardo text-3xl font-semibold md:text-4xl">
           <h1>The 9 essential elements of </h1>
           <h1 className="font-bold text-center text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text ">
             life mystery{" "}

@@ -33,7 +33,7 @@ const Why = () => {
   return (
     <div className="px-1.5 flex flex-col items-center justify-center w-[100vw] mx-auto  my-28 space-y-8 bg-gradient-to-l from-[#e9f3ee] to-[#f8ebe5] p-16">
       <div>
-        <h1 className="text-3xl font-semibold md:text-4xl ">
+        <h1 className="text-3xl font-cardo font-semibold md:text-4xl ">
           Why{" "}
           <span className="font-bold text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text">
             MentorHeal?
