@@ -17,12 +17,12 @@ const data = [
   {
     image: pro,
     title: "Choose how you want to mentor",
-    line: "Set your own schedule, choose what types of students you want to work with, and get paid for your time.",
+    line: "Set your own schedule, choose what types of mentees  you want to work with, and get paid for your time.",
   },
   {
     image: pro2,
     title: "We’ll handle the details, you focus on mentoring",
-    line: "We’ll connect you with students, manage the scheduling process, and deal with the boring stuff, so you can focus on mentoring!",
+    line: "We’ll connect you with mentees , manage the scheduling process, and deal with the boring stuff, so you can focus on mentoring!",
   },
   // {
   //   image: pro3,
@@ -32,12 +32,12 @@ const data = [
   {
     image: pro4,
     title: "Flexibility to mentor how you want",
-    line: "As a MentorHeal mentor, you’re free to teach in your own style and customize your approach based on your students’ goals.",
+    line: "As a MentorHeal mentor, you’re free to teach in your own style and customize your approach based on your mentees ’ goals.",
   },
   {
     image: pro5,
     title: "Structure to make mentoring easy",
-    line: "We provide shared workspaces, frameworks, and projects that you and your students can use (but only if you want to).",
+    line: "We provide shared workspaces, frameworks, and projects that you and your mentees  can use (but only if you want to).",
   },
   {
     image: pro6,
@@ -75,7 +75,7 @@ const Mentor = () => {
             </h1>
             <p className="text-[#8ca1b3]">
               As a MentorHeal mentor, you’ll get to provide mentorship to
-              students in your own style and on your own schedule (and get paid
+              mentees  in your own style and on your own schedule (and get paid
               for it!).
             </p>
           </div>
