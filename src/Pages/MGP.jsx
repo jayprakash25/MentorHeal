@@ -62,7 +62,11 @@ export default function MGP({ page }) {
                     src={_.image}
                     alt=""
                   />
-                  <ul className="max-w-sm">
+                  <ul
+                    className={` ${
+                      page === "home" ? "max-w-xs lg:max-w-sm" : "max-w-sm"
+                    } `}
+                  >
                     <h1 className="text-3xl font-bold md:text-4xl">
                       Save on 3 Groups
                     </h1>
