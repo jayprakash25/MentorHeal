@@ -94,7 +94,7 @@ export default function JoinMentor() {
       <div className="z-50 flex items-center justify-center h-full p-3 pt-20 overflow-y-scroll">
         <div className="w-[90vw] md:w-[60vw] lg:w-[45vw] px-8 bg-white rounded-md py-3 overflow-y-scroll ">
           <div className="space-y-3 text-lg">
-            <h1 className="font-semibold ">
+            <h1 className="font-semibold font-poppins">
               Please register for Workshop This question is required.*
             </h1>
             <p className="font-light text-semibold">
