@@ -7,28 +7,22 @@ export default function Quote() {
   const quotes = [
     {
       id: 1,
-      img: "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:best/rockcms/2023-07/230724-elon-musk-ac-1041p-bc05fb.jpg",
+      img: "https://blackhattalent.com/wp-content/uploads/2023/08/robinsharma.jpg",
       quote:
         "The path to the CEO's office should not be through the CFO's office, and it should not be through the marketing department. It needs to be through engineering and design",
     },
     {
       id: 2,
-      img: "https://assets.entrepreneur.com/content/3x2/2000/20150224165308-jeff-bezos-amazon.jpeg",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8CE0tFpz5ha5WekWiYr8B9f2cs-F5ZVNd9NKk-FQbUVS0GZnc-G9MDWI2LaccXCS-dhI&usqp=CAU",
       quote:
         "We see our customers as invited guests to a party, and we are the hosts. It's our job every day to make every important aspect of the customer experience a little bit better",
     },
 
     {
       id: 12,
-      img: "https://api.time.com/wp-content/uploads/2014/09/jack-ma-alibaba-life-lessons-clinton-global-initiative.jpg?quality=85&w=3000",
+      img: "https://akm-img-a-in.tosshub.com/lingo/hrb/images/story/202302/untitled-design-2023-02-16t165401077160223050538.png?size=945:532",
       quote:
         "The path to the CEO's office should not be through the CFO's office, and it should not be through the marketing department. It needs to be through engineering and design",
-    },
-    {
-      id: 203,
-      img: "https://cdn.britannica.com/98/236598-050-9F0C5A8D/Mark-Zuckerberg-2019.jpg",
-      quote:
-        "We see our customers as invited guests to a party, and we are the hosts. It's our job every day to make every important aspect of the customer experience a little bit better",
     },
   ];
 
