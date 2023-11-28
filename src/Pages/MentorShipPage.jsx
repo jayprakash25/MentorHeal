@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Footer, NavBar } from "../components/index";
+import {  NavBar } from "../components/index";
 import { Data } from "../Data/index";
 import { LiaGreaterThanSolid } from "react-icons/lia";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
