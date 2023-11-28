@@ -17,7 +17,7 @@ export default function ReadFull() {
       <NavBar />
       <div className="pt-20">
         {/* <img src={data.state.Background} className="" alt="" /> */}
-        <h1 className=" top-64 text-[#001C30] hidden md:block pl-44  md:text-5xl font-poppins  ">
+        <h1 className=" top-64 text-[#001C30] hidden md:block pl-44  md:text-5xl   text-transparent  bg-gradient-to-l from-[#4a7999] via-[#5b99c3] to-[#4c8db8]  bg-clip-text">
           {id}
         </h1>
       </div>
@@ -34,7 +34,7 @@ export default function ReadFull() {
                     setPoint(index);
                   }}
                 >
-                  <h1 className="text-lg text-gray-400 font-poppins">
+                  <h1 className="text-lg text-gray-400 ">
                     {item.Tittle.toUpperCase()}
                   </h1>
                 </button>
@@ -44,7 +44,7 @@ export default function ReadFull() {
         </div>
 
         <div className="max-w-2xl space-y-3 ">
-          <h1 className="py-4 text-xl font-semibold text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text md:text-2xl lg:text-3xl">
+          <h1 className="py-4 text-xl font-bold text-transparent  bg-gradient-to-l from-[#4a7999] via-[#5b99c3] to-[#4c8db8]  bg-clip-text md:text-2xl lg:text-3xl">
             {data.state.Blog[point].Tittle}
           </h1>
           {data.state.Blog[point].Points.map((item, index) => {

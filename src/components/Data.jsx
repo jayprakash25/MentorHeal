@@ -32,7 +32,7 @@ const Carddata = [
         ],
       },
       {
-        Tittle: "MENTAL FITNESS        ",
+        Tittle: "MENTAL FITNESS",
         Points: [
           "IN TODAY’S TIMES, COMPETITION IS MUCH MORE THAN THE PREVIOUS GENERATIONS.",
           "THE WORK PRESSURES ARE MUCH MORE AND THE DEMANDING SCHEDULES ARE MUCH MORE TAXING.",

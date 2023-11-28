@@ -1,11 +1,13 @@
 const Data = [
-  "Relationship",
+  "Health",
   "Career",
-  "Sexual Wellness",
-  "Self Improvement",
-  "Academic",
-  "Psychological Disorders",
-  "LGBTQIA+",
+  "Learning",
+  "Skills",
+  "Decisions",
+  "Relationships ",
+  "Entrepreneurship ",
+  "Financial Literacy ",
+  "Spirituality ",
 ];
 
 export default Data;

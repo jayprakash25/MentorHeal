@@ -42,14 +42,14 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
                 window.scrollTo(0, 0);
               }}
             >
-              {/* <p className="text-2xl font-semibold text-cyan-400 md:text-3xl ">
+              {/* <p className="text-2xl text-cyan-400 md:text-3xl ">
                 MentorHeal
               </p> */}
               <img src={MainLogo} className="w-52" alt="" />
             </Link>
           </div>
           <div className="items-center hidden lg:flex">
-            <ul className="flex flex-row items-center mr-6 space-x-6 font-semibold list-none md:text-sm">
+            <ul className="flex flex-row items-center mr-6 space-x-6 list-none md:text-sm">
               {/* dropdown web..... */}
               <div className="flex flex-col">
                 <li
@@ -74,7 +74,7 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
                           className="transition duration-300 ease-in-out cursor-pointer"
                           key={index}
                         >
-                          {" "}
+                        {" "}
                           <Link
                             key={index}
                             to={`/${item.Title}`}
@@ -115,7 +115,7 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
                     more ? "block" : "hidden"
                   } absolute bg-white shadow-md p-2 mt-3 rounded-lg`}
                 >
-                  <ul className="grid grid-cols-2 gap-3 p-3 font-normal">
+                  <ul className="grid grid-cols-2 gap-3 p-3 ">
                     <li className="cursor-pointer">
                       <Link to={"/Blog"}>Blog</Link>
                     </li>
@@ -149,7 +149,7 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
               )}
               {mentorjwt ? null : (
                 <li className="cursor-pointer ">
-                  <Link to="/Mentor-Ship-Page">Join as Mentor</Link>
+                  <Link to="/join">Join as Mentor</Link>
                 </li>
               )}
             </ul>
@@ -245,7 +245,7 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial }) => {
                   )}
                   {mentorjwt ? null : (
                     <li value="cursor-pointer transition ease-in-out duration-300">
-                      <Link to="/Mentor-Ship-Page">Join as Mentor</Link>
+                      <Link to="/join">Join as Mentor</Link>
                     </li>
                   )}
                   <p value="cursor-pointer transition ease-in-out duration-300">

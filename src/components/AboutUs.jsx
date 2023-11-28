@@ -32,9 +32,9 @@ const AboutUs = () => {
 
       {/* Our mission section..... */}
 
-    <div className="pt-20">
-      <OurMission />
-    </div>
+      <div className="pt-20">
+        <OurMission />
+      </div>
 
       {/* Our Vision Section...... */}
 

@@ -5,6 +5,7 @@ import { auth, db } from "../../Firebase";
 import { doc, setDoc } from "firebase/firestore";
 import GoogleIcon from "@mui/icons-material/Google";
 import emailjs from "@emailjs/browser";
+import MainLogo from "../../assets/MainLogo.png";
 export default function Signup() {
   const GoogleProvider = new GoogleAuthProvider();
 
@@ -58,36 +59,37 @@ export default function Signup() {
   return (
     <>
       <Link to="/">
-        <div className="p-9 flex items-center space-x-0.5">
-          <p className="text-2xl font-bold text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text md:text-3xl">
-            MentorHeal
-          </p>
+        <div className="flex items-center py-5 px-9 ">
+          <img src={MainLogo} className="w-52" alt="" />
         </div>
       </Link>
 
-      <main className="pt-7">
+      <main className="pt-16">
         <div>
-          <div className="my-11">
+          <div className="mt-11">
             <div className=" space-y-1.5 text-center">
-              <h1 className="text-2xl font-bold lg:text-3xl md:text-4xl">
-                Get MentorShip
+              <h1 className="text-xl font-Kanit lg:text-5xl md:text-4xl">
+                Get{" "}
+                <span className="text-transparent bg-gradient-to-l from-[#4a7999] via-[#5b99c3] to-[#4c8db8] bg-clip-text">
+                  MentorShip
+                </span>
               </h1>
-              <p className="text-[#676b5f] font-semibold md:text-lg">
+              <p className="text-[#676b5f] font-Kanit md:text-lg">
                 Sign Up for free!
               </p>
             </div>
-            <div className="flex flex-col justify-center max-w-md mx-auto my-10 space-y-8">
-              <h2 className="text-[#676b5f]  text-center mx-auto max-w-md md:max-w-xl text-sm md:text-base ">
+            <div className="flex flex-col justify-center max-w-md mx-auto mt-8 space-y-8">
+              <h2 className="text-[#676b5f]  text-center mx-auto max-w-md md:max-w-xl text-sm md:text-base font-Kanit">
                 By continuing, you agree to MentorHeal&apos;s Terms and
                 Conditions and confirm you have read our Privacy Notice.
               </h2>
               <button
-                className="flex items-center justify-center rounded-full space-x-3 border-[1px] hover:bg-[#eeefea] ease-in-out duration-500 border-slate-300 px-8 text-sm py-3.5"
+                className="flex items-center justify-center rounded-full space-x-3 border-[1px] hover:bg-[#eeefea] ease-in-out duration-500 border-slate-300 px-5 lg:px-8 text-sm py-3.5"
                 onClick={GoogleSignin}
               >
                 {/* <img src={GoogleIcon} className="w-7 h-7" /> */}
                 <GoogleIcon fontSize="medium" />
-                <h1 className=" font-poppins">Sign up with Google</h1>
+                <h1 className=" font-Kanit">Sign up with Google</h1>
               </button>
             </div>
           </div>

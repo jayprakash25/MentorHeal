@@ -29,10 +29,10 @@ export default function MGP({ page }) {
     <section className={` ${page === "home" ? "mb-20 mt-14" : null} `}>
       {page === "home" ? null : <NavBar />}
       {page === "home" ? (
-        <div className="text-3xl font-semibold text-center font-cardo md:text-4xl ">
-          <h1>
+        <div className="text-3xl text-center md:text-4xl ">
+          <h1 className="font-Kanit">
             MentorHeal{" "}
-            <span className="font-bold text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text">
+            <span className="font-Kanit text-transparent bg-gradient-to-l from-[#4a7999] via-[#5b99c3] to-[#4c8db8] bg-clip-text">
               Guidance
             </span>{" "}
             Program
@@ -67,17 +67,17 @@ export default function MGP({ page }) {
                       page === "home" ? "max-w-xs lg:max-w-sm" : "max-w-sm"
                     } `}
                   >
-                    <h1 className="text-3xl font-bold md:text-4xl">
+                    <h1 className="text-3xl font-Kanit md:text-4xl">
                       Save on 3 Groups
                     </h1>
-                    <p className="mt-3.5 font-semibold text-gray-500">
+                    <p className="mt-3.5 font-Kanit text-gray-500">
                       what will you get:
                     </p>
                     {_.list.map((i) => {
-                      return <li className="mt-3.5 text-gray-500 ">{i}</li>;
+                      return <li className="mt-3.5 text-gray-500 font-Kanit">{i}</li>;
                     })}
-                    <button className="flex items-center justify-center px-6 py-2 mt-8 space-x-2 font-semibold text-white duration-500 ease-in-out rounded-full bg-cyan-400">
-                      <h1>Get up to {_.off}%</h1>
+                    <button className="flex items-center justify-center px-6 py-2 mt-8 space-x-2 text-white duration-500 ease-in-out rounded-full font-Kanit bg-[#4a7999]">
+                      <h1 className="font-Kanit">Get up to {_.off}%</h1>
                     </button>
                   </ul>
                 </div>

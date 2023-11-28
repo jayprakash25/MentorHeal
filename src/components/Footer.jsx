@@ -10,7 +10,7 @@ const Footer = ({ Scrolltoref }) => {
   return (
     // 007384
     <div className="">
-      <footer className="relative py-8 text-sm text-center bg-cyan-600">
+      <footer className="relative py-8 text-sm text-center bg-[#4a7999]">
         <div className="container px-4 mx-auto">
           <div className="flex flex-wrap text-left lg:text-left">
             <div className="w-full px-4 text-center text-black lg:w-6/12">
@@ -22,13 +22,13 @@ const Footer = ({ Scrolltoref }) => {
                     window.scrollTo(0, 0);
                   }}
                 >
-                  <p className="mx-auto mb-5 text-3xl font-bold text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text md:text-4xl">
+                  <p className="mx-auto mb-5 text-3xl font-Kanit text-transparent bg-gradient-to-l from-[#77b3db] via-[#65a6d1] to-[#5ba4d4] bg-clip-text md:text-4xl">
                     MentorHeal
                   </p>
                 </Link>
               </div>
               <div className="max-w-xl text-xs text-left text-white lg:pl-20 lg:text-sm lg:text-center ">
-                <p className="leading-5">
+                <p className="leading-5 font-Kanit">
                   MentorHeal is the holistic wellness mentorship platform where
                   we connect the mentees with experienced, qualified and
                   certified mentors across the country.
@@ -48,7 +48,7 @@ const Footer = ({ Scrolltoref }) => {
                     onClick={() => {
                       setEmail("");
                     }}
-                    className="px-6 py-3 bg-[#00b8d3] text-white font-semibold rounded-3xl"
+                    className="px-6 py-3 bg-[#5789aa]  text-white font-Kanit rounded-3xl"
                   >
                     Subscribe Now!!
                   </button>
@@ -58,29 +58,29 @@ const Footer = ({ Scrolltoref }) => {
             <div className="w-full px-4 lg:w-6/12">
               <div className="flex flex-wrap mb-6 items-top">
                 <div className="w-full px-4 ml-auto lg:w-4/12">
-                  <span className="block mb-2 text-sm font-semibold text-white uppercase">
+                  <span className="block mb-2 text-sm text-white uppercase font-Kanit">
                     More
                   </span>
-                  <ul className="text-[#dde5f1] list-unstyled space-y-4 my-6 cursor-pointer">
-                    <li>
+                  <ul className="text-[#dde5f1] list-unstyled space-y-4 my-6 cursor-pointer ">
+                    <li className="font-Kanit">
                       <Link to={"/about"}>About Us</Link>
                     </li>
-                    <li>
+                    <li className="font-Kanit">
                       <Link to={"/how"}>How it works</Link>
                     </li>
-                    <li>
+                    <li className="font-Kanit">
                       <Link to={"/join"}>Join as Mentor</Link>
                     </li>
                   </ul>
                 </div>
                 <div className="w-full px-4 ml-auto lg:w-4/12">
-                  <span className="block mb-2 text-sm font-semibold text-white uppercase">
+                  <span className="block mb-2 text-sm text-white uppercase font-Kanit">
                     Mentorship Options
                   </span>
                   <ul className="text-[#dde5f1]  list-unstyled  space-y-3 my-6 cursor-pointer">
                     {Carddata.map((item, index) => {
                       return (
-                        <li className="cursor-pointer" key={index}>
+                        <li className="cursor-pointer font-Kanit" key={index}>
                           {" "}
                           <Link
                             key={index}
@@ -99,14 +99,14 @@ const Footer = ({ Scrolltoref }) => {
                   </ul>
                 </div>
                 <div className="w-full px-4 lg:w-4/12">
-                  <span className="block mb-2 text-sm font-semibold text-white uppercase">
+                  <span className="block mb-2 text-sm text-white uppercase font-Kanit">
                     Other Resources
                   </span>
                   <ul className="text-[#dde5f1] list-unstyled space-y-4 my-6 cursor-pointer">
                     {/* <li>Support</li>
                     <li>Terms &amp; Conditions</li>
                     <li>Privacy Policy</li> */}
-                    <li onClick={Scrolltoref}>Contact Us </li>
+                    <li onClick={Scrolltoref} className="font-Kanit">Contact Us </li>
                   </ul>
                 </div>
               </div>
@@ -146,7 +146,7 @@ const Footer = ({ Scrolltoref }) => {
         <hr className="my-6  dark:bg-gray-400 border-0 h-[1.5px]" />
         <div className="flex flex-wrap items-center justify-center md:justify-between">
           <div className="w-full px-4 mx-auto text-center md:w-4/12">
-            <div className="py-1 text-sm font-semibold text-white">
+            <div className="py-1 text-sm text-white font-Kanit">
               Copyright © <span id="get-current-year">2023</span>
               <a href="/" className="">
                 {" "}
@@ -157,7 +157,7 @@ const Footer = ({ Scrolltoref }) => {
         </div>
         <hr className="my-6  dark:bg-gray-400 border-0 h-[1.5px]" />
         {/* 42909d */}
-        <div className="text-[#dde5f1] bg-cyan-700 py-5 px-5 lg:px-20 mx-10 lg:mx-20 rounded-lg font-semibold text-sm lg:leading-10  ">
+        <div className="text-[#dde5f1] bg-cyan-700 py-5 px-5 lg:px-20 mx-10 lg:mx-20 rounded-lg font-Kanit text-sm lg:leading-10  ">
           <p>
             Disclaimer: We are diligently refining our prototype services,
             eagerly preparing for the highly anticipated launch announcement.

@@ -34,9 +34,9 @@ export default function LatestBlogs() {
   return (
     <>
       <div className="mt-32 text-center">
-        <h1 className="text-3xl font-semibold md:text-4xl">
+        <h1 className="text-3xl font-Kanit md:text-4xl">
           Latest on Your{" "}
-          <span className="font-bold text-center text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text">
+          <span className="font-Kanit text-transparent bg-gradient-to-l from-[#4a7999] via-[#5b99c3] to-[#4c8db8] bg-clip-text">
             MentorHeal
           </span>{" "}
           Blog
@@ -67,7 +67,7 @@ export default function LatestBlogs() {
                   />
                 </div>
                 <div>
-                  <p className="font-bold underline">{item.BLogTittle}</p>
+                  <p className="underline font-Kanit">{item.BLogTittle}</p>
                 </div>
               </div>
             </React.Fragment>
@@ -76,8 +76,8 @@ export default function LatestBlogs() {
       </section>
       <div className="flex justify-center ">
         <Link to="/Blog">
-          <button className="py-3 font-semibold text-white px-9 bg-cyan-400 rounded-3xl">
-            Read More Articles
+          <button className="py-3  text-white px-9 bg-[#4a7999] rounded-3xl font-Kanit">
+            Read More Articles 
           </button>
         </Link>
       </div>

@@ -95,7 +95,7 @@ export default function JoinMentor() {
         <div className="w-[90vw] md:w-[60vw] lg:w-[45vw] px-8 bg-white rounded-md py-3 overflow-y-scroll ">
           <div className="space-y-3 text-lg">
             <h1 className="font-semibold font-poppins">
-              Please register for Workshop This question is required.*
+               Register as a Mentor*
             </h1>
             <p className="font-light text-semibold">
               Contact information will only be used to coordinate sessions with
@@ -208,7 +208,7 @@ export default function JoinMentor() {
           <div className="flex justify-center mb-5 mt-11">
             <button
               onClick={uploadImage}
-              className="py-3 text-sm font-semibold text-white rounded-full px-28 bg-cyan-400"
+              className="py-3 text-sm font-semibold text-white rounded-full px-28 bg-[#4a7999]"
             >
               {loader ? (
                 <BiLoaderAlt
@@ -223,7 +223,6 @@ export default function JoinMentor() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

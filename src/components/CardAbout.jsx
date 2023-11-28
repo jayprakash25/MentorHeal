@@ -65,7 +65,7 @@ const CardAbout = () => {
                   <div className="text-xl font-bold md:text-2xl ">
                     {member.Name}
                   </div>
-                  <p className="font-semibold ">{member.Position}</p>
+                  <p className="font-Kanit ">{member.Position}</p>
                 </div>
               </div>
             </React.Fragment>

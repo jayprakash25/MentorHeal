@@ -33,13 +33,13 @@ const TeamCard = () => {
   return (
     <div className="mx-5 my-10">
       <div>
-        <h1 className="px-5 text-3xl font-semibold leading-10 text-center md:text-4xl">
+        <h1 className="px-5 text-3xl leading-10 text-center font-Kanit md:text-4xl">
           Meet your{" "}
-          <span className="font-bold text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text">
+          <span className="font-Kanit text-transparent bg-gradient-to-l from-[#4a7999] via-[#5b99c3] to-[#4c8db8] bg-clip-text">
             premier advisors
           </span>
           , the
-          <span className="font-bold text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text">
+          <span className="font-Kanit text-transparent bg-gradient-to-l from-[#4a7999] via-[#5b99c3] to-[#4c8db8] bg-clip-text">
             {" "}
             leading experts
           </span>
@@ -52,10 +52,10 @@ const TeamCard = () => {
             <React.Fragment key={index}>
               <div className="max-w-md rounded-md mx-auto cursor-pointer px-4 border-[1px] border-gray-200   hover:shadow-md ease-in-out duration-300 ">
                 <div className={newLocal}>
-                  <div className="text-xl font-bold text-transparent md:text-2xl bg-gradient-to-l from-cyan-600 via-cyan-400 to-cyan-500 bg-clip-text">
+                  <div className="text-xl text-transparent font-Kanit md:text-2xl bg-gradient-to-l from-[#4a7999] via-[#5b99c3] to-[#4c8db8] bg-clip-text">
                     {member.name}
                   </div>
-                  <p className="font-semibold text-cyan-500">
+                  <p className="font-Kanit text-[#4a7999]">
                     {member.position}
                   </p>
                 </div>

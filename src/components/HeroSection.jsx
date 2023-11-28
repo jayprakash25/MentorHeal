@@ -16,7 +16,7 @@ const HeroSection = () => {
           <div className="flex flex-col items-center justify-between py-8 space-y-6 lg:px-5 md:items-start lg:space-y-9">
             <div className="flex flex-col items-center justify-between px-5 py-8 space-y-6 md:items-start lg:space-y-9">
               <h1 className="text-2xl md:text-4xl lg:max-w-[40vw] leading-10 font-Kanit">
-                <span className="font-Kanit text-transparent bg-gradient-to-l from-[#4a7999] via-[#5087ac] to-[#4a7ea1] bg-clip-text">
+                <span className="font-Kanit text-transparent bg-gradient-to-l from-[#4a7999] via-[#5b99c3] to-[#4c8db8] bg-clip-text">
                   Mentorship
                 </span>{" "}
                 can help you embrace your potential!
@@ -26,7 +26,7 @@ const HeroSection = () => {
                 realise it and discover our purpose.
               </p>
               <Link to="/how">
-                <button className="py-2 text-sm font-semibold text-white duration-500 ease-in-out rounded-full px-9 bg-cyan-400">
+                <button className="py-2 text-sm font-semibold text-white duration-500 ease-in-out rounded-full px-9 bg-[#4a7999]">
                   Get Started
                 </button>
               </Link>

@@ -35,7 +35,6 @@ const App = () => {
         <Route path="/community" element={<Community />} />
         <Route path="/Mentor-Ship-Page" element={<MentorShipPage />} />
         <Route path="/queries/:postid/" element={<ReadFullQuestion />} />
-        {/* <Route path="/Mentor-Ship-Page/form" element={<JoinMentor />} /> */}
         <Route path="/MGP" element={<MGP />} />
       </Routes>
     </>

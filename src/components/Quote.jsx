@@ -42,9 +42,9 @@ export default function Quote() {
     <section className="mt-32">
       <div className="flex flex-col items-center px-5 my-10 md:px-8">
         <div>
-          <h1 className="py-4 text-3xl font-semibold md:text-4xl">
+          <h1 className="py-4 text-3xl font-Kanit md:text-4xl">
             Wellness Builds
-            <span className="font-bold text-transparent bg-gradient-to-l from-cyan-500 via-cyan-300 to-cyan-500 bg-clip-text">
+            <span className="font-Kanit text-transparent bg-gradient-to-l from-[#4a7999] via-[#5b99c3] to-[#4c8db8] bg-clip-text">
               {" "}
               Character{" "}
             </span>
@@ -64,8 +64,8 @@ export default function Quote() {
                   />
                 </div>
                 <div className="max-w-xs">
-                  <h1 className="text-lg font-semibold">{item.name}</h1>
-                  <h1 className="text-[#8ca1b3] md:text-xl  leading-7 lg:leading-10">
+                  <h1 className="text-lg font-Kanit">{item.name}</h1>
+                  <h1 className="text-[#8ca1b3] md:text-xl font-Kanit  leading-7 lg:leading-8">
                     "{item.quote}"
                   </h1>
                 </div>

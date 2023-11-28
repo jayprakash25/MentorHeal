@@ -63,21 +63,7 @@ export default function Blogs() {
                     />
                   </div>
                   <div>
-                    <h1 className="font-bold underline">{item.BLogTittle}</h1>
-                  </div>
-                  <div className="flex justify-end gap-5 pt-5">
-                    {item.Category?.map((item, index) => {
-                      return (
-                        <>
-                          <button
-                            key={index}
-                            className="px-5 py-1 text-sm font-semibold text-[#5e626e] bg-[#dee6ef]"
-                          >
-                            #{item}
-                          </button>
-                        </>
-                      );
-                    })}
+                    <h1 className="underline font-Kanit">{item.BLogTittle}</h1>
                   </div>
                 </div>
               </React.Fragment>
