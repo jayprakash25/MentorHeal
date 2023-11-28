@@ -157,11 +157,11 @@ export default function JoinMentor() {
               </select>
             </div>
             <div className="flex flex-col space-y-3 md:col-span-2">
-              <label className="pl-1.5">Achievement*</label>
+              <label className="pl-1.5">Bio* <span className="text-sm">(This will be shown in your profile)</span></label>
               <textarea
                 type="text"
                 value={mentor.achievement}
-                placeholder="Achievements"
+                placeholder="Bio"
                 maxLength={250}
                 onChange={(e) => {
                   setmentor({ ...mentor, achievement: e.target.value });

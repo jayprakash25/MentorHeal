@@ -61,7 +61,7 @@ const HowContent = () => {
     {
       image: Set,
       Tittle: "Get Started: Set Up Your Account",
-      Para: "Unlock the door to your journey with just a few clicks",
+      Para: "Unlock the door to your journey with just a few clicks.",
     },
     {
       image: chose,
@@ -71,7 +71,7 @@ const HowContent = () => {
     {
       image: Find,
       Tittle: "Meet Your Guide: Find The Right Mentor",
-      Para: "Connect with experienced mentors which you feel right for you",
+      Para: "Connect with experienced mentors which you feel right for you.",
     },
     {
       image: Schedule,
