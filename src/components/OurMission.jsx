@@ -2,7 +2,7 @@ import ourmission from "../assets/images/ourmission.png";
 
 const OurMission = () => {
   return (
-    <div className="flex flex-col-reverse items-center gap-4 m-8 md:flex-row md:justify-between">
+    <div className="flex flex-col-reverse items-center gap-4 m-8 md:flex-row md:justify-between ">
       <div className="mt-4">
         <h1 className="font-semibold text-2xl lg:text-5xl text-[#00b8d3] ">
           Our Mission

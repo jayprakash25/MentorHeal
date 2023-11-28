@@ -35,9 +35,9 @@ const Transformation = ({ testimonialref }) => {
   };
 
   return (
-    <>
+    <section className="my-20">
       <div
-        className="flex flex-col items-center justify-center my-8"
+        className="flex flex-col items-center justify-center my-5"
         ref={testimonialref}
       >
         <div className="text-center">
@@ -70,7 +70,7 @@ const Transformation = ({ testimonialref }) => {
           })}
         </Slider>
       </div>
-    </>
+    </section>
   );
 };
 

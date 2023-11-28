@@ -23,7 +23,7 @@ const HeroSection = () => {
               </h1>
               <p className="text-lg text-[#8ca1b3] md:text-xl md:max-w-[40vw]">
                 We are all already abundant. We just need a mentor to help us
-                realise it and discover our purpose
+                realise it and discover our purpose.
               </p>
               <Link to="/how">
                 <button className="py-2 text-sm font-semibold text-white duration-500 ease-in-out rounded-full px-9 bg-cyan-400">

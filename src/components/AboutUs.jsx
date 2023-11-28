@@ -24,15 +24,17 @@ const AboutUs = () => {
 
       {/* Herosection........ */}
 
-      <HeroAbout />
+      {/* <HeroAbout /> */}
 
       {/* our story...... */}
 
-      <OurStory />
+      {/* <OurStory /> */}
 
       {/* Our mission section..... */}
 
+    <div className="pt-20">
       <OurMission />
+    </div>
 
       {/* Our Vision Section...... */}
 

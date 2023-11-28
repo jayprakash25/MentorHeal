@@ -161,7 +161,7 @@ const Carddata = [
   {
     image: Learning,
     Title: "Learning",
-    Para: "Continual learning and growth help individuals stay current and prepared for new opportunities.",
+    Para: "Continous learning and growth help individuals stay current and prepared for new opportunities.",
     Blog: [
       {
         Tittle: "SELF-EDUCATION",
@@ -220,7 +220,7 @@ const Carddata = [
   {
     image: Skills,
     Title: "Skills",
-    Para: " Developing new skills and honing existing ones leads to increased self-confidence and personal growth.",
+    Para: " Developing new skills and working on existing ones leads to increased self-confidence and personal growth.",
     Blog: [
       {
         Tittle: "COMMUNICATION",
