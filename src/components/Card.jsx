@@ -43,7 +43,7 @@ export const FirstCard = () => {
   return (
     <div className="px-4 bg-[#4a7999] w-[90vw] lg:w-[80vw] mx-auto rounded-lg">
       <section className=" my-28">
-        <div className="items-center md:flex md:flex-row-reverse p-7 md:justify-around md:space-x-5 md:px-5">
+        <div className="items-center px-3 py-5 md:flex md:flex-row-reverse md:justify-around md:space-x-5 md:px-5">
           <div className="flex flex-col order-2 py-5 space-y-8 md:text-left">
             <h1 className="text-2xl  text-white md:text-4xl md:max-w-[50vw] leading-8 font-Kanit ">
               How will{" "}
