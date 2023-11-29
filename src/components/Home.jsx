@@ -103,7 +103,6 @@ export default function Home() {
       <NavBar
         Scrolltoref={Scrolltoref}
         Scrolltotestimonial={Scrolltotestimonial}
-        ScrolltoMGP={ScrolltoMGP}
       />
       <HeroSection Scrolltoref={Scrolltoref} />
       <FirstCard />
