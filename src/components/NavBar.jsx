@@ -240,6 +240,15 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial ,  }) => {
                       <Link to="/join">Join as Mentor</Link>
                     </li>
                   )}
+                  <li
+                  onClick={() => {
+                    setdropdown(!dropdown);
+                  }}
+                  className="flex items-center space-x-1 cursor-pointer"
+                >
+                  <h1>More</h1>
+                  <ArrowDropDownIcon />
+                </li>
                   <p value="cursor-pointer transition ease-in-out duration-300">
                     <Link to={"/blog"}>Blog</Link>
                   </p>
@@ -250,15 +259,6 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial ,  }) => {
                     <Link to={"/MGP"}>MGP</Link>
                   </p>
                 </div>
-                <li
-                  onClick={() => {
-                    setdropdown(!dropdown);
-                  }}
-                  className="flex items-center space-x-1 cursor-pointer"
-                >
-                  <h1>More</h1>
-                  <ArrowDropDownIcon />
-                </li>
               </ul>
             </div>
           </div>
