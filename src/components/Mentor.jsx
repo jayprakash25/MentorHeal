@@ -127,7 +127,7 @@ const Mentor = () => {
           })}
         </div>
       </div>
-      <div className="my-20">
+      <div className="my-14">
         <JoinMentor />
       </div>
       <Appointment />
