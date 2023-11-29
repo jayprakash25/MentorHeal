@@ -73,7 +73,7 @@ export default function Signup() {
               <h1 className="text-3xl font-Kanit lg:text-5xl md:text-4xl">
                 Get{" "}
                 <span className="text-transparent bg-gradient-to-l from-[#4a7999] via-[#5b99c3] to-[#4c8db8] bg-clip-text">
-                  MentorShip
+                  Mentorship
                 </span>
               </h1>
               <p className="text-[#676b5f] font-Kanit md:text-lg">
