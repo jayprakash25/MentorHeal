@@ -41,11 +41,7 @@ export default function Home() {
     });
   };
 
-  const ScrolltoMGP = () => {
-    MGPref.current.scrollIntoView({
-      behaviour: "smooth ",
-    });
-  };
+
   const Data = [
     {
       image: oneonone,
@@ -117,9 +113,7 @@ export default function Home() {
       <Steps />
       <Transformation testimonialref={testimonialref} />
       <TeamCard />
-      <div ref={MGPref}>
       <MGP page={"home"}/>
-      </div>
       <Quote />
       <Whatsup />
       <LatestBlogs />

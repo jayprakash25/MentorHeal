@@ -6,7 +6,7 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import Carddata from "./Data";
 import { useEffect } from "react";
 import MainLogo from "../assets/MainLogo.png";
-const NavBar = ({ Scrolltoref, Scrolltotestimonial, ScrolltoMGP }) => {
+const NavBar = ({ Scrolltoref, Scrolltotestimonial ,  }) => {
   // state handlers
   const mentorjwt = localStorage.getItem("mentorjwt");
   const [toggle, setToggle] = useState(false);
@@ -74,7 +74,7 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial, ScrolltoMGP }) => {
                           className="transition duration-300 ease-in-out cursor-pointer"
                           key={index}
                         >
-                          {" "}
+                        {" "}
                           <Link
                             key={index}
                             to={`/${item.Title}`}
@@ -125,8 +125,8 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial, ScrolltoMGP }) => {
                     <li className="cursor-pointer">
                       <Link to="/mentors"> Mentors </Link>
                     </li>
-                    <li onClick={ScrolltoMGP} className="cursor-pointer">
-                       MGP 
+                    <li  className="cursor-pointer">
+                      <Link to="/MGP"> MGP </Link>
                     </li>
                     {/* <li onClick={Scrolltoref} className="cursor-pointer">
                       Contact us
@@ -219,6 +219,7 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial, ScrolltoMGP }) => {
                 <li className="cursor-pointer">
                   <Link to="/mentors"> Mentors </Link>
                 </li>
+               
                 <div
                   className={` space-y-4 text-sm ${
                     dropdown ? "block" : "hidden"
@@ -245,11 +246,8 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial, ScrolltoMGP }) => {
                   {/* <p value="cursor-pointer transition ease-in-out duration-300">
                     <Link to={"/community"}>community</Link>
                   </p> */}
-                  <p
-                    onClick={ScrolltoMGP}
-                    value="cursor-pointer transition ease-in-out duration-300"
-                  >
-                    MGP
+                  <p  value="cursor-pointer transition ease-in-out duration-300">
+                    <Link to={"/MGP"}>MGP</Link>
                   </p>
                 </div>
                 <li
