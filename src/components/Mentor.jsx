@@ -79,7 +79,7 @@ const Mentor = () => {
               for it!).
             </p>
           </div>
-          <div className="flex flex-col lg:flex-row mt-8 justify-center gap-6">
+          <div className="flex flex-col justify-center gap-6 mt-8 lg:flex-row">
             <div className="space-y-2.5 max-w-xs mx-auto">
               <h1 className="text-xl ">Learn</h1>
               <p className="text-[#8ca1b3]">
@@ -108,7 +108,7 @@ const Mentor = () => {
           </h1>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-14 items-start">
+        <div className="grid items-start md:grid-cols-2 lg:grid-cols-3 gap-14">
           {data.map((item, index) => {
             return (
               <div
