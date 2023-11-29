@@ -8,7 +8,6 @@ import pro5 from "../assets/images/pro5.png";
 import pro6 from "../assets/images/pro6.png";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import Form from "./Form";
 import Appointment from "./Appointment";
 import Whatsup from "./Whatsup";
 import { JoinMentor } from "../features";
@@ -47,47 +46,48 @@ const data = [
 ];
 
 const Mentor = () => {
-  const location = useLocation(); 
+  const location = useLocation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
 
-
   return (
     <div>
       <NavBar />
 
-      <div
-        className="flex flex-col items-center p-8 pt-24 space-y-8 text-center md:flex-row md:justify-around "
-      >
-        <div >
+      <div className="flex flex-col items-center p-8 pt-24 space-y-8 text-center md:flex-row md:justify-around ">
+        <div>
           <img
             src={mentor}
             className="max-w-sm md:max-w-md lg:max-w-lg"
             alt=""
           />
         </div>
-        <div  className="md:max-w-lg">
+        <div className="md:max-w-lg">
           <div className="space-y-4">
             <h1 className="text-2xl">
-              Join our <span className=" text-transparent bg-gradient-to-l from-[#4a7999] via-[#5b99c3] to-[#4c8db8] bg-clip-text">community</span> of world-class mentors
+              Join our{" "}
+              <span className=" text-transparent bg-gradient-to-l from-[#4a7999] via-[#5b99c3] to-[#4c8db8] bg-clip-text">
+                community
+              </span>{" "}
+              of world-class mentors
             </h1>
             <p className="text-[#8ca1b3]">
               As a MentorHeal mentor, you’ll get to provide mentorship to
-              mentees  in your own style and on your own schedule (and get paid
+              mentees in your own style and on your own schedule (and get paid
               for it!).
             </p>
           </div>
-          <div className="flex my-8">
-            <div className="space-y-2.5">
+          <div className="flex flex-col lg:flex-row mt-8 justify-center gap-6">
+            <div className="space-y-2.5 max-w-xs mx-auto">
               <h1 className="text-xl ">Learn</h1>
               <p className="text-[#8ca1b3]">
                 Route among the safe roads. Find whats waiting for you.
               </p>
             </div>
 
-            <div className="space-y-2.5">
+            <div className="space-y-2.5 max-w-xs mx-auto">
               <h1 className="text-xl ">Share</h1>
               <p className="text-[#8ca1b3]">
                 Your caring gets its way. Let your people know.
@@ -98,26 +98,29 @@ const Mentor = () => {
       </div>
 
       <div className="p-8 my-4 text-center space-y-14">
-        <div >
+        <div>
           <h1 className="text-2xl lg:text-3xl">
-            Here’s why mentor's around the world love <span className=" text-transparent bg-gradient-to-l from-[#4a7999] via-[#5b99c3] to-[#4c8db8] bg-clip-text">mentoring</span> on MentorHeal
+            Here’s why mentor's around the world love{" "}
+            <span className=" text-transparent bg-gradient-to-l from-[#4a7999] via-[#5b99c3] to-[#4c8db8] bg-clip-text">
+              mentoring
+            </span>{" "}
+            on MentorHeal
           </h1>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-14 ">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-14 items-start">
           {data.map((item, index) => {
             return (
               <div
                 key={index}
-                className="flex flex-col items-center px-8 space-y-2.5"
+                className="flex flex-col hover:shadow-sm ease-in-out duration-300 items-center px-8 space-y-4 cursor-pointer border-[1px] border-slate-300 p-5 h-[40vh] rounded-lg"
               >
                 <div className="mx-auto">
-                  <img
-                    src={item.image}
-                    className="w-16 h-16 "
-                  />
+                  <img src={item.image} className="w-16 h-16 " />
                 </div>
-                <h1 className="text-xl">{item.title}</h1>
+                <h1 className="text-xl">
+                  {index + 1}. {item.title}
+                </h1>
                 <p className="text-[#8ca1b3]">{item.line}</p>
               </div>
             );
@@ -125,7 +128,7 @@ const Mentor = () => {
         </div>
       </div>
       <div className="my-20">
-      <JoinMentor/>
+        <JoinMentor />
       </div>
       <Appointment />
       <Whatsup />
