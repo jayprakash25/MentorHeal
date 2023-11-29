@@ -113,7 +113,7 @@ const Mentor = () => {
             return (
               <div
                 key={index}
-                className="flex flex-col hover:shadow-sm ease-in-out duration-300 items-center px-8 space-y-4 cursor-pointer border-[1px] border-slate-300 p-5 h-[40vh] rounded-lg"
+                className="flex flex-col hover:shadow-sm ease-in-out duration-300 items-center px-8 space-y-4 cursor-pointer border-[1px] border-slate-300 p-5 h-[50vh] rounded-lg"
               >
                 <div className="mx-auto">
                   <img src={item.image} className="w-16 h-16 " />
