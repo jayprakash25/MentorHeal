@@ -4,32 +4,31 @@ import { useState } from "react";
 import { db } from "../Firebase";
 import { collection, getDocs } from "firebase/firestore";
 import { useEffect } from "react";
-import AllBlogs from "../Data/BlogsData";
 
 export default function LatestBlogs() {
   const navigate = useNavigate();
 
-  // const [AllBlogs, setAllBlogs] = useState(null);
+  const [AllBlogs, setAllBlogs] = useState(null);
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const collectionRef = collection(db, "BLOGS");
-  //       const querySnapshot = await getDocs(collectionRef);
-  //       const blogsData = [];
-  //       querySnapshot.forEach((doc) => {
-  //         if (doc.exists()) {
-  //           blogsData.push(doc.data());
-  //         }
-  //       });
-  //       setAllBlogs(blogsData);
-  //     } catch (error) {
-  //       console.error("Error fetching data:", error);
-  //     }
-  //   };
-  //   fetchData();
-  //   window.scrollTo(0, 0);
-  // }, []);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const collectionRef = collection(db, "BLOGS");
+        const querySnapshot = await getDocs(collectionRef);
+        const blogsData = [];
+        querySnapshot.forEach((doc) => {
+          if (doc.exists()) {
+            blogsData.push(doc.data());
+          }
+        });
+        setAllBlogs(blogsData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>

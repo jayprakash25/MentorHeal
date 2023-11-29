@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { db } from "../Firebase";
 import { collection, getDocs } from "firebase/firestore";
-import BlogsData from "../Data/BlogsData";
 import Loader from "./Loader";
 export default function Blogs() {
   const navigate = useNavigate();
@@ -39,7 +38,7 @@ export default function Blogs() {
         {loading ? (
           <Loader text={"loading..."} />
         ) : (
-          BlogsData?.map((item, index) => {
+          AllBlogs?.map((item, index) => {
             return (
               <React.Fragment key={index}>
                 <div
