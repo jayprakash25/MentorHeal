@@ -68,7 +68,7 @@ export default function MentorShipPage() {
     <>
       <NavBar />
       {/* Herosection-1 */}
-      <div className="bg-[#f9f9f9] flex flex-col lg:flex-row lg:justify-evenly justify-center items-center   pt-28 px-5 pb-8 lg:shadow-sm">
+      <div className="bg-[#f9f9f9] flex flex-col lg:flex-row lg:justify-evenly justify-center items-center  pt-28 px-5 pb-8 lg:shadow-sm">
         <div>
           <img
             src="https://images.pexels.com/photos/6325984/pexels-photo-6325984.jpeg?auto=compress&cs=tinysrgb&w=600"

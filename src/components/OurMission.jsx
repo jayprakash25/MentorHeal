@@ -5,7 +5,7 @@ const OurMission = () => {
     <div className="flex flex-col-reverse items-center gap-4 m-8 md:flex-row md:justify-between ">
       <div className="mt-4">
         <h1 className="font-Kanit text-2xl lg:text-5xl text-[#4a7999] ">
-          Our Mission
+          OUR MISSION
         </h1>
         <p className="text-[#7C7C7C] font-Kanit leading-5 text-[13px] md:text-[16.5px]  md:leading-7 lg:leading-9 w-80 lg:w-[40vw] mt-5">
           MentorHeal aims to be India’s pioneering holistic wellness brand,

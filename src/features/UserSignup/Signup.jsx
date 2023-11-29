@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth, db } from "../../Firebase";
 import { doc, setDoc } from "firebase/firestore";
+import { NavBar } from "../../components/index";
 import GoogleIcon from "@mui/icons-material/Google";
 import emailjs from "@emailjs/browser";
 import MainLogo from "../../assets/MainLogo.png";
@@ -58,17 +59,18 @@ export default function Signup() {
 
   return (
     <>
-      <Link to="/">
+      {/* <Link to="/">
         <div className="flex items-center py-5 px-9 ">
           <img src={MainLogo} className="w-52" alt="" />
         </div>
-      </Link>
+      </Link> */}
+      <NavBar/>
 
-      <main className="pt-16">
+      <main className="pt-36">
         <div>
           <div className="mt-11">
             <div className=" space-y-1.5 text-center">
-              <h1 className="text-xl font-Kanit lg:text-5xl md:text-4xl">
+              <h1 className="text-3xl font-Kanit lg:text-5xl md:text-4xl">
                 Get{" "}
                 <span className="text-transparent bg-gradient-to-l from-[#4a7999] via-[#5b99c3] to-[#4c8db8] bg-clip-text">
                   MentorShip

@@ -28,6 +28,7 @@ export default function Home() {
   // refs
   const formref = useRef();
   const testimonialref = useRef();
+  const MGPref = useRef();
 
   const Scrolltoref = () => {
     formref.current.scrollIntoView({
@@ -36,6 +37,12 @@ export default function Home() {
   };
   const Scrolltotestimonial = () => {
     testimonialref.current.scrollIntoView({
+      behaviour: "smooth ",
+    });
+  };
+
+  const ScrolltoMGP = () => {
+    MGPref.current.scrollIntoView({
       behaviour: "smooth ",
     });
   };
@@ -100,6 +107,7 @@ export default function Home() {
       <NavBar
         Scrolltoref={Scrolltoref}
         Scrolltotestimonial={Scrolltotestimonial}
+        ScrolltoMGP={ScrolltoMGP}
       />
       <HeroSection Scrolltoref={Scrolltoref} />
       <FirstCard />
@@ -109,7 +117,9 @@ export default function Home() {
       <Steps />
       <Transformation testimonialref={testimonialref} />
       <TeamCard />
+      <div ref={MGPref}>
       <MGP page={"home"}/>
+      </div>
       <Quote />
       <Whatsup />
       <LatestBlogs />

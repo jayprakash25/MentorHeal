@@ -13,7 +13,7 @@ const Prophecy = () => {
       <div className="space-y-2">
         <div className="flex flex-col-reverse items-center md:flex-row md:justify-around ">
           <div className="py-5 space-y-2 ">
-            <h1 className="text-2xl lg:text-3xl text-[#00b8d3] font-Kanit">
+            <h1 className="text-2xl lg:text-3xl text-[#4a7999] font-Kanit">
               Enable youth empowerment
             </h1>
             <p className="text-[#7C7C7C] font-medium text-[13px] md:text-[16.5px] lg:text-[20px] leading-6 md:leading-7 lg:leading-9 w-80 lg:w-[625px] font-Kanit">
@@ -29,7 +29,7 @@ const Prophecy = () => {
 
         <div className="flex flex-col-reverse items-center md:flex-row-reverse md:justify-around">
           <div className="py-5 space-y-2">
-            <h1 className="text-2xl lg:text-3xl text-[#00b8d3] font-Kanit">
+            <h1 className="text-2xl lg:text-3xl text-[#4a7999] font-Kanit">
               Become the beacon of learning
             </h1>
             <p className="text-[#7C7C7C] font-medium text-[13px] md:text-[16.5px] lg:text-[20px] leading-6 md:leading-7 lg:leading-9 w-80 lg:w-[625px] font-Kanit">

@@ -49,7 +49,7 @@ const CardAbout = () => {
   return (
     <div className="flex flex-col items-center justify-center mt-14">
       <div className="pt-8">
-        <h1 className="text-3xl lg:text-4xl">OUR TEAM</h1>
+        <h1 className="text-3xl lg:text-4xl text-[#4a7999]">OUR TEAM</h1>
       </div>
       <div className="grid grid-cols-1 gap-4 p-4 mt-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
         {data.map((member, index) => {
