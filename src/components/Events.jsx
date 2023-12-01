@@ -11,7 +11,7 @@ export default function Events() {
           <p className="text-sm font-semibold lg:text-lg my-11">
           Contact us to invite the professionals in various industries and spaces or conduct a seminar, event or a workshop
           </p>
-          <button className="bg-cyan-500 rounded-full text-white font-semibold px-10 py-1.5">
+          <button className="bg-[#4a7999] rounded-full text-white font-semibold px-10 py-1.5">
             Enquire Now
           </button>
         </div>

@@ -15,6 +15,7 @@ import {
   Transformation,
   Card,
   FirstCard,
+  Events,
 } from "./index";
 import {
   Authentic,
@@ -112,7 +113,8 @@ export default function Home() {
       <Steps />
       <Transformation testimonialref={testimonialref} />
       <TeamCard />
-      <MGP page={"home"}/>
+      {/* <MGP page={"home"}/> */}
+      <Events/>
       <Quote />
       <Whatsup />
       <LatestBlogs />

@@ -125,9 +125,6 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial ,  }) => {
                     <li className="cursor-pointer">
                       <Link to="/mentors"> Mentors </Link>
                     </li>
-                    <li  className="cursor-pointer">
-                      <Link to="/MGP"> MGP </Link>
-                    </li>
                     {/* <li onClick={Scrolltoref} className="cursor-pointer">
                       Contact us
                     </li> */}
@@ -257,9 +254,6 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial ,  }) => {
                   {/* <p value="cursor-pointer transition ease-in-out duration-300">
                     <Link to={"/community"}>community</Link>
                   </p> */}
-                  <p  value="cursor-pointer transition ease-in-out duration-300">
-                    <Link to={"/MGP"}>MGP</Link>
-                  </p>
                 </div>
               </ul>
             </div>

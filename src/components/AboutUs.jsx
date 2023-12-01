@@ -32,7 +32,7 @@ const AboutUs = () => {
 
       {/* Our mission section..... */}
 
-      <div className="pt-20">
+      <div className="lg:pt-20">
         <OurMission />
       </div>
 
