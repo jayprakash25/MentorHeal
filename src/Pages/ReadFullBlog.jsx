@@ -21,7 +21,7 @@ export default function ReadFullBlog() {
           <div className="flex justify-start pt-5 pr-3 md:pr-0">
             <img
               src={Blogimage}
-              className="max-w-sm duration-300 ease-in-out rounded-md cursor-pointer lg:max-w-2xl hover:brightness-90"
+              className="max-w-xs duration-300 ease-in-out rounded-md cursor-pointer lg:max-w-2xl hover:brightness-90"
               alt={Blogimage}
             />
           </div>
