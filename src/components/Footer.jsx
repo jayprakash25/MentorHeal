@@ -5,8 +5,21 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import { Instagram } from "@mui/icons-material";
 import { useState } from "react";
+import { addDoc, collection } from "firebase/firestore";
+import { db } from "../Firebase";
 const Footer = ({ Scrolltoref }) => {
-  const [email, setEmail] = useState("");
+  const [email, setemail] = useState("");
+
+  const handleSubscribe = async () => {
+    console.log(email)
+    try {
+      await addDoc(collection(db, "Subscribes"), {email});
+      alert("success");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     // 007384
     <div className="">
@@ -40,14 +53,12 @@ const Footer = ({ Scrolltoref }) => {
                     placeholder="Your email"
                     value={email}
                     onChange={(e) => {
-                      setEmail(e.target.value);
+                      setemail(e.target.value);
                     }}
                     className="px-6 py-3 leading-tight text-gray-700 border shadow appearance-none rounded-3xl w-54 md:w-64 focus:outline-none focus:shadow-outline"
                   />
                   <button
-                    onClick={() => {
-                      setEmail("");
-                    }}
+                    onClick={handleSubscribe}
                     className="px-6 py-3 bg-[#5789aa]  text-white font-Kanit rounded-3xl"
                   >
                     Subscribe Now!!
@@ -106,7 +117,9 @@ const Footer = ({ Scrolltoref }) => {
                     {/* <li>Support</li>
                     <li>Terms &amp; Conditions</li>
                     <li>Privacy Policy</li> */}
-                    <li onClick={Scrolltoref} className="font-Kanit">Contact Us </li>
+                    <li onClick={Scrolltoref} className="font-Kanit">
+                      Contact Us{" "}
+                    </li>
                   </ul>
                 </div>
               </div>

@@ -11,7 +11,7 @@ export default function ReadFullBlog() {
   return (
     <main>
       <NavBar />
-      <div className="flex justify-between">
+      <div className="flex justify-between pt-20">
         <section className="px-7 lg:pl-48 lg:ml-20 max-w-5xl bg-white border-[0.5px] border-slate-50">
           <div className="flex justify-start pt-5 ">
             <h1 className="max-w-2xl text-xl font-bold underline lg:text-2xl ">
