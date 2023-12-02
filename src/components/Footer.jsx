@@ -11,9 +11,9 @@ const Footer = ({ Scrolltoref }) => {
   const [email, setemail] = useState("");
 
   const handleSubscribe = async () => {
-    console.log(email)
+    console.log(email);
     try {
-      await addDoc(collection(db, "Subscribes"), {email});
+      await addDoc(collection(db, "Subscribes"), { email });
       alert("success");
     } catch (error) {
       console.log(error);
@@ -136,7 +136,7 @@ const Footer = ({ Scrolltoref }) => {
                 className="p-1 bg-white rounded-full"
               />
             </a>
-            <a href="https://instagram.com/mentorheal.forlife?igshid=MzRlODBiNWFlZA==">
+            <a href="https://instagram.com/mentorheal_forlife?igshid=OGQ5ZDc2ODk2ZA==">
               <Instagram
                 style={{ color: "#C13584" }}
                 fontSize="large"
@@ -148,11 +148,13 @@ const Footer = ({ Scrolltoref }) => {
               fontSize="large"
               className="p-1 bg-white rounded-full"
             />
-            <YouTubeIcon
-              style={{ color: "#CD201F" }}
-              fontSize="large"
-              className="p-1 bg-white rounded-full"
-            />
+            <a href="https://youtube.com/@MentorHealOfficial?si=3AGtMKOZFSsogBz1">
+              <YouTubeIcon
+                style={{ color: "#CD201F" }}
+                fontSize="large"
+                className="p-1 bg-white rounded-full"
+              />
+            </a>
           </div>
         </div>
 
