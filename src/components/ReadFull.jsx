@@ -34,7 +34,7 @@ export default function ReadFull() {
                     setPoint(index);
                   }}
                 >
-                  <h1 className="text-lg text-gray-400 ">
+                  <h1 className="text-lg text-gray-400">
                     {item.Tittle.toUpperCase()}
                   </h1>
                 </button>
@@ -42,7 +42,7 @@ export default function ReadFull() {
             );
           })}
         </div>
-        <div className="max-w-2xl space-y-3 ">
+        <div className="max-w-2xl space-y-3">
           <h1 className="py-4 text-xl font-bold text-transparent bg-gradient-to-l from-[#4a7999] via-[#5b99c3] to-[#4c8db8]  bg-clip-text md:text-2xl lg:text-3xl">
             {data.state.Blog[point].Tittle}
           </h1>

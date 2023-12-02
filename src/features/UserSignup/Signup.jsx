@@ -64,8 +64,7 @@ export default function Signup() {
           <img src={MainLogo} className="w-52" alt="" />
         </div>
       </Link> */}
-      <NavBar/>
-
+      <NavBar />
       <main className="pt-36">
         <div>
           <div className="mt-11">
@@ -86,7 +85,7 @@ export default function Signup() {
                 Conditions and confirm you have read our Privacy Notice.
               </h2>
               <button
-                className="flex items-center justify-center rounded-full space-x-3 border-[1px] hover:bg-[#eeefea] ease-in-out duration-500 border-slate-300 px-5 lg:px-8 text-sm py-3.5"
+                className="flex items-center justify-center rounded-full space-x-3 border-[1px] hover:bg-[#eeefea] ease-in-out duration-500 border-slate-300 p-3 text-sm mx-5"
                 onClick={GoogleSignin}
               >
                 {/* <img src={GoogleIcon} className="w-7 h-7" /> */}
