@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { BiLoaderAlt } from "react-icons/bi";
 import emailjs from "@emailjs/browser";
 import Data from "../../Data/MentorShipCategories";
-import { Footer, NavBar } from "../../components";
+import { NavBar } from "../../components";
 export default function JoinMentor() {
   const dpref = useRef(null);
   const id = useId();
@@ -91,11 +91,11 @@ export default function JoinMentor() {
   return (
     <>
       <NavBar />
-      <div className="z-50 flex items-center justify-center h-full p-3 pt-20 overflow-y-scroll">
-        <div className="w-[90vw] md:w-[60vw] lg:w-[45vw] px-8 bg-white rounded-md py-3 overflow-y-scroll ">
+      <div className="z-50 flex items-center justify-center h-full p-3 pt-10 overflow-y-scroll">
+        <div className="w-[86vw] md:w-[60vw] lg:w-[45vw] px-8 bg-[#4a7999] rounded-md py-3 overflow-y-scroll text-white">
           <div className="space-y-3 text-lg">
             <h1 className="font-semibold font-poppins">
-               Register as a Mentor*
+              Register as a Mentor*
             </h1>
             <p className="font-light text-semibold">
               Contact information will only be used to coordinate sessions with
@@ -112,7 +112,7 @@ export default function JoinMentor() {
                 onChange={(e) => {
                   setmentor({ ...mentor, Name: e.target.value });
                 }}
-                className="p-3 outline-none border-b-[0.5px] border-gray-300  focus:border-gray-800 ease-in-out duration-300"
+                className="p-3 outline-none border-b-[0.5px] border-gray-300  focus:border-gray-800 ease-in-out duration-300 text-black"
               />
             </div>
             <div className="flex flex-col space-y-3">
@@ -124,7 +124,7 @@ export default function JoinMentor() {
                 onChange={(e) => {
                   setmentor({ ...mentor, Phone: e.target.value });
                 }}
-                className="p-3 outline-none border-b-[0.5px] border-gray-300 focus:border-gray-800 ease-in-out duration-300"
+                className="p-3 outline-none border-b-[0.5px] border-gray-300 focus:border-gray-800 ease-in-out duration-300 text-black"
               />
             </div>
             <div className="flex flex-col space-y-3">
@@ -136,13 +136,13 @@ export default function JoinMentor() {
                 onChange={(e) => {
                   setmentor({ ...mentor, Email: e.target.value });
                 }}
-                className="p-3 outline-none border-b-[0.5px] border-gray-300  focus:border-gray-800 ease-in-out duration-300"
+                className="p-3 outline-none border-b-[0.5px] border-gray-300  focus:border-gray-800  ease-in-out duration-300 text-black"
               />
             </div>
             <div className="flex flex-col space-y-3">
               <label className="pl-1.5">Category *</label>
               <select
-                className="p-3 outline-none border-b-[0.5px] border-gray-300  focus:border-gray-800 ease-in-out duration-300"
+                className="p-3 outline-none border-b-[0.5px] border-gray-300  focus:border-gray-800 ease-in-out duration-300 text-black"
                 onChange={(e) => {
                   setmentor({ ...mentor, Categeory: e.target.value });
                 }}
@@ -157,7 +157,12 @@ export default function JoinMentor() {
               </select>
             </div>
             <div className="flex flex-col space-y-3 md:col-span-2">
-              <label className="pl-1.5">Bio* <span className="text-sm">(This will be shown in your profile)</span></label>
+              <label className="pl-1.5">
+                Bio*{" "}
+                <span className="text-sm">
+                  (This will be shown in your profile)
+                </span>
+              </label>
               <textarea
                 type="text"
                 value={mentor.achievement}
@@ -166,7 +171,7 @@ export default function JoinMentor() {
                 onChange={(e) => {
                   setmentor({ ...mentor, achievement: e.target.value });
                 }}
-                className="p-3 outline-none border-b-[0.5px] border-gray-300  focus:border-gray-800 ease-in-out duration-300"
+                className="p-3 outline-none border-b-[0.5px] border-gray-300  focus:border-gray-800 ease-in-out duration-300 text-black"
               />
             </div>
             <div className="flex flex-col space-y-3 md:col-span-2">
@@ -195,7 +200,7 @@ export default function JoinMentor() {
                   <FiUploadCloud
                     size={65}
                     className="cursor-pointer"
-                    color="gray"
+                    color="white"
                     onClick={() => {
                       dpref.current.click();
                     }}
@@ -208,8 +213,7 @@ export default function JoinMentor() {
           <div className="flex justify-center mb-5 mt-11">
             <button
               onClick={uploadImage}
-              className="py-3 text-sm font-semibold text-white rounded-full px-28 bg-[#4a7999]"
-            >
+              className="px-10 py-2 text-sm tracking-wide text-black bg-white rounded-full font-Kanit">
               {loader ? (
                 <BiLoaderAlt
                   size={27}
