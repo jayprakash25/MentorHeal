@@ -17,7 +17,7 @@ export default function Quote() {
       img: "https://cdn.images.express.co.uk/img/dynamic/72/590x/secondary/Novak-Djokovic-Rafael-Nadal-Roger-Federer-Olympics-5084586.jpg?r=1700899508770",
       quote:
         "Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful.",
-      name: "novak djokovic",
+      name: "Novak Djokovic",
     },
 
     {

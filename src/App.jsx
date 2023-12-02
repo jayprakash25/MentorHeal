@@ -5,17 +5,8 @@ import Mentor from "./components/Mentor";
 import BookForm from "./components/BookForm";
 import How from "./components/How";
 import ReadFull from "./components/ReadFull";
-import {
-  Blog,
-  Community,
-  ReadFullBlog,
-  MentorShipPage,
-} from "./Pages/index";
-import {
-  FindMentors,
-  ReadFullQuestion,
-  Signup,
-} from "./features/index";
+import { Blog, Community, ReadFullBlog, MentorShipPage } from "./Pages/index";
+import { FindMentors, ReadFullQuestion, Signup } from "./features/index";
 
 const App = () => {
   return (

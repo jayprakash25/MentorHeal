@@ -34,7 +34,10 @@ export default function Blogs() {
   return (
     <main>
       <NavBar />
-      <div className="flex flex-col items-center justify-center gap-10 pt-24 pb-10 md:grid md:grid-cols-2 lg:grid-cols-3 place-items-center md:px-10 bg-white border-[0.5px]">
+      <div className="pt-20 text-center">
+        <h1 className="font-Kanit text-transparent bg-gradient-to-l from-[#4a7999] via-[#5b99c3] to-[#4c8db8] bg-clip-text text-2xl md:text-3xl">Latest Blogs</h1>
+      </div>
+      <div className="flex flex-col items-center justify-center gap-10 pt-5 pb-10 bg-white md:grid md:grid-cols-2 lg:grid-cols-3 place-items-center md:px-10">
         {loading ? (
           <Loader text={"loading..."} />
         ) : (

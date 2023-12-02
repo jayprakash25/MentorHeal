@@ -22,7 +22,7 @@ export default function ReadFull() {
         </h1>
       </div>
 
-      <div className="flex flex-col items-center justify-center px-4 space-y-10 lg:flex-row lg:items-start space-x-14 md:space-y-0 py-14">
+      <div className="flex flex-col items-center justify-center space-y-10 px-11 lg:space-x-10 lg:flex-row lg:items-start md:space-y-0 py-14">
         <div className="flex flex-col-reverse md:flex-row lg:flex-col">
           {data.state.Blog.map((item, index) => {
             return (
