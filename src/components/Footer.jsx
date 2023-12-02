@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Carddata from "./Data";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import TwitterIcon from "@mui/icons-material/Twitter";
+import { FaXTwitter } from "react-icons/fa6";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import { Instagram } from "@mui/icons-material";
 import { useState } from "react";
@@ -15,6 +15,7 @@ const Footer = ({ Scrolltoref }) => {
     try {
       await addDoc(collection(db, "Subscribes"), { email });
       alert("success");
+      setemail("")
     } catch (error) {
       console.log(error);
     }
@@ -143,11 +144,9 @@ const Footer = ({ Scrolltoref }) => {
                 className="p-1 bg-white rounded-full"
               />
             </a>
-            <TwitterIcon
-              style={{ color: "#1DA1F2" }}
-              fontSize="large"
-              className="p-1 bg-white rounded-full"
-            />
+            <a href="https://x.com/MentorHeal">
+            <FaXTwitter color="" size={30} className="p-1 bg-white rounded-full" />
+            </a>
             <a href="https://youtube.com/@MentorHealOfficial?si=3AGtMKOZFSsogBz1">
               <YouTubeIcon
                 style={{ color: "#CD201F" }}

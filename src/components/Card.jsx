@@ -41,7 +41,7 @@ export const Card = () => {
 
 export const FirstCard = () => {
   return (
-    <div className="px-4 bg-[#4a7999] w-[90vw] lg:w-[80vw] mx-auto rounded-lg">
+    <div className="px-4 bg-[#4a7999] w-[100vw]  mx-auto ">
       <section className=" my-28">
         <div className="items-center px-3 py-5 md:flex md:flex-row-reverse md:justify-around md:space-x-5 md:px-5">
           <div className="flex flex-col order-2 py-5 space-y-8 md:text-left">

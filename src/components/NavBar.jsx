@@ -140,12 +140,12 @@ const NavBar = ({ Scrolltoref, Scrolltotestimonial ,  }) => {
               </div>
               {/* className="px-5  text-white cursor-pointer bg-gradient-to-l from-cyan-400 via-cyan-400 to-cyan-300 py-1.5 rounded-full" */}
               {user ? null : (
-                <li className="cursor-pointer - rounded-">
+                <li className="cursor-pointer bg-[#4a7999] px-6 py-2 rounded-full text-white">
                   <Link to="/signup"> User Signup </Link>
                 </li>
               )}
               {mentorjwt ? null : (
-                <li className="cursor-pointer ">
+                <li className="cursor-pointer bg-[#4a7999] px-6 py-2 rounded-full text-white">
                   <Link to="/join">Join as Mentor</Link>
                 </li>
               )}

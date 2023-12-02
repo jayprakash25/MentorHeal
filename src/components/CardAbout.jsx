@@ -57,15 +57,15 @@ const CardAbout = () => {
             <React.Fragment key={index}>
               <div className="max-w-md duration-500 ease-in-out cursor-pointer border-[1px] border-slate-300 p-4 hover:shadow-md rounded-lg">
                 <img
-                  className="md:w-[20vw] hover:brightness-75 grayscale duration-700 ease-in-out"
+                  className="md:w-[20vw] hover:brightness-75  grayscale duration-700 ease-in-out"
                   src={member.imageUrl}
                   alt=""
                 />
                 <div className="space-y-2.5 mt-3 text-center">
-                  <div className="text-xl font-bold md:text-2xl ">
+                  <div className="text-xl font-bold md:text-2xl text-[#4a7999]">
                     {member.Name}
                   </div>
-                  <p className="font-Kanit ">{member.Position}</p>
+                  <p className="font-Kanit text-[#8ca1b3]">{member.Position}</p>
                 </div>
               </div>
             </React.Fragment>

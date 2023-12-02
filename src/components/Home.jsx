@@ -29,7 +29,6 @@ export default function Home() {
   // refs
   const formref = useRef();
   const testimonialref = useRef();
-  const MGPref = useRef();
 
   const Scrolltoref = () => {
     formref.current.scrollIntoView({
@@ -114,7 +113,7 @@ export default function Home() {
       <Transformation testimonialref={testimonialref} />
       <TeamCard />
       {/* <MGP page={"home"}/> */}
-      <Events/>
+      <Events         Scrolltoref={Scrolltoref}/>
       <Quote />
       <Whatsup />
       <LatestBlogs />

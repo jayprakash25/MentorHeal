@@ -1,4 +1,4 @@
-import ourmission from "../assets/images/ourmission.png";
+import ourmission from "../assets/images/ourmission.jpg";
 
 const OurMission = () => {
   return (
@@ -7,7 +7,7 @@ const OurMission = () => {
         <h1 className="font-Kanit text-2xl lg:text-5xl text-[#4a7999] ">
           OUR MISSION
         </h1>
-        <p className="text-[#7C7C7C] font-Kanit leading-5 text-[13px] md:text-[16.5px]  md:leading-7 lg:leading-9 w-80 lg:w-[40vw] mt-5">
+        <p className="text-[#7C7C7C] font-Kanit leading-5 text-sm md:text-[16.5px]  md:leading-7 lg:leading-9 w-80 lg:w-[40vw] mt-5">
           MentorHeal aims to be India’s pioneering holistic wellness brand,
           guided by a profound understanding of the privilege of human existence
           and the profound potential within each individual. Recognizing that
@@ -46,7 +46,7 @@ const OurMission = () => {
         </div> */}
       </div>
       <div>
-        <img src={ourmission} className=" md:w-[463px] md:h-auto grayscale" />
+        <img src={ourmission} className=" md:w-[470px] md:h-auto" />
       </div>
     </div>
   );

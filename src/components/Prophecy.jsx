@@ -10,7 +10,7 @@ const Prophecy = () => {
         </h1>
       </div>
 
-      <div className="space-y-2">
+      <div className="mt-5 space-y-2 ">
         <div className="flex flex-col-reverse items-center md:flex-row md:justify-around ">
           <div className="py-5 space-y-2 ">
             <h1 className="text-2xl lg:text-3xl text-[#4a7999] font-Kanit">
@@ -22,7 +22,7 @@ const Prophecy = () => {
               knowledge, tools, and mentors to navigate their wellness journeys.
             </p>
           </div>
-          <div className="max-w-xs">
+          <div className="max-w-sm">
             <img src={youth} />
           </div>
         </div>

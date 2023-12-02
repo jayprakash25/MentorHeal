@@ -108,14 +108,14 @@ const Mentor = () => {
           </h1>
         </div>
 
-        <div className="grid items-start md:grid-cols-2 lg:grid-cols-3 gap-14">
+        <div className="grid items-start justify-center place-items-center md:grid-cols-2 lg:grid-cols-3 gap-14">
           {data.map((item, index) => {
             return (
               <div
                 key={index}
-                className="flex flex-col hover:shadow-sm ease-in-out duration-300 items-center px-8 space-y-4 cursor-pointer border-[1px] border-slate-300 p-5 h-[50vh] rounded-lg"
+                className="flex flex-col hover:shadow-sm ease-in-out duration-300 items-center px-8 space-y-4 cursor-pointer border-[1px] border-slate-300 p-5 h-[49vh] rounded-lg"
               >
-                <div className="mx-auto">
+                <div className="mx-auto mt-7">
                   <img src={item.image} className="w-16 h-16 " />
                 </div>
                 <h1 className="text-xl">
