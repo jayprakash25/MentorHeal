@@ -43,7 +43,7 @@ const BookForm = () => {
       </div>
       <div className=" py-7">
         <form
-          className="max-w-sm md:max-w-md  p-7 mx-auto text-white shadow-sm rounded-lg bg-[#4a7999]"
+          className="max-w-md md:max-w-md  p-7 mx-5 text-white shadow-sm  bg-[#4a7999]"
           onSubmit={handleSubmit}
         >
           <div className="mb-4 space-y-5 text-white">
