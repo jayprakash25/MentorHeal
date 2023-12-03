@@ -20,7 +20,7 @@ export default function JoinMentor() {
     Name: "",
     Phone: "",
     Email: "",
-    Categeory: "",
+    Categeory: "health", 
     image: "",
     achievement: "",
   });
@@ -217,7 +217,7 @@ export default function JoinMentor() {
               {loader ? (
                 <BiLoaderAlt
                   size={27}
-                  color="white"
+                  color="black"
                   className="duration-300 ease-in-out animate-spin"
                 />
               ) : (

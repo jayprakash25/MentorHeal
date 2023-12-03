@@ -7,7 +7,6 @@ import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 import Carddata from "./Data";
 import { db } from "../Firebase";
 import { collection, addDoc } from "firebase/firestore";
-import { useNavigate } from "react-router-dom";
 import { Footer, NavBar } from "./index";
 
 const BookForm = () => {
@@ -43,7 +42,7 @@ const BookForm = () => {
       </div>
       <div className=" py-7">
         <form
-          className="max-w-md md:max-w-md  p-7 mx-5 text-white shadow-sm  bg-[#4a7999]"
+          className="max-w-md md:max-w-md mx-auto p-7  text-white shadow-sm  bg-[#4a7999]"
           onSubmit={handleSubmit}
         >
           <div className="mb-4 space-y-5 text-white">
