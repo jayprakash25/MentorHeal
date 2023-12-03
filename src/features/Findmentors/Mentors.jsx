@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Mentors({ filterCategeory, mentors }) {
   return (
     <>
-      <section className="grid justify-center grid-cols-1 gap-6 px-10 my-20 md:grid-cols-2 lg:grid-cols-3">
+      <section className="grid justify-center grid-cols-1 gap-6 px-3 my-20 lg:px-10 md:grid-cols-2 lg:grid-cols-3">
         {mentors
           ?.filter((item) => {
             if (filterCategeory === undefined) {
