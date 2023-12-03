@@ -41,9 +41,9 @@ const BookForm = () => {
       <div className="pb-16">
         <NavBar />
       </div>
-      <div className="py-10 mb-">
+      <div className=" py-7">
         <form
-          className="max-w-md p-7  mx-auto text-white shadow-sm rounded-lg bg-[#4a7999]"
+          className="max-w-sm md:max-w-md  p-7 mx-auto text-white shadow-sm rounded-lg bg-[#4a7999]"
           onSubmit={handleSubmit}
         >
           <div className="mb-4 space-y-5 text-white">
